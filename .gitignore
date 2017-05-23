@@ -16,7 +16,7 @@ results
 *.mat
 *.fig
 *.mdb
-*.dss
+#*.dss
 *.csv
 *.htm
 *.png
