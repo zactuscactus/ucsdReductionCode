@@ -146,7 +146,7 @@ end
 
 if(~isfield(c,'basevoltages'))
 	warning('Set base Voltages in circuit')
-	c.basevoltages = [115, 12.47, 4.16, 0.48, 0.12];
+	c.basevoltages = [115, 69, 12.47, 4.16, 2.4, 0.48, 0.24, 0.208, 0.12];
 end
 
 if headerfooterflag

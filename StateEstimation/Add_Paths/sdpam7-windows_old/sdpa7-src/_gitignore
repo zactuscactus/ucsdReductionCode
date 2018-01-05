@@ -1,0 +1,49 @@
+*~
+*.o
+*.a
+*.gz
+r
+r2
+
+# binary
+sdpa
+gmon.out
+*.exe
+
+# tex
+*.log
+*.aux
+*.idx
+*.toc
+*.ilg
+*.ind
+
+# emacs temporary files
+\#*
+.\#*
+
+# matlab
+*.dll
+*.mexmac
+*.mexmaci
+*.mexglx
+*.mexsol
+*.mexa64
+*.mexw64
+*.mat
+*.mex
+
+# python
+*.so
+*.pyc
+
+# autoreconf
+/Makefile
+/Makefile.in
+configure
+config.log
+config.status
+autom4te.cache
+etc/make.inc
+.deps/
+aclocal.m4

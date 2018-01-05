@@ -1,0 +1,41 @@
+Clear
+
+New Circuit.IEEE13Nodeckt_Reduced Phases=3 bus1=SourceBus basekv=115 pu=1.0001 angle=30 MVAsc3=20000 MVAsc1=21000
+New Line.rg60_671 Phases=3 bus1=rg60.1.2.3 bus2=671.1.2.3 Units=kft Length=4 Rmatrix=(0.065627|0.029546    0.063922|0.029925    0.029073    0.064661) Xmatrix=(0.19279|0.095022     0.19845|0.080229      0.0729     0.19599) Cmatrix=(0|0  0|0  0  0)
+New Line.671_692 Phases=3 bus1=671.1.2.3 bus2=692.1.2.3 Units=kft Length=0.001 Rmatrix=(0.0001|0      0.0001|0           0      0.0001) Xmatrix=(0|0  0|0  0  0) Cmatrix=(0|0  0|0  0  0)
+New Line.671_684 Phases=2 bus1=671.1.3 bus2=684.1.3 Units=kft Length=0.3 Rmatrix=(0.25073|0.03913     0.25179) Xmatrix=(0.257|0.086953     0.25514) Cmatrix=(0|0  0)
+New Line.692_675 Phases=3 bus1=692.1.2.3 bus2=675.1.2.3 Units=kft Length=0.5 Rmatrix=(0.15118|0.060456     0.14945|0.05396    0.060456     0.15118) Xmatrix=(0.084529|0.0062123    0.076536|-0.0027084   0.0062123    0.084529) Cmatrix=(2713.92|0        2713.92|0              0        2713.92)
+New Line.684_652 Phases=1 bus1=684.1 bus2=652.1 Units=kft Length=0.8 Rmatrix=(0.25427) Xmatrix=(0.097048) Cmatrix=(1557.6)
+New Line.684_611 Phases=1 bus1=684.3 bus2=611.3 Units=kft Length=0.3 Rmatrix=(0.25175) Xmatrix=(0.25522) Cmatrix=(0)
+New Transformer.Sub Phases=3 Windings=2 XHL=0.008 XHT=4 XLT=4 Wdg=1 Bus=SourceBus Conn=delta kV=115 kVA=5000 %R=0.0005 Wdg=2 Bus=650 Conn=wye kV=4.16 kVA=5000 %R=0.0005
+New Transformer.Reg1 Buses=[650.1 RG60.1] %Loadloss=0.01 Phases=1 XHL=0.01 kVAs=[1666  1666] kVs=[2.4         2.4]
+New Transformer.Reg2 Buses=[650.2 RG60.2] %Loadloss=0.01 Phases=1 XHL=0.01 kVAs=[1666  1666] kVs=[2.4         2.4]
+New Transformer.Reg3 Buses=[650.3 RG60.3] %Loadloss=0.01 Phases=1 XHL=0.01 kVAs=[1666  1666] kVs=[2.4         2.4]
+New Regcontrol.Reg1 transformer=Reg1 winding=2 vreg=122 band=2 ptratio=20 CTprim=700 R=3 X=9
+New Regcontrol.Reg2 transformer=Reg2 winding=2 vreg=122 band=2 ptratio=20 CTprim=700 R=3 X=9
+New Regcontrol.Reg3 transformer=Reg3 winding=2 vreg=122 band=2 ptratio=20 CTprim=700 R=3 X=9
+New Capacitor.Cap1 Phases=3 Bus1=675 Kvar=600 Kv=4.16
+New Capacitor.Cap2 Phases=1 Bus1=611.3 Kvar=100 Kv=2.4
+New Load.LOAD_on_RG60.1 Phases=1 bus1=RG60.1 Kv=2.4018 Kw=85.6653 Model=5 Kvar=58.3325
+New Load.LOAD_on_RG60.2 Phases=1 bus1=RG60.2 Kv=2.4018 Kw=224.4945 Model=5 Kvar=153.1635
+New Load.LOAD_on_RG60.3 Phases=1 bus1=RG60.3 Kv=2.4018 Kw=156.4903 Model=5 Kvar=100.661
+New Load.LOAD_on_671.1 Phases=1 bus1=671.1 Kv=2.4018 Kw=476.3347 Model=5 Kvar=281.6675
+New Load.LOAD_on_671.2 Phases=1 bus1=671.2 Kv=2.4018 Kw=631.5055 Model=5 Kvar=385.8365
+New Load.LOAD_on_671.3 Phases=1 bus1=671.3 Kv=2.4018 Kw=580.5098 Model=5 Kvar=343.339
+New Load.LOAD_on_692.1 Phases=1 bus1=692.1 Kv=2.4018 Kw=85 Model=5 Kvar=75.5
+New Load.LOAD_on_692.3 Phases=1 bus1=692.3 Kv=2.4018 Kw=85 Model=5 Kvar=75.5
+New Load.LOAD_on_675.1 Phases=1 bus1=675.1 Kv=2.4018 Kw=485 Model=5 Kvar=190
+New Load.LOAD_on_675.2 Phases=1 bus1=675.2 Kv=2.4018 Kw=68 Model=5 Kvar=60
+New Load.LOAD_on_675.3 Phases=1 bus1=675.3 Kv=2.4018 Kw=290 Model=5 Kvar=212
+New Load.LOAD_on_611.3 Phases=1 bus1=611.3 Kv=2.4018 Kw=170 Model=5 Kvar=80
+New Load.LOAD_on_652.1 Phases=1 bus1=652.1 Kv=2.4018 Kw=128 Model=5 Kvar=86
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 4.16 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords IEEE13Nodeckt_Reduced_buscoords.csv
+
+
+set maxiterations=1000

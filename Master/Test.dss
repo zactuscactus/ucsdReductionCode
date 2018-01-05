@@ -1,0 +1,25 @@
+Clear
+ 
+New Circuit.IEEE8500_simple_Reduced pu=1.05 R1=0 X1=0.001 R0=0 X0=0.001
+New Line.l2801909_r20185 Phases=3 bus1=l2801909.1.2.3 bus2=r20185.1.2.3 Units=km Length=0.4 Rmatrix=[0.270019       0.109951       0.113538| 0.109951       0.264634       0.110747| 0.113538       0.110747       0.271698|] Xmatrix=[0.695974        0.33351       0.308271|  0.33351       0.708729       0.350259| 0.308271       0.350259       0.692021|] Cmatrix=[0              0              0| 0              0              0| 0              0              0|]
+New Line._hvmv_sub_lsb_hvmv_sub_48332 Phases=3 bus1=_hvmv_sub_lsb.1.2.3 bus2=hvmv_sub_48332.1.2.3 Units=km Length=1 Rmatrix=[0.001              0              0|     0          0.001              0|     0              0          0.001|] Xmatrix=[0.01              0              0|    0           0.01              0|    0              0           0.01|] Cmatrix=[0              0              0| 0              0              0| 0              0              0|]
+New Line.hvmv_sub_48332_l2801909 Phases=3 bus1=hvmv_sub_48332.1.2.3 bus2=l2801909.1.2.3 Units=km Length=0.025252282 Rmatrix=[ 0.214162      0.0557957      0.0571636| 0.0557957       0.212131      0.0560892| 0.0571636      0.0560892       0.214801|] Xmatrix=[0.634957        0.27487       0.246528|  0.27487       0.652375        0.29092| 0.246528        0.29092       0.629544|] Cmatrix=[0              0              0| 0              0              0| 0              0              0|]
+New Reactor.HVMV_Sub_HSB Bus1=SourceBus Bus2=HVMV_Sub_HSB R=0 X=14.7983 Normamps=400 Emergamps=400
+New Transformer.HVMV_Sub Phases=3 Windings=2 Buses=[HVMV_Sub_HSB regxfmr_HVMV_Sub_LSB.1.2.3.0] Conns=[wye wye] kVs=[115         12.47] kVAs=[27500  27500] XHL=15.51 %Noloadloss=0 %imag=0 sub=y Wdg=1 %R=0.67202 Wdg=2 %R=0.67202
+New Transformer.FEEDER_REGA Phases=3 Windings=2 Buses=[regxfmr_HVMV_Sub_LSB _HVMV_Sub_LSB] Conns=[wye wye] kVs=[7.2         7.2] kVAs=[27500  27500] XHL=0.1 %Loadloss=0.001 %Noloadloss=0 %imag=0 Ppm_Antifloat=0 MaxTap=1.1 MinTap=0.9
+New Transformer.Xfrmr_con_l2801909_sx2801909a Phases=1 Windings=3 Buses=[l2801909.1 sx2801909a.1.0 sx2801909a.0.2] kVs=[7.2        0.12        0.12] kVAs=[10  10  10] %Rs=[0.18967       3.029       3.029] XHL=2.6154 XLT=3.3995 XHT=2.6154 %Noloadloss=0 %imag=0
+New Regcontrol.FEEDER_REGA transformer=FEEDER_REGA winding=2 vreg=126.5 band=2 ptratio=60
+New Capacitor.CAPBank2A Phases=1 Bus1=R20185.1 Kvar=300 Kv=7.2 Conn=wye
+New Capacitor.CAPBank2B Phases=1 Bus1=R20185.2 Kvar=300 Kv=7.2 Conn=wye
+New Capacitor.CAPBank2C Phases=1 Bus1=R20185.3 Kvar=300 Kv=7.2 Conn=wye
+New Load.226195333C0 Phases=2 bus1=SX2801909A.1.2 Kv=0.208 Kw=4.07 Pf=0.97 Model=1
+ 
+ 
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 12.47 0.48 0.208]
+Calcvoltagebases     ! This also establishes the bus list
+ 
+
+ 
+set maxiterations=1000
+solve

@@ -1,0 +1,143 @@
+!------------------------------
+! Sample Script files from EPRI's OpenDSS Training, June 7, 2013, Charlotte, NC.
+! ~ Jeff Smith, EPRI
+compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+solve
+
+!-----
+!Plot Circuit Power flow
+set markercode=24
+set markregulators=yes
+plot circuit power 1ph=3
+
+!plot voltages
+set emergvminpu=1.0
+set normvminpu=1.035
+plot circuit voltage
+
+!plot profile
+set normvminpu=0.95
+plot profile phases = primary
+plot profile phases = all
+
+!Minimum load case (approximate)
+set loadmult=.1
+solve
+plot profile phases = all
+
+!--Add PV to Circuit Model------------------------------------------------------------
+Compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+solve
+
+!Add PV
+Redirect ExistingPV.dss
+Set DaisySize=2.5
+set markregulators=yes
+plot daisy power max=2000 dots=y buslist=(file=pvbuses.txt )
+solve
+plot profile phases = all
+
+!
+!----Voltage Change Test-----------------------------------------------------------
+compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+solve
+save voltages
+Redirect ExistingPV.dss
+!Disable all controls
+set controlmode=off
+solve
+plot profile phases = all
+
+
+! Compare saved voltages to current case solved
+vdiff            !creates voltage difference file
+set markercode=24 nodewidth=2.5
+!Plot difference in voltage between no-PV and with-PV cases
+plot general quantity=1 max=3.5 min=0.0 dots=y labels=n object=vdiff.csv C1=$0000FFFF C2=$000000FF
+
+
+!------- Run Time Series Analysis------------------------------------------------
+compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+Redirect ExistingPV.dss
+solve
+! - define PV curve
+new loadshape.mypv npts=1800 sinterval=1 csvfile=strwplns1sec30min.csv
+new monitor.PVSite4VI element=PVSystem.3P_ExistingSite4 terminal=1 mode=0
+new monitor.PVSite4PQ element = Line.Site4_PV terminal=2 mode=65 ppolar=no
+!Assign same PV curve to all PV systems (single curve used for demo only)
+batchedit pvsystem..* daily=mypv
+
+!- change solution mode
+solve mode=daily stepsize=1s number=1800
+
+batchedit pvsystem..* pf=-0.98
+
+!--------------Plotting---------------------------------------------
+Export monitors pvsite4vi
+Plot monitor object= pvsite4vi channels=(1 )
+Export monitors pvsite4pq
+Plot monitor object= pvsite4pq channels=(1 )
+Plot monitor object= pvsite4pq channels=(2 )
+plot Loadshape Object=MYPV
+
+!LTC @ Sub
+Plot monitor object= tap9 channels=(1 )
+Plot monitor object= subvi channels=(1 )
+
+!Line Regulators - Mid Feeder
+Plot monitor object= tap8 channels=(1 )
+Plot monitor object= voltagetap8 channels=(1 )
+
+!Line Regulators - End of Feeder
+plot monitor object = tap2 channels=(1
+Plot monitor object= voltagetap2 channels=(1 )
+
+
+!---Automatically Add Large Amounts of Small-Scale Generation ---------------------
+! http://sourceforge.net/apps/mediawiki/electricdss/index.php?title=DSS_Distribute_Cmd
+
+Compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+solve
+
+Distribute KW=2000 how=proportional file=distributedgen.DSS
+redirect distributedgen.dss
+solve
+
+
+!----Voltage Change Test
+compile "C:\Users\pjsm001\projects\training\2013 OpenDSS training - Charlotte\PVExample1\master_nopv.dss"
+solve
+plot profile phases = all
+redirect distributedgen.dss
+!Disable all controls
+set controlmode=off
+solve
+plot profile phases = all
+
+show powers kva elements
+
+
+
+!-Misc---------------------------------------------------------------------------
+! - define PV curve
+new loadshape.mypv npts=1800 sinterval=1 csvfile=strwplns1sec30min.csv
+!Assign same PV curve to all PV systems (single curve used for demo only)
+batchedit generator..* daily=mypv
+
+!- change solution mode
+set maxcontrol = 200
+solve mode=daily stepsize=1s number=1800
+
+
+show eventlog
+show power kva elements
+
+!----Importing Binary Loadshape files ---------------
+!http://sourceforge.net/apps/mediawiki/electricdss/index.php?title=TechNote_New_ways_to_import_loadshapes
+new loadshape.mypv npts=1800 sinterval=1 csvfile=strwplns1sec30min.csv
+Loadshape.mypv.action=sngsave
+mult=[sngfile=mypv_P.sng]
+new loadshape.newpv npts=1800 sinterval=1 sngfile=mypv_P.sng
+plot loadshape object=newpv
+
+

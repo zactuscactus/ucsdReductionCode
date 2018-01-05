@@ -62,14 +62,14 @@ for i=1:length(fn)
 				% this appends a '| character at the end of each line of
 				% the matrix and then wraps the string back onto one line.
 				% e.g. [1 2 3| 4 5 6| 7 8 9]
-				v = [num2str(v), repmat('| ',[size(v,1),1])];
+				v = [num2str(v,12), repmat('| ',[size(v,1),1])];
 				v = reshape(v',[1,numel(v)]);
 				s = [s ' ' fn{i} '=[' v(1:end-1) ']'];
 			else
 				s = [s ' ' fn{i} '=[' num2str(v) ']'];
 			end
 		else %and finally scalar numeric data:
-			s = [s ' ' fn{i} '=' num2str(v)];
+			s = [s ' ' fn{i} '=' num2str(v,8)];
 		end
 	elseif(iscell(v))
 		% if v is an array of strings (for Buses or Conns)

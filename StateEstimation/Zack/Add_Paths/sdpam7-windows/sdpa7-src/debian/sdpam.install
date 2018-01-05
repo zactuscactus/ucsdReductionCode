@@ -1,0 +1,7 @@
+mex/Makefile          usr/share/sdpa/mex
+mex/*.cpp             usr/share/sdpa/mex
+mex/*.c               usr/share/sdpa/mex
+mex/*.m               usr/share/sdpa/mex
+mex/*.txt             usr/share/sdpa/mex
+mex/*.mex             usr/lib/sdpa/mex
+#mex/*.m               usr/lib/sdpa/mex

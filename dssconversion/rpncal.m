@@ -87,6 +87,7 @@ for i=1:length(s)
 				if(j<2), error('empty RPN stack'); end
 				j = j-1;
 				val(j) = f(val(j),val(j+1));
+				val(j+1)=[];
 			case 'atan2' % dual input, but we have to convert the output from radians to degrees
 				if(j<2), error('empty RPN stack'); end
 				j = j-1;

@@ -78,6 +78,7 @@ else %otherwise assign default values
 		'VBus','', ... % bus to use for voltage override (below).  Defaults to bus of terminal.
 		'Vmax',126, ...% max voltage (after PT ratio) regardless of other controls
 		'Vmin',115, ...% min voltage (after PT ratio) regardless of other controls
+		'Enabled','true', ...% min voltage (after PT ratio) regardless of other controls
 		'VoltOverride','NO'); % whether to use Vmax/Vmin
 	obj.fieldnames = fieldnames(obj.defaults);
 	% set the data structure to be a blank version of the defaults

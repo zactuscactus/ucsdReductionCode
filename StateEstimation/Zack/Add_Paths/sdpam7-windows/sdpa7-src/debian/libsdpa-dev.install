@@ -1,0 +1,5 @@
+sdpa_*.h              usr/include
+libsdpa.a             usr/lib/
+etc/make.inc	      usr/share/sdpa
+example*              usr/share/sdpa/example
+libexample/*          usr/share/sdpa/libexample

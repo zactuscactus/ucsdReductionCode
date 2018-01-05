@@ -1,0 +1,45 @@
+Clear
+
+New Circuit.ucsdMicrogrid_Reduced bus1=SDG&E_69KV basekv=69 pu=1.05 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
+New Line.t_204_sec_bus_t_290_pri Phases=3 bus1=t_204_sec.1.2.3 bus2=bus_t_290_pri.1.2.3 Units=km Length=4.16814 Rmatrix=[ 0.071084400891    0.0120295975517    0.0120295975517| 0.0120295975517    0.0710844008909    0.0120295975517| 0.0120295975517    0.0120295975517    0.0710844008909|] Xmatrix=[ 0.138888469291    0.0503055512339    0.0503055512339| 0.0503055512339     0.138888469291    0.0503055512339| 0.0503055512339    0.0503055512339     0.138888469291|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Transformer.T_204 Windings=2 Buses=[SDG&E_69KV T_204_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.36        0.36] XHL=7.55 %Noloadloss=0 %imag=0 sub=y MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_205 Windings=2 Buses=[SDG&E_69KV T_205_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.37        0.37] XHL=7.61 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_277 Windings=2 Buses=[SDG&E_69KV T_277_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.36        0.36] XHL=7.43 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_290_STUD Windings=2 Buses=[BUS_T_290_PRI STUDENT_T224] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[0.95        0.95] XHL=4.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Regcontrol.FEEDER_REG204 transformer=T_204 winding=2 vreg=126 band=2 ptratio=60
+New Regcontrol.FEEDER_REG205 transformer=T_205 winding=2 vreg=126 band=2 ptratio=60
+New Regcontrol.FEEDER_REG277 transformer=T_277 winding=2 vreg=126 band=2 ptratio=60
+New Load.Load_T_204_SEC.1_model_1 Phases=1 bus1=T_204_SEC.1 Kv=7.2 Kw=5195.371 Model=1 Kvar=2804.1734
+New Load.Load_T_204_SEC.2_model_1 Phases=1 bus1=T_204_SEC.2 Kv=7.2 Kw=5195.371 Model=1 Kvar=2804.1734
+New Load.Load_T_204_SEC.3_model_1 Phases=1 bus1=T_204_SEC.3 Kv=7.2 Kw=5195.371 Model=1 Kvar=2804.1734
+New Load.Load_T_205_SEC.1_model_1 Phases=1 bus1=T_205_SEC.1 Kv=7.2 Kw=7166.6791 Model=1 Kvar=3868.1796
+New Load.Load_T_205_SEC.2_model_1 Phases=1 bus1=T_205_SEC.2 Kv=7.2 Kw=7166.6791 Model=1 Kvar=3868.1796
+New Load.Load_T_205_SEC.3_model_1 Phases=1 bus1=T_205_SEC.3 Kv=7.2 Kw=7166.6791 Model=1 Kvar=3868.1796
+New Load.Load_T_277_SEC.1_model_1 Phases=1 bus1=T_277_SEC.1 Kv=7.2 Kw=1433.3336 Model=1 Kvar=773.6319
+New Load.Load_T_277_SEC.2_model_1 Phases=1 bus1=T_277_SEC.2 Kv=7.2 Kw=1433.3336 Model=1 Kvar=773.6319
+New Load.Load_T_277_SEC.3_model_1 Phases=1 bus1=T_277_SEC.3 Kv=7.2 Kw=1433.3336 Model=1 Kvar=773.6319
+New Load.Load_BUS_T_290_PRI.1_model_1 Phases=1 bus1=BUS_T_290_PRI.1 Kv=7.2 Kw=1455.3037 Model=1 Kvar=785.4915
+New Load.Load_BUS_T_290_PRI.2_model_1 Phases=1 bus1=BUS_T_290_PRI.2 Kv=7.2 Kw=1455.3037 Model=1 Kvar=785.4915
+New Load.Load_BUS_T_290_PRI.3_model_1 Phases=1 bus1=BUS_T_290_PRI.3 Kv=7.2 Kw=1455.3037 Model=1 Kvar=785.4915
+New Load.Load_STUDENT_T224.1_model_1 Phases=1 bus1=STUDENT_T224.1 Kv=0.12 Kw=57.3333 Model=1 Kvar=30.9453
+New Load.Load_STUDENT_T224.2_model_1 Phases=1 bus1=STUDENT_T224.2 Kv=0.12 Kw=57.3333 Model=1 Kvar=30.9453
+New Load.Load_STUDENT_T224.3_model_1 Phases=1 bus1=STUDENT_T224.3 Kv=0.12 Kw=57.3333 Model=1 Kvar=30.9453
+New Generator.Gen_T_204_SEC.1_model_1 Phases=1 bus1=T_204_SEC.1 Kv=7.2 Kw=5224.7094 Model=1 Kvar=2820.0121
+New Generator.Gen_T_204_SEC.2_model_1 Phases=1 bus1=T_204_SEC.2 Kv=7.2 Kw=5224.7094 Model=1 Kvar=2820.0121
+New Generator.Gen_T_204_SEC.3_model_1 Phases=1 bus1=T_204_SEC.3 Kv=7.2 Kw=5224.7094 Model=1 Kvar=2820.0121
+New Generator.Gen_T_205_SEC.1_model_1 Phases=1 bus1=T_205_SEC.1 Kv=7.2 Kw=6250.269 Model=1 Kvar=3373.5545
+New Generator.Gen_T_205_SEC.2_model_1 Phases=1 bus1=T_205_SEC.2 Kv=7.2 Kw=6250.269 Model=1 Kvar=3373.5545
+New Generator.Gen_T_205_SEC.3_model_1 Phases=1 bus1=T_205_SEC.3 Kv=7.2 Kw=6250.269 Model=1 Kvar=3373.5545
+New Generator.Gen_BUS_T_290_PRI.1_model_1 Phases=1 bus1=BUS_T_290_PRI.1 Kv=7.2 Kw=110.4536 Model=1 Kvar=59.6168
+New Generator.Gen_BUS_T_290_PRI.2_model_1 Phases=1 bus1=BUS_T_290_PRI.2 Kv=7.2 Kw=110.4536 Model=1 Kvar=59.6168
+New Generator.Gen_BUS_T_290_PRI.3_model_1 Phases=1 bus1=BUS_T_290_PRI.3 Kv=7.2 Kw=110.4536 Model=1 Kvar=59.6168
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 69 12.47 4.16 2.4 0.48 0.24 0.208 0.12]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords OutputDSS_buscoords.csv
+
+
+set maxiterations=1000

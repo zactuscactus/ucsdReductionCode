@@ -19,7 +19,8 @@ dcap = o.data;
 fn = o.fieldnames(2:end);
 % skip any dependencies on the first pass
 try
-	fn = setdiff(fn,o.dependency);
+% 	fn = setdiff(fn,o.dependency);
+	fn=fn(find(~ismember(fn,o.dependency)));
 catch
 end
 

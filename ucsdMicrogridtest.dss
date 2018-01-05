@@ -1,0 +1,1313 @@
+Clear
+
+New Circuit.ucsdMicrogrid bus1=SDG&E_69KV basekv=69 pu=1.05 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
+New Linecode.1_0_Cu R1=0.26903 X1=0.10827 R0=0.42979 X0=0.27231 Units=km
+New Linecode.2_0_Cu R1=0.21654 X1=0.10499 R0=0.34121 X0=0.26903 Units=km
+New Linecode.3_0_Cu R1=0.17224 X1=0.098425 R0=0.27067 X0=0.26247 Units=km
+New Linecode.4_0_Cu R1=0.13451 X1=0.098425 R0=0.21326 X0=0.24934 Units=km
+New Linecode.6_Cu R1=726.2139 X1=97.5394 R0=2288.6155 X0=240.2231 Units=km
+New Linecode.10_Cu R1=1680.2822 X1=121.6207 R0=5295.4724 X0=299.4751 Units=km
+New Linecode.250_Cu R1=1.1549 X1=1.6503 R0=7.0341 X0=6.6175 Units=km
+New Linecode.350_Cu R1=0.69554 X1=0.74803 R0=1.1089 X0=1.8963 Units=km
+New Linecode.500_Cu R1=0.059055 X1=0.088583 R0=0.095144 X0=0.2395 Units=km
+New Linecode.600_Cu R1=0.02395 X1=0.13123 R0=0.14895 X0=0.69554 Units=km
+New Linecode.750_Cu R1=0.042651 X1=0.082021 R0=0.068898 X0=0.21326 Units=km
+New Line.CBL_0581 LineCode=500_Cu bus1=E_7_10_2_11 bus2=E_1_9_1_11 Units=m Length=99.06
+New Line.CBL_0583 LineCode=600_Cu bus1=SS23_14 bus2=SS_23_WC Units=m Length=0.3048
+New Line.CBL_0726 LineCode=750_Cu bus1=SS_126 bus2=BUS_0861 Units=m Length=0.3048
+New Line.CBL_0727 LineCode=750_Cu bus1=SS_126 bus2=BUS_0862 Units=m Length=0.3048
+New Line.CBL_0728 LineCode=750_Cu bus1=SS_127 bus2=BUS_0865 Units=m Length=0.3048
+New Line.CBL_0729 LineCode=750_Cu bus1=SS_127 bus2=BUS_0866 Units=m Length=0.3048
+New Line.CBL_E_4_1_404 LineCode=750_Cu bus1=E_4_404 bus2=E_4_1_404 Units=m Length=57.912
+New Line.CBL_E_4_1_405 LineCode=750_Cu bus1=E_4_405 bus2=E_4_1_405 Units=m Length=57.912
+New Line.CBL_E_4_1_409 LineCode=500_Cu bus1=E_4_409 bus2=E_4_1_409 Units=m Length=61.2648
+New Line.CBL_E_4_2_404 LineCode=750_Cu bus1=E_4_1_404 bus2=E_4_2_404 Units=m Length=67.9704
+New Line.CBL_E_4_2_405 LineCode=750_Cu bus1=E_4_1_405 bus2=E_4_2_405 Units=m Length=67.9704
+New Line.CBL_E_4_2_409 LineCode=500_Cu bus1=E_4_1_409 bus2=E_4_2_409 Units=m Length=74.676
+New Line.CBL_E_4_404 LineCode=750_Cu bus1=MCSS_MB bus2=E_4_404 Units=m Length=38.1
+New Line.CBL_E_4_405 LineCode=750_Cu bus1=MCSS_MA bus2=E_4_405 Units=m Length=30.48
+New Line.CBL_E_4_407 LineCode=750_Cu bus1=MCSS_MA bus2=E_4_407 Units=m Length=30.48
+New Line.CBL_E_4_409 LineCode=500_Cu bus1=MCSS_MA bus2=E_4_409 Units=m Length=33.528
+New Line.CBL_E_4_413 LineCode=500_Cu bus1=MCSS_MA bus2=E_4_413 Units=m Length=64.008
+New Line.CBL_E_4_9_413 LineCode=750_Cu bus1=E_5_8_1_413 bus2=E_4_9_413 Units=m Length=152.4
+New Line.CBL_E_5_3_1_SS_138 LineCode=500_Cu bus1=E_5_3_SS_138 bus2=E_5_3_1_SS_138 Units=m Length=6.096
+New Line.CBL_E_5_3_412 LineCode=500_Cu bus1=E_5_1_412 bus2=E_5_3_412 Units=m Length=265.176
+New Line.CBL_E_5_3_437 LineCode=500_Cu bus1=E_5_1_437 bus2=E_5_3_437 Units=m Length=265.176
+New Line.CBL_E_5_3_SS_138 LineCode=500_Cu bus1=SS_51_EC bus2=E_5_3_SS_138 Units=m Length=15.24
+New Line.CBL_E_5_4_2_404 LineCode=750_Cu bus1=E_4_2_404 bus2=E_5_4_2_404 Units=m Length=38.1
+New Line.CBL_E_5_4_2_405 LineCode=750_Cu bus1=E_4_2_405 bus2=E_5_4_2_405 Units=m Length=38.1
+New Line.CBL_E_5_4_406 LineCode=750_Cu bus1=E_4_406 bus2=E_5_4_406 Units=m Length=62.484
+New Line.CBL_E_5_4_407 LineCode=750_Cu bus1=E_4_407 bus2=E_5_4_407 Units=m Length=62.484
+New Line.CBL_E_5_4_413 LineCode=500_Cu bus1=E_4_413 bus2=E_5_4_413 Units=m Length=62.484
+New Line.CBL_E_5_4_436 LineCode=500_Cu bus1=E_4_436 bus2=E_5_4_436 Units=m Length=62.484
+New Line.CBL_E_5_7_413 LineCode=750_Cu bus1=E_5_4_413 bus2=E_5_7_413 Units=m Length=108.5088
+New Line.CBL_E_5_8_1_413 LineCode=750_Cu bus1=E_5_7_413 bus2=E_5_8_1_413 Units=m Length=135.636
+New Line.CBL_E_6A_5_EC_12 LineCode=750_Cu bus1=E_6A_2_EC_12 bus2=E_6A_5_EC_12 Units=m Length=127.1016
+New Line.CBL_E_6A_5_EC_25 LineCode=750_Cu bus1=E_6A_2_EC_25 bus2=E_6A_5_EC_25 Units=m Length=127.1016
+New Line.CBL_E_6A_5_EC_37 LineCode=750_Cu bus1=E_5_1_37 bus2=E_6A_5_EC_37 Units=m Length=129.2352
+New Line.CBL_E_6A_6_EC_12 LineCode=750_Cu bus1=E_6A_5_EC_12 bus2=E_6A_6_EC_12 Units=m Length=132.588
+New Line.CBL_E_6A_6_EC_25 LineCode=750_Cu bus1=E_6A_5_EC_25 bus2=E_6A_6_EC_25 Units=m Length=132.588
+New Line.CBL_E_6A_6_EC_37 LineCode=750_Cu bus1=E_6A_5_EC_37 bus2=E_6A_6_EC_37 Units=m Length=132.588
+New Line.CBL_EMH_E_4_406 LineCode=750_Cu bus1=MCSS_MB bus2=E_4_406 Units=m Length=38.1
+New Line.CBL_EMH_E_4_436 LineCode=500_Cu bus1=MCSS_MC bus2=E_4_436 Units=m Length=48.768
+New Line.CBL_EMH_E_5_1_412 LineCode=500_Cu bus1=E_6A_5_412 bus2=E_5_1_412 Units=m Length=129.2352
+New Line.CBL_EMH_E_5_1A_437 LineCode=500_Cu bus1=E_6A_5_MA_437 bus2=E_5_1_437 Units=m Length=129.2352
+New Line.CBL_EMH_E_5_8_1_406 LineCode=750_Cu bus1=E_5_7_406 bus2=E_5_8_1_406 Units=m Length=135.636
+New Line.CBL_EMH_E_5_8_1_407 LineCode=750_Cu bus1=E_5_7_407 bus2=E_5_8_1_407 Units=m Length=135.636
+New Line.CBL_EMH_E_6A_5_412 LineCode=500_Cu bus1=E_6A_6_412 bus2=E_6A_5_412 Units=m Length=132.588
+New Line.CBL_EMH_E_6A_5_437 LineCode=500_Cu bus1=E_6A_6_MA_437 bus2=E_6A_5_MA_437 Units=m Length=132.588
+New Line.CBl_EMH_E_6A_6_437 LineCode=500_Cu bus1=MCSS_MC bus2=E_6A_6_MA_437 Units=m Length=28.956
+New Line.CBL_EMH_E6A_6_412 LineCode=500_Cu bus1=MCSS_MB bus2=E_6A_6_412 Units=m Length=36.576
+New Line.CBL_MCSS_MA LineCode=750_Cu bus1=E_6A_6_EC_25 bus2=MCSS_MA Units=m Length=38.1
+New Line.CBL_MCSS_MB LineCode=750_Cu bus1=E_6A_6_EC_12 bus2=MCSS_MB Units=m Length=30.48
+New Line.CBL_MCSS_MC LineCode=750_Cu bus1=E_6A_6_EC_37 bus2=MCSS_MC Units=m Length=24.384
+New Line.CBL_SS_102_406 LineCode=750_Cu bus1=E_5_8_1_406 bus2=SS_102_EC Units=m Length=81.0768
+New Line.CBL_SS_103_407 LineCode=750_Cu bus1=E_5_8_1_407 bus2=SS_103_EC Units=m Length=81.0768
+New Line.CBL_SS_114_EC LineCode=750_Cu bus1=E_5_4_2_405 bus2=SS_114_EC Units=m Length=68.58
+New Line.CBL_SS_115_EC LineCode=750_Cu bus1=E_5_4_2_404 bus2=SS_115_EC Units=m Length=68.58
+New Line.CBL_SS_125_MCSS_409 LineCode=500_Cu bus1=E_4_2_409 bus2=SS_125_MCSS Units=m Length=20.1168
+New Line.CBL_SS_126_407 LineCode=750_Cu bus1=E_5_8_1_407 bus2=SS_126 Units=m Length=88.392
+New Line.CBL_SS_127_406 LineCode=750_Cu bus1=E_5_8_1_406 bus2=SS_127 Units=m Length=88.392
+New Line.CBL_SS_130 LineCode=750_Cu bus1=E_4_2_405 bus2=SS_130 Units=m Length=524.5608
+New Line.CBL_SS_131 LineCode=750_Cu bus1=E_4_2_404 bus2=SS_131 Units=m Length=525.78
+New Line.CBL_SS_138 LineCode=500_Cu bus1=E_5_3_2_SS_138 bus2=SS_138 Units=m Length=15.24
+New Line.CBL_T_304_EC_PS LineCode=500_Cu bus1=SS_125_MCSS bus2=BUS_PD_T_304 Units=m Length=7.62
+New Line.CBL_T_JMC_TEMP_PWR LineCode=500_Cu bus1=SS_125_MCSS bus2=BUS_JMC_TEMP_PWR_LI_SW Units=m Length=426.72
+New Line.CBL_T_JMC_TEMP_PWR_PRI LineCode=4_0_Cu bus1=BUS_JMC_TEMP_PWR_LI_SW bus2=BUS_JMC_TEMP_PWR_PRI Units=m Length=3.6576
+New Line.CBL_XF_CPT_1A LineCode=1_0_Cu bus1=MCSS_MA bus2=BUS_XF_CPT_1A Units=m Length=27.7368
+New Line.CBL_XF_CPT_1B LineCode=1_0_Cu bus1=MCSS_MB bus2=BUS_XF_CPT_1B Units=m Length=30.48
+New Line.CBL_XF_CPT_1C LineCode=2_0_Cu bus1=MCSS_MC bus2=BUS_XF_CPT_1C Units=m Length=24.384
+New Line.CBL_XF_CPT_C LineCode=2_0_Cu bus1=EAST_CAMPUS_1 bus2=BUS_XF_CPT_C_PRI Units=m Length=16.764
+New Line.CBL_XF_CPT_E LineCode=2_0_Cu bus1=EAST_CAMPUS_1 bus2=BUS_XF_CPT_E_PRI Units=m Length=15.24
+New Line.CBL_XF_CPT_W LineCode=2_0_Cu bus1=EAST_CAMPUS_1 bus2=BUS_XF_CPT_W_PRI Units=m Length=18.288
+New Line.F_1SG1 LineCode=500_Cu bus1=SG1_BUS bus2=PSB Units=m Length=85.344
+New Line.F_3RD_C_S166 LineCode=2_0_Cu bus1=E_7_19_4 bus2=3RD_C_S166_PRI Units=m Length=71.628
+New Line.F_3RD_C_S206 LineCode=500_Cu bus1=E_7_19_1 bus2=3RD_C_S206PRI Units=m Length=88.392
+New Line.F_3RD_C_S207 LineCode=500_Cu bus1=3RD_C_S206PRI bus2=T_207_PRI Units=m Length=91.44
+New Line.F_ALEX_SP LineCode=4_0_Cu bus1=E_7_26_1 bus2=ALEX_SP_PRI Units=m Length=79.248
+New Line.F_ARGO_BLAKE LineCode=500_Cu bus1=SS_35_RC bus2=T_342_PRI Units=m Length=41.148
+New Line.F_ATHL_FIELD LineCode=250_Cu bus1=E_7_23_1 bus2=T_242_PRI Units=m Length=167.64
+New Line.F_B_BOX_REST LineCode=500_Cu bus1=SS_88_RC bus2=B_BOX_REST_PRI Units=m Length=85.344
+New Line.F_B_SCI_PB3_102 LineCode=500_Cu bus1=PB_1_102 bus2=B_SCI_PB3_102 Units=m Length=47.244
+New Line.F_B_SCI_PB3_105 LineCode=500_Cu bus1=PB_1_105 bus2=B_SCI_PB3_105 Units=m Length=47.244
+New Line.F_B_SCI_PB4_102 LineCode=500_Cu bus1=B_SCI_PB3_102 bus2=B_SCI_PB4_102 Units=m Length=51.816
+New Line.F_B_SCI_PB4_105 LineCode=500_Cu bus1=B_SCI_PB3_105 bus2=B_SCI_PB4_105 Units=m Length=51.816
+New Line.F_BIO_MED LineCode=500_Cu bus1=SS_95_SOM bus2=PRI_BIO_MED Units=m Length=38.1
+New Line.F_BIRCH_AQ LineCode=4_0_Cu bus1=SS_64_SIO bus2=BUS_T_223_PRI Units=m Length=76.2
+New Line.F_BLACK_BOX LineCode=500_Cu bus1=SS_88_RC bus2=BLACK_BOX_PRI Units=m Length=30.48
+New Line.F_BLDG_3C_12 LineCode=500_Cu bus1=BLDG_3B_12KV bus2=BLDG_3C_12KV Units=m Length=42.672
+New Line.F_BLDG_3C_15 LineCode=500_Cu bus1=BLDG_3B_15 bus2=BLDG3C_15_12KV Units=m Length=42.672
+New Line.F_BONNER_LCA LineCode=2_0_Cu bus1=SS_36_RC bus2=SW_T_119 Units=m Length=10.668
+New Line.F_BONNER_LCB LineCode=2_0_Cu bus1=SS_36_RC bus2=SW_T_120 Units=m Length=13.716
+New Line.F_BONNER_LCC LineCode=2_0_Cu bus1=SS_36_RC bus2=SW_T_121_1 Units=m Length=76.2
+New Line.F_BRAIN_IMAGE LineCode=500_Cu bus1=SS_95_SOM bus2=PRI_BIO_MED_1 Units=m Length=36.576
+New Line.F_BSB_MTF_TUN_102 LineCode=500_Cu bus1=E_1_2_102 bus2=BSB_MTF_TUN_102 Units=m Length=67.056
+New Line.F_BSB_MTF_TUN_105 LineCode=500_Cu bus1=E_1_2_105 bus2=BSB_MTF_TUN_105 Units=m Length=67.056
+New Line.F_BUS_NC14 LineCode=500_Cu bus1=BUS_NC_14 bus2=N_CAMPUS_B Units=m Length=0.9144
+New Line.F_BUS_NC15 LineCode=500_Cu bus1=E_7_C_NC3 bus2=N_CAMPUS_C Units=m Length=152.4
+New Line.F_BUS_NC17 LineCode=500_Cu bus1=E_7_C_NC2 bus2=N_CAMPUS_B Units=m Length=152.4
+New Line.F_BUS_NC18 LineCode=500_Cu bus1=BUS_NC17 bus2=N_CAMPUS_A Units=m Length=0.9144
+New Line.F_BUS_NC19 LineCode=500_Cu bus1=E_7_B_NC3 bus2=E_7_C_NC3 Units=m Length=96.012
+New Line.F_C_LIB_S182 LineCode=500_Cu bus1=E_1_6_8 bus2=S182_8 Units=m Length=45.72
+New Line.F_C_LIB_S183 LineCode=500_Cu bus1=S182_8 bus2=S183_8 Units=m Length=0.9144
+New Line.F_C_LIB_S184 LineCode=500_Cu bus1=S183_8 bus2=C_LIB_S184_PRI Units=m Length=0.3048
+New Line.F_C_UNION LineCode=500_Cu bus1=SS_50_SC bus2=T_253_PRI Units=m Length=176.784
+New Line.F_CB_52_TB LineCode=250_Cu bus1=BUS_52_TB bus2=MSG Units=m Length=15.24
+New Line.F_CH_1 LineCode=500_Cu bus1=SUB_1A bus2=BUS_CH_1 Units=m Length=9.144
+New Line.F_CH_2 LineCode=500_Cu bus1=SUB_1A bus2=BUS_CH_2 Units=m Length=9.144
+New Line.F_CLASSROOM LineCode=500_Cu bus1=SS_28_SIO bus2=BUS_T_238_PRI Units=m Length=6.096
+New Line.F_CLIN_SCI_102 LineCode=500_Cu bus1=E_1_2_2_1_102 bus2=CLIN_SCI_12KV Units=m Length=164.592
+New Line.F_CT34_PSB LineCode=500_Cu bus1=PSB bus2=SW_T_087 Units=m Length=45.72
+New Line.F_E_1_0_1_104 LineCode=500_Cu bus1=E_1_0_104 bus2=E_1_0_1_104 Units=m Length=124.968
+New Line.F_E_1_0_1_107 LineCode=500_Cu bus1=E_1_0_107 bus2=E_1_0_1_107 Units=m Length=124.968
+New Line.F_E_1_0_104 LineCode=500_Cu bus1=REVELLE_2 bus2=E_1_0_104 Units=m Length=106.68
+New Line.F_E_1_0_107 LineCode=500_Cu bus1=REVELLE_1 bus2=E_1_0_107 Units=m Length=106.68
+New Line.F_E_1_0_1A_104 LineCode=500_Cu bus1=E_1_0_1_104 bus2=E_1_0_1A_104 Units=m Length=82.296
+New Line.F_E_1_0_1A_107 LineCode=500_Cu bus1=E_1_0_1_107 bus2=E_1_0_1A_107 Units=m Length=82.296
+New Line.F_E_1_0_2_107 LineCode=500_Cu bus1=E_1_0_1A_107 bus2=E_1_0_2_107 Units=m Length=121.92
+New Line.F_E_1_0_2A_104 LineCode=500_Cu bus1=E_1_0_1A_104 bus2=E_1_0_2A_104 Units=m Length=134.112
+New Line.F_E_1_0_2A_107 LineCode=500_Cu bus1=E_1_0_1A_107 bus2=E_1_0_2A_107 Units=m Length=134.112
+New Line.F_E_1_0_2B_104 LineCode=500_Cu bus1=E_1_0_2A_104 bus2=E_1_0_2B_104 Units=m Length=45.72
+New Line.F_E_1_0_2B_107__1 LineCode=500_Cu bus1=E_1_0_2A_107 bus2=E_1_0_2B_107 Units=m Length=45.72
+New Line.F_E_1_0_2B_107__2 LineCode=500_Cu bus1=E_1_0_2B_107 bus2=SS_136 Units=m Length=45.72
+New Line.F_E_1_0_3A_104 LineCode=500_Cu bus1=E_1_0_2A_104 bus2=E_1_0_3A_104 Units=m Length=45.72
+New Line.F_E_1_0_3A_107 LineCode=500_Cu bus1=E_1_0_2A_107 bus2=E_1_0_3A_107 Units=m Length=45.72
+New Line.F_E_1_1_102 LineCode=500_Cu bus1=E_1_2_0_102 bus2=E_1_1_102 Units=m Length=115.824
+New Line.F_E_1_1_105 LineCode=500_Cu bus1=E_1_2_0_105 bus2=E_1_1_105 Units=m Length=115.824
+New Line.F_E_1_1_19 LineCode=500_Cu bus1=E_1_2_0_19 bus2=E_1_1_19 Units=m Length=115.824
+New Line.F_E_1_1_4 LineCode=500_Cu bus1=E_1_2_0_4 bus2=E_1_1_4 Units=m Length=115.824
+New Line.F_E_1_1_EG LineCode=250_Cu bus1=E_2_1_EG bus2=E_1_1_EG Units=m Length=109.728
+New Line.F_E_1_10_11 LineCode=500_Cu bus1=E_1_10_11 bus2=E_1_11_11 Units=m Length=68.58
+New Line.F_E_1_10_8 LineCode=500_Cu bus1=E_1_10_8 bus2=E_1_11_8 Units=m Length=68.58
+New Line.F_E_1_11_11 LineCode=500_Cu bus1=E_1_11_11 bus2=E_1_12_11 Units=m Length=91.44
+New Line.F_E_1_11_8 LineCode=500_Cu bus1=E_1_11_8 bus2=E_1_12_8 Units=m Length=91.44
+New Line.F_E_1_19 LineCode=500_Cu bus1=E_7_17_1_338 bus2=SS_120_ERC Units=m Length=129.54
+New Line.F_E_1_2_0_102 LineCode=500_Cu bus1=E_1_2_102 bus2=E_1_2_0_102 Units=m Length=9.144
+New Line.F_E_1_2_0_105 LineCode=500_Cu bus1=E_1_2_105 bus2=E_1_2_0_105 Units=m Length=9.144
+New Line.F_E_1_2_0_19 LineCode=500_Cu bus1=E_1_2_19 bus2=E_1_2_0_19 Units=m Length=9.144
+New Line.F_E_1_2_0_4 LineCode=500_Cu bus1=E_1_2_4 bus2=E_1_2_0_4 Units=m Length=9.144
+New Line.F_E_1_2_1_102 LineCode=500_Cu bus1=E_1_2_102 bus2=E_1_2_1_102 Units=m Length=102.108
+New Line.F_E_1_2_1_105 LineCode=500_Cu bus1=E_1_2_105 bus2=E_1_2_1_105 Units=m Length=102.108
+New Line.F_E_1_2_102 LineCode=500_Cu bus1=E_1_3_102 bus2=E_1_2_102 Units=m Length=124.968
+New Line.F_E_1_2_105 LineCode=500_Cu bus1=E_1_3_105 bus2=E_1_2_105 Units=m Length=124.968
+New Line.F_E_1_2_19 LineCode=500_Cu bus1=E_1_3_19 bus2=E_1_2_19 Units=m Length=124.968
+New Line.F_E_1_2_2_1_102 LineCode=500_Cu bus1=E_1_2_2_102 bus2=E_1_2_2_1_102 Units=m Length=3.048
+New Line.F_E_1_2_2_102 LineCode=500_Cu bus1=B_SCI_PB4_102 bus2=E_1_2_2_102 Units=m Length=48.768
+New Line.F_E_1_2_2_105 LineCode=500_Cu bus1=B_SCI_PB4_105 bus2=E_1_2_2_105 Units=m Length=48.768
+New Line.F_E_1_2_3_105 LineCode=500_Cu bus1=E_1_2_2_105 bus2=E_1_2_3_105 Units=m Length=99.06
+New Line.F_E_1_2_4 LineCode=500_Cu bus1=E_1_3_4 bus2=E_1_2_4 Units=m Length=124.968
+New Line.F_E_1_2_EG LineCode=250_Cu bus1=SS_84 bus2=E_1_2_EG Units=m Length=9.144
+New Line.F_E_1_20 LineCode=500_Cu bus1=SS_119_ERC bus2=E_7_17_1_307 Units=m Length=129.54
+New Line.F_E_1_3_11 LineCode=500_Cu bus1=E_1_4_11 bus2=E_1_3_11 Units=m Length=123.444
+New Line.F_E_1_3_19 LineCode=500_Cu bus1=E_1_3_19 bus2=E_6_16_19 Units=m Length=71.628
+New Line.F_E_1_3_4 LineCode=500_Cu bus1=E_1_3_4 bus2=E_6_16_4 Units=m Length=71.628
+New Line.F_E_1_3_8 LineCode=500_Cu bus1=E_1_4_8 bus2=E_1_3_8 Units=m Length=123.444
+New Line.F_E_1_4_1_11 LineCode=500_Cu bus1=E_1_4_1_11 bus2=E_1_4_11 Units=m Length=77.724
+New Line.F_E_1_4_1_8 LineCode=500_Cu bus1=E_1_4_1_8 bus2=E_1_4_8 Units=m Length=77.724
+New Line.F_E_1_4_11 LineCode=500_Cu bus1=E_1_5_11 bus2=E_1_4_11 Units=m Length=144.78
+New Line.F_E_1_4_2_11 LineCode=500_Cu bus1=E_1_4_2_11 bus2=E_1_4_1_11 Units=m Length=91.44
+New Line.F_E_1_4_2_8 LineCode=500_Cu bus1=E_1_4_2_8 bus2=E_1_4_1_8 Units=m Length=91.44
+New Line.F_E_1_4_3_11 LineCode=500_Cu bus1=E_1_4_3_11 bus2=E_1_4_2_11 Units=m Length=91.44
+New Line.F_E_1_4_4_1_304 LineCode=500_Cu bus1=E_1_4_4_1_304 bus2=E_1_4_4_304 Units=m Length=82.296
+New Line.F_E_1_4_4_1_305 LineCode=500_Cu bus1=E_1_4_4_1_305 bus2=E_1_4_4_305 Units=m Length=82.296
+New Line.F_E_1_4_4_304 LineCode=500_Cu bus1=E_1_9_2_304 bus2=E_1_4_4_304 Units=m Length=109.728
+New Line.F_E_1_4_4_305 LineCode=500_Cu bus1=E_1_9_2_305 bus2=E_1_4_4_305 Units=m Length=109.728
+New Line.F_E_1_4_5_304 LineCode=500_Cu bus1=E_1_4_5_304 bus2=E_1_4_4_304 Units=m Length=161.544
+New Line.F_E_1_4_5_305 LineCode=500_Cu bus1=E_1_4_5_305 bus2=E_1_4_4_305 Units=m Length=161.544
+New Line.F_E_1_4_8 LineCode=500_Cu bus1=E_1_5_8 bus2=E_1_4_8 Units=m Length=144.78
+New Line.F_E_1_5_11 LineCode=500_Cu bus1=E_1_6_11 bus2=E_1_5_11 Units=m Length=97.536
+New Line.F_E_1_5_8 LineCode=500_Cu bus1=E_1_6_8 bus2=E_1_5_8 Units=m Length=97.536
+New Line.F_E_1_6_11 LineCode=500_Cu bus1=E_1_7_11 bus2=E_1_6_11 Units=m Length=121.92
+New Line.F_E_1_6_8 LineCode=500_Cu bus1=E_1_7_8 bus2=E_1_6_8 Units=m Length=121.92
+New Line.F_E_1_7_11 LineCode=500_Cu bus1=E_1_8_11 bus2=E_1_7_11 Units=m Length=118.872
+New Line.F_E_1_7_8 LineCode=500_Cu bus1=E_1_8_8 bus2=E_1_7_8 Units=m Length=118.872
+New Line.F_E_1_8_11 LineCode=500_Cu bus1=E_1_9_11 bus2=E_1_8_11 Units=m Length=30.48
+New Line.F_E_1_8_8 LineCode=500_Cu bus1=E_1_9_8 bus2=E_1_8_8 Units=m Length=30.48
+New Line.F_E_1_9_1 LineCode=500_Cu bus1=E_1_9_8 bus2=E_1_9_1_8 Units=m Length=12.192
+New Line.F_E_1_9_1_11 LineCode=500_Cu bus1=E_1_9_11 bus2=E_1_9_1_11 Units=m Length=12.192
+New Line.F_E_1_9_1_8 LineCode=500_Cu bus1=E_7_10_2_8 bus2=E_1_9_1_8 Units=m Length=99.06
+New Line.F_E_1_9_11 LineCode=500_Cu bus1=E_1_10_11 bus2=E_1_9_11 Units=m Length=91.44
+New Line.F_E_1_9_2_11 LineCode=500_Cu bus1=E_1_9_1_11 bus2=E_1_9_2_11 Units=m Length=71.628
+New Line.F_E_1_9_2_304 LineCode=500_Cu bus1=E_1_9_2_304 bus2=E_1_9_3_304 Units=m Length=109.728
+New Line.F_E_1_9_2_305 LineCode=500_Cu bus1=E_1_9_2_305 bus2=E_1_9_3_305 Units=m Length=109.728
+New Line.F_E_1_9_2_8 LineCode=500_Cu bus1=E_1_9_1_8 bus2=E_1_9_2_8 Units=m Length=71.628
+New Line.F_E_1_9_3_304 LineCode=500_Cu bus1=E_1_9_4_304 bus2=E_1_9_3_304 Units=m Length=73.152
+New Line.F_E_1_9_3_305 LineCode=500_Cu bus1=E_1_9_4_305 bus2=E_1_9_3_305 Units=m Length=73.152
+New Line.F_E_1_9_4_304 LineCode=500_Cu bus1=E_1_9_4_304 bus2=E_1_9_5_304 Units=m Length=100.584
+New Line.F_E_1_9_4_305 LineCode=500_Cu bus1=E_1_9_4_305 bus2=E_1_9_5_305 Units=m Length=100.584
+New Line.F_E_1_9_5_304 LineCode=500_Cu bus1=E_7_C_304 bus2=E_1_9_5_304 Units=m Length=103.632
+New Line.F_E_1_9_5_305 LineCode=500_Cu bus1=E_7_C_305 bus2=E_1_9_5_305 Units=m Length=103.632
+New Line.F_E_1_9_8 LineCode=500_Cu bus1=E_1_10_8 bus2=E_1_9_8 Units=m Length=91.44
+New Line.F_E_10_10_109 LineCode=500_Cu bus1=E_10_11_109 bus2=E_10_10_109 Units=m Length=54.864
+New Line.F_E_10_10_110 LineCode=500_Cu bus1=E_10_11_110 bus2=E_10_10_110 Units=m Length=54.864
+New Line.F_E_10_10_202 LineCode=4_0_Cu bus1=E_10_11_202 bus2=E_10_10_202 Units=m Length=54.864
+New Line.F_E_10_10_205 LineCode=4_0_Cu bus1=E_10_11_205 bus2=E_10_10_205 Units=m Length=54.864
+New Line.F_E_10_11_1_202 LineCode=4_0_Cu bus1=E_10_10_202 bus2=E_10_11_1_202 Units=m Length=96.012
+New Line.F_E_10_11_1_205 LineCode=4_0_Cu bus1=E_10_10_205 bus2=E_10_11_1_205 Units=m Length=96.012
+New Line.F_E_10_11_10_109 LineCode=500_Cu bus1=E_10_11_11_109 bus2=E_10_11_10_109 Units=m Length=33.528
+New Line.F_E_10_11_10_110 LineCode=500_Cu bus1=E_10_11_11_110 bus2=E_10_11_10_110 Units=m Length=33.528
+New Line.F_E_10_11_109 LineCode=500_Cu bus1=E_10_11_2_109 bus2=E_10_11_109 Units=m Length=94.488
+New Line.F_E_10_11_11_109 LineCode=500_Cu bus1=E_10_11_12_109 bus2=E_10_11_11_109 Units=m Length=105.156
+New Line.F_E_10_11_11_110 LineCode=500_Cu bus1=E_10_11_12_110 bus2=E_10_11_11_110 Units=m Length=105.156
+New Line.F_E_10_11_110 LineCode=500_Cu bus1=E_10_11_2_110 bus2=E_10_11_110 Units=m Length=94.488
+New Line.F_E_10_11_12_109 LineCode=500_Cu bus1=E_10_11_13_109 bus2=E_10_11_12_109 Units=m Length=120.396
+New Line.F_E_10_11_12_110 LineCode=500_Cu bus1=E_10_11_13_110 bus2=E_10_11_12_110 Units=m Length=120.396
+New Line.F_E_10_11_13_1_106 LineCode=500_Cu bus1=E_10_11_13_1_106 bus2=E_10_11_13_106 Units=m Length=112.776
+New Line.F_E_10_11_13_1_119 LineCode=500_Cu bus1=E_10_11_13_1_119 bus2=E_10_11_13_119 Units=m Length=112.776
+New Line.F_E_10_11_13_106 LineCode=500_Cu bus1=E_10_11_14_106 bus2=E_10_11_13_106 Units=m Length=149.352
+New Line.F_E_10_11_13_109 LineCode=500_Cu bus1=E_10_11_14_109 bus2=E_10_11_13_109 Units=m Length=149.352
+New Line.F_E_10_11_13_110 LineCode=500_Cu bus1=E_10_11_14_110 bus2=E_10_11_13_110 Units=m Length=149.352
+New Line.F_E_10_11_13_119 LineCode=500_Cu bus1=E_10_11_14_119 bus2=E_10_11_13_119 Units=m Length=149.352
+New Line.F_E_10_11_13_1A_106 LineCode=500_Cu bus1=E_10_11_13_106 bus2=E_10_11_13_1A_106 Units=m Length=128.016
+New Line.F_E_10_11_13_1A_119 LineCode=500_Cu bus1=E_10_11_13_119 bus2=E_10_11_13_1A_119 Units=m Length=128.016
+New Line.F_E_10_11_13_2_106 LineCode=500_Cu bus1=E_10_11_13_2_106 bus2=E_10_11_13_1_106 Units=m Length=114.3
+New Line.F_E_10_11_13_2_119 LineCode=500_Cu bus1=E_10_11_13_2_119 bus2=E_10_11_13_1_119 Units=m Length=114.3
+New Line.F_E_10_11_13_3_106 LineCode=500_Cu bus1=E_10_11_13_3_106 bus2=E_10_11_13_2_106 Units=m Length=121.92
+New Line.F_E_10_11_13_3_119 LineCode=500_Cu bus1=E_10_11_13_3_119 bus2=E_10_11_13_2_119 Units=m Length=121.92
+New Line.F_E_10_11_13_3A LineCode=500_Cu bus1=SS_137 bus2=E_10_11_13_3A Units=m Length=0.3048
+New Line.F_E_10_11_13_4_119 LineCode=500_Cu bus1=E_10_11_13_4_119 bus2=E_10_11_13_3_119 Units=m Length=53.34
+New Line.F_E_10_11_13_5_119 LineCode=500_Cu bus1=E_10_11_13_5_119 bus2=E_10_11_13_4_119 Units=m Length=76.2
+New Line.F_E_10_11_14_1 LineCode=500_Cu bus1=SS_17_RC bus2=E_10_11_14_1 Units=m Length=147.828
+New Line.F_E_10_11_14_106 LineCode=500_Cu bus1=E_10_11_15_106 bus2=E_10_11_14_106 Units=m Length=121.92
+New Line.F_E_10_11_14_109 LineCode=500_Cu bus1=E_10_11_15_109 bus2=E_10_11_14_109 Units=m Length=121.92
+New Line.F_E_10_11_14_110 LineCode=500_Cu bus1=E_10_11_15_110 bus2=E_10_11_14_110 Units=m Length=121.92
+New Line.F_E_10_11_14_119 LineCode=500_Cu bus1=E_10_11_15_119 bus2=E_10_11_14_119 Units=m Length=121.92
+New Line.F_E_10_11_15_106 LineCode=500_Cu bus1=REVELLE_2 bus2=E_10_11_15_106 Units=m Length=91.44
+New Line.F_E_10_11_15_109 LineCode=500_Cu bus1=REVELLE_1 bus2=E_10_11_15_109 Units=m Length=91.44
+New Line.F_E_10_11_15_110 LineCode=500_Cu bus1=E_10_11_15_110 bus2=REVELLE_2 Units=m Length=91.44
+New Line.F_E_10_11_15_119 LineCode=500_Cu bus1=E_10_11_15_119 bus2=REVELLE_1 Units=m Length=91.44
+New Line.F_E_10_11_2_1_202 LineCode=4_0_Cu bus1=E_10_11_2_202 bus2=E_10_11_2_1_202 Units=m Length=82.296
+New Line.F_E_10_11_2_109 LineCode=500_Cu bus1=E_10_11_3_109 bus2=E_10_11_2_109 Units=m Length=128.016
+New Line.F_E_10_11_2_110 LineCode=500_Cu bus1=E_10_11_3_110 bus2=E_10_11_2_110 Units=m Length=128.016
+New Line.F_E_10_11_202 LineCode=500_Cu bus1=E_10_11_2_202 bus2=E_10_11_202 Units=m Length=94.488
+New Line.F_E_10_11_205 LineCode=4_0_Cu bus1=E_10_11_2_205 bus2=E_10_11_205 Units=m Length=94.488
+New Line.F_E_10_11_3_109 LineCode=500_Cu bus1=E_10_11_4_109 bus2=E_10_11_3_109 Units=m Length=80.772
+New Line.F_E_10_11_3_110 LineCode=500_Cu bus1=E_10_11_4_110 bus2=E_10_11_3_110 Units=m Length=80.772
+New Line.F_E_10_11_3_202 LineCode=4_0_Cu bus1=E_10_11_4_202 bus2=E_10_11_3_202 Units=m Length=80.772
+New Line.F_E_10_11_4_109 LineCode=500_Cu bus1=E_10_11_5_109 bus2=E_10_11_4_109 Units=m Length=131.064
+New Line.F_E_10_11_4_110 LineCode=500_Cu bus1=E_10_11_5_110 bus2=E_10_11_4_110 Units=m Length=131.064
+New Line.F_E_10_11_5_109 LineCode=500_Cu bus1=E_10_11_6_109 bus2=E_10_11_5_109 Units=m Length=126.492
+New Line.F_E_10_11_5_110 LineCode=500_Cu bus1=E_10_11_6_110 bus2=E_10_11_5_110 Units=m Length=126.492
+New Line.F_E_10_11_6_109 LineCode=500_Cu bus1=E_10_11_7_109 bus2=E_10_11_6_109 Units=m Length=138.684
+New Line.F_E_10_11_6_110 LineCode=500_Cu bus1=E_10_11_7_110 bus2=E_10_11_6_110 Units=m Length=138.684
+New Line.F_E_10_11_7_109 LineCode=500_Cu bus1=E_10_11_8_109 bus2=E_10_11_7_109 Units=m Length=137.16
+New Line.F_E_10_11_7_110 LineCode=500_Cu bus1=E_10_11_8_110 bus2=E_10_11_7_110 Units=m Length=137.16
+New Line.F_E_10_11_8_109 LineCode=500_Cu bus1=E_10_11_9_109 bus2=E_10_11_8_109 Units=m Length=138.684
+New Line.F_E_10_11_8_110 LineCode=500_Cu bus1=E_10_11_9_110 bus2=E_10_11_8_110 Units=m Length=138.684
+New Line.F_E_10_11_9_109 LineCode=500_Cu bus1=E_10_11_10_109 bus2=E_10_11_9_109 Units=m Length=150.876
+New Line.F_E_10_11_9_110 LineCode=500_Cu bus1=E_10_11_10_110 bus2=E_10_11_9_110 Units=m Length=150.876
+New Line.F_E_10_113_203 LineCode=4_0_Cu bus1=E_10_11_3_202 bus2=E_10_11_2_202 Units=m Length=128.016
+New Line.F_E_10_12_202 LineCode=500_Cu bus1=E_10_11_202 bus2=E_10_12_202 Units=m Length=106.68
+New Line.F_E_10_12_205 LineCode=500_Cu bus1=E_10_11_205 bus2=E_10_12_205 Units=m Length=106.68
+New Line.F_E_10_2_203 LineCode=4_0_Cu bus1=E_10_8_5_203 bus2=E_10_2_203 Units=m Length=91.44
+New Line.F_E_10_2_204 LineCode=4_0_Cu bus1=E_10_8_5_204 bus2=E_10_2_204 Units=m Length=91.44
+New Line.F_E_10_202 LineCode=500_Cu bus1=E_10_A_202 bus2=E_10_202 Units=m Length=4.572
+New Line.F_E_10_205 LineCode=500_Cu bus1=E_10_A_205 bus2=E_10_205 Units=m Length=4.572
+New Line.F_E_10_8_1_203 LineCode=4_0_Cu bus1=E_10_A_203 bus2=E_10_8_1_203 Units=m Length=68.58
+New Line.F_E_10_8_1_204 LineCode=4_0_Cu bus1=E_10_A_204 bus2=E_10_8_1_204 Units=m Length=68.58
+New Line.F_E_10_8_109 LineCode=500_Cu bus1=E_10_9_109 bus2=E_10_8_109 Units=m Length=144.78
+New Line.F_E_10_8_110 LineCode=500_Cu bus1=E_10_9_110 bus2=E_10_8_110 Units=m Length=144.78
+New Line.F_E_10_8_2_1_203 LineCode=4_0_Cu bus1=E_10_8_1_203 bus2=E_10_8_2_1_203 Units=m Length=21.336
+New Line.F_E_10_8_2_1_204 LineCode=4_0_Cu bus1=E_10_8_1_204 bus2=E10_8_2_1_204 Units=m Length=21.336
+New Line.F_E_10_8_2_203 LineCode=4_0_Cu bus1=E_10_8_2_1_203 bus2=E_10_8_2_203 Units=m Length=97.536
+New Line.F_E_10_8_2_204 LineCode=4_0_Cu bus1=E10_8_2_1_204 bus2=E_10_8_2_204 Units=m Length=97.536
+New Line.F_E_10_8_202 LineCode=500_Cu bus1=E_10_9_202 bus2=E_10_8_202 Units=m Length=144.78
+New Line.F_E_10_8_205 LineCode=500_Cu bus1=E_10_9_205 bus2=E_10_8_205 Units=m Length=144.78
+New Line.F_E_10_8_3_203 LineCode=4_0_Cu bus1=SB_E_10_8_3_203 bus2=E_10_8_3_203 Units=m Length=42.672
+New Line.F_E_10_8_3_204 LineCode=4_0_Cu bus1=SB_E_10_8_3_204 bus2=E_10_8_3_204 Units=m Length=42.672
+New Line.F_E_10_8_4_203 LineCode=4_0_Cu bus1=E_10_8_3_203 bus2=E_10_8_4_203 Units=m Length=100.584
+New Line.F_E_10_8_4_204 LineCode=4_0_Cu bus1=E_10_8_3_204 bus2=E_10_8_4_204 Units=m Length=100.584
+New Line.F_E_10_8_5_203 LineCode=4_0_Cu bus1=E_10_8_4_203 bus2=E_10_8_5_203 Units=m Length=21.336
+New Line.F_E_10_8_5_204 LineCode=4_0_Cu bus1=E_10_8_4_204 bus2=E_10_8_5_204 Units=m Length=21.336
+New Line.F_E_10_9_109 LineCode=500_Cu bus1=E_10_10_109 bus2=E_10_9_109 Units=m Length=60.96
+New Line.F_E_10_9_110 LineCode=500_Cu bus1=E_10_10_110 bus2=E_10_9_110 Units=m Length=60.96
+New Line.F_E_10_9_202 LineCode=500_Cu bus1=E_10_10_202 bus2=E_10_9_202 Units=m Length=60.96
+New Line.F_E_10_9_205 LineCode=500_Cu bus1=E_10_10_205 bus2=E_10_9_205 Units=m Length=60.96
+New Line.F_E_10_A_109 LineCode=500_Cu bus1=E_10_8_109 bus2=E_10_A_109 Units=m Length=38.1
+New Line.F_E_10_A_2 LineCode=500_Cu bus1=E_10_A_203 bus2=SIO_2_SUB Units=m Length=7.62
+New Line.F_E_10_A_202 LineCode=500_Cu bus1=E_10_8_202 bus2=E_10_A_202 Units=m Length=38.1
+New Line.F_E_10_A_205 LineCode=500_Cu bus1=E_10_8_205 bus2=E_10_A_205 Units=m Length=38.1
+New Line.F_E_10_A_3 LineCode=500_Cu bus1=E_10_A_204 bus2=SIO_1_SUB Units=m Length=7.62
+New Line.F_E_10A_110 LineCode=500_Cu bus1=E_10_8_110 bus2=E_10_A_110 Units=m Length=38.1
+New Line.F_E_11_0_307 LineCode=500_Cu bus1=E_11_0_307 bus2=N_CAMPUS_A Units=m Length=83.82
+New Line.F_E_11_0_338 LineCode=500_Cu bus1=E_11_0_338 bus2=N_CAMPUS_C Units=m Length=83.82
+New Line.F_E_11_1_307 LineCode=500_Cu bus1=E_11_1_307 bus2=E_11_0_307 Units=m Length=106.68
+New Line.F_E_11_1_338 LineCode=500_Cu bus1=E_11_1_338 bus2=E_11_0_338 Units=m Length=106.68
+New Line.F_E_11_2_307 LineCode=500_Cu bus1=E_11_2_307 bus2=E_11_1_307 Units=m Length=167.64
+New Line.F_E_11_3_307 LineCode=500_Cu bus1=E_11_3_307 bus2=E_11_2_307 Units=m Length=149.352
+New Line.F_E_11_3_338 LineCode=500_Cu bus1=E_11_3_338 bus2=E_11_2_338 Units=m Length=149.352
+New Line.F_E_11_4_307 LineCode=500_Cu bus1=E_11_4_307 bus2=E_11_3_307 Units=m Length=152.4
+New Line.F_E_11_4_338 LineCode=500_Cu bus1=E_11_4_338 bus2=E_11_3_338 Units=m Length=152.4
+New Line.F_E_17_3_302 LineCode=500_Cu bus1=E_7_17_3_302 bus2=E_7_17_302 Units=m Length=73.152
+New Line.F_E_17_3_303 LineCode=500_Cu bus1=E_7_17_3_303 bus2=E_7_17_303 Units=m Length=73.152
+New Line.F_E_18_1_15 LineCode=500_Cu bus1=E_7_18_1_15 bus2=E_7_18_15 Units=m Length=51.816
+New Line.F_E_18_2_15 LineCode=500_Cu bus1=E_7_18_2_15 bus2=E_7_18_1_15 Units=m Length=39.624
+New Line.F_E_2_0_EG LineCode=250_Cu bus1=E_1_1_EG bus2=E_2_0_EG Units=m Length=115.824
+New Line.F_E_2_1_102 LineCode=500_Cu bus1=E_1_1_102 bus2=E_2_1_102 Units=m Length=109.728
+New Line.F_E_2_1_105 LineCode=500_Cu bus1=E_1_1_105 bus2=E_2_1_105 Units=m Length=109.728
+New Line.F_E_2_1_19 LineCode=500_Cu bus1=E_1_1_19 bus2=E_2_1_19 Units=m Length=109.728
+New Line.F_E_2_1_EG LineCode=250_Cu bus1=GILMAN_VAULT_EG bus2=E_2_1_EG Units=m Length=30.48
+New Line.F_E_2_10_1_12 LineCode=500_Cu bus1=SS_61_TMC bus2=E_2_10_1_12 Units=m Length=45.72
+New Line.F_E_2_10_1_15 LineCode=500_Cu bus1=SS_60_TMC bus2=E_2_10_1_15 Units=m Length=45.72
+New Line.F_E_2_10_12 LineCode=500_Cu bus1=BLDG_3B_12KV bus2=E_2_10_12 Units=m Length=79.248
+New Line.F_E_2_10_15 LineCode=500_Cu bus1=BLDG_3B_15 bus2=E_2_10_15 Units=m Length=79.248
+New Line.F_E_2_10_2_12 LineCode=500_Cu bus1=SS_46_TMC_12 bus2=E_2_10_2_12 Units=m Length=21.336
+New Line.F_E_2_10_2_15 LineCode=500_Cu bus1=SS_46_TMC_15 bus2=E_2_10_2_15 Units=m Length=21.336
+New Line.F_E_2_10_3_12 LineCode=500_Cu bus1=E_2_10_2_12 bus2=E_2_10_3_12 Units=m Length=30.48
+New Line.F_E_2_10_3_15 LineCode=500_Cu bus1=E_2_10_2_15 bus2=E_2_10_3_15 Units=m Length=30.48
+New Line.F_E_2_10_4_12 LineCode=500_Cu bus1=E_2_10_3_12 bus2=E_2_10_4_12 Units=m Length=30.48
+New Line.F_E_2_10_4_15 LineCode=500_Cu bus1=E_2_10_3_15 bus2=E_2_10_4_15 Units=m Length=30.48
+New Line.F_E_2_2_EG LineCode=250_Cu bus1=E_2_2_EG bus2=E_2_1_EG Units=m Length=94.488
+New Line.F_E_2_3_EG LineCode=250_Cu bus1=E_2_3_EG bus2=E_2_2_EG Units=m Length=146.304
+New Line.F_E_2_4_1_12 LineCode=500_Cu bus1=SS_83_MC_12 bus2=E_2_4_1_12 Units=m Length=146.304
+New Line.F_E_2_4_1_15 LineCode=500_Cu bus1=SS_83_MC_15 bus2=E_2_4_1_15 Units=m Length=146.304
+New Line.F_E_2_4_12 LineCode=500_Cu bus1=E_2_5_12 bus2=E_2_4_12 Units=m Length=54.864
+New Line.F_E_2_4_15 LineCode=500_Cu bus1=E_2_5_15 bus2=E_2_4_15 Units=m Length=54.864
+New Line.F_E_2_4_2_12 LineCode=500_Cu bus1=E_2_4_1_12 bus2=E_2_4_2_12 Units=m Length=106.68
+New Line.F_E_2_4_2_15 LineCode=500_Cu bus1=E_2_4_1_15 bus2=E_2_4_2_15 Units=m Length=106.68
+New Line.F_E_2_4_EG LineCode=250_Cu bus1=E_2_4_EG bus2=E_2_3_EG Units=m Length=140.208
+New Line.F_E_2_5_12 LineCode=500_Cu bus1=E_2_6_12 bus2=E_2_5_12 Units=m Length=129.54
+New Line.F_E_2_5_15 LineCode=500_Cu bus1=E_2_6_15 bus2=E_2_5_15 Units=m Length=129.54
+New Line.F_E_2_5_2_12 LineCode=500_Cu bus1=E_2_5_12 bus2=E_2_5_2_12 Units=m Length=141.732
+New Line.F_E_2_5_2_15 LineCode=500_Cu bus1=E_2_5_15 bus2=E_2_5_2_15 Units=m Length=141.732
+New Line.F_E_2_5_EG LineCode=250_Cu bus1=E_2_5_EG bus2=E_2_4_EG Units=m Length=54.864
+New Line.F_E_2_6_1_12 LineCode=500_Cu bus1=E_2_6_1_12 bus2=E_2_6_12 Units=m Length=91.44
+New Line.F_E_2_6_1_15 LineCode=500_Cu bus1=E_2_6_1_15 bus2=E_2_6_15 Units=m Length=91.44
+New Line.F_E_2_6_1_RG LineCode=250_Cu bus1=E_2_6_1_RG bus2=E_2_6_EG Units=m Length=91.44
+New Line.F_E_2_6_10_12 LineCode=500_Cu bus1=E_2_6_10_12 bus2=E_2_6_15 Units=m Length=97.536
+New Line.F_E_2_6_10_15 LineCode=500_Cu bus1=E_2_6_10_15 bus2=E_2_6_12 Units=m Length=97.536
+New Line.F_E_2_6_11_12 LineCode=500_Cu bus1=E_2_6_11_12 bus2=E_2_6_10_12 Units=m Length=64.008
+New Line.F_E_2_6_11_15 LineCode=500_Cu bus1=E_2_6_11_15 bus2=E_2_6_10_15 Units=m Length=64.008
+New Line.F_E_2_6_12 LineCode=500_Cu bus1=E_2_6_12 bus2=E_2_7_12 Units=m Length=80.772
+New Line.F_E_2_6_15 LineCode=500_Cu bus1=E_2_6_15 bus2=E_2_7_15 Units=m Length=80.772
+New Line.F_E_2_6_2_12 LineCode=500_Cu bus1=SS_100_MC_12 bus2=E_2_6_2_12 Units=m Length=83.82
+New Line.F_E_2_6_2_15 LineCode=500_Cu bus1=SS_100_MC_15 bus2=E_2_6_2_15 Units=m Length=83.82
+New Line.F_E_2_6_3_12 LineCode=500_Cu bus1=E_2_6_2_12 bus2=E_2_6_3_12 Units=m Length=33.528
+New Line.F_E_2_6_3_15 LineCode=500_Cu bus1=E_2_6_2_15 bus2=E_2_6_3_15 Units=m Length=33.528
+New Line.F_E_2_6_4_12 LineCode=500_Cu bus1=E_2_6_3_12 bus2=E_2_6_4_12 Units=m Length=71.628
+New Line.F_E_2_6_4_15 LineCode=500_Cu bus1=E_2_6_3_15 bus2=E_2_6_4_15 Units=m Length=71.628
+New Line.F_E_2_6_EG LineCode=250_Cu bus1=E_2_6_EG bus2=E_2_5_EG Units=m Length=129.54
+New Line.F_E_2_7_12 LineCode=500_Cu bus1=E_2_7_12 bus2=E_2_8_12 Units=m Length=259.08
+New Line.F_E_2_7_15 LineCode=500_Cu bus1=E_2_7_15 bus2=E_2_8_15 Units=m Length=259.08
+New Line.F_E_2_8_12 LineCode=500_Cu bus1=E_2_8_12 bus2=E_2_9_12 Units=m Length=259.08
+New Line.F_E_2_8_15 LineCode=500_Cu bus1=E_2_8_15 bus2=E_2_9_15 Units=m Length=259.08
+New Line.F_E_2_9_12 LineCode=500_Cu bus1=E_2_9_12 bus2=E_7_30_12 Units=m Length=56.388
+New Line.F_E_2_9_15 LineCode=500_Cu bus1=E_2_9_15 bus2=E_7_30_15 Units=m Length=56.388
+New Line.F_E_3_1_103 LineCode=500_Cu bus1=GILMAN_VT_103 bus2=E_3_1_103 Units=m Length=83.82
+New Line.F_E_3_1_108 LineCode=500_Cu bus1=GILMAN_VT_108 bus2=E_3_1_108 Units=m Length=83.82
+New Line.F_E_3_2_103 LineCode=500_Cu bus1=SS_32_RC bus2=E_3_2_103 Units=m Length=59.436
+New Line.F_E_3_2_108 LineCode=500_Cu bus1=SS_33_RC bus2=E_3_2_108 Units=m Length=59.436
+New Line.F_E_4_1_T_396 LineCode=500_Cu bus1=E_4_2_T_396 bus2=E_4_1_T_396 Units=m Length=74.676
+New Line.F_E_4_T_396 LineCode=500_Cu bus1=E_4_1_T_396 bus2=E_4_T_396 Units=m Length=61.2648
+New Line.F_E_5_0_10 LineCode=500_Cu bus1=EAST_CAMPUS_2 bus2=E_5_0_10 Units=m Length=21.336
+New Line.F_E_5_0_35 LineCode=500_Cu bus1=E_5_1_35 bus2=E_5_0_35 Units=m Length=99.6696
+New Line.F_E_5_0_37 LineCode=750_Cu bus1=EAST_CAMPUS_3 bus2=E_5_0_37 Units=m Length=18.288
+New Line.F_E_5_0_38 LineCode=500_Cu bus1=EAST_CAMPUS_3 bus2=E_5_0_38 Units=m Length=21.336
+New Line.F_E_5_0_7 LineCode=500_Cu bus1=E_5_1_7 bus2=E_5_0_7 Units=m Length=99.6696
+New Line.F_E_5_1_35 LineCode=500_Cu bus1=E_6_1_35 bus2=E_5_1_35 Units=m Length=43.5864
+New Line.F_E_5_1_37 LineCode=750_Cu bus1=E_5_0_37 bus2=E_5_1_37 Units=m Length=99.6696
+New Line.F_E_5_1_7 LineCode=500_Cu bus1=E_6_1_7 bus2=E_5_1_7 Units=m Length=43.5864
+New Line.F_E_5_2_13 LineCode=500_Cu bus1=E_5_1_13 bus2=E_5_2_13 Units=m Length=112.776
+New Line.F_E_5_3_1_13 LineCode=500_Cu bus1=E_5_3_412 bus2=E_5_3_1_412 Units=m Length=21.336
+New Line.F_E_5_3_1_37 LineCode=500_Cu bus1=E_5_3_437 bus2=E_5_3_1_437 Units=m Length=21.336
+New Line.F_E_5_3_13 LineCode=500_Cu bus1=E_5_2_13 bus2=E_5_3_412 Units=m Length=121.92
+New Line.F_E_5_3_2 LineCode=500_Cu bus1=E_5_3_1_SS_138 bus2=E_5_3_2_SS_138 Units=m Length=67.056
+New Line.F_E_5_3_2_T_359_RAD LineCode=500_Cu bus1=SS_138 bus2=E_5_3_2_T_359_RAD Units=m Length=15.24
+New Line.F_E_5_4_436 LineCode=500_Cu bus1=E_5_3_436 bus2=E_5_5_436 Units=m Length=251.46
+New Line.F_E_5_5_38 LineCode=500_Cu bus1=E_5_4_436 bus2=E_5_5_436 Units=m Length=121.92
+New Line.F_E_5_5_406 LineCode=500_Cu bus1=E_5_4_406 bus2=E_5_5_406 Units=m Length=121.92
+New Line.F_E_5_5_407 LineCode=500_Cu bus1=E_5_4_407 bus2=E_5_5_407 Units=m Length=121.92
+New Line.F_E_5_6_38 LineCode=500_Cu bus1=E_5_5_436 bus2=E_5_6_436 Units=m Length=140.208
+New Line.F_E_5_6_406 LineCode=500_Cu bus1=E_5_5_406 bus2=E_5_6_406 Units=m Length=140.208
+New Line.F_E_5_6_407 LineCode=500_Cu bus1=E_5_5_407 bus2=E_5_6_407 Units=m Length=140.208
+New Line.F_E_5_7_406 LineCode=500_Cu bus1=E_5_6_406 bus2=E_5_7_406 Units=m Length=121.92
+New Line.F_E_5_7_407 LineCode=500_Cu bus1=E_5_6_407 bus2=E_5_7_407 Units=m Length=121.92
+New Line.F_E_5_E_35 LineCode=500_Cu bus1=E_5_E_35 bus2=E_7_5_35 Units=m Length=114.3
+New Line.F_E_5_E_7 LineCode=500_Cu bus1=E_5_E_7 bus2=E_7_5_7 Units=m Length=114.3
+New Line.F_E_5_E_NC1 LineCode=500_Cu bus1=E_5_E_NC1 bus2=E_7_5_NC1 Units=m Length=114.3
+New Line.F_E_5_E_NC2 LineCode=500_Cu bus1=E_5_E_NC2 bus2=E_7_5_NC2 Units=m Length=114.3
+New Line.F_E_5_E_NC3 LineCode=500_Cu bus1=E_5_E_NC3 bus2=E_7_A_NC3 Units=m Length=131.064
+New Line.F_E_5_W_35 LineCode=500_Cu bus1=E_5_W_35 bus2=E_5_E_35 Units=m Length=173.736
+New Line.F_E_5_W_7 LineCode=500_Cu bus1=E_5_W_7 bus2=E_5_E_7 Units=m Length=173.736
+New Line.F_E_5_W_NC1 LineCode=500_Cu bus1=E_5_W_NC1 bus2=E_5_E_NC1 Units=m Length=173.736
+New Line.F_E_5_W_NC2 LineCode=500_Cu bus1=E_5_W_NC2 bus2=E_5_E_NC2 Units=m Length=173.736
+New Line.F_E_5_W_NC3 LineCode=500_Cu bus1=E_5_W_NC3 bus2=E_5_E_NC3 Units=m Length=173.736
+New Line.F_E_6_1_19 LineCode=500_Cu bus1=EAST_CAMPUS_1 bus2=E_6_1_19 Units=m Length=100.584
+New Line.F_E_6_1_35 LineCode=500_Cu bus1=E_7_1_35 bus2=E_6_1_35 Units=m Length=100.584
+New Line.F_E_6_1_4 LineCode=500_Cu bus1=EAST_CAMPUS_2 bus2=E_6_1_4 Units=m Length=100.584
+New Line.F_E_6_1_7 LineCode=500_Cu bus1=E_7_1_7 bus2=E_6_1_7 Units=m Length=100.584
+New Line.F_E_6_10_19 LineCode=500_Cu bus1=E_6_10_19 bus2=E_6_9_19 Units=m Length=132.588
+New Line.F_E_6_10_4 LineCode=500_Cu bus1=E_6_10_4 bus2=E_6_9_4 Units=m Length=132.588
+New Line.F_E_6_11_19 LineCode=500_Cu bus1=E_6_11_19 bus2=E_6_10_19 Units=m Length=103.632
+New Line.F_E_6_11_4 LineCode=500_Cu bus1=E_6_11_4 bus2=E_6_10_4 Units=m Length=103.632
+New Line.F_E_6_12_19 LineCode=500_Cu bus1=E_6_12_19 bus2=E_6_11_19 Units=m Length=109.728
+New Line.F_E_6_12_4 LineCode=500_Cu bus1=E_6_12_4 bus2=E_6_11_4 Units=m Length=109.728
+New Line.F_E_6_13_19 LineCode=500_Cu bus1=E_6_13_19 bus2=E_6_12_19 Units=m Length=115.824
+New Line.F_E_6_13_4 LineCode=500_Cu bus1=E_6_13_4 bus2=E_6_12_4 Units=m Length=115.824
+New Line.F_E_6_14_19 LineCode=500_Cu bus1=E_6_14_19 bus2=E_6_13_19 Units=m Length=126.492
+New Line.F_E_6_14_4 LineCode=500_Cu bus1=E_6_14_4 bus2=E_6_13_4 Units=m Length=126.492
+New Line.F_E_6_15_19 LineCode=500_Cu bus1=E_6_15_19 bus2=E_6_14_19 Units=m Length=118.872
+New Line.F_E_6_15_4 LineCode=500_Cu bus1=E_6_15_4 bus2=E_6_14_4 Units=m Length=118.872
+New Line.F_E_6_16_19 LineCode=500_Cu bus1=E_6_15_19 bus2=E_6_16_19 Units=m Length=121.92
+New Line.F_E_6_16_4 LineCode=500_Cu bus1=E_6_15_4 bus2=E_6_16_4 Units=m Length=121.92
+New Line.F_E_6_2_19 LineCode=500_Cu bus1=E_6_1_19 bus2=E_6_2_19 Units=m Length=152.4
+New Line.F_E_6_2_4 LineCode=500_Cu bus1=E_6_1_4 bus2=E_6_2_4 Units=m Length=152.4
+New Line.F_E_6_3_19 LineCode=500_Cu bus1=E_6_2_19 bus2=E_6_3_19 Units=m Length=115.824
+New Line.F_E_6_3_4 LineCode=500_Cu bus1=E_6_2_4 bus2=E_6_3_4 Units=m Length=115.824
+New Line.F_E_6_4_19 LineCode=500_Cu bus1=E_6_3_19 bus2=E_6_4_19 Units=m Length=112.776
+New Line.F_E_6_4_4 LineCode=500_Cu bus1=E_6_3_4 bus2=E_6_4_4 Units=m Length=112.776
+New Line.F_E_6_7_19 LineCode=500_Cu bus1=E_6_4_19 bus2=E_6_7_19 Units=m Length=402.336
+New Line.F_E_6_7_4 LineCode=500_Cu bus1=E_6_4_4 bus2=E_6_7_4 Units=m Length=402.336
+New Line.F_E_6_8_19 LineCode=500_Cu bus1=E_6_7_19 bus2=E_6_8_19 Units=m Length=123.444
+New Line.F_E_6_8_4 LineCode=500_Cu bus1=E_6_7_4 bus2=E_6_8_4 Units=m Length=123.444
+New Line.F_E_6_9_19 LineCode=500_Cu bus1=E_6_8_19 bus2=E_6_9_19 Units=m Length=120.396
+New Line.F_E_6_9_4 LineCode=500_Cu bus1=E_6_8_4 bus2=E_6_9_4 Units=m Length=120.396
+New Line.F_E_6A_2_EC_12 LineCode=750_Cu bus1=E_9_0_EC_12 bus2=E_6A_2_EC_12 Units=m Length=71.628
+New Line.F_E_6A_2_EC_25 LineCode=750_Cu bus1=E_9_0_EC_25 bus2=E_6A_2_EC_25 Units=m Length=71.628
+New Line.F_E_7_1_35 LineCode=500_Cu bus1=EAST_CAMPUS_3 bus2=E_7_1_35 Units=m Length=21.336
+New Line.F_E_7_1_7 LineCode=500_Cu bus1=EAST_CAMPUS_1 bus2=E_7_1_7 Units=m Length=21.336
+New Line.F_E_7_1_NC1 LineCode=500_Cu bus1=EAST_CAMPUS_1 bus2=E_7_1_NC1 Units=m Length=21.336
+New Line.F_E_7_1_NC2 LineCode=500_Cu bus1=EAST_CAMPUS_2 bus2=E_7_1_NC2 Units=m Length=21.336
+New Line.F_E_7_10_1_11 LineCode=500_Cu bus1=E_7_10_1_11 bus2=E_7_10_11 Units=m Length=30.48
+New Line.F_E_7_10_1_17 LineCode=500_Cu bus1=E_7_10_17 bus2=E_7_10_1_17 Units=m Length=115.824
+New Line.F_E_7_10_1_8 LineCode=500_Cu bus1=E_7_10_1_8 bus2=E_7_10_8 Units=m Length=30.48
+New Line.F_E_7_10_11 LineCode=500_Cu bus1=E_7_C_11 bus2=E_7_10_11 Units=m Length=54.864
+New Line.F_E_7_10_17 LineCode=500_Cu bus1=E_7_C_17 bus2=E_7_10_17 Units=m Length=54.864
+New Line.F_E_7_10_2_11 LineCode=500_Cu bus1=E_7_10_2_11 bus2=E_7_10_1_11 Units=m Length=96.012
+New Line.F_E_7_10_2_8 LineCode=500_Cu bus1=E_7_10_2_8 bus2=E_7_10_1_8 Units=m Length=96.012
+New Line.F_E_7_10_8 LineCode=500_Cu bus1=E_7_10_8 bus2=E_7_C_8 Units=m Length=54.864
+New Line.F_E_7_10_NC1 LineCode=500_Cu bus1=E_7_10_NC1 bus2=E_7_9_NC1 Units=m Length=121.92
+New Line.F_E_7_11_15 LineCode=500_Cu bus1=E_7_11_15 bus2=N_CAMPUS_A Units=m Length=53.34
+New Line.F_E_7_11_17 LineCode=500_Cu bus1=E_7_11_17 bus2=BUS_NC17 Units=m Length=53.34
+New Line.F_E_7_11_302 LineCode=500_Cu bus1=E_7_11_302 bus2=N_CAMPUS_B Units=m Length=53.34
+New Line.F_E_7_11_303 LineCode=500_Cu bus1=E_7_11_303 bus2=N_CAMPUS_A Units=m Length=53.34
+New Line.F_E_7_11_306 LineCode=500_Cu bus1=E_7_11_306 bus2=N_CAMPUS_B Units=m Length=53.34
+New Line.F_E_7_11_337 LineCode=500_Cu bus1=E_7_11_337 bus2=N_CAMPUS_C Units=m Length=53.34
+New Line.F_E_7_11_NC12 LineCode=500_Cu bus1=E_7_11_12 bus2=N_CAMPUS_B Units=m Length=53.34
+New Line.F_E_7_11_NC14 LineCode=500_Cu bus1=E_7_11_14 bus2=BUS_NC_14 Units=m Length=53.34
+New Line.F_E_7_11_NCA LineCode=500_Cu bus1=N_CAMPUS_A bus2=E_7_11_NC1 Units=m Length=53.34
+New Line.F_E_7_12_1_306 LineCode=500_Cu bus1=E_7_12_1_306 bus2=E_7_12_306 Units=m Length=54.864
+New Line.F_E_7_12_1_337 LineCode=500_Cu bus1=E_7_12_1_337 bus2=E_7_12_337 Units=m Length=54.864
+New Line.F_E_7_12_12 LineCode=500_Cu bus1=E_7_12_12 bus2=E_7_11_12 Units=m Length=129.54
+New Line.F_E_7_12_14 LineCode=500_Cu bus1=E_7_12_14 bus2=E_7_11_14 Units=m Length=129.54
+New Line.F_E_7_12_15 LineCode=500_Cu bus1=E_7_12_15 bus2=E_7_11_15 Units=m Length=129.54
+New Line.F_E_7_12_17 LineCode=500_Cu bus1=E_7_12_17 bus2=E_7_11_17 Units=m Length=129.54
+New Line.F_E_7_12_2_306 LineCode=500_Cu bus1=E_7_12_2_306 bus2=E_7_12_1_306 Units=m Length=71.628
+New Line.F_E_7_12_2_337 LineCode=500_Cu bus1=E_7_12_2_337 bus2=E_7_12_1_337 Units=m Length=71.628
+New Line.F_E_7_12_302 LineCode=500_Cu bus1=E_7_12_302 bus2=E_7_11_302 Units=m Length=129.54
+New Line.F_E_7_12_303 LineCode=500_Cu bus1=E_7_12_303 bus2=E_7_11_303 Units=m Length=129.54
+New Line.F_E_7_12_306 LineCode=500_Cu bus1=E_7_12_306 bus2=E_7_11_306 Units=m Length=129.54
+New Line.F_E_7_12_337 LineCode=500_Cu bus1=E_7_12_337 bus2=E_7_11_337 Units=m Length=129.54
+New Line.F_E_7_12_8 LineCode=500_Cu bus1=E_7_10_NC1 bus2=E_7_11_NC1 Units=m Length=117.348
+New Line.F_E_7_13_1_17 LineCode=500_Cu bus1=SS23_17 bus2=E_7_13_1_17 Units=m Length=77.724
+New Line.F_E_7_13_12 LineCode=500_Cu bus1=E_7_13_12 bus2=E_7_12_12 Units=m Length=134.112
+New Line.F_E_7_13_14 LineCode=500_Cu bus1=E_7_13_14 bus2=E_7_12_14 Units=m Length=134.112
+New Line.F_E_7_13_15 LineCode=500_Cu bus1=E_7_13_15 bus2=E_7_12_15 Units=m Length=134.112
+New Line.F_E_7_13_17 LineCode=500_Cu bus1=E_7_13_17 bus2=E_7_12_17 Units=m Length=134.112
+New Line.F_E_7_13_302 LineCode=500_Cu bus1=E_7_13_302 bus2=E_7_12_302 Units=m Length=134.112
+New Line.F_E_7_13_303 LineCode=500_Cu bus1=E_7_13_303 bus2=E_7_12_303 Units=m Length=134.112
+New Line.F_E_7_14_12 LineCode=500_Cu bus1=E_7_14_12 bus2=E_7_13_12 Units=m Length=99.06
+New Line.F_E_7_14_14 LineCode=500_Cu bus1=E_7_14_14 bus2=E_7_13_14 Units=m Length=99.06
+New Line.F_E_7_14_15 LineCode=500_Cu bus1=E_7_14_15 bus2=E_7_13_15 Units=m Length=99.06
+New Line.F_E_7_14_302 LineCode=500_Cu bus1=E_7_14_302 bus2=E_7_13_17 Units=m Length=99.06
+New Line.F_E_7_14_303 LineCode=500_Cu bus1=E_7_14_303 bus2=E_7_13_302 Units=m Length=99.06
+New Line.F_E_7_15_12 LineCode=500_Cu bus1=E_7_15_12 bus2=E_7_13_303 Units=m Length=99.06
+New Line.F_E_7_15_14 LineCode=500_Cu bus1=E_7_15_14 bus2=E_7_14_12 Units=m Length=99.06
+New Line.F_E_7_15_15 LineCode=500_Cu bus1=E_7_15_15 bus2=E_7_14_15 Units=m Length=99.06
+New Line.F_E_7_15_17 LineCode=500_Cu bus1=E_7_15_17 bus2=E_7_14_14 Units=m Length=99.06
+New Line.F_E_7_15_302 LineCode=500_Cu bus1=E_7_15_302 bus2=E_7_14_302 Units=m Length=99.06
+New Line.F_E_7_15_303 LineCode=500_Cu bus1=E_7_15_303 bus2=E_7_14_303 Units=m Length=99.06
+New Line.F_E_7_16_12 LineCode=500_Cu bus1=E_7_16_12 bus2=E_7_15_12 Units=m Length=118.872
+New Line.F_E_7_16_14 LineCode=500_Cu bus1=E_7_16_14 bus2=E_7_15_14 Units=m Length=118.872
+New Line.F_E_7_16_15 LineCode=500_Cu bus1=E_7_16_15 bus2=E_7_15_15 Units=m Length=118.872
+New Line.F_E_7_16_17 LineCode=500_Cu bus1=E_7_16_17 bus2=E_7_15_17 Units=m Length=118.872
+New Line.F_E_7_16_302 LineCode=500_Cu bus1=E_7_16_302 bus2=E_7_15_302 Units=m Length=118.872
+New Line.F_E_7_16_303 LineCode=500_Cu bus1=E_7_16_303 bus2=E_7_15_303 Units=m Length=118.872
+New Line.F_E_7_17_1_17 LineCode=500_Cu bus1=E_7_17_17 bus2=E_7_17_1_17 Units=m Length=152.4
+New Line.F_E_7_17_1_307 LineCode=500_Cu bus1=E_7_17_1_307 bus2=E_11_4_307 Units=m Length=160.02
+New Line.F_E_7_17_1_338 LineCode=500_Cu bus1=E_11_4_338 bus2=E_7_17_1_338 Units=m Length=160.02
+New Line.F_E_7_17_12 LineCode=500_Cu bus1=E_7_17_12 bus2=E_7_16_12 Units=m Length=124.968
+New Line.F_E_7_17_14 LineCode=500_Cu bus1=E_7_17_14 bus2=E_7_16_14 Units=m Length=124.968
+New Line.F_E_7_17_15 LineCode=500_Cu bus1=E_7_17_15 bus2=E_7_16_15 Units=m Length=124.968
+New Line.F_E_7_17_17 LineCode=500_Cu bus1=E_7_17_17 bus2=E_7_16_17 Units=m Length=124.968
+New Line.F_E_7_17_302 LineCode=500_Cu bus1=E_7_17_302 bus2=E_7_16_302 Units=m Length=124.968
+New Line.F_E_7_17_303 LineCode=500_Cu bus1=E_7_17_303 bus2=E_7_16_303 Units=m Length=124.968
+New Line.F_E_7_18_1_12 LineCode=500_Cu bus1=E_7_18_1_12 bus2=E_7_18_12 Units=m Length=51.816
+New Line.F_E_7_18_1_14 LineCode=500_Cu bus1=E_7_18_1_14 bus2=E_7_18_14 Units=m Length=51.816
+New Line.F_E_7_18_1_17 LineCode=500_Cu bus1=E_7_18_1_17 bus2=E_7_18_17 Units=m Length=51.816
+New Line.F_E_7_18_12 LineCode=500_Cu bus1=E_7_18_12 bus2=E_7_17_12 Units=m Length=126.492
+New Line.F_E_7_18_14 LineCode=500_Cu bus1=E_7_18_14 bus2=E_7_17_14 Units=m Length=126.492
+New Line.F_E_7_18_15 LineCode=500_Cu bus1=E_7_18_15 bus2=E_7_17_15 Units=m Length=126.492
+New Line.F_E_7_18_17 LineCode=500_Cu bus1=E_7_18_17 bus2=E_7_17_17 Units=m Length=126.492
+New Line.F_E_7_18_2_12 LineCode=500_Cu bus1=E_7_18_2_12 bus2=E_7_18_1_12 Units=m Length=39.624
+New Line.F_E_7_18_2_14 LineCode=500_Cu bus1=E_7_18_2_14 bus2=E_7_18_1_14 Units=m Length=39.624
+New Line.F_E_7_18_2_17 LineCode=500_Cu bus1=E_7_18_2_17 bus2=E_7_18_1_17 Units=m Length=39.624
+New Line.F_E_7_19_1 LineCode=4_0_Cu bus1=SS_14_TMC bus2=E_7_19_1 Units=m Length=6.096
+New Line.F_E_7_19_12 LineCode=500_Cu bus1=E_7_19_12 bus2=E_7_18_2_12 Units=m Length=45.72
+New Line.F_E_7_19_14 LineCode=500_Cu bus1=E_7_19_14 bus2=E_7_18_2_14 Units=m Length=45.72
+New Line.F_E_7_19_15 LineCode=500_Cu bus1=E_7_19_15 bus2=E_7_18_2_15 Units=m Length=45.72
+New Line.F_E_7_19_17 LineCode=500_Cu bus1=E_7_19_17 bus2=E_7_18_2_17 Units=m Length=45.72
+New Line.F_E_7_19_2 LineCode=500_Cu bus1=SS_14_TMC bus2=E_7_19_2 Units=m Length=152.4
+New Line.F_E_7_19_4 LineCode=500_Cu bus1=E_7_19_1 bus2=E_7_19_4 Units=m Length=103.632
+New Line.F_E_7_2_35 LineCode=500_Cu bus1=E_7_1_35 bus2=E_7_2_35 Units=m Length=99.06
+New Line.F_E_7_2_7 LineCode=500_Cu bus1=E_7_1_7 bus2=E_7_2_7 Units=m Length=99.06
+New Line.F_E_7_2_NC1 LineCode=500_Cu bus1=E_7_1_NC1 bus2=E_7_2_NC1 Units=m Length=99.06
+New Line.F_E_7_2_NC2 LineCode=500_Cu bus1=E_7_1_NC2 bus2=E_7_2_NC2 Units=m Length=99.06
+New Line.F_E_7_20_12 LineCode=500_Cu bus1=E_7_20_12 bus2=E_7_19_12 Units=m Length=115.824
+New Line.F_E_7_20_14 LineCode=500_Cu bus1=E_7_20_14 bus2=E_7_19_14 Units=m Length=115.824
+New Line.F_E_7_20_15 LineCode=500_Cu bus1=E_7_20_15 bus2=E_7_19_15 Units=m Length=115.824
+New Line.F_E_7_20_17 LineCode=500_Cu bus1=E_7_20_17 bus2=E_7_19_17 Units=m Length=115.824
+New Line.F_E_7_21_14 LineCode=500_Cu bus1=E_7_20_14 bus2=E_7_21_14 Units=m Length=114.3
+New Line.F_E_7_21_17 LineCode=500_Cu bus1=E_7_20_17 bus2=E_7_21_17 Units=m Length=114.3
+New Line.F_E_7_22_14 LineCode=500_Cu bus1=E_7_21_14 bus2=E_7_22_14 Units=m Length=117.348
+New Line.F_E_7_22_17 LineCode=500_Cu bus1=E_7_21_17 bus2=E_7_22_17 Units=m Length=117.348
+New Line.F_E_7_23_1 LineCode=500_Cu bus1=SS_15_ERC bus2=E_7_23_1 Units=m Length=193.548
+New Line.F_E_7_23_14 LineCode=500_Cu bus1=E_7_22_14 bus2=E_7_23_14 Units=m Length=114.3
+New Line.F_E_7_23_17 LineCode=500_Cu bus1=E_7_22_17 bus2=E_7_23_17 Units=m Length=114.3
+New Line.F_E_7_24_17 LineCode=500_Cu bus1=E_7_23_17 bus2=E_7_24_17 Units=m Length=106.68
+New Line.F_E_7_25_17 LineCode=500_Cu bus1=E_7_24_17 bus2=E_7_25_17 Units=m Length=141.732
+New Line.F_E_7_26_1 LineCode=4_0_Cu bus1=SS_16_ERC bus2=E_7_26_1 Units=m Length=36.576
+New Line.F_E_7_26_17_5 LineCode=500_Cu bus1=E_7_24_17 bus2=E_7_24_1_17 Units=m Length=88.392
+New Line.F_E_7_27_12 LineCode=500_Cu bus1=E_7_27_12 bus2=E_7_20_12 Units=m Length=121.92
+New Line.F_E_7_27_15 LineCode=500_Cu bus1=E_7_27_15 bus2=E_7_20_15 Units=m Length=121.92
+New Line.F_E_7_28_12 LineCode=500_Cu bus1=E_7_28_12 bus2=E_7_27_12 Units=m Length=121.92
+New Line.F_E_7_28_15 LineCode=500_Cu bus1=E_7_28_15 bus2=E_7_27_15 Units=m Length=121.92
+New Line.F_E_7_29_12 LineCode=500_Cu bus1=E_7_29_12 bus2=E_7_28_12 Units=m Length=121.92
+New Line.F_E_7_29_15 LineCode=500_Cu bus1=E_7_29_15 bus2=E_7_28_15 Units=m Length=121.92
+New Line.F_E_7_3_35 LineCode=500_Cu bus1=E_7_2_35 bus2=E_7_3_35 Units=m Length=144.78
+New Line.F_E_7_3_7 LineCode=500_Cu bus1=E_7_2_7 bus2=E_7_3_7 Units=m Length=144.78
+New Line.F_E_7_3_NC1 LineCode=500_Cu bus1=E_7_2_NC1 bus2=E_7_3_NC1 Units=m Length=144.78
+New Line.F_E_7_3_NC2 LineCode=500_Cu bus1=E_7_2_NC2 bus2=E_7_3_NC2 Units=m Length=144.78
+New Line.F_E_7_30_12 LineCode=500_Cu bus1=E_7_30_12 bus2=E_7_29_12 Units=m Length=108.204
+New Line.F_E_7_30_15 LineCode=500_Cu bus1=E_7_30_15 bus2=E_7_29_15 Units=m Length=108.204
+New Line.F_E_7_4_35 LineCode=500_Cu bus1=E_7_3_35 bus2=E_7_4_35 Units=m Length=120.396
+New Line.F_E_7_4_7 LineCode=500_Cu bus1=E_7_3_7 bus2=E_7_4_7 Units=m Length=120.396
+New Line.F_E_7_4_NC1 LineCode=500_Cu bus1=E_7_3_NC1 bus2=E_7_4_NC1 Units=m Length=120.396
+New Line.F_E_7_4_NC2 LineCode=500_Cu bus1=E_7_3_NC2 bus2=E_7_4_NC2 Units=m Length=120.396
+New Line.F_E_7_5_1_7 LineCode=500_Cu bus1=E_7_5_7 bus2=E_7_5_1_7 Units=m Length=19.812
+New Line.F_E_7_5_35 LineCode=500_Cu bus1=E_7_5_35 bus2=E_7_4_35 Units=m Length=114.3
+New Line.F_E_7_5_7 LineCode=500_Cu bus1=E_7_5_7 bus2=E_7_4_7 Units=m Length=114.3
+New Line.F_E_7_5_NC1 LineCode=500_Cu bus1=E_7_5_NC1 bus2=E_7_4_NC1 Units=m Length=114.3
+New Line.F_E_7_5_NC2 LineCode=500_Cu bus1=E_7_5_NC2 bus2=E_7_4_NC2 Units=m Length=114.3
+New Line.F_E_7_6_35 LineCode=500_Cu bus1=E_7_6_35 bus2=E_5_W_35 Units=m Length=38.1
+New Line.F_E_7_6_7 LineCode=500_Cu bus1=E_7_6_7 bus2=E_5_W_7 Units=m Length=38.1
+New Line.F_E_7_6_NC1 LineCode=500_Cu bus1=E_7_6_NC1 bus2=E_5_W_NC1 Units=m Length=38.1
+New Line.F_E_7_7_35 LineCode=500_Cu bus1=E_7_7_35 bus2=E_7_6_35 Units=m Length=45.72
+New Line.F_E_7_7_7 LineCode=500_Cu bus1=E_7_7_7 bus2=E_7_6_7 Units=m Length=45.72
+New Line.F_E_7_7_A_35 LineCode=500_Cu bus1=E_7_7_A_35 bus2=E_7_7_35 Units=m Length=4.572
+New Line.F_E_7_7_A_7 LineCode=500_Cu bus1=E_7_7_A_7 bus2=E_7_7_7 Units=m Length=4.572
+New Line.F_E_7_7_B_7 LineCode=500_Cu bus1=E_7_7_A_7 bus2=E_7_6_1_7 Units=m Length=158.496
+New Line.F_E_7_7_C_7 LineCode=500_Cu bus1=E_7_6_1_7 bus2=E_7_6_2_7 Units=m Length=176.784
+New Line.F_E_7_7_D_7 LineCode=500_Cu bus1=E_7_6_2_7 bus2=E_7_6_3_7 Units=m Length=137.16
+New Line.F_E_7_7_E_7 LineCode=500_Cu bus1=E_7_6_3_7 bus2=E_7_6_4_7 Units=m Length=68.58
+New Line.F_E_7_7_F_7 LineCode=500_Cu bus1=E_7_6_4_7 bus2=E_7_6_5_7 Units=m Length=77.724
+New Line.F_E_7_7_G_7 LineCode=500_Cu bus1=E_7_6_5_7 bus2=E_7_6_6_7 Units=m Length=73.152
+New Line.F_E_7_7_NC1 LineCode=500_Cu bus1=E_7_7_NC1 bus2=E_7_6_NC1 Units=m Length=45.72
+New Line.F_E_7_7A_NC1 LineCode=500_Cu bus1=E_7_7_A_NC1 bus2=E_7_7_NC1 Units=m Length=4.572
+New Line.F_E_7_8_35 LineCode=500_Cu bus1=E_7_8_35 bus2=E_7_7_A_35 Units=m Length=121.92
+New Line.F_E_7_8_NC1 LineCode=500_Cu bus1=E_7_8_NC1 bus2=E_7_7_A_NC1 Units=m Length=121.92
+New Line.F_E_7_9_1 LineCode=2_0_Cu bus1=SS_13_WC bus2=E_7_9_1 Units=m Length=4.572
+New Line.F_E_7_9_3 LineCode=2_0_Cu bus1=E_7_9_4 bus2=E_7_9_3 Units=m Length=121.92
+New Line.F_E_7_9_35 LineCode=500_Cu bus1=E_7_9_35 bus2=E_7_8_35 Units=m Length=144.78
+New Line.F_E_7_9_4 LineCode=4_0_Cu bus1=WAR_COL_1_PRI bus2=E_7_9_4 Units=m Length=4.572
+New Line.F_E_7_9_5 LineCode=2_0_Cu bus1=E_7_9_1 bus2=E_7_9_5 Units=m Length=109.728
+New Line.F_E_7_9_NC1 LineCode=500_Cu bus1=E_7_9_NC1 bus2=E_7_8_NC1 Units=m Length=144.78
+New Line.F_E_7_A_1_NC3 LineCode=500_Cu bus1=E_7_A_2_NC3 bus2=E_7_A_1_NC3 Units=m Length=167.64
+New Line.F_E_7_A_2_NC3 LineCode=500_Cu bus1=E_9_0_NC3 bus2=E_7_A_2_NC3 Units=m Length=80.772
+New Line.F_E_7_A_NC3 LineCode=500_Cu bus1=E_7_A_1_NC3 bus2=E_7_A_NC3 Units=m Length=198.12
+New Line.F_E_7_B_NC2 LineCode=500_Cu bus1=E_7_B_NC2 bus2=E_5_W_NC2 Units=m Length=115.824
+New Line.F_E_7_B_NC3 LineCode=500_Cu bus1=E_7_B_NC3 bus2=E_5_W_NC3 Units=m Length=115.824
+New Line.F_E_7_C_304 LineCode=500_Cu bus1=N_CAMPUS_B bus2=E_7_C_304 Units=m Length=152.4
+New Line.F_E_7_C_305 LineCode=500_Cu bus1=N_CAMPUS_A bus2=E_7_C_305 Units=m Length=152.4
+New Line.F_E_7_C_NC2 LineCode=500_Cu bus1=E_7_B_NC2 bus2=E_7_C_NC2 Units=m Length=96.012
+New Line.F_E_9_0_EC_12 LineCode=750_Cu bus1=EAST_CAMPUS_2 bus2=E_9_0_EC_12 Units=m Length=48.768
+New Line.F_E_9_0_EC_25 LineCode=750_Cu bus1=EAST_CAMPUS_1 bus2=E_9_0_EC_25 Units=m Length=53.34
+New Line.F_E_9_0_NC3 LineCode=500_Cu bus1=EAST_CAMPUS_3 bus2=E_9_0_NC3 Units=m Length=30.48
+New Line.F_E_CAMPUS_1 LineCode=500_Cu bus1=T_204_SEC bus2=EAST_CAMPUS_1 Units=m Length=48.768
+New Line.F_E_CAMPUS_2 LineCode=500_Cu bus1=T_205_SEC bus2=EAST_CAMPUS_2 Units=m Length=67.056
+New Line.F_E_CAMPUS_3 LineCode=500_Cu bus1=T_277_SEC bus2=EAST_CAMPUS_3 Units=m Length=85.344
+New Line.F_E101135 LineCode=500_Cu bus1=SS_6_ERC bus2=E_7_21_17 Units=m Length=7.62
+New Line.F_E11_2_338 LineCode=500_Cu bus1=E_11_2_338 bus2=E_11_1_338 Units=m Length=167.64
+New Line.F_EBU1_S137 LineCode=2_0_Cu bus1=SS_42_WC bus2=T_137_PRI Units=m Length=4.572
+New Line.F_EBU1_S138 LineCode=2_0_Cu bus1=SS_42_WC bus2=T_138_PRI Units=m Length=4.572
+New Line.F_EBU1_S139 LineCode=2_0_Cu bus1=SS_43_WC bus2=BUS_T_139_PRI Units=m Length=4.572
+New Line.F_EBU1_S140 LineCode=2_0_Cu bus1=SS_43_WC bus2=T_140_PRI Units=m Length=4.572
+New Line.F_EBU2_LAB_17 LineCode=500_Cu bus1=E_7_10_1_17 bus2=EBU2_LAB_PRI Units=m Length=10.668
+New Line.F_EC_NORTH_412 LineCode=500_Cu bus1=E_5_3_1_412 bus2=EC_NORTH Units=m Length=21.336
+New Line.F_EC_OFFICE_BLDG LineCode=500_Cu bus1=SS_123 bus2=T_305_PRI Units=m Length=4.572
+New Line.F_EC_SOUTH_437 LineCode=500_Cu bus1=E_5_3_1_437 bus2=EC_SOUTH Units=m Length=21.336
+New Line.F_EG1 LineCode=350_Cu bus1=EG1 bus2=US_TD Units=m Length=15.24
+New Line.F_EG2 LineCode=350_Cu bus1=EG2 bus2=US_TD Units=m Length=15.24
+New Line.F_EG3 LineCode=350_Cu bus1=EG3 bus2=US_TD Units=m Length=15.24
+New Line.F_EMH_E_4_2_T_396 LineCode=500_Cu bus1=SS_125_MCSS bus2=E_4_2_T_396 Units=m Length=20.1168
+New Line.F_EMH_E1 LineCode=500_Cu bus1=EC_NORTH bus2=EMH_E1_N Units=m Length=21.336
+New Line.F_EMH_E1_S LineCode=500_Cu bus1=EC_SOUTH bus2=EMH_E1_S Units=m Length=21.336
+New Line.F_EMH_E2_N LineCode=500_Cu bus1=EMH_E1_N bus2=EMH_E2_N Units=m Length=60.96
+New Line.F_EMH_E2_S LineCode=500_Cu bus1=EMH_E1_S bus2=EMH_E2_S Units=m Length=60.96
+New Line.F_EMH_E3_N LineCode=500_Cu bus1=EMH_E2_N bus2=EMH_E3_N Units=m Length=64.008
+New Line.F_EMH_E3_S LineCode=500_Cu bus1=EMH_E2_S bus2=EMH_E3_S Units=m Length=64.008
+New Line.F_EMH_E5_N LineCode=500_Cu bus1=EMH_E3_N bus2=EMH_E5_N Units=m Length=231.648
+New Line.F_EMH_E5_S LineCode=500_Cu bus1=EMH_E3_S bus2=EMH_E5_S Units=m Length=231.648
+New Line.F_ENDUR_SUB1 LineCode=4_0_Cu bus1=SS_48_SIO bus2=BUS_T_264_PRI Units=m Length=9.144
+New Line.F_ENDUR_SUB2 LineCode=4_0_Cu bus1=SS_48_SIO bus2=BUS_T_265_PRI Units=m Length=9.144
+New Line.F_ERC LineCode=500_Cu bus1=SS_50_SC bus2=T_269_PRI Units=m Length=4.572
+New Line.F_GALBRAITH LineCode=500_Cu bus1=SS_37_RC bus2=SW_T_095 Units=m Length=9.144
+New Line.F_GEN/ATS LineCode=500_Cu bus1=BUS_STNDBY_PH bus2=GEN/ATS Units=m Length=12.192
+New Line.F_GIL_VAULT_EG LineCode=250_Cu bus1=US_TD bus2=GILMAN_VAULT_EG Units=m Length=33.528
+New Line.F_GILMAN_102 LineCode=500_Cu bus1=E_2_1_102 bus2=GILMAN_102 Units=m Length=30.48
+New Line.F_GILMAN_105 LineCode=500_Cu bus1=E_2_1_105 bus2=GILMAN_VAULT_105 Units=m Length=30.48
+New Line.F_GILMAN_113 LineCode=500_Cu bus1=GILMAN_VAULT_113 bus2=REVELLE_1 Units=m Length=60.96
+New Line.F_GILMAN_V_19 LineCode=500_Cu bus1=E_2_1_19 bus2=GILMAN_19 Units=m Length=30.48
+New Line.F_GILMAN_V_4 LineCode=500_Cu bus1=E_1_1_4 bus2=GILMAN_VAULT_4 Units=m Length=30.48
+New Line.F_GILMANV_102 LineCode=500_Cu bus1=GILMAN_102 bus2=REVELLE_2 Units=m Length=60.96
+New Line.F_GILMANV_103 LineCode=500_Cu bus1=GILMAN_VT_103 bus2=REVELLE_1 Units=m Length=60.96
+New Line.F_GILMANV_105 LineCode=500_Cu bus1=GILMAN_VAULT_105 bus2=REVELLE_1 Units=m Length=60.96
+New Line.F_GILMANV_108 LineCode=500_Cu bus1=GILMAN_VT_108 bus2=REVELLE_2 Units=m Length=60.96
+New Line.F_GILMANV_112 LineCode=500_Cu bus1=GILMAN_V_112 bus2=REVELLE_2 Units=m Length=60.96
+New Line.F_GS_3 LineCode=500_Cu bus1=PSB bus2=SS_3_RC Units=m Length=73.152
+New Line.F_GS1_PSA LineCode=500_Cu bus1=PSA bus2=SS_1_RC Units=m Length=6.096
+New Line.F_GS4 LineCode=500_Cu bus1=PSA bus2=SS_4_RC Units=m Length=67.056
+New Line.F_GS5_PSA LineCode=500_Cu bus1=PSA bus2=SS_5_RC Units=m Length=7.62
+New Line.F_HI_BY_PH_305 LineCode=500_Cu bus1=E_1_9_2_305 bus2=HI_BAY_PH_PRI Units=m Length=67.056
+New Line.F_HLA LineCode=10_Cu bus1=MDB bus2=HLA Units=m Length=3.048
+New Line.F_HUBBS LineCode=500_Cu bus1=SS_25_SIO bus2=BUS_T_123_PRI Units=m Length=4.572
+New Line.F_I&R_BLDG_8 LineCode=500_Cu bus1=E_1_10_8 bus2=SW_T_042/043 Units=m Length=53.34
+New Line.F_IMG_105 LineCode=500_Cu bus1=E_1_2_3_105 bus2=SS_11_SOM Units=m Length=65.532
+New Line.F_IOF LineCode=1_0_Cu bus1=E_7_19_2 bus2=IOF_PRI Units=m Length=36.576
+New Line.F_IOF_PH2 LineCode=1_0_Cu bus1=IOF_PRI bus2=BUS_T_229_PRI Units=m Length=39.624
+New Line.F_IRPS LineCode=4_0_Cu bus1=E_7_19_1 bus2=IRPS_PRI Units=m Length=19.812
+New Line.F_J2 LineCode=2_0_Cu bus1=ERC bus2=J2 Units=m Length=51.816
+New Line.F_J3 LineCode=2_0_Cu bus1=J2 bus2=J3 Units=m Length=27.432
+New Line.F_J4 LineCode=2_0_Cu bus1=J2 bus2=J4 Units=m Length=73.152
+New Line.F_J5 LineCode=2_0_Cu bus1=J2 bus2=T_H38_PRI Units=m Length=25.908
+New Line.F_J6 LineCode=2_0_Cu bus1=J3 bus2=T_H35_PRI Units=m Length=48.768
+New Line.F_J7 LineCode=2_0_Cu bus1=J3 bus2=T_H34_PRI Units=m Length=27.432
+New Line.F_J8 LineCode=2_0_Cu bus1=J4 bus2=T_H37_PRI Units=m Length=28.956
+New Line.F_J9 LineCode=2_0_Cu bus1=J4 bus2=T_H36_PRI Units=m Length=54.864
+New Line.F_L_301_12 LineCode=500_Cu bus1=E_2_9_12 bus2=BLDG_3B_12KV Units=m Length=45.72
+New Line.F_L_302_15 LineCode=500_Cu bus1=E_2_9_15 bus2=BLDG_3B_15 Units=m Length=45.72
+New Line.F_LIS_T_386 LineCode=500_Cu bus1=SS_139 bus2=LIS_T_386 Units=m Length=3.048
+New Line.F_LIS_T_387 LineCode=500_Cu bus1=LIS_T_386 bus2=BUS_T_386_PRI Units=m Length=3.048
+New Line.F_MANDELL_W LineCode=2_0_Cu bus1=SS_88_RC bus2=MANDEL_W_PRI Units=m Length=30.48
+New Line.F_MATT_SUB_11 LineCode=500_Cu bus1=E_1_5_11 bus2=SS_85_MATTH_SUB Units=m Length=42.672
+New Line.F_MDB LineCode=350_Cu bus1=BUS_MDB_MAIN bus2=MDB Units=m Length=3.048
+New Line.F_MDB_MAIN LineCode=350_Cu bus1=BUS_PD_T_396_MDB_SEC bus2=BUS_MDB_MAIN Units=m Length=4.572
+New Line.F_MSG LineCode=500_Cu bus1=MSG bus2=SS_105 Units=m Length=10.668
+New Line.F_N_EBU2_17 LineCode=500_Cu bus1=E_7_12_17 bus2=SW_T_069/070 Units=m Length=73.152
+New Line.F_N_EBU4 LineCode=500_Cu bus1=E_7_11_17 bus2=SS_94_WC Units=m Length=35.052
+New Line.F_NC11 LineCode=500_Cu bus1=N_CAMPUS_A bus2=E_7_C_11 Units=m Length=152.4
+New Line.F_NC17 LineCode=500_Cu bus1=BUS_NC17 bus2=E_7_C_17 Units=m Length=152.4
+New Line.F_NC8 LineCode=500_Cu bus1=E_7_C_8 bus2=N_CAMPUS_B Units=m Length=152.4
+New Line.F_NIER LineCode=4_0_Cu bus1=SS_49_SIO bus2=BUS_T_126_PRI Units=m Length=19.812
+New Line.F_O_VIEW_S167 LineCode=2_0_Cu bus1=3RD_C_S166_PRI bus2=BUS_T_179_PRI Units=m Length=70.104
+New Line.F_OARF LineCode=4_0_Cu bus1=SS_49_SIO bus2=BUS_T_267_PRI Units=m Length=4.572
+New Line.F_PAC_HALL_T2 LineCode=500_Cu bus1=E_3_2_108 bus2=P_HALL_T2_SW4 Units=m Length=60.96
+New Line.F_PAC_T2_SW3 LineCode=500_Cu bus1=E_3_2_103 bus2=P_HALL_T2_SW3 Units=m Length=60.96
+New Line.F_PB_1_102 LineCode=500_Cu bus1=BSB_MTF_TUN_102 bus2=PB_1_102 Units=m Length=36.576
+New Line.F_PB_1_105 LineCode=500_Cu bus1=BSB_MTF_TUN_105 bus2=PB_1_105 Units=m Length=36.576
+New Line.F_PB2_102 LineCode=500_Cu bus1=PB_1_102 bus2=PB_2_102 Units=m Length=22.86
+New Line.F_PB2_105 LineCode=500_Cu bus1=PB_1_105 bus2=PB_2_105 Units=m Length=22.86
+New Line.F_PD_T_TA_PRI LineCode=10_Cu bus1=MDB bus2=BUS_PD_T_TA_PRI Units=m Length=3.048
+New Line.F_PD_T_TM_PRI LineCode=6_Cu bus1=MDB bus2=BUS_PD_T_TM_PRI Units=m Length=3.048
+New Line.F_PHYS_ED_12 LineCode=500_Cu bus1=SS_83_MC_12 bus2=PHYS_ED_PRI Units=m Length=231.648
+New Line.F_PNL_A LineCode=10_Cu bus1=MDB bus2=PNL_A Units=m Length=3.048
+New Line.F_PNL_B LineCode=10_Cu bus1=BUS_T_TA_SEC bus2=PNL_B Units=m Length=3.048
+New Line.F_PNL_MP LineCode=2_0_Cu bus1=BUS_T_TM_SEC bus2=PNL_MP Units=m Length=3.048
+New Line.F_PRI_PARKING3 LineCode=500_Cu bus1=SUPERCOMP bus2=SS_93_ERC Units=m Length=30.48
+New Line.F_PSA LineCode=250_Cu bus1=GILMAN_VAULT_113 bus2=PSA Units=m Length=33.528
+New Line.F_PSB LineCode=250_Cu bus1=GILMAN_V_112 bus2=PSB Units=m Length=33.528
+New Line.F_RADY_SCHOOL LineCode=500_Cu bus1=SS_15_ERC bus2=BUS_T_345_PRI Units=m Length=144.78
+New Line.F_REVELLE_19 LineCode=500_Cu bus1=GILMAN_19 bus2=REVELLE_1 Units=m Length=60.96
+New Line.F_REVELLE_4 LineCode=500_Cu bus1=GILMAN_VAULT_4 bus2=REVELLE_2 Units=m Length=60.96
+New Line.F_RIMAC_US1_17 LineCode=500_Cu bus1=E_7_17_1_17 bus2=US1_17 Units=m Length=91.44
+New Line.F_S_EBU2_17 LineCode=500_Cu bus1=E_7_10_1_17 bus2=S_EBU2_PRI Units=m Length=22.86
+New Line.F_S182_11 LineCode=500_Cu bus1=E_1_6_11 bus2=S182_11 Units=m Length=45.72
+New Line.F_SB_1 LineCode=500_Cu bus1=SS_31_RC bus2=SB_1_103 Units=m Length=100.584
+New Line.F_SB_1_108 LineCode=500_Cu bus1=SS_30_RC bus2=SPLICE_BOX_1 Units=m Length=100.584
+New Line.F_SB_B2A_12 LineCode=500_Cu bus1=SP_B2B_12 bus2=SB_B2A Units=m Length=114.3
+New Line.F_SB_B2A_EG LineCode=250_Cu bus1=E_2_6_1_RG bus2=SB_B2A_EG Units=m Length=137.16
+New Line.F_SB_B2B_12 LineCode=500_Cu bus1=SP_B2B_12 bus2=E_2_6_1_12 Units=m Length=22.86
+New Line.F_SB_B2B_15 LineCode=500_Cu bus1=SB_B2B_15 bus2=E_2_6_1_15 Units=m Length=22.86
+New Line.F_SB_B2C_12 LineCode=500_Cu bus1=SB_B2A bus2=SB_B2C_12 Units=m Length=100.584
+New Line.F_SB_B2C_15 LineCode=500_Cu bus1=SB_B2A bus2=SB_B2C_15 Units=m Length=100.584
+New Line.F_SB_E_10_8_3_203 LineCode=4_0_Cu bus1=E_10_8_2_203 bus2=SB_E_10_8_3_203 Units=m Length=108.204
+New Line.F_SB_E_10_8_3_204 LineCode=4_0_Cu bus1=E_10_8_2_204 bus2=SB_E_10_8_3_204 Units=m Length=108.204
+New Line.F_SERF_BLD_11 LineCode=500_Cu bus1=E_1_9_11 bus2=SERF_BLDG_PRI Units=m Length=60.96
+New Line.F_SIO_109 LineCode=500_Cu bus1=E_10_A_109 bus2=SIO_2_SUB Units=m Length=7.62
+New Line.F_SIO_110 LineCode=500_Cu bus1=E_10_A_110 bus2=SIO_1_SUB Units=m Length=7.62
+New Line.F_SIO_202 LineCode=500_Cu bus1=E_10_A_202 bus2=SIO_1_SUB Units=m Length=7.62
+New Line.F_SIO_205 LineCode=500_Cu bus1=E_10_A_205 bus2=SIO_2_SUB Units=m Length=7.62
+New Line.F_SS_1 LineCode=500_Cu bus1=SS_2 bus2=SS_1_RC Units=m Length=68.58
+New Line.F_SS_10_305 LineCode=500_Cu bus1=SS_10_SC bus2=E_1_4_4_1_305 Units=m Length=30.48
+New Line.F_SS_100_12 LineCode=500_Cu bus1=SB_B2C_12 bus2=SS_100_MC_12 Units=m Length=53.34
+New Line.F_SS_100_15 LineCode=500_Cu bus1=SB_B2C_15 bus2=SS_100_MC_15 Units=m Length=53.34
+New Line.F_SS_101_304 LineCode=500_Cu bus1=E_7_C_304 bus2=SS_101 Units=m Length=99.06
+New Line.F_SS_104_8 LineCode=500_Cu bus1=E_1_7_8 bus2=SS_104_WC Units=m Length=76.2
+New Line.F_SS_105_412 LineCode=500_Cu bus1=SS_105 bus2=E_5_3_1_412 Units=m Length=15.24
+New Line.F_SS_106 LineCode=500_Cu bus1=SS_70_RC bus2=SS_106_RC Units=m Length=73.152
+New Line.F_SS_107_17 LineCode=500_Cu bus1=SS_107_ERC bus2=E_7_24_17 Units=m Length=30.48
+New Line.F_SS_108_17 LineCode=500_Cu bus1=E_7_24_1_17 bus2=SS_108_ERC Units=m Length=5.1816
+New Line.F_SS_109_106 LineCode=500_Cu bus1=SS_109_RC bus2=E_10_11_13_3_106 Units=m Length=91.44
+New Line.F_SS_111_305 LineCode=500_Cu bus1=SS_111_SC bus2=E_1_4_5_305 Units=m Length=76.2
+New Line.F_SS_116 LineCode=500_Cu bus1=SS_114_EC bus2=SS_116_EC Units=m Length=56.388
+New Line.F_SS_117 LineCode=500_Cu bus1=SS_115_EC bus2=SS_117_EC Units=m Length=56.388
+New Line.F_SS_12_105 LineCode=500_Cu bus1=E_1_3_105 bus2=SS_12_SOM Units=m Length=88.392
+New Line.F_SS_122_104 LineCode=500_Cu bus1=E_1_0_3A_104 bus2=SS_122_RC Units=m Length=36.576
+New Line.F_SS_123_413 LineCode=750_Cu bus1=E_4_9_413 bus2=SS_123 Units=m Length=106.3752
+New Line.F_SS_124_107 LineCode=500_Cu bus1=E_1_0_2_107 bus2=SS_124 Units=m Length=94.488
+New Line.F_SS_13_35 LineCode=500_Cu bus1=E_7_9_35 bus2=SS_13_WC Units=m Length=30.48
+New Line.F_SS_137_119 LineCode=500_Cu bus1=E_10_11_13_119 bus2=SS_137 Units=m Length=54.864
+New Line.F_SS_139_12 LineCode=500_Cu bus1=SS_139 bus2=E_2_6_11_12 Units=m Length=9.144
+New Line.F_SS_14_17 LineCode=500_Cu bus1=E_7_19_17 bus2=SS_14_TMC Units=m Length=12.192
+New Line.F_SS_15_17 LineCode=500_Cu bus1=E_7_23_17 bus2=SS_15_ERC Units=m Length=42.672
+New Line.F_SS_16_17 LineCode=500_Cu bus1=E_7_25_17 bus2=SS_16_ERC Units=m Length=73.152
+New Line.F_SS_162 LineCode=2_0_Cu bus1=E_7_9_3 bus2=SW_T_162 Units=m Length=118.872
+New Line.F_SS_163 LineCode=2_0_Cu bus1=E_7_9_3 bus2=SW_T_163 Units=m Length=45.72
+New Line.F_SS_169 LineCode=4_0_Cu bus1=SW_T_166 bus2=SW_T_169 Units=m Length=128.016
+New Line.F_SS_17 LineCode=500_Cu bus1=E_10_11_14_109 bus2=SS_17_RC Units=m Length=44.196
+New Line.F_SS_18_110 LineCode=500_Cu bus1=E_10_11_8_110 bus2=SS_18_SIO Units=m Length=13.716
+New Line.F_SS_19_7 LineCode=500_Cu bus1=E_7_5_1_7 bus2=SS_19_EC Units=m Length=22.86
+New Line.F_SS_2 LineCode=500_Cu bus1=SS_1_RC bus2=BUS_T_230_PRI Units=m Length=3.048
+New Line.F_SS_20_7 LineCode=500_Cu bus1=E_7_6_2_7 bus2=SS_20_EC Units=m Length=15.24
+New Line.F_SS_22_7 LineCode=500_Cu bus1=E_7_6_6_7 bus2=SS_22_WC Units=m Length=7.62
+New Line.F_SS_23_14 LineCode=500_Cu bus1=E_7_13_14 bus2=SS23_14 Units=m Length=12.192
+New Line.F_SS_24_14 LineCode=500_Cu bus1=E_7_18_14 bus2=SS_24_ERC Units=m Length=6.096
+New Line.F_SS_25_202 LineCode=4_0_Cu bus1=E_10_11_1_202 bus2=SS_25_SIO Units=m Length=50.292
+New Line.F_SS_26_205 LineCode=4_0_Cu bus1=E_10_10_205 bus2=SS_26_SIO Units=m Length=27.432
+New Line.F_SS_27_205 LineCode=4_0_Cu bus1=E_10_11_205 bus2=SS_27_SIO Units=m Length=47.244
+New Line.F_SS_28_8 LineCode=500_Cu bus1=E_1_4_1_8 bus2=SS_28_SIO Units=m Length=22.86
+New Line.F_SS_29_11 LineCode=500_Cu bus1=E_1_4_11 bus2=SS_29_MC Units=m Length=65.532
+New Line.F_SS_3 LineCode=500_Cu bus1=SS_1_RC bus2=BUS_T_356_PRI Units=m Length=3.048
+New Line.F_SS_30 LineCode=500_Cu bus1=SS_30_RC bus2=E_3_1_108 Units=m Length=146.304
+New Line.F_SS_31 LineCode=500_Cu bus1=SS_31_RC bus2=E_3_1_103 Units=m Length=146.304
+New Line.F_SS_32_108 LineCode=500_Cu bus1=SS_33_RC bus2=SPLICE_BOX_1 Units=m Length=86.868
+New Line.F_SS_33_103 LineCode=500_Cu bus1=SS_32_RC bus2=SB_1_103 Units=m Length=86.868
+New Line.F_SS_34 LineCode=500_Cu bus1=SS_35_RC bus2=SS_34_RC Units=m Length=94.488
+New Line.F_SS_35 LineCode=500_Cu bus1=SS_37_RC bus2=SS_35_RC Units=m Length=164.592
+New Line.F_SS_36_103 LineCode=500_Cu bus1=SB_1_103 bus2=SS_36_RC Units=m Length=73.152
+New Line.F_SS_37_108 LineCode=500_Cu bus1=SS_30_RC bus2=SS_37_RC Units=m Length=102.108
+New Line.F_SS_38 LineCode=4_0_Cu bus1=SB_E_10_8_3_204 bus2=SS_38_SIO Units=m Length=30.48
+New Line.F_SS_39 LineCode=4_0_Cu bus1=SB_E_10_8_3_203 bus2=SS_39_SIO Units=m Length=30.48
+New Line.F_SS_4 LineCode=500_Cu bus1=SS_2 bus2=BUS_T_156_PRI Units=m Length=15.24
+New Line.F_SS_40_203 LineCode=4_0_Cu bus1=E_10_2_203 bus2=SS_40_SIO Units=m Length=42.672
+New Line.F_SS_41_15 LineCode=500_Cu bus1=E_2_4_2_15 bus2=SS_41_MC Units=m Length=7.62
+New Line.F_SS_42/43_11 LineCode=500_Cu bus1=E_1_12_11 bus2=BUS_SS_42/43_11 Units=m Length=15.24
+New Line.F_SS_42/43_8 LineCode=500_Cu bus1=E_1_12_8 bus2=BUS_SS_42/43_8 Units=m Length=15.24
+New Line.F_SS_42_8 LineCode=500_Cu bus1=BUS_SS_42/43_8 bus2=SS_42_WC Units=m Length=0.3048
+New Line.F_SS_43_11 LineCode=500_Cu bus1=BUS_SS_42/43_11 bus2=SS_43_WC Units=m Length=7.62
+New Line.F_SS_44 LineCode=500_Cu bus1=E_2_6_2_12 bus2=SS_44_MC Units=m Length=39.624
+New Line.F_SS_45 LineCode=500_Cu bus1=B_SCI_PB3_102 bus2=SS_45_SOM Units=m Length=50.292
+New Line.F_SS_46_12 LineCode=500_Cu bus1=E_2_10_1_12 bus2=SS_46_TMC_12 Units=m Length=35.052
+New Line.F_SS_46_15 LineCode=500_Cu bus1=E_2_10_1_15 bus2=SS_46_TMC_15 Units=m Length=35.052
+New Line.F_SS_47_103 LineCode=500_Cu bus1=SS_31_RC bus2=SS_47_RC Units=m Length=73.152
+New Line.F_SS_48_204 LineCode=4_0_Cu bus1=E10_8_2_1_204 bus2=SS_48_SIO Units=m Length=44.196
+New Line.F_SS_49_202 LineCode=4_0_Cu bus1=E_10_11_2_1_202 bus2=SS_49_SIO Units=m Length=67.056
+New Line.F_SS_5 LineCode=500_Cu bus1=SS_2 bus2=BUS_T_114_PRI Units=m Length=42.672
+New Line.F_SS_50_304 LineCode=500_Cu bus1=E_1_4_5_304 bus2=SS_50_SC Units=m Length=109.728
+New Line.F_SS_51_436 LineCode=500_Cu bus1=E_5_3_436 bus2=SS_51_EC Units=m Length=21.336
+New Line.F_SS_52/204 LineCode=4_0_Cu bus1=E_10_8_5_204 bus2=SS_52_SIO Units=m Length=48.768
+New Line.F_SS_53_12 LineCode=500_Cu bus1=E_2_10_1_12 bus2=SS_53_TMC Units=m Length=54.864
+New Line.F_SS_54 LineCode=4_0_Cu bus1=E_10_8_5_203 bus2=SS_54_SIO Units=m Length=9.144
+New Line.F_SS_54_cont_ LineCode=4_0_Cu bus1=SS_54_SIO bus2=BUS_T_271_PRI Units=m Length=25.908
+New Line.F_SS_55_12 LineCode=500_Cu bus1=SP_B2B_12 bus2=SS_55_MC Units=m Length=6.096
+New Line.F_SS_56_11 LineCode=500_Cu bus1=E_1_5_11 bus2=SS_56_MC Units=m Length=85.344
+New Line.F_SS_57_14 LineCode=500_Cu bus1=E_7_20_14 bus2=SS_57_ERC Units=m Length=202.692
+New Line.F_SS_58 LineCode=250_Cu bus1=US_TD bus2=SS_58 Units=m Length=228.6
+New Line.F_SS_59 LineCode=500_Cu bus1=SS_57_ERC bus2=BUS_T_299_PRI Units=m Length=50.292
+New Line.F_SS_59_107 LineCode=500_Cu bus1=E_1_0_2_107 bus2=SS_59 Units=m Length=83.82
+New Line.F_SS_60 LineCode=500_Cu bus1=E_2_10_12 bus2=SS_61_TMC Units=m Length=73.152
+New Line.F_SS_61 LineCode=500_Cu bus1=E_2_10_15 bus2=SS_60_TMC Units=m Length=73.152
+New Line.F_SS_62_12 LineCode=500_Cu bus1=E_2_6_4_12 bus2=SS_62_MC Units=m Length=38.1
+New Line.F_SS_63_2 LineCode=500_Cu bus1=E_1_4_3_11 bus2=SS_21_SC Units=m Length=48.768
+New Line.F_SS_63_8 LineCode=500_Cu bus1=E_1_4_2_8 bus2=SS_63_SC Units=m Length=64.008
+New Line.F_SS_64_202 LineCode=4_0_Cu bus1=E_10_11_4_202 bus2=SS_64_SIO Units=m Length=12.192
+New Line.F_SS_65 LineCode=4_0_Cu bus1=SS_65_SIO bus2=BUS_T_67_PRI Units=m Length=1.524
+New Line.F_SS_65_205 LineCode=4_0_Cu bus1=E_10_11_2_205 bus2=SS_65_SIO Units=m Length=4.572
+New Line.F_SS_66 LineCode=500_Cu bus1=E_10_12_202 bus2=SS_66_SIO Units=m Length=99.06
+New Line.F_SS_67 LineCode=4_0_Cu bus1=E_10_11_1_202 bus2=SS_67_SIO Units=m Length=19.812
+New Line.F_SS_68_205 LineCode=500_Cu bus1=E_10_205 bus2=SS_68_SIO Units=m Length=13.716
+New Line.F_SS_69_204 LineCode=500_Cu bus1=E_10_8_3_204 bus2=SS_69_SIO Units=m Length=42.672
+New Line.F_SS_7_104 LineCode=500_Cu bus1=E_1_0_1A_104 bus2=SS_7_SOM Units=m Length=10.668
+New Line.F_SS_7_GEN LineCode=500_Cu bus1=GEN/ATS bus2=SS_7_SOM Units=m Length=24.384
+New Line.F_SS_70_108 LineCode=500_Cu bus1=SS_30_RC bus2=SS_70_RC Units=m Length=74.676
+New Line.F_SS_71_EC_7 LineCode=500_Cu bus1=E_5_0_7 bus2=SS_71_EC Units=m Length=36.576
+New Line.F_SS_72_15 LineCode=500_Cu bus1=SB_B2A bus2=SS_72_MC Units=m Length=4.572
+New Line.F_SS_73_102 LineCode=500_Cu bus1=BSB_MTF_TUN_105 bus2=SS_73_SOM Units=m Length=94.488
+New Line.F_SS_74_11 LineCode=500_Cu bus1=E_1_9_1_11 bus2=SS_74_WC Units=m Length=25.908
+New Line.F_SS_75_102 LineCode=500_Cu bus1=PB_2_102 bus2=SS_75_SOM Units=m Length=42.672
+New Line.F_SS_76_436 LineCode=500_Cu bus1=E_5_6_436 bus2=SS_76_EC Units=m Length=9.144
+New Line.F_SS_77_N LineCode=500_Cu bus1=EMH_E3_N bus2=SS_77_EC Units=m Length=15.24
+New Line.F_SS_78 LineCode=500_Cu bus1=EMH_E5_S bus2=SS_78_EC Units=m Length=18.288
+New Line.F_SS_79 LineCode=500_Cu bus1=EMH_E5_N bus2=SS_79_EC Units=m Length=18.288
+New Line.F_SS_8_GEN LineCode=500_Cu bus1=GEN/ATS bus2=SS_8_SOM Units=m Length=24.384
+New Line.F_SS_80_436 LineCode=500_Cu bus1=E_5_6_436 bus2=SS_80_EC Units=m Length=36.576
+New Line.F_SS_81_15 LineCode=500_Cu bus1=E_7_28_15 bus2=SS_81_TMC Units=m Length=73.152
+New Line.F_SS_82_337 LineCode=500_Cu bus1=E_7_12_2_337 bus2=SS_82_WC Units=m Length=50.292
+New Line.F_SS_83_12 LineCode=500_Cu bus1=E_2_4_12 bus2=SS_83_MC_12 Units=m Length=146.304
+New Line.F_SS_83_15 LineCode=500_Cu bus1=E_2_4_15 bus2=SS_83_MC_15 Units=m Length=146.304
+New Line.F_SS_84 LineCode=250_Cu bus1=E_2_0_EG bus2=SS_84 Units=m Length=7.62
+New Line.F_SS_85 LineCode=500_Cu bus1=SW_T_324 bus2=SW_T_325 Units=m Length=3.048
+New Line.F_SS_86_119 LineCode=500_Cu bus1=SS_86_RC bus2=E_10_11_13_5_119 Units=m Length=16.764
+New Line.F_SS_87_11 LineCode=500_Cu bus1=E_1_8_11 bus2=SS_87_WC Units=m Length=22.86
+New Line.F_SS_88_106 LineCode=500_Cu bus1=E_10_11_13_1A_106 bus2=SS_88_RC Units=m Length=41.148
+New Line.F_SS_89_12 LineCode=500_Cu bus1=SB_B2C_12 bus2=SS_89_MC Units=m Length=6.096
+New Line.F_SS_90_102 LineCode=500_Cu bus1=E_1_2_1_102 bus2=SS_90_SOM Units=m Length=18.288
+New Line.F_SS_91_337 LineCode=500_Cu bus1=E_7_12_2_337 bus2=SS_91_WC Units=m Length=79.248
+New Line.F_SS_92_303 LineCode=500_Cu bus1=SS_92_ERC bus2=E_7_17_3_303 Units=m Length=83.82
+New Line.F_SS_93_302 LineCode=500_Cu bus1=SS_93_ERC bus2=E_7_17_3_302 Units=m Length=83.82
+New Line.F_SS_95 LineCode=500_Cu bus1=SS_73_SOM bus2=SS_95_SOM Units=m Length=10.668
+New Line.F_SS_97_108 LineCode=500_Cu bus1=SS_33_RC bus2=SS_97_RC Units=m Length=19.812
+New Line.F_SS_98_12 LineCode=500_Cu bus1=SS_97_RC bus2=SS_98_RC Units=m Length=0.3048
+New Line.F_SS_99 LineCode=250_Cu bus1=SS_58 bus2=SS_99 Units=m Length=109.728
+New Line.F_SS23_17 LineCode=500_Cu bus1=E_7_13_17 bus2=SS23_17 Units=m Length=12.192
+New Line.F_STUDENT_PRI_15 LineCode=500_Cu bus1=SS_83_MC_15 bus2=STUDENT_PRI Units=m Length=13.716
+New Line.F_SVERDRUP_US1 LineCode=500_Cu bus1=SS_39_SIO bus2=SVERD_US1_PRI Units=m Length=9.144
+New Line.F_SVERDRUP_US2 LineCode=500_Cu bus1=SS_38_SIO bus2=SVERD_US2_PRI Units=m Length=15.24
+New Line.F_SW_T_166 LineCode=2_0_Cu bus1=SW_T_167 bus2=SW_T_166 Units=m Length=137.16
+New Line.F_SW_T_167 LineCode=2_0_Cu bus1=SW_T_168 bus2=SW_T_167 Units=m Length=68.58
+New Line.F_SW_T_168 LineCode=2_0_Cu bus1=E_7_9_5 bus2=SW_T_168 Units=m Length=160.02
+New Line.F_SW_T_227/228_102 LineCode=500_Cu bus1=E_1_3_102 bus2=SW_T_227/228 Units=m Length=36.576
+New Line.F_SW_T_297 LineCode=500_Cu bus1=SS_82_WC bus2=SW_T_297 Units=m Length=96.012
+New Line.F_SW_T_298 LineCode=500_Cu bus1=SS_82_WC bus2=SW_T_298 Units=m Length=3.048
+New Line.F_SW_T_324 LineCode=500_Cu bus1=SS_82_WC bus2=SW_T_324 Units=m Length=126.492
+New Line.F_T_050 LineCode=500_Cu bus1=SS_103_EC bus2=T_050 Units=m Length=22.86
+New Line.F_T_051 LineCode=500_Cu bus1=SS_102_EC bus2=T_051 Units=m Length=15.24
+New Line.F_T_053 LineCode=500_Cu bus1=SS_102_EC bus2=T_053 Units=m Length=15.24
+New Line.F_T_105 LineCode=250_Cu bus1=E_1_2_EG bus2=BUS_T_105_PRI Units=m Length=103.632
+New Line.F_T_106 LineCode=500_Cu bus1=SS_45_SOM bus2=BUS_T_106_PRI Units=m Length=3.048
+New Line.F_T_107 LineCode=250_Cu bus1=E_1_2_EG bus2=BUS_T_107_PRI Units=m Length=246.888
+New Line.F_T_112 LineCode=500_Cu bus1=BUS_T_112_PRI bus2=US_TD Units=m Length=21.336
+New Line.F_T_115 LineCode=250_Cu bus1=E_2_6_1_RG bus2=BUS_T_115_PRI Units=m Length=36.576
+New Line.F_T_116_15 LineCode=600_Cu bus1=BLDG_3B_15 bus2=SW_T_303/304 Units=m Length=19.812
+New Line.F_T_117_12 LineCode=600_Cu bus1=BLDG_3B_12KV bus2=SW_T_301/302 Units=m Length=16.764
+New Line.F_T_118_12 LineCode=500_Cu bus1=BLDG_3C_12KV bus2=SW_T_305/306 Units=m Length=42.672
+New Line.F_T_119_15 LineCode=500_Cu bus1=BLDG3C_15_12KV bus2=SW_T_307/308 Units=m Length=42.672
+New Line.F_T_120_12 LineCode=500_Cu bus1=SS_61_TMC bus2=SW_T_309/310 Units=m Length=18.288
+New Line.F_T_121_12 LineCode=500_Cu bus1=SS_61_TMC bus2=SW_T_311/312 Units=m Length=18.288
+New Line.F_T_124 LineCode=4_0_Cu bus1=SS_69_SIO bus2=BUS_T_124_PRI Units=m Length=6.096
+New Line.F_T_136 LineCode=500_Cu bus1=SS_74_WC bus2=BUS_T_136_PRI Units=m Length=4.572
+New Line.F_T_145 LineCode=500_Cu bus1=SS_73_SOM bus2=BUS_T_145_PRI Units=m Length=9.144
+New Line.F_T_146 LineCode=500_Cu bus1=SS_73_SOM bus2=BUS_T_146_PRI Units=m Length=6.096
+New Line.F_T_147 LineCode=500_Cu bus1=SS_73_SOM bus2=BUS_T_147_PRI Units=m Length=3.048
+New Line.F_T_148 LineCode=500_Cu bus1=SS_75_SOM bus2=BUS_T_148_PRI Units=m Length=6.096
+New Line.F_T_157_12 LineCode=500_Cu bus1=SS_55_MC bus2=SW_T_209/210 Units=m Length=54.864
+New Line.F_T_159 LineCode=2_0_Cu bus1=E_7_9_5 bus2=BUS_T_159_PRI Units=m Length=9.144
+New Line.F_T_161 LineCode=250_Cu bus1=SS_19_EC bus2=BASEBALL_PRI Units=m Length=3.048
+New Line.F_T_170 LineCode=2_0_Cu bus1=SW_T_169 bus2=SW_T_170 Units=m Length=96.012
+New Line.F_T_171 LineCode=500_Cu bus1=SS_20_EC bus2=C_SERVICE_PRI Units=m Length=4.572
+New Line.F_T_180 LineCode=500_Cu bus1=SS_75_SOM bus2=BUS_T_180_PRI Units=m Length=27.432
+New Line.F_T_181 LineCode=500_Cu bus1=SS_75_SOM bus2=BUS_T_181_PRI Units=m Length=36.576
+New Line.F_T_182_8 LineCode=500_Cu bus1=S182_8 bus2=SW_T_010/011 Units=m Length=15.24
+New Line.F_T_183_8 LineCode=500_Cu bus1=S183_8 bus2=SW_T_008/009 Units=m Length=15.24
+New Line.F_T_186 LineCode=500_Cu bus1=E_10_11_14_1 bus2=BUS_T_186_PRI Units=m Length=85.344
+New Line.F_T_19 LineCode=500_Cu bus1=SS_44_MC bus2=BUS_T_19_PRI Units=m Length=7.62
+New Line.F_T_191 LineCode=250_Cu bus1=SB_B2A_EG bus2=BUS_T_191_PRI Units=m Length=42.672
+New Line.F_T_192_15 LineCode=500_Cu bus1=SS_83_MC_15 bus2=SW_T_219 Units=m Length=6.096
+New Line.F_T_193_102 LineCode=500_Cu bus1=CLIN_SCI_12KV bus2=C_SCI_SUBA_PRI Units=m Length=3.048
+New Line.F_T_194_102 LineCode=500_Cu bus1=CLIN_SCI_12KV bus2=C_SCI_SUBB_PRI Units=m Length=3.048
+New Line.F_T_195 LineCode=500_Cu bus1=SS_89_MC bus2=BUS_T_195_PRI Units=m Length=10.668
+New Line.F_T_196 LineCode=500_Cu bus1=SS_89_MC bus2=BUS_T_196_PRI Units=m Length=10.668
+New Line.F_T_197 LineCode=500_Cu bus1=SS_72_MC bus2=BUS_T_197_PRI Units=m Length=7.62
+New Line.F_T_198 LineCode=500_Cu bus1=SS_72_MC bus2=BUS_T_198_PRI Units=m Length=7.62
+New Line.F_T_199 LineCode=500_Cu bus1=SS_72_MC bus2=BUS_T_199_PRI Units=m Length=7.62
+New Line.F_T_20 LineCode=500_Cu bus1=SS_44_MC bus2=BUS_T_20_PRI Units=m Length=7.62
+New Line.F_T_211 LineCode=500_Cu bus1=SS_103_EC bus2=T_049 Units=m Length=12.192
+New Line.F_T_212_108 LineCode=500_Cu bus1=P_HALL_T2_SW4 bus2=SW_T_057/058 Units=m Length=6.096
+New Line.F_T_213_103 LineCode=500_Cu bus1=E_3_2_103 bus2=SW_T_055/056 Units=m Length=60.96
+New Line.F_T_214_103 LineCode=500_Cu bus1=P_HALL_T2_SW3 bus2=SW_T_059/060 Units=m Length=12.192
+New Line.F_T_215_17 LineCode=500_Cu bus1=E_7_13_1_17 bus2=SW_T_061/062 Units=m Length=45.72
+New Line.F_T_219_17 LineCode=500_Cu bus1=US1_17 bus2=SW_T_071/072 Units=m Length=12.192
+New Line.F_T_220_17 LineCode=500_Cu bus1=US1_17 bus2=SW_T_073/074 Units=m Length=27.432
+New Line.F_T_227_102 LineCode=500_Cu bus1=SW_T_227/228 bus2=SW_T_227 Units=m Length=3.048
+New Line.F_T_228_102 LineCode=500_Cu bus1=SW_T_227/228 bus2=SW_T_228 Units=m Length=3.048
+New Line.F_T_233 LineCode=500_Cu bus1=SS_4_RC bus2=BUS_T_233_PRI Units=m Length=44.196
+New Line.F_T_234 LineCode=500_Cu bus1=BUS_T_234_PRI bus2=SS_3_RC Units=m Length=35.052
+New Line.F_T_240 LineCode=250_Cu bus1=SS_24_ERC bus2=SW_T_092 Units=m Length=13.716
+New Line.F_T_241_7 LineCode=500_Cu bus1=E_7_6_3_7 bus2=M_HAND_PRI Units=m Length=12.192
+New Line.F_T_244 LineCode=2_0_Cu bus1=DB_CP bus2=T_244_PRI Units=m Length=21.336
+New Line.F_T_248 LineCode=250_Cu bus1=TERM_CABINET bus2=BUS_T_248_PRI Units=m Length=89.916
+New Line.F_T_249 LineCode=250_Cu bus1=TERM_CABINET bus2=BUS_T_249_PRI Units=m Length=217.932
+New Line.F_T_251 LineCode=500_Cu bus1=SS_75_SOM bus2=BUS_T_251_PRI Units=m Length=27.432
+New Line.F_T_252 LineCode=500_Cu bus1=BUS_MARSH_SUB bus2=BUS_T_252_PRI Units=m Length=1.524
+New Line.F_T_252_12 LineCode=500_Cu bus1=SS_46_TMC_12 bus2=BUS_MARSH_SUB Units=m Length=3.048
+New Line.F_T_256 LineCode=4_0_Cu bus1=SS_40_SIO bus2=T_256_PRI Units=m Length=24.384
+New Line.F_T_257 LineCode=500_Cu bus1=E_10_11_14_1 bus2=BUS_T_257_PRI Units=m Length=70.104
+New Line.F_T_258 LineCode=500_Cu bus1=SS_44_MC bus2=BUS_T_258_PRI Units=m Length=4.572
+New Line.F_T_259 LineCode=250_Cu bus1=SB_B2A_EG bus2=BUS_T_259_PRI Units=m Length=99.06
+New Line.F_T_260 LineCode=250_Cu bus1=BUS_T_260_PRI bus2=E_2_6_EG Units=m Length=42.672
+New Line.F_T_270 LineCode=500_Cu bus1=SS_51_EC bus2=T_270_PRI Units=m Length=6.096
+New Line.F_T_272 LineCode=500_Cu bus1=SS_63_SC bus2=T_272_PRI Units=m Length=10.668
+New Line.F_T_274 LineCode=250_Cu bus1=SS_58 bus2=BUS_T_274_PRI Units=m Length=118.872
+New Line.F_T_275 LineCode=250_Cu bus1=SS_58 bus2=BUS_T_275_PRI Units=m Length=51.816
+New Line.F_T_276 LineCode=250_Cu bus1=SS_58 bus2=BUS_T_276_PRI Units=m Length=65.532
+New Line.F_T_281 LineCode=500_Cu bus1=SS_50_SC bus2=T_281_PRI Units=m Length=42.672
+New Line.F_T_283 LineCode=500_Cu bus1=SS_71_EC bus2=BUS_T_287_PRI Units=m Length=6.096
+New Line.F_T_284 LineCode=500_Cu bus1=SS_57_ERC bus2=BUS_T_284_PRI Units=m Length=4.572
+New Line.F_T_288 LineCode=500_Cu bus1=DB_CP bus2=T_288_PRI Units=m Length=97.536
+New Line.F_T_290 LineCode=500_Cu bus1=STUDENT_PRI bus2=BUS_T_290_PRI Units=m Length=71.628
+New Line.F_T_292 LineCode=500_Cu bus1=SS_81_TMC bus2=BUS_T_292_PRI Units=m Length=144.78
+New Line.F_T_293 LineCode=500_Cu bus1=BUS_T_293_PRI bus2=SS_86_RC Units=m Length=15.24
+New Line.F_T_294 LineCode=500_Cu bus1=BUS_T_294_PRI bus2=SS_86_RC Units=m Length=12.192
+New Line.F_T_295 LineCode=500_Cu bus1=BUS_T_295_PRI bus2=SS_86_RC Units=m Length=7.62
+New Line.F_T_300 LineCode=500_Cu bus1=BUS_T_300_PRI bus2=SS_6_ERC Units=m Length=123.444
+New Line.F_T_301 LineCode=500_Cu bus1=BUS_T_301_PRI bus2=SS_6_ERC Units=m Length=193.548
+New Line.F_T_302 LineCode=500_Cu bus1=BUS_T_302_PRI bus2=SS_6_ERC Units=m Length=86.868
+New Line.F_T_303 LineCode=500_Cu bus1=SS_81_TMC bus2=BUS_T_303_PRI Units=m Length=60.96
+New Line.F_T_306_SHILEY LineCode=500_Cu bus1=SS_76_EC bus2=PRI_T_306_SHILEY Units=m Length=128.016
+New Line.F_T_313 LineCode=250_Cu bus1=SS_84 bus2=BUS_T_313_PRI Units=m Length=109.728
+New Line.F_T_314 LineCode=500_Cu bus1=SS_12_SOM bus2=BUS_T_314_PRI Units=m Length=9.144
+New Line.F_T_315 LineCode=500_Cu bus1=SS_12_SOM bus2=BUS_T_315_PRI Units=m Length=13.716
+New Line.F_T_316 LineCode=500_Cu bus1=SS_12_SOM bus2=BUS_T_316_PRI Units=m Length=18.288
+New Line.F_T_317 LineCode=2_0_Cu bus1=E_7_9_5 bus2=BUS_T_317_PRI Units=m Length=39.624
+New Line.F_T_318 LineCode=500_Cu bus1=BUS_T_318_PRI bus2=SS_10_SC Units=m Length=18.288
+New Line.F_T_321 LineCode=500_Cu bus1=SS_91_WC bus2=US1B Units=m Length=7.62
+New Line.F_T_322 LineCode=500_Cu bus1=SS_91_WC bus2=US1C Units=m Length=10.668
+New Line.F_T_323 LineCode=500_Cu bus1=SS_91_WC bus2=T_323_PRI Units=m Length=4.572
+New Line.F_T_326 LineCode=500_Cu bus1=SS_94_WC bus2=BUS_T_326_PRI Units=m Length=4.572
+New Line.F_T_328 LineCode=500_Cu bus1=SS_98_RC bus2=BUS_T_328_PRI Units=m Length=38.1
+New Line.F_T_329 LineCode=500_Cu bus1=SS_7_SOM bus2=T_PHARM_B_PRI Units=m Length=41.148
+New Line.F_T_330 LineCode=500_Cu bus1=SS_7_SOM bus2=T_PHARM_A_PRI Units=m Length=41.148
+New Line.F_T_331 LineCode=500_Cu bus1=SS_8_SOM bus2=T_PHARM_ESA_P Units=m Length=30.48
+New Line.F_T_335 LineCode=500_Cu bus1=EC_NORTH bus2=BUS_T_335_PRI Units=m Length=41.148
+New Line.F_T_336 LineCode=500_Cu bus1=EC_NORTH bus2=BUS_T_336_PRI Units=m Length=25.908
+New Line.F_T_338 LineCode=500_Cu bus1=SUPERCOMP bus2=BUS_T_338_PRI Units=m Length=18.288
+New Line.F_T_339_12 LineCode=500_Cu bus1=SS_100_MC_12 bus2=DINING_COMM_PRI Units=m Length=22.86
+New Line.F_T_341 LineCode=500_Cu bus1=SS_21_SC bus2=T_341_PRI Units=m Length=10.668
+New Line.F_T_343 LineCode=2_0_Cu bus1=SS_34_RC bus2=T_343_PRI Units=m Length=76.2
+New Line.F_T_346 LineCode=500_Cu bus1=BUS_T_346_PRI bus2=SS_92_ERC Units=m Length=18.288
+New Line.F_T_347 LineCode=500_Cu bus1=BUS_T_347_PRI bus2=SS_93_ERC Units=m Length=18.288
+New Line.F_T_348 LineCode=500_Cu bus1=BUS_T_348_PRI bus2=SS_92_ERC Units=m Length=4.572
+New Line.F_T_349 LineCode=4_0_Cu bus1=SS_64_SIO bus2=BUS_T_349_PRI Units=m Length=76.2
+New Line.F_T_350 LineCode=500_Cu bus1=SS_104_WC bus2=BUS_T_350_PRI Units=m Length=6.096
+New Line.F_T_351 LineCode=500_Cu bus1=SS_104_WC bus2=BUS_T_351_PRI Units=m Length=12.192
+New Line.F_T_352 LineCode=500_Cu bus1=SS_104_WC bus2=BUS_T_352_PRI Units=m Length=18.288
+New Line.F_T_353 LineCode=500_Cu bus1=SS_106_RC bus2=SW_USS_B Units=m Length=6.096
+New Line.F_T_354 LineCode=500_Cu bus1=SS_106_RC bus2=SW_USS_C Units=m Length=18.288
+New Line.F_T_355 LineCode=500_Cu bus1=T_355_PRI bus2=SS_111_SC Units=m Length=6.096
+New Line.F_T_357 LineCode=500_Cu bus1=SS_51_EC bus2=BUS_T_357_PRI_CNG Units=m Length=41.148
+New Line.F_T_359 LineCode=500_Cu bus1=E_5_3_2_T_359_RAD bus2=BUS_T_359_PRI Units=m Length=85.344
+New Line.F_T_360 LineCode=500_Cu bus1=SS_99 bus2=BUS_T_360_PRI Units=m Length=36.576
+New Line.F_T_361 LineCode=500_Cu bus1=SS_107_ERC bus2=BUS_T_361_PRI_NCH Units=m Length=167.64
+New Line.F_T_362 LineCode=500_Cu bus1=SS_107_ERC bus2=BUS_T_362_PRI_NCH Units=m Length=99.06
+New Line.F_T_363 LineCode=500_Cu bus1=SS_107_ERC bus2=BUS_T_363_PRI_NCH Units=m Length=4.572
+New Line.F_T_364 LineCode=500_Cu bus1=SS_108_ERC bus2=BUS_T_364_PRI Units=m Length=56.388
+New Line.F_T_365 LineCode=500_Cu bus1=SS_108_ERC bus2=BUS_T_365_PRI Units=m Length=6.096
+New Line.F_T_366 LineCode=500_Cu bus1=SS_108_ERC bus2=BUS_T_366_PRI Units=m Length=60.96
+New Line.F_T_367 LineCode=500_Cu bus1=SS_119_ERC bus2=BUS_T_367_PRI Units=m Length=4.572
+New Line.F_T_368 LineCode=500_Cu bus1=SS_119_ERC bus2=BUS_T_368_PRI Units=m Length=7.62
+New Line.F_T_369 LineCode=500_Cu bus1=SS_120_ERC bus2=BUS_T_369_PRI Units=m Length=6.096
+New Line.F_T_370 LineCode=500_Cu bus1=SS_120_ERC bus2=BUS_T_370_PRI Units=m Length=9.144
+New Line.F_T_372 LineCode=4_0_Cu bus1=SS_66_SIO bus2=T_372_PRI Units=m Length=7.62
+New Line.F_T_375 LineCode=500_Cu bus1=SS_117_EC bus2=BUS_T_375_PRI Units=m Length=121.92
+New Line.F_T_376 LineCode=500_Cu bus1=SS_116_EC bus2=BUS_T_376_PRI Units=m Length=121.92
+New Line.F_T_377 LineCode=500_Cu bus1=SS_117_EC bus2=BUS_T_377_PRI Units=m Length=121.92
+New Line.F_T_378 LineCode=500_Cu bus1=SS_122_RC bus2=BUS_T_378_PRI Units=m Length=24.384
+New Line.F_T_379 LineCode=500_Cu bus1=SS_122_RC bus2=BUS_T_379_PRI Units=m Length=15.24
+New Line.F_T_382 LineCode=500_Cu bus1=SS_59 bus2=T_382_PRI Units=m Length=18.288
+New Line.F_T_383_ECOB LineCode=500_Cu bus1=SS_138 bus2=BUS_PD_EC_TEMP_TR Units=m Length=15.24
+New Line.F_T_384 LineCode=500_Cu bus1=SS_137 bus2=T_384_PRI Units=m Length=9.144
+New Line.F_T_385 LineCode=500_Cu bus1=E_10_11_13_3A bus2=T_385_PRI Units=m Length=0.3048
+New Line.F_T_387 LineCode=500_Cu bus1=SS_101 bus2=BUS_0891 Units=m Length=15.24
+New Line.F_T_388 LineCode=500_Cu bus1=SS_101 bus2=BUS_0890 Units=m Length=15.24
+New Line.F_T_389 LineCode=500_Cu bus1=SS_101 bus2=BUS_0889 Units=m Length=15.24
+New Line.F_T_394 LineCode=500_Cu bus1=SS_124 bus2=T_394_PRI Units=m Length=94.488
+New Line.F_T_396_MDB LineCode=500_Cu bus1=E_4_T_396 bus2=BUS_PD_T_396_MDB_PRI Units=m Length=27.432
+New Line.F_T_57 LineCode=500_Cu bus1=SS_40_SIO bus2=T_57_PRI Units=m Length=4.572
+New Line.F_T_79 LineCode=4_0_Cu bus1=SS_87_WC bus2=BUS_T_79_PRI Units=m Length=4.572
+New Line.F_T_H16_15 LineCode=500_Cu bus1=E_2_10_3_15 bus2=SW_T_315 Units=m Length=9.144
+New Line.F_T_H16_SUB2_15 LineCode=500_Cu bus1=E_2_10_2_15 bus2=SW_T_314 Units=m Length=54.864
+New Line.F_T_H16_SUB4_15 LineCode=500_Cu bus1=E_2_10_4_15 bus2=SW_T_316 Units=m Length=70.104
+New Line.F_T_RO1_SEC LineCode=250_Cu bus1=T_RO1_SEC bus2=T_RO2_SEC Units=m Length=4.572
+New Line.F_T_RO2_SEC LineCode=250_Cu bus1=T_RO2_SEC bus2=BUS_52_TB Units=m Length=0.3048
+New Line.F_T_SHILEY_E LineCode=500_Cu bus1=SS_77_EC bus2=PRI_T_309_SHILEY Units=m Length=42.672
+New Line.F_T_TA LineCode=10_Cu bus1=BUS_PD_T_TA_PRI bus2=BUS_T_TA_SEC Units=m Length=3.048
+New Line.F_T_TM LineCode=6_Cu bus1=BUS_PD_T_TM_PRI bus2=BUS_T_TM_SEC Units=m Length=3.048
+New Line.F_TA LineCode=500_Cu bus1=PSA bus2=BUS_T_152_PRI Units=m Length=18.288
+New Line.F_TB LineCode=3_0_Cu bus1=SS_5_RC bus2=BUS_T_236_PRI Units=m Length=12.192
+New Line.F_TERM_CABINET LineCode=250_Cu bus1=SS_18_SIO bus2=TERM_CABINET Units=m Length=36.576
+New Line.F_TG1 LineCode=500_Cu bus1=TG1 bus2=PSA Units=m Length=76.2
+New Line.F_TG1_M LineCode=500_Cu bus1=PSA_LINE_TG_1 bus2=PSA Units=m Length=0.3048
+New Line.F_TG2 LineCode=500_Cu bus1=TG2 bus2=PSB Units=m Length=76.2
+New Line.F_TG2_M LineCode=500_Cu bus1=PSB_LINE_TG_2 bus2=PSB Units=m Length=0.3048
+New Line.F_TS LineCode=500_Cu bus1=SS_136 bus2=TS Units=m Length=6.096
+New Line.F_TUS_1N LineCode=750_Cu bus1=SS_130 bus2=TUS_1N_PRI Units=m Length=21.336
+New Line.F_TUS_2N LineCode=750_Cu bus1=SS_131 bus2=TUS_2N_PRI Units=m Length=12.192
+New Line.F_TUS_3N LineCode=750_Cu bus1=SS_130 bus2=TUS_3N_PRI Units=m Length=19.812
+New Line.F_TUS_4N LineCode=750_Cu bus1=SS_131 bus2=TUS_4N_PRI Units=m Length=10.668
+New Line.F_TUS_5N LineCode=750_Cu bus1=SS_130 bus2=TUS_5N_PRI Units=m Length=10.668
+New Line.F_TUS_6N LineCode=750_Cu bus1=SS_131 bus2=TUS_6N_PRI Units=m Length=24.384
+New Line.F_US_TD_DB_CP_TIE LineCode=250_Cu bus1=US_TD bus2=DB_CP Units=m Length=3.048
+New Line.F_US3N LineCode=500_Cu bus1=SS_3_RC bus2=BUS_T_333_PRI Units=m Length=21.336
+New Line.F_US7N LineCode=500_Cu bus1=SS_4_RC bus2=T_319_PRI Units=m Length=15.24
+New Line.F_USEM_A LineCode=500_Cu bus1=SS_79_EC bus2=PRI_T_USEM_A Units=m Length=67.056
+New Line.F_USEM_B LineCode=500_Cu bus1=SS_78_EC bus2=PRI_T_USEM_B Units=m Length=67.056
+New Line.F_USNL_A LineCode=500_Cu bus1=SS_80_EC bus2=T_308_PRI Units=m Length=6.096
+New Line.F_USNL_B LineCode=500_Cu bus1=SS_80_EC bus2=T_307_PRI Units=m Length=18.288
+New Line.F_VISUAL_A_305 LineCode=500_Cu bus1=E_1_9_3_305 bus2=SS_110_VIS_A Units=m Length=9.144
+New Line.F_WALKWAY_CAR LineCode=500_Cu bus1=SS_29_MC bus2=BUS_T_239_PRI Units=m Length=4.572
+New Line.F_WAR_COL_1 LineCode=4_0_Cu bus1=SS_23_WC bus2=WAR_COL_1_PRI Units=m Length=7.62
+New Line.F_XF_15KVA_XFMR LineCode=10_Cu bus1=PNL_A bus2=BUS_XF_15KVA Units=m Length=3.048
+New Line.F_YORK_SUB1 LineCode=500_Cu bus1=SS_47_RC bus2=SW_YORK_SUB1 Units=m Length=85.344
+New Line.F_YORK_SUB2 LineCode=500_Cu bus1=SS_47_RC bus2=SW_YORK_SUB2 Units=m Length=6.096
+New Line.F_YORK_SUB3 LineCode=500_Cu bus1=SS_47_RC bus2=SW_YORK_SUB_3 Units=m Length=4.572
+New Transformer.T_105_BSB Windings=2 Buses=[BUS_T_105_PRI T_105_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[1000  1333] %Rs=[1  1] XHL=5.73 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_106_MED_TEACH Windings=2 Buses=[BUS_T_106_PRI MED_TEACHING] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.91        0.91] XHL=5.94 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_107_MTF Windings=2 Buses=[BUS_T_107_PRI ED2] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[300  300] %Rs=[0.98        0.98] XHL=4.08 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_109_HEALTH_CEN Windings=2 Buses=[SS_56_MC HEALTH_CENTER] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.17        1.17] XHL=4.86 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_112_US_TF Windings=2 Buses=[BUS_T_112_PRI SOM_SUB_E] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[1000  1000] %Rs=[1.07        1.07] XHL=6.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_114 Windings=2 Buses=[BUS_T_114_PRI T_114_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.88        0.88] XHL=5.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_115 Windings=2 Buses=[BUS_T_115_PRI ED6] Conns=[delta wye] kVs=[4.16       0.208] kVAs=[150  150] %Rs=[1.42        1.42] XHL=5.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_116_BLDG_3B Windings=2 Buses=[SW_T_303/304 CRB_3B_208V] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.12        1.12] XHL=5.87 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_117_BLDG_3B Windings=2 Buses=[SW_T_301/302 CRB_3B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.02        1.02] XHL=5.35 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_118_BLDG_3C Windings=2 Buses=[SW_T_305/306 COG_SCI_3C_480V] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.09        1.09] XHL=5.12 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_119_BLDG_3C Windings=2 Buses=[SW_T_307/308 COG_SCI_3C_208V] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.25        1.25] XHL=5.2 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_120_BLDG_3F Windings=2 Buses=[SW_T_309/310 MEDIA_3F_480V] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[1.19        1.19] XHL=4.93 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_121_BLDG_3F Windings=2 Buses=[SW_T_311/312 MEDIA_3F_208V] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.27        1.27] XHL=5.25 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_123_HUBBS_HALL Windings=2 Buses=[BUS_T_123_PRI HUBBS_HALL] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2000] %Rs=[0.86        0.86] XHL=6.24 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_124_MARINE_SCI Windings=2 Buses=[BUS_T_124_PRI MARINE_SCIENCE] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.36        0.36] XHL=1.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_126_NIER Windings=2 Buses=[BUS_T_126_PRI NIERENBURG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.09        1.09] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_134_STUD Windings=2 Buses=[STUDENT_PRI STUDENT_T226] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.15        1.15] XHL=4.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_135_FACULTY Windings=2 Buses=[SS_41_MC FACULTY_CLUB] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.94        0.94] XHL=3.9 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_136_POWELL Windings=2 Buses=[BUS_T_136_PRI POWELL_STRUCT] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2240] %Rs=[0.71        0.71] XHL=5.67 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_137_EBU1 Windings=2 Buses=[T_137_PRI T_137_SEC_EBU1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.93        0.93] XHL=6.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_138_EBU1 Windings=2 Buses=[T_138_PRI EBU1_T_138] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.75        0.75] XHL=6.02 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_139_EBU1 Windings=2 Buses=[BUS_T_139_PRI EBU1_T_139] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[1.07        1.07] XHL=6.12 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_140_EBU1 Windings=2 Buses=[T_140_PRI EBU1_T_140] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.07        1.07] XHL=5.61 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_143_UREY Windings=2 Buses=[SS_97_RC LC_C_UREY] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.97        0.97] XHL=5.57 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_144_MAYER Windings=2 Buses=[SS_70_RC MAYER_480V] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  667] %Rs=[1.19        1.19] XHL=5.57 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_145_BSCI_S3 Windings=2 Buses=[BUS_T_145_PRI BASIC_SCI_SUB3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.27        1.27] XHL=5.97 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_146_BSCI_S2 Windings=2 Buses=[BUS_T_146_PRI BASIC_SCI_SUB2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.07        1.07] XHL=6.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_147_BSCI_S1 Windings=2 Buses=[BUS_T_147_PRI BASIC_SCI_SUB1] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.16        1.16] XHL=6.09 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_148_BSCI_S4 Windings=2 Buses=[BUS_T_148_PRI BASIC_SCI_SUB4] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.05        1.05] XHL=6.01 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_149_B_2B_480V Windings=2 Buses=[SS_55_MC LC1_2B_480V] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  666] %Rs=[1.27        1.27] XHL=5.97 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_150_B_2B_208V Windings=2 Buses=[SS_55_MC T_150_SEC_LC2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.16        1.16] XHL=6.09 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_151_PHYS_ED Windings=2 Buses=[PHYS_ED_PRI PHYS_ED_BLDGS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.94        0.94] XHL=4.4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_152_TA Windings=2 Buses=[BUS_T_152_PRI SWBD_A] Conns=[delta wye] kVs=[12.47         4.16] kVAs=[2500  2800] %Rs=[0.52        0.52] XHL=5.5 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_154_BONNER_LCB Windings=2 Buses=[SW_T_120 BONNER_LC_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.15        1.15] XHL=5.38 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_155_BONNER_LCA Windings=2 Buses=[SW_T_119 BONNER_LC_A] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.09        1.09] XHL=5.7 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_156_TES Windings=2 Buses=[BUS_T_156_PRI TES] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1  1] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_157_BLDG_2D Windings=2 Buses=[SW_T_209/210 BUILDING_2D] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1  1] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_158_NORPAX Windings=2 Buses=[SS_66_SIO NORPAX] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1.05        1.05] XHL=6.01 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_159_P_E Windings=2 Buses=[BUS_T_159_PRI BUS_T_159_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[0.82        0.82] XHL=3.4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_160_ALEX_SP Windings=2 Buses=[ALEX_SP_PRI ALEX_SPANOS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[0.82        0.82] XHL=3.4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_162_WAR_COL_2 Windings=2 Buses=[SW_T_162 WARREN_COL_2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[225  250] %Rs=[0.9         0.9] XHL=3.49 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_163_WAR_COL_3 Windings=2 Buses=[SW_T_163 WARREN_COL_3] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[225  250] %Rs=[0.82        0.82] XHL=3.2 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_164_WAR_COL_1 Windings=2 Buses=[WAR_COL_1_PRI WARREN_COL_1] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[0.81        0.81] XHL=2.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_166 Windings=2 Buses=[SW_T_166 T_287_SEC] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[0.88        0.88] XHL=2.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_167_MATH Windings=2 Buses=[SW_T_167 MATHEWS_S167] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_168_MATH Windings=2 Buses=[SW_T_168 MATHEWS_S168] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[1.52        1.52] XHL=4.55 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_169_P_CYN Windings=2 Buses=[SW_T_169 PEP_CYN_S169] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_170_INAT_HOUSE Windings=2 Buses=[SW_T_170 INAT_HOUSE] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[0.92        0.92] XHL=2.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_171_C_SERVICE Windings=2 Buses=[C_SERVICE_PRI T_171_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.9         0.9] XHL=5.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_172_GRN_HSE Windings=2 Buses=[SS_22_WC GREENHOUSE] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.49        1.49] XHL=4.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_173_IOF Windings=2 Buses=[IOF_PRI INST_OF_AMER] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[1.02        1.02] XHL=4.24 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_174_IRPS Windings=2 Buses=[IRPS_PRI IRPS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[0.89        0.89] XHL=3.69 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_178_3RD_C Windings=2 Buses=[3RD_C_S166_PRI 3RD_C_RES] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[0.81        0.81] XHL=3.81 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_179_O_VIEW Windings=2 Buses=[BUS_T_179_PRI T_179_OCEANVIEW_SEC] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.02        1.02] XHL=3.22 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_18_MUIR_APTS Windings=2 Buses=[SS_62_MC MUIR_APTS] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.14        1.14] XHL=5.99 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_180_BSCI_S5 Windings=2 Buses=[BUS_T_180_PRI BASIC_SCI_SUB5] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.78        0.78] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_181_BSCI_S7 Windings=2 Buses=[BUS_T_181_PRI BASIC_SCI_SUB7] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[0.96        0.96] XHL=5.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_182_C_LIB Windings=2 Buses=[SW_T_010/011 CEN_LIB_S182] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.01        1.01] XHL=5.3 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_183_C_LIB Windings=2 Buses=[SW_T_008/009 CEN_LIB_S183] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.01        1.01] XHL=5.3 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_184_C_LIB Windings=2 Buses=[C_LIB_S184_PRI CEN_LIB_S184] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.86        0.86] XHL=5.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_186_FORUM_THEATRE Windings=2 Buses=[BUS_T_186_PRI T_186_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.01        1.01] XHL=5.31 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_187_MANDELL_W Windings=2 Buses=[MANDEL_W_PRI MANDELL_WEISS] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.08        1.08] XHL=5.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_188_I&R_BLDG Windings=2 Buses=[SW_T_042/043 I&R_BLDG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.74        0.74] XHL=5.95 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_189_HI_BAY_PH Windings=2 Buses=[HI_BAY_PH_PRI HI_BAY_PHYSICS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.94        0.94] XHL=4.4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_19_TIOGA Windings=2 Buses=[BUS_T_19_PRI TIOGA] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[1.12        1.12] XHL=5.26 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_190_SIO_LIBRARY Windings=2 Buses=[SS_26_SIO SIO_LIBRARY] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1  1] XHL=5.26 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_191 Windings=2 Buses=[BUS_T_191_PRI T_191_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[225  225] %Rs=[1.34        1.34] XHL=5.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_192_MANDEVILLE Windings=2 Buses=[SW_T_219 MANDEVILLE_CTR] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.88        0.88] XHL=5.78 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_193_C_SCI_SUBA Windings=2 Buses=[C_SCI_SUBA_PRI CLIN_SCI_SUB_A] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.03        1.03] XHL=5.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_194_C_SCI_SUBB Windings=2 Buses=[C_SCI_SUBB_PRI CLIN_SCI_SUB_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.9         0.9] XHL=5.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_195_B2C Windings=2 Buses=[BUS_T_195_PRI BLDG_2C_208V] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.05        1.05] XHL=6.01 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_196_B2C Windings=2 Buses=[BUS_T_196_PRI BLDG_2C_480V] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1.04        1.04] XHL=5.96 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_197_SUB3 Windings=2 Buses=[BUS_T_197_PRI SUB_3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.96        0.96] XHL=5.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_198_SUB1 Windings=2 Buses=[BUS_T_198_PRI SUB_1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.56        0.56] XHL=5.87 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_199_SUB2 Windings=2 Buses=[BUS_T_199_PRI SUB_2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.77        0.77] XHL=4.38 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_20_TENEYA Windings=2 Buses=[BUS_T_20_PRI TENEYA] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.08        1.08] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_200_UREY Windings=2 Buses=[SS_97_RC LC_A_UREY] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[1.04        1.04] XHL=5.95 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_202_SEAWEED Windings=2 Buses=[SS_64_SIO SEAWEED_CAN] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.56        0.56] XHL=2.64 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_203_IGPP Windings=2 Buses=[SS_67_SIO IGPP_SUB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.11        1.11] XHL=5.8 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_204 Windings=2 Buses=[SDG&E_69KV T_204_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.36        0.36] XHL=7.55 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_205 Windings=2 Buses=[SDG&E_69KV T_205_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.37        0.37] XHL=7.61 %Noloadloss=0 %imag=0 sub=y MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_206_3RD_C Windings=2 Buses=[3RD_C_S206PRI 3RD_C_APT_206] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[0.97        0.97] XHL=3.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_207_3RD_C Windings=2 Buses=[T_207_PRI T_207_SEC] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.93        0.93] XHL=3.88 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_209_CPA Windings=2 Buses=[T_053 US_CPA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  3333] %Rs=[0.78        0.78] XHL=6.25 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_210_HW Windings=2 Buses=[T_051 US_HW] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.89        0.89] XHL=6.2 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_211_HE Windings=2 Buses=[T_049 US_HE] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.89        0.89] XHL=6.21 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_212_PAC_HALL_T2 Windings=2 Buses=[SW_T_057/058 PACIFIC_H_T2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[1.07        1.07] XHL=6.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_213_PAC_HALL_T1 Windings=2 Buses=[SW_T_055/056 PACIFIC_H_T1] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[1.03        1.03] XHL=5.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_214_PAC_HALL_T3 Windings=2 Buses=[SW_T_059/060 PACIFIC_H_T3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  3333] %Rs=[0.59        0.59] XHL=6.17 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_215_CV_CAF Windings=2 Buses=[SW_T_061/062 CANYON_VIEW] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.96        0.96] XHL=6.69 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_216_VISUAL_A Windings=2 Buses=[SS_110_VIS_A VISUAL_ARTS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.88        0.88] XHL=5.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_217_S_EBU2 Windings=2 Buses=[S_EBU2_PRI S_EBU2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.74        0.74] XHL=5.94 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_218_N_EBU2 Windings=2 Buses=[SW_T_069/070 US_N_EBU2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.81        0.81] XHL=5.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_219_RIMAC_US_1W Windings=2 Buses=[SW_T_071/072 US_2_RIMAC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.89        0.89] XHL=5.8 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_220_RIMAC_US_1E Windings=2 Buses=[SW_T_073/074 US_1_RIMAC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.82        0.82] XHL=5.39 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_221_EBU2_LAB Windings=2 Buses=[EBU2_LAB_PRI EBU2_LAB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  3500] %Rs=[0.72        0.72] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_222_IGPP_II Windings=2 Buses=[SS_27_SIO IGPP2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.06        1.06] XHL=5.56 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_223_BIRCH_AQ Windings=2 Buses=[BUS_T_223_PRI BIRCH_AQUARIUM] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  1000] %Rs=[1.09        1.09] XHL=5.7 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_224_SVERDRUP_US1 Windings=2 Buses=[SVERD_US1_PRI SVERDRUP_US1] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.05        1.05] XHL=5.5 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_225_SVERDRUP_US2 Windings=2 Buses=[SVERD_US2_PRI SVERDRUP_US2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.05        1.05] XHL=5.5 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_227_E_CMM Windings=2 Buses=[SW_T_227 EAST_CMM_S227] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.82        0.82] XHL=5.98 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_228_E_CMM Windings=2 Buses=[SW_T_228 EAST_CMM_S228] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.89        0.89] XHL=5.84 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_229_IOF_PH2 Windings=2 Buses=[BUS_T_229_PRI IN_OF_AMER_P2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.96        0.96] XHL=3.99 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_230_CT_5&6 Windings=2 Buses=[BUS_T_230_PRI T_230_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2240] %Rs=[0.76        0.76] XHL=5.57 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_231_CT_3&4 Windings=2 Buses=[SW_T_087 T_231_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.86        0.86] XHL=5.63 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_233_US_8 Windings=2 Buses=[BUS_T_233_PRI US8] Conns=[delta wye] kVs=[12.47         4.16] kVAs=[2500  2800] %Rs=[0.53        0.53] XHL=5.53 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_234_US_TD Windings=2 Buses=[BUS_T_234_PRI DB_CP] Conns=[delta wye] kVs=[12.47         4.16] kVAs=[2500  2500] %Rs=[0.51        0.51] XHL=5.38 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_236_TB Windings=2 Buses=[BUS_T_236_PRI TB_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.86        0.86] XHL=4.93 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_238_CENT_HALL Windings=2 Buses=[BUS_T_238_PRI CENT_HALL] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.05        1.05] XHL=5.51 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_239_CAREER_SERV Windings=2 Buses=[BUS_T_239_PRI MDP] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[225  225] %Rs=[0.94        0.94] XHL=3.68 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_240_SOCIAL_SCI Windings=2 Buses=[SW_T_092 US_SS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  1000] %Rs=[1.12        1.12] XHL=5.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_241_MAT_HAND Windings=2 Buses=[M_HAND_PRI MAT_HANDLING] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.13        1.13] XHL=5.64 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_242_ATHL_FIELD Windings=2 Buses=[T_242_PRI ATHLETIC_FIELD] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1  1] XHL=5.24 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_244_CT_3&4 Windings=2 Buses=[T_244_PRI T_244_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[1000  1120] %Rs=[0.95        0.95] XHL=5.43 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_246_SERF_BLDG Windings=2 Buses=[SERF_BLDG_PRI SERF_BLDG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.76        0.76] XHL=6.1 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_247_BONNER_LCC Windings=2 Buses=[SW_T_121_1 BONNER_LC_C] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.06        1.06] XHL=6.08 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_248 Windings=2 Buses=[BUS_T_248_PRI COAST_APT_2] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[167  167] %Rs=[0.47        0.47] XHL=1.74 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_249 Windings=2 Buses=[BUS_T_249_PRI T_249_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[167  167] %Rs=[0.87        0.87] XHL=3.18 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_250 Windings=2 Buses=[TERM_CABINET COAST_APT] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[167  167] %Rs=[0.4         0.4] XHL=1.45 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_251_BSCI_S6 Windings=2 Buses=[BUS_T_251_PRI BASIC_SCI_SUB6] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[0.95        0.95] XHL=5.41 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_252_MARSH_SUB1 Windings=2 Buses=[BUS_T_252_PRI MARSHALL_SUB1] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[1.17        1.17] XHL=5.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_253_CR_UNION Windings=2 Buses=[T_253_PRI CREDIT_UNION] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[1.23        1.23] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_255_IMG Windings=2 Buses=[SS_11_SOM IMG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  840] %Rs=[1  1] XHL=5.25 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_256_SCHOL_HAL Windings=2 Buses=[T_256_PRI SCHOLANDER_HAL] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.36        0.36] XHL=1.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_257_DANCE_STUDIO Windings=2 Buses=[BUS_T_257_PRI DANCE_STUDIO] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.76        0.76] XHL=3.15 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_258_CELL_SITE Windings=2 Buses=[BUS_T_258_PRI CELL_SITE] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[225  252] %Rs=[0.85        0.85] XHL=3.29 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_259 Windings=2 Buses=[BUS_T_259_PRI T_259_SEC] Conns=[delta wye] kVs=[4.16       0.208] kVAs=[150  150] %Rs=[1.06        1.06] XHL=3.8 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_260 Windings=2 Buses=[BUS_T_260_PRI ED4] Conns=[delta wye] kVs=[4.16       0.208] kVAs=[225  225] %Rs=[1.27        1.27] XHL=4.96 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_264_ENDUR_SUB1 Windings=2 Buses=[BUS_T_264_PRI USR1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.9         0.9] XHL=5.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_265_ENDUR_SUB2 Windings=2 Buses=[BUS_T_265_PRI USR2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.22        1.22] XHL=5.73 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_267_OARF Windings=2 Buses=[BUS_T_267_PRI OARF] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.86        0.86] XHL=5.64 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_268_GALBRAITH Windings=2 Buses=[SW_T_095 GALBRAITH_HALL] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.85        0.85] XHL=5.56 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_269_ERC Windings=2 Buses=[T_269_PRI ERC] Conns=[delta wye] kVs=[12.47          2.4] kVAs=[500  500] %Rs=[1.15        1.15] XHL=5.38 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_270_REGENTS Windings=2 Buses=[T_270_PRI T_270_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[75  75] %Rs=[1.26        1.26] XHL=3.79 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_271_OLD_R_HALL Windings=2 Buses=[BUS_T_271_PRI OLD_RITTER_HAL] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.05        1.05] XHL=5.5 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_272_MAAC_BLDG Windings=2 Buses=[T_272_PRI MAAC_BLDGS] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1  1] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_273_MAYER Windings=2 Buses=[SS_70_RC MAYER_208V] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1333] %Rs=[0.92        0.92] XHL=5.25 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_274_YORK Windings=2 Buses=[BUS_T_274_PRI T_274_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[300  300] %Rs=[1.19        1.19] XHL=4.96 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_275_MAYER Windings=2 Buses=[BUS_T_275_PRI T_275_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[225  225] %Rs=[1.19        1.19] XHL=5.57 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_276_BONNER Windings=2 Buses=[BUS_T_276_PRI DB_EM] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[500  500] %Rs=[1.11        1.11] XHL=5.2 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_277 Windings=2 Buses=[SDG&E_69KV T_277_SEC] Conns=[delta wye] kVs=[69        12.47] kVAs=[16800  28000] %Rs=[0.36        0.36] XHL=7.43 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=16
+New Transformer.T_278_YORK_SUB2 Windings=2 Buses=[SW_YORK_SUB2 DBN] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[1000  1000] %Rs=[1.06        1.06] XHL=6.03 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_279_YORK_SUB3 Windings=2 Buses=[SW_YORK_SUB_3 DBN_1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.11        1.11] XHL=5.2 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_280_YORK_SUB1 Windings=2 Buses=[SW_YORK_SUB1 DBS] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.07        1.07] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_281_GILMAN Windings=2 Buses=[T_281_PRI GILMAN_PARKING] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  840] %Rs=[1.09        1.09] XHL=5.7 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_282_SCRIPPS Windings=2 Buses=[SS_52_SIO SCRIPPS_BLDG] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.94        0.94] XHL=3.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_283_PREUSS Windings=2 Buses=[BUS_T_287_PRI PREUSS_SCHOOL] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1.03        1.03] XHL=5.86 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_284_NC_PARKING Windings=2 Buses=[BUS_T_284_PRI NC_PARKING_480] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[1.33        1.33] XHL=6.26 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_288_BS Windings=2 Buses=[T_288_PRI SUB_BS] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[2000  2300] %Rs=[0.75        0.75] XHL=5.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_289_BLDG_3E Windings=2 Buses=[SS_53_TMC ECON_3E] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.79        0.79] XHL=3.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_290_STUD Windings=2 Buses=[BUS_T_290_PRI STUDENT_T224] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[500  500] %Rs=[0.95        0.95] XHL=4.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_291_BRAIN_IMAG Windings=2 Buses=[PRI_BIO_MED_1 BRAIN_IMG_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  1000] %Rs=[1.11        1.11] XHL=5.81 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_292_UNEX Windings=2 Buses=[BUS_T_292_PRI UNEX_MSB] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.01        1.01] XHL=5.3 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_293_SS_BA Windings=2 Buses=[BUS_T_293_PRI SS_BA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1333] %Rs=[1  1] XHL=5.68 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_294_SS_BB Windings=2 Buses=[BUS_T_294_PRI SS_BB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1333] %Rs=[1  1] XHL=5.73 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_295_SS_BC Windings=2 Buses=[BUS_T_295_PRI SS_BC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.91        0.91] XHL=5.95 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_296_MATTH_SUB Windings=2 Buses=[SS_85_MATTH_SUB MATTHEWS_SUB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.09        1.09] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_297_EBU_3A Windings=2 Buses=[SW_T_297 EBU_3A_SSB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.69 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_298_EBU_3A Windings=2 Buses=[SW_T_298 EBU_3A1_SSA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.7 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_299_ERC Windings=2 Buses=[BUS_T_299_PRI T_299_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1120] %Rs=[0.98        0.98] XHL=5.61 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_300_HD_3 Windings=2 Buses=[BUS_T_300_PRI HD_3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1680] %Rs=[0.86        0.86] XHL=5.63 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_301_HD_1 Windings=2 Buses=[BUS_T_301_PRI HD_1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1120] %Rs=[1.01        1.01] XHL=5.78 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_302_HD_2 Windings=2 Buses=[BUS_T_302_PRI HD_2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1120] %Rs=[1.03        1.03] XHL=5.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_303_BALLOON Windings=2 Buses=[BUS_T_303_PRI BALLON_BLDG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[1.35        1.35] XHL=5.61 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_304_EC_PS Windings=2 Buses=[BUS_PD_T_304 BUS_T_304_EC_PS_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.45        0.45] XHL=2.12 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_305 Windings=2 Buses=[T_305_PRI EC_OFFICE_BLDG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.99        0.99] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_306_SHILEY Windings=2 Buses=[PRI_T_306_SHILEY SHILEY_EYE_CTR] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1150] %Rs=[1.01        1.01] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_307_USNL_B Windings=2 Buses=[T_307_PRI USNLB_CC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  3000] %Rs=[0.74        0.74] XHL=5.41 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_308_USNL_A Windings=2 Buses=[T_308_PRI USNLA_CC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  3000] %Rs=[0.75        0.75] XHL=5.44 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_309_SHILEY Windings=2 Buses=[PRI_T_309_SHILEY SHILEY_US_EM] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[1.15        1.15] XHL=4.78 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_310_USEM_A Windings=2 Buses=[PRI_T_USEM_A USEM_A_CC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1500] %Rs=[0.89        0.89] XHL=5.08 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_311_USEM_B Windings=2 Buses=[PRI_T_USEM_B USEM_B_CC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1500] %Rs=[0.9         0.9] XHL=5.11 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_313_LIECHTAG Windings=2 Buses=[BUS_T_313_PRI T_313_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[1000  1333] %Rs=[1.01        1.01] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_314_B Windings=2 Buses=[BUS_T_314_PRI SOM_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.89        0.89] XHL=5.79 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_315_C Windings=2 Buses=[BUS_T_315_PRI SOM_C] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.91        0.91] XHL=5.92 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_316_A Windings=2 Buses=[BUS_T_316_PRI SOM_A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.88        0.88] XHL=5.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_317_MC Windings=2 Buses=[BUS_T_317_PRI T_317_SEC] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[150  150] %Rs=[1.11        1.11] XHL=4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_318_MULTIP_BLD Windings=2 Buses=[BUS_T_318_PRI MULT_BLD_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  1000] %Rs=[1.03        1.03] XHL=5.4 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_319_US_7N Windings=2 Buses=[T_319_PRI US_7N] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2000] %Rs=[0.79        0.79] XHL=5.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_320_LA_JOLLA Windings=2 Buses=[BLACK_BOX_PRI LA_JOLLA_PLAY] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.88        0.88] XHL=5.75 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_321_CAL_IT1B Windings=2 Buses=[US1B CAL_IT_US1B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.97        0.97] XHL=6.32 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_322_CAL_IT1C Windings=2 Buses=[US1C CAL_IT_US1C] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.97        0.97] XHL=6.32 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_323_CAL_IT1A Windings=2 Buses=[T_323_PRI CAL_IT_US1A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.97        0.97] XHL=6.35 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_324_EBU_3B Windings=2 Buses=[SW_T_324 EBU_3B_SUB_A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.69 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_325_EBU_3B1 Windings=2 Buses=[SW_T_325 EBU_3B1_SUB_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.85        0.85] XHL=5.59 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_326 Windings=2 Buses=[BUS_T_326_PRI T_326_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.98        0.98] XHL=4.62 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_327_BLK_BOX_REST Windings=2 Buses=[B_BOX_REST_PRI B_BOX_REST] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[0.94        0.94] XHL=3.9 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_328_UREY Windings=2 Buses=[BUS_T_328_PRI UREY_CCT] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.91        0.91] XHL=5.96 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_329_PHARM_B Windings=2 Buses=[T_PHARM_B_PRI USB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1150] %Rs=[0.98        0.98] XHL=5.62 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_330_PHARM_A Windings=2 Buses=[T_PHARM_A_PRI USA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1150] %Rs=[0.98        0.98] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_331_ESA_PHARMA Windings=2 Buses=[T_PHARM_ESA_P PHARM_ESA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1150] %Rs=[0.99        0.99] XHL=5.64 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_332_BASEBALL Windings=2 Buses=[BASEBALL_PRI BASEBALL_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  500] %Rs=[0.77        0.77] XHL=3.62 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_333_US_3N Windings=2 Buses=[BUS_T_333_PRI US_3N] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.75        0.75] XHL=5.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_334_BIO_MED Windings=2 Buses=[PRI_BIO_MED BIO_MED_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.71 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_335_SUB_1A Windings=2 Buses=[BUS_T_335_PRI SUB_1A] Conns=[delta wye] kVs=[12.47         4.16] kVAs=[3000  4000] %Rs=[0.47        0.47] XHL=5.07 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_336_SUB_2A Windings=2 Buses=[BUS_T_336_PRI SUB_2A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.88        0.88] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_338_CSD2 Windings=2 Buses=[BUS_T_338_PRI CSD2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.79        0.79] XHL=5.76 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_339_DINING_COMM Windings=2 Buses=[DINING_COMM_PRI DINING_COMMONS] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  750] %Rs=[1.44        1.44] XHL=6.78 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_341_STUD_ACAD Windings=2 Buses=[T_341_PRI STUD_ACAD] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.88        0.88] XHL=5.78 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_342_ARGO_BLAKE Windings=2 Buses=[T_342_PRI ARGO_BLAKE] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1333] %Rs=[1.05        1.05] XHL=6.01 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_343_REV_CAFE Windings=2 Buses=[T_343_PRI REVELLE_CAFE] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[750  1000] %Rs=[1.07        1.07] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_345_RADY_MNGM Windings=2 Buses=[BUS_T_345_PRI LDP] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.7 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_346_US_1 Windings=2 Buses=[BUS_T_346_PRI US_1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1725] %Rs=[0.82        0.82] XHL=5.36 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_347_US_2 Windings=2 Buses=[BUS_T_347_PRI US_2_HOPKINS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1725] %Rs=[0.83        0.83] XHL=5.45 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_348_HPS Windings=2 Buses=[BUS_T_348_PRI SUP_COMP_PG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  336] %Rs=[1.35        1.35] XHL=5.59 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_349_BIRCH_AQ Windings=2 Buses=[BUS_T_349_PRI BIRCH_AQ] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1725] %Rs=[0.87        0.87] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_350 Windings=2 Buses=[BUS_T_350_PRI USS_A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.78        0.78] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_351 Windings=2 Buses=[BUS_T_351_PRI USS_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.84        0.84] XHL=5.52 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_352_PRICE_CEN Windings=2 Buses=[BUS_T_352_PRI USS_C_PC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.09        1.09] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_353 Windings=2 Buses=[SW_USS_B MAYER_USSB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_354 Windings=2 Buses=[SW_USS_C MAYER_USSC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.87        0.87] XHL=5.67 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_355_MB Windings=2 Buses=[T_355_PRI T_355_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1.07        1.07] XHL=6.09 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_356_USWC_9 Windings=2 Buses=[BUS_T_356_PRI T_356_SEC] Conns=[delta wye] kVs=[12.47         4.16] kVAs=[2000  2300] %Rs=[0.8         0.8] XHL=5.84 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_357_CNG Windings=2 Buses=[BUS_T_357_PRI_CNG CNG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[1.05        1.05] XHL=5.99 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_358_CPB Windings=2 Buses=[T_050 US_CPB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  3333] %Rs=[0.55        0.55] XHL=5.79 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_359_RAD Windings=2 Buses=[BUS_T_359_PRI T_359_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.11        1.11] XHL=5.82 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_360_UREY Windings=2 Buses=[BUS_T_360_PRI T_360_SEC] Conns=[delta wye] kVs=[4.16        0.48] kVAs=[150  150] %Rs=[0.97        0.97] XHL=3.47 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_361_NCH Windings=2 Buses=[BUS_T_361_PRI_NCH NCH_T_361] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.97        0.97] XHL=5.53 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_362_NCH Windings=2 Buses=[BUS_T_362_PRI_NCH NCH_T_362] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.02        1.02] XHL=5.36 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_363_NCH Windings=2 Buses=[BUS_T_363_PRI_NCH NCH_T_363] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.03        1.03] XHL=5.38 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_364_NCHP_II Windings=2 Buses=[BUS_T_364_PRI T_364_MS1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.87        0.87] XHL=5.67 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_365_NCHP_II Windings=2 Buses=[BUS_T_365_PRI T_365_MS4] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.87        0.87] XHL=5.67 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_366_NCHP_II Windings=2 Buses=[BUS_T_366_PRI T_366_MS5] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.99        0.99] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_367_A_1 Windings=2 Buses=[BUS_T_367_PRI A_1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.76        0.76] XHL=5.57 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_368_A_2 Windings=2 Buses=[BUS_T_368_PRI A_2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.77        0.77] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_369_A_3 Windings=2 Buses=[BUS_T_369_PRI A_3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.77        0.77] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_370 Windings=2 Buses=[BUS_T_370_PRI A_4] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2667] %Rs=[0.77        0.77] XHL=5.59 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_371_HDSAB Windings=2 Buses=[SS_109_RC DSAB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.07        1.07] XHL=5.63 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_372 Windings=2 Buses=[T_372_PRI T_372_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.87        0.87] XHL=5.69 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_375_CVC Windings=2 Buses=[BUS_T_375_PRI T_375_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.88        0.88] XHL=5.73 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_376_CVC Windings=2 Buses=[BUS_T_376_PRI T_376_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.86        0.86] XHL=5.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_377_CVC Windings=2 Buses=[BUS_T_377_PRI T_377_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[500  667] %Rs=[1.16        1.16] XHL=5.44 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_378_A Windings=2 Buses=[BUS_T_378_PRI HS_APT_A] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2000] %Rs=[0.75        0.75] XHL=5.48 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_379_B Windings=2 Buses=[BUS_T_379_PRI HS_APT_B] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2000] %Rs=[0.76        0.76] XHL=5.54 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_380_SC_T_3 Windings=2 Buses=[SUPERCOMP CDS1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.88        0.88] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_381_SC_T_2 Windings=2 Buses=[SUPERCOMP SC_MDS] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.86        0.86] XHL=5.6 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_382_TELEMED Windings=2 Buses=[T_382_PRI T_382_SEC_MSA] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.89        0.89] XHL=5.79 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_383_ECOB Windings=2 Buses=[BUS_PD_EC_TEMP_TR ECOB] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[0.94        0.94] XHL=3.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_384 Windings=2 Buses=[T_384_PRI T_384_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.99        0.99] XHL=5.64 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_385 Windings=2 Buses=[T_385_PRI T_385_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.07        1.07] XHL=5.63 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_386 Windings=2 Buses=[BUS_T_386_PRI T_386_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[0.94        0.94] XHL=4.91 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_387 Windings=2 Buses=[BUS_0891 USS1] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.87        0.87] XHL=5.68 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_388 Windings=2 Buses=[BUS_0890 USS2] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1500] %Rs=[0.87        0.87] XHL=5.68 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_389 Windings=2 Buses=[BUS_0889 USS3] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2000  2000] %Rs=[0.87        0.87] XHL=5.68 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_394 Windings=2 Buses=[T_394_PRI T_394_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  1982] %Rs=[0.89        0.89] XHL=5.8 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_396_MDB Windings=2 Buses=[BUS_PD_T_396_MDB_PRI BUS_PD_T_396_MDB_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[300  300] %Rs=[0.94        0.94] XHL=3.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_42_CMG Windings=2 Buses=[SS_90_SOM CMG] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.52        0.52] XHL=5.5 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_56_BCF_PMP Windings=2 Buses=[SS_68_SIO BCF_PMP] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[225  225] %Rs=[0.52        0.52] XHL=2.03 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_57_PIER Windings=2 Buses=[T_57_PRI PIER] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.12        1.12] XHL=5.89 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_67_DEEP_SEA Windings=2 Buses=[BUS_T_67_PRI DEEP_SEA_DRILL] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.43        1.43] XHL=5.93 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_79_CMRR Windings=2 Buses=[BUS_T_79_PRI CMRR] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[750  750] %Rs=[1.1         1.1] XHL=5.77 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_CRSF Windings=2 Buses=[TS T_CRSF_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1000  1000] %Rs=[0.99        0.99] XHL=5.66 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H16_MARSH_SUB2 Windings=2 Buses=[SW_T_314 MARSHALL_SUB2] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.24        1.24] XHL=5.15 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H16_MARSH_SUB3 Windings=2 Buses=[SW_T_315 MARSHALL_SUB3] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.24        1.24] XHL=5.15 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H16_MARSH_SUB4 Windings=2 Buses=[SW_T_316 MARSHALL_SUB4] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[300  300] %Rs=[1.24        1.24] XHL=5.15 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H34 Windings=2 Buses=[T_H34_PRI T_H34_SEC] Conns=[delta wye] kVs=[2.4       0.208] kVAs=[75  75] %Rs=[0.54        0.54] XHL=1.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H35 Windings=2 Buses=[T_H35_PRI T_H35_SEC] Conns=[delta wye] kVs=[2.4       0.208] kVAs=[75  75] %Rs=[0.54        0.54] XHL=1.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H36 Windings=2 Buses=[T_H36_PRI T_H36_SEC] Conns=[delta wye] kVs=[2.4       0.208] kVAs=[75  75] %Rs=[0.54        0.54] XHL=1.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H37 Windings=2 Buses=[T_H37_PRI T_H37_SEC] Conns=[delta wye] kVs=[2.4       0.208] kVAs=[75  75] %Rs=[0.54        0.54] XHL=1.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_H38 Windings=2 Buses=[T_H38_PRI PEP_CANY_APTS] Conns=[delta wye] kVs=[2.4       0.208] kVAs=[50  50] %Rs=[0.61        0.61] XHL=1.8 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.T_JMC_TEMP_PWR Windings=2 Buses=[BUS_JMC_TEMP_PWR_PRI BUS_JMC_TEMP_PWR_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[1500  2000] %Rs=[0.92        0.92] XHL=6.03 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_1N Windings=2 Buses=[TUS_1N_PRI TUS_1N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_2N Windings=2 Buses=[TUS_2N_PRI TUS_2N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_3N Windings=2 Buses=[TUS_3N_PRI TUS_3N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_4N Windings=2 Buses=[TUS_4N_PRI TUS_4N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_5N Windings=2 Buses=[TUS_5N_PRI TUS_5N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.TUS_6N Windings=2 Buses=[TUS_6N_PRI TUS_6N_SEC] Conns=[delta wye] kVs=[12.47         0.48] kVAs=[2500  2500] %Rs=[0.55        0.55] XHL=5.72 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_1A Windings=2 Buses=[BUS_XF_CPT_1A BUS_XF_CPT_1A_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.3] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_1B Windings=2 Buses=[BUS_XF_CPT_1B BUS_XF_CPT_1B_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.3] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_1C Windings=2 Buses=[BUS_XF_CPT_1C BUS_XF_CPT_1C_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.3] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_C Windings=2 Buses=[BUS_XF_CPT_C_PRI BUS_XF_CPT_C_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.4] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_E Windings=2 Buses=[BUS_XF_CPT_E_PRI BUS_XF_CPT_E_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.3] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.XF_CPT_W Windings=2 Buses=[BUS_XF_CPT_W_PRI BUS_XF_CPT_W_SEC] Conns=[delta wye] kVs=[12.47         0.24] kVAs=[43.3         43.5] %Rs=[0.92        0.92] XHL=2.65 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_BIRCH_P017 Phases=3 Windings=2 Buses=[SS_64_SIO EV_BIRCH_P017] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_ATHENA Phases=3 Windings=2 Buses=[SS_125_MCSS EV_ATHENA] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_OSLER_P604 Phases=3 Windings=2 Buses=[SS_73_SOM EV_OSLER] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_EC_PS Phases=3 Windings=2 Buses=[SS_125_MCSS EV_EC_PS] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_ECUP Phases=3 Windings=2 Buses=[SS_5_RC EV_ECUP] Conns=[delta wye] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_FC_P206 Phases=3 Windings=2 Buses=[SS_41_MC EV_FC_P206] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_GILMAN_PS Phases=3 Windings=2 Buses=[SS_50_SC EV_GILMAN_PS] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_HOPKINS_PS Phases=3 Windings=2 Buses=[SS_93_ERC EV_HOPKINS_PS] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_KECK_P014 Phases=3 Windings=2 Buses=[SS_49_SIO EV_KECK_P014] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_KEELING_APTS_P103 Phases=3 Windings=2 Buses=[SS_137 EV_KEELING_APTS_P103] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_MESOM_P013 Phases=3 Windings=2 Buses=[SS_66_SIO EV_MESOM_P013] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_PANGEA_PS Phases=3 Windings=2 Buses=[SS_57_ERC EV_PANGEA_PS] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_RITTER_HALL_P004 Phases=3 Windings=2 Buses=[SS_54_SIO EV_RITTER_HALL_P004] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_CAROLINES_P001 Phases=3 Windings=2 Buses=[SS_52_SIO EV_CAROLINES_P001] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_SME Phases=3 Windings=2 Buses=[SS_101 EV_SME] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_HOUSING_ADMIN Phases=3 Windings=2 Buses=[SS_109_RC EV_HOUSING_ADMIN] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Transformer.EV_PMS Phases=3 Windings=2 Buses=[SS_22_WC EV_PMS] Conns=[delta delta] kVs=[12.47        0.208] kVAs=[75  75] %Rs=[1.08        1.08] XHL=3.23 %Noloadloss=0 %imag=0 MaxTap=1.05 MinTap=0.95 NumTaps=4
+New Energymeter.source1 element=Transformer.T_204 terminal=1
+New Energymeter.source2 element=Transformer.T_205 terminal=1
+New Energymeter.source3 element=Transformer.T_277 terminal=1
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 69 12.47 4.16 2.4 0.48 0.24 0.208 0.12]
+Calcvoltagebases     ! This also establishes the bus list
+
+
+set maxiterations=1000

@@ -1,0 +1,18 @@
+Clear
+
+New Circuit.4busDYBal Phases=3 basekv=12.47 MVAsc3=200000
+New Wiredata.conductor Rac=0.306 Runits=mi GMRac=0.0244 GMRunits=ft Radunits=in Diam=0.721
+New Wiredata.neutral Rac=0.592 Runits=mi GMRac=0.00814 GMRunits=ft Radunits=in Diam=0.563
+New Linegeometry.4wire Nconds=4 Nphases=3 Cond=1 Wire=conductor X=-4 H=28 Units=ft Cond=2 Wire=conductor X=-1.5 H=28 Units=ft Cond=3 Wire=conductor X=3 H=28 Units=ft Cond=4 Wire=neutral X=0 H=24 Units=ft Reduce=yes
+New Line.line1 Geometry=4wire bus1=sourcebus bus2=n2 Units=ft Length=2000
+New Line.line2 Geometry=4wire bus1=n3 bus2=n4 Units=ft Length=2500
+New Transformer.t1 XHL=6 Wdg=1 Bus=n2 Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n3 Conn=wye kV=4.16 kVA=6000 %R=0.5
+New Load.load1 Phases=3 bus1=n4 Kv=4.16 Kw=5400 Pf=0.9 Model=1 Conn=wye Vminpu=0.75
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+
+set maxiterations=1000

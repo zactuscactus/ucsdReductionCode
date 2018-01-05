@@ -1,0 +1,95 @@
+sdpa (7.3.9+dfsg-1) unstable; urgency=low
+   * New upstream
+     + Assign the library files to link by full paths
+     + Rename configure.in to configure.ac
+     + Add CPPFLAGS to configure.ac
+   * Change the compilation by gcc-4.8 (closes: #701356)
+   * Update Standards-Version to 3.9.4
+   * Update debian/copyright into the DEP5 format
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Sun, 07 Jul 2013 10:00:00 +0900
+
+sdpa (7.3.8+dfsg-1) unstable; urgency=low
+   * New upstream
+     + Fix inside 'index' to 'index2'
+        in changeIndex of mexReadSDPAToSedumi.cpp (closes: #667369)
+   * Change Dependency from octave3.2 to octave (closes: #666927)
+   * Change Dendency from openblas to atlas
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Sat, 07 Apr 2012 10:00:00 +0900
+
+sdpa (7.3.7+dfsg-1) unstable; urgency=low
+   * New upstream
+     + Fix some spell-miss
+     + Modify sdpa.1 to remove the warning hyphen-used-as-minus-sign
+   * Change debian/rules to link with
+        libatlas-base-dev 3.8 and 3.6
+   * Change dfsg version name from period to plus
+        to remove the warning dfsg-version-with-period
+   * Remove Section:math in sdpa and sdpam from debian/control
+        to remove the warning binary-control-field-duplicates-source
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Mon, 12 Mar 2012 10:00:00 +0900
+
+sdpa (7.3.6.dfsg-2) unstable; urgency=low
+   * Change Dendency so that if openblas is available,
+       use openblas; otherwise atlas. (closes: #660596)
+   * Update Standards-Version to 3.9.3
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Mon, 05 Mar 2012 10:00:00 +0900
+
+sdpa (7.3.6.dfsg-1) unstable; urgency=low
+
+   * New upstream
+     + Print error messages for reading errors
+     + Fix bugs for some SDPs
+     + Fix some spell-miss
+     + Delete DIMACS_PRINT macro (already replaced by --dimacs option)
+   * Change Dependency from libmumps-seq-4.9.2 to libmumps-seq-4.10.0
+   * Change Dependency from libatlas-dev to libopenblas-dev and liblapack-pic
+   * Change the copyright-years to include the year 2012
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Wed, 01 Feb 2012 14:00:00 +0900
+
+sdpa (7.3.5.dfsg-1) unstable; urgency=low
+
+   * New upstream
+     + Add option --version
+     + Fix bugs for some SDPs
+     + Remove MUMPS tar.gz in upstream file
+     + Change official homepage to sourceforge
+   * Change priority from optional to extra
+   * Update Homepage field
+   * Update Standards-Version to 3.9.2
+   * Remove Guillaume Yziquel from Uploaders
+   * Change the copyright-years to include the year 2011
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Thu, 05 May 2011 19:00:00 +0900
+
+sdpa (7.3.4.dfsg-1) unstable; urgency=low
+
+   * New upstream
+   * Modify debian/rules for some architectures
+   * Change the configure script for mingw envrionment
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Mon, 06 Dec 2010 15:00:00 +0900
+
+sdpa (7.3.3.dfsg-1) unstable; urgency=low
+
+  * New upstream
+  * Change the configure script for MUMPS
+  * Change the short descriptions of libsdpa-dev and sdpam
+  * Add the dependency of octave3.2-common and
+     octave3.2-headers to sdpam (closes: #603715)
+  * Fix bugs for some architectures
+  * Add some matlab source codes in mex directory
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Wed, 23 Nov 2010 19:00:00 +0900
+
+sdpa (7.3.2.dfsg-1) unstable; urgency=low
+
+  * New package release (closes: #594463)
+  * MUMPS_4.8.4.tar.gz was removed from the upstream tar.gz
+  * Prototype packaing for 7.3.1 was by Guillaume Yziquel
+
+ -- Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>  Tue, 31 Aug 2010 14:26:08 +0900

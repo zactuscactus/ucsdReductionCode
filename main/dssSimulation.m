@@ -154,12 +154,12 @@ while dssSolution.dblHour <= simHours
 %             tapPos.transformer(j).V(i,:) = tPos(j,:);
         end
         % get capacitor
-        if isfield(circuit,'capacitor')
-            cPos = readCapTap(getval(o,circuit.capacitor,'states'));
-            for j = 1:length(circuit.capacitor)
-                tapPos.capacitor(j).pos(i,:) = int32(cPos{j});
-            end
-        end
+%         if isfield(circuit,'capacitor')
+%             cPos = readCapTap(getval(o,circuit.capacitor,'states'));
+%             for j = 1:length(circuit.capacitor)
+%                 tapPos.capacitor(j).pos(i,:) = int32(cPos{j});
+%             end
+%         end
     else
         fprintf('%sId: %04d Time: %d h %4.0f s ... ',indent,i,floor(dssSolution.dblHour),mod(dssSolution.dblHour*3600,3600));
         setSolutionTime(o,t(i));
@@ -200,23 +200,23 @@ else
 end
 
 % process cap controller data
-if isfield(circuit,'capacitor')
-    cSize = cellfun(@sum,readCapTap(getval(o,circuit.capacitor,'kvar')));
-    if length(circuit.capacitor) == 1
-        nStep = str2double(getval(o,circuit.capacitor,'numSteps'));
-    else
-        nStep = cellfun(@str2double,getval(o,circuit.capacitor,'numSteps'));
-    end
-    for i = 1:length(circuit.capacitor)
-        tapPos.capacitor(i).sumSubCap = sum(tapPos.capacitor(i).pos,2);
-        tapPos.capacitor(i).numTapChange = sum(sum(abs(diff(tapPos.capacitor(i).pos))));
-        tapPos.capacitor(i).numStep = nStep(i);
-        tapPos.capacitor(i).capSizeKvar = cSize(i);
-    end
-    data.totCapTapOpe = sum([tapPos.capacitor.numTapChange]);
-else
-    data.totCapTapOpe = 0;
-end
+% % if isfield(circuit,'capacitor')
+% %     cSize = cellfun(@sum,readCapTap(getval(o,circuit.capacitor,'kvar')));
+% %     if length(circuit.capacitor) == 1
+% %         nStep = str2double(getval(o,circuit.capacitor,'numSteps'));
+% %     else
+% %         nStep = cellfun(@str2double,getval(o,circuit.capacitor,'numSteps'));
+% %     end
+% %     for i = 1:length(circuit.capacitor)
+% %         tapPos.capacitor(i).sumSubCap = sum(tapPos.capacitor(i).pos,2);
+% %         tapPos.capacitor(i).numTapChange = sum(sum(abs(diff(tapPos.capacitor(i).pos))));
+% %         tapPos.capacitor(i).numStep = nStep(i);
+% %         tapPos.capacitor(i).capSizeKvar = cSize(i);
+% %     end
+% %     data.totCapTapOpe = sum([tapPos.capacitor.numTapChange]);
+% % else
+% %     data.totCapTapOpe = 0;
+% % end
 % dssText.Command= 'Show EventLog';
 data.nodeName = nodeName';
 data.Voltage = Volt;

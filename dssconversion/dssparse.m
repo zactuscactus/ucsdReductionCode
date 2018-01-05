@@ -39,7 +39,7 @@ while 1
         error([filename ' doesn''t exist!']);
     end
     if ~ischar(l),   break,   end
-    if strcmp(l,'New Storage.N86 Bus1=SX3104118C.1.2 kV=4.16 kWRated=250 kWhRated=1000 %Reserve=20 kWhStored=1000');
+    if strcmp(l,'New EnergyMeter.sub element=Line.MDV201_connector terminal=1');
 			stopping_ind=1;
 	end
 	% remove all spaces/tabs at the beginning of the line
@@ -73,6 +73,10 @@ while 1
             % search for class name and object name
 			n  = regexpi(l,'(\S+)\.(\S+)','once','tokens');
 			cn = n{1};
+			
+			if strcmpi(cn,'line')
+				killingInTheNameOf=1;
+			end
             
 			if ~ismember(cn,knownobjs) && ~ismember(cn,unknownobjs)
 				try
@@ -195,7 +199,9 @@ on = n{2};
 % create object
 obj = feval(['dss' lower(cn)]);
 obj.Name = on;
-
+% if strcmpi(prop{2},' phases=3 windings=2 buses=(HVMV_Sub_HSB, regxfmr_HVMV_Sub_LSB.1.2.3.0)')
+% 	stop=1;
+% end
 % add properties
 if ~isempty(prop{2})
 	obj = addtoObj(obj,prop{2});
@@ -210,6 +216,10 @@ props = regexp(l,'(\S+)=([\[\(\{"''][^=]+[\]\)\}''"]|[^"''\[\(\{]\S*)','tokens')
 for i = 1:length(props)
 	% clean up quotes
 	val = regexprep( props{i}(2),'["'']','' );
+	
+% 	if strcmpi(props{i}(1),'Buses')
+% 		stop=1;
+% 	end
 	% drop the % notation when given
 	prop = regexprep(props{i}(1),'%','');
 	% drop the '-' notation when given

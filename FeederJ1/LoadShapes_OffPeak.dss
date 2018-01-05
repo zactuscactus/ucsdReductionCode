@@ -1,0 +1,3 @@
+new loadshape.Commercial npts=15, interval=0, csvfile=offPeakDay.csv 
+new loadshape.Other npts=15, interval=0, csvfile=offPeakDay.csv 
+new loadshape.AggLoadProfile npts=15, interval=0, csvfile=offPeakDay.csv 

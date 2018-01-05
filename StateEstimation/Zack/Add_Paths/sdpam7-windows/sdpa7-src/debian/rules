@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+
+# DH_VERBOSE is used for test building
+# export DH_VERBOSE=1
+
+# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+# include /usr/share/cdbs/1/class/makefile.mk
+
+# Add here any variable or target overrides you need.
+DEB_MAKE_INSTALL_TARGET =
+
+# DEB_MAKE_ENVVARS = CFLAGS="-funroll-all-loops" CXXFLAGS="-funroll-all-loops"
+# DEB_MAKE_ENVVARS = CFLAGS="-g -O2 -Wall -fPIC -funroll-all-loops" CXXFLAGS="-g -O2 -D_REENTRANT -Wall -fPIC -funroll-all-loops" FCFLAGS="-g -O2 -Wall -fPIC -funroll-all-loops"
+
+CFLAGS   += -Wall -fPIC -funroll-all-loops
+CXXFLAGS += -Wall -fPIC -funroll-all-loops
+FCFLAGS  += -Wall -fPIC -funroll-all-loops
+
+# For old libatlas-base-dev
+DEB_CONFIGURE_EXTRA_FLAGS = --with-lapack="/usr/lib/atlas/liblapack.a" --with-blas="/usr/lib/atlas/libblas.a"
+# For new libatlas-base-dev
+ifeq ($(shell test -f /usr/lib/atlas-base/atlas/liblapack.a && echo 1),1)
+	DEB_CONFIGURE_EXTRA_FLAGS = --with-lapack="/usr/lib/atlas-base/atlas/liblapack.a" --with-blas="/usr/lib/atlas-base/atlas/libblas.a"
+endif
+
+
+SDPA_DIR=$(CURDIR)/debian/sdpa
+SDPAM_DIR=$(CURDIR)/debian/sdpam
+LIBSDPA_DIR=$(CURDIR)/debian/libsdpa-dev
+build/sdpam::
+	cd $(CURDIR)/mex && \
+	make \
+	  MAKE_INCLUDE_DIR=../etc COMPILE_ENVIRONMENT=octave \
+	  ALL_INCLUDE=-I../ SDPA_LIB=../libsdpa.a
+binary-post-install/sdpam::
+	cd $(SDPAM_DIR)/usr/lib/sdpa/mex/ && \
+	ln -s ../../../share/sdpa/mex/*.m .
+	cd $(SDPAM_DIR)/usr/lib/sdpa/mex/ && \
+	ln -s ../../../share/sdpa/mex/CommandList.txt .

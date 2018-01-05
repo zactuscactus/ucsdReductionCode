@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cim="http://iec.ch/TC57/2008/CIM-schema-cim13#">
+	<cim:IEC61970CIMVersion rdf:ID="_301">
+		<cim:IEC61970CIMVersion.version>CIM13v12</cim:IEC61970CIMVersion.version>
+		<cim:IEC61970CIMVersion.date>2008-09-26</cim:IEC61970CIMVersion.date>
+	</cim:IEC61970CIMVersion>
+
+<!-- This Section declares UCSD ad a Geographical Region -->
+ 	<cim:SubGeographicalRegion rdf:ID="_B7CD48062F2A49358F35F54AEB2D4008">
+		<cim:IdentifiedObject.name>UCSD</cim:IdentifiedObject.name>
+		<cim:IdentifiedObject.localName>UCSD</cim:IdentifiedObject.localName>
+	</cim:SubGeographicalRegion>
+
+<!-- This Section declares North Campus Sub with One Voltage Level -->
+<!-- All Conducting Equipment belongs to the Voltage level not the substation -->
+<!-- The Voltage Level belongs to the Sub and has a base voltage of 12.47 -->
+
+	<cim:Substation rdf:ID="_2BCC3D5923464FED9E08EB12EC388BD7">
+		<cim:IdentifiedObject.name>North Campus Switching Station</cim:IdentifiedObject.name>
+		<cim:Substation.Region rdf:resource="#_B7CD48062F2A49358F35F54AEB2D4008"/>
+	</cim:Substation>
+	<cim:VoltageLevel rdf:ID="_084A90326E964C0DA6945C0E57A7B814">
+		<cim:IdentifiedObject.name>North Campus Switching Station Voltage Level</cim:IdentifiedObject.name>
+		<cim:VoltageLevel.MemberOf_Substation rdf:resource="#_2BCC3D5923464FED9E08EB12EC388BD7"/>
+		<cim:VoltageLevel.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:VoltageLevel>
+	<cim:BaseVoltage rdf:ID="_F6C8920DCCCF404CBA2BD6C0BB74E870">
+	    <cim:IdentifiedObject.name>BV 12.47KV</cim:IdentifiedObject.name>
+		<cim:BaseVoltage.nominalVoltage>12.47KV</cim:BaseVoltage.nominalVoltage>
+	</cim:BaseVoltage>
+
+<!-- This section models the breaker that connects 2 busbar sections in the North Campus Sub -->
+
+	<cim:BusbarSection rdf:ID="_0B435F9F88FF479E87D934B8D0211BAD_1">
+		<cim:IdentifiedObject.name>North Campus Segment 1</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_084A90326E964C0DA6945C0E57A7B814"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:BusbarSection>
+	<cim:Terminal rdf:ID="NC_BBSEC1_T1">
+		<cim:IdentifiedObject.name>NC_BBSEC_1_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_0B435F9F88FF479E87D934B8D0211BAD_1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_302A1D83A1C3487E930F60016207C40B"/>
+	</cim:Terminal>
+
+	<cim:ConnectivityNode rdf:ID="_302A1D83A1C3487E930F60016207C40B">
+		<cim:IdentifiedObject.name>BBSEC1_CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+	<cim:Terminal rdf:ID="NC_BTAB_T1">
+		<cim:IdentifiedObject.name>BTAB_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_031ED8476CA04C87AFE0EEABE4C974A7"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_302A1D83A1C3487E930F60016207C40B"/>
+	</cim:Terminal>
+	<cim:Breaker rdf:ID="_031ED8476CA04C87AFE0EEABE4C974A7">
+		<cim:Breaker.ratedCurrent>0</cim:Breaker.ratedCurrent>
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>BTAB</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_084A90326E964C0DA6945C0E57A7B814"/>
+	</cim:Breaker>
+	<cim:Terminal rdf:ID="NC_BTAB_T2">
+		<cim:IdentifiedObject.name>BTAB_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_031ED8476CA04C87AFE0EEABE4C974A7"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_302A1D83A1C3487E930F60016207C40B_2"/>
+	</cim:Terminal>
+
+	<cim:ConnectivityNode rdf:ID="_302A1D83A1C3487E930F60016207C40B_2">
+		<cim:IdentifiedObject.name>BBSEC2_CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+	<cim:Terminal rdf:ID="NC_BBSEC2_T1">
+		<cim:IdentifiedObject.name>NC_BBSEC_2_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_0B435F9F88FF479E87D934B8D0211BAD_2"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_302A1D83A1C3487E930F60016207C40B_2"/>
+	</cim:Terminal>
+ 	<cim:BusbarSection rdf:ID="_0B435F9F88FF479E87D934B8D0211BAD_2">
+		<cim:IdentifiedObject.name>North Campus Segment 2</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_084A90326E964C0DA6945C0E57A7B814"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:BusbarSection>
+
+<!-- This section models Breaker 303 to the first BusBar Section -->
+
+	<cim:Terminal rdf:ID="NC_BREAKER303_T1">
+		<cim:IdentifiedObject.name>B303_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_Breaker303"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_302A1D83A1C3487E930F60016207C40B"/>
+	</cim:Terminal>
+ 	<cim:Breaker rdf:ID="_Breaker303">
+		<cim:Breaker.ratedCurrent>0</cim:Breaker.ratedCurrent>
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>303</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_084A90326E964C0DA6945C0E57A7B814"/>
+	</cim:Breaker>
+	<cim:Terminal rdf:ID="NC_BREAKER303_T2">
+		<cim:IdentifiedObject.name>B303_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_Breaker303"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_1_BREAKER303_CN"/>
+	</cim:Terminal>
+	<cim:ConnectivityNode rdf:ID="_ACLINESEG303_1_BREAKER303_CN">
+		<cim:IdentifiedObject.name>ACLINESEG303_1_BREAKER303</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+<!-- Now have the Breaker ready to attach to an ACLineSegment -->
+	<cim:Terminal rdf:ID="NC_ACLINE1_T1">
+		<cim:IdentifiedObject.name>LINE303_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_03F929948E2B410AB3112811F0DE521D"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_1_BREAKER303_CN"/>
+	</cim:Terminal>
+	<cim:ACLineSegment rdf:ID="_03F929948E2B410AB3112811F0DE521D">
+		<cim:Conductor.gch>0</cim:Conductor.gch>
+		<cim:Conductor.bch>.0003938</cim:Conductor.bch>
+		<cim:Conductor.r>4.621</cim:Conductor.r>
+		<cim:Conductor.x>37.6</cim:Conductor.x>
+		<cim:Conductor.length>0</cim:Conductor.length>
+		<cim:IdentifiedObject.name>Line 303 Segment 1</cim:IdentifiedObject.name>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:ACLineSegment>
+	<cim:Terminal rdf:ID="NC_ACLINE1_T2">
+		<cim:IdentifiedObject.name>LINE303_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_03F929948E2B410AB3112811F0DE521D"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_1_SS92_SW1_CN"/>
+	</cim:Terminal>
+
+<!-- Now need to connect to the switching substation 92 -->
+<!-- Has one BusBar and one Voltage Level.  Base Voltage is the same as North Campus -->
+	<cim:Substation rdf:ID="_SS92">
+		<cim:IdentifiedObject.name>SS-92</cim:IdentifiedObject.name>
+		<cim:Substation.Region rdf:resource="#_B7CD48062F2A49358F35F54AEB2D4008"/>
+	</cim:Substation>
+	<cim:VoltageLevel rdf:ID="_SS92_VL">
+		<cim:IdentifiedObject.name>SS-92 Voltage Level</cim:IdentifiedObject.name>
+		<cim:VoltageLevel.MemberOf_Substation rdf:resource="#_SS92"/>
+		<cim:VoltageLevel.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:VoltageLevel>
+
+	<cim:ConnectivityNode rdf:ID="_ACLINESEG303_1_SS92_SW1_CN">
+		<cim:IdentifiedObject.name>ACLINESEG303_1_SS92_SW1</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+	<cim:Terminal rdf:ID="SS_92_SW1_T1">
+		<cim:IdentifiedObject.name>SW1_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_1_SS92_SW1_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS92_SW1">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Switch 1</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS92_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="SS_92_SW1_T2">
+		<cim:IdentifiedObject.name>SW1_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_BAD_1_CN"/>
+	</cim:Terminal>
+
+
+	<cim:ConnectivityNode rdf:ID="_SS92_BAD_1_CN">
+		<cim:IdentifiedObject.name>Bus Bar CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+	<cim:BusbarSection rdf:ID="_SS92_BAD_1">
+		<cim:IdentifiedObject.name>SS92 Busbar</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS92_VL"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:BusbarSection>
+	<cim:Terminal rdf:ID="SS_92_BAD_1">
+		<cim:IdentifiedObject.name>Busbar_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_BAD_1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_BAD_1_CN"/>
+	</cim:Terminal>
+	<cim:Terminal rdf:ID="SS_92_BAD_5">
+		<cim:IdentifiedObject.name>Busbar_T5</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_BAD_1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_BAD_1_CN"/>
+	</cim:Terminal>
+
+	<cim:Terminal rdf:ID="SS_92_SW5_T1">
+		<cim:IdentifiedObject.name>SW5_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_SW5"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_BAD_1_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS92_SW5">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Switch 5</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS92_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="SS_92_SW5_T2">
+		<cim:IdentifiedObject.name>SW5_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS92_SW5"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_SW5_ACLINE303_2_CN"/>
+	</cim:Terminal>
+
+
+	<cim:ConnectivityNode rdf:ID="_SS92_SW5_ACLINE303_2_CN">
+		<cim:IdentifiedObject.name>Connection to ACLine Segment 303 2</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+ <!-- Now need to connect to the ACLine that goes to  substation 93 -->
+	<cim:Terminal rdf:ID="SS92_SS93_ACLINE2_T1">
+		<cim:IdentifiedObject.name>LINE303_2_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_03F929948E2B410AB3112811F0DE521D_2"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS92_SW5_ACLINE303_2_CN"/>
+	</cim:Terminal>
+	<cim:ACLineSegment rdf:ID="_03F929948E2B410AB3112811F0DE521D_2">
+		<cim:Conductor.gch>0</cim:Conductor.gch>
+		<cim:Conductor.bch>.0003938</cim:Conductor.bch>
+		<cim:Conductor.r>4.621</cim:Conductor.r>
+		<cim:Conductor.x>37.6</cim:Conductor.x>
+		<cim:Conductor.length>0</cim:Conductor.length>
+		<cim:IdentifiedObject.name>Line 303 Segment 2</cim:IdentifiedObject.name>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:ACLineSegment>
+	<cim:Terminal rdf:ID="SS92_SS93_ACLINE2_T2">
+		<cim:IdentifiedObject.name>LINE303_2_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_03F929948E2B410AB3112811F0DE521D_2"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_3_SS93_SW3_CN"/>
+	</cim:Terminal>
+
+
+<!-- Now need to connect to the switching substation 93 -->
+<!-- Has one BusBar and one Voltage Level.  Base Voltage is the same as North Campus -->
+	<cim:Substation rdf:ID="_SS93">
+		<cim:IdentifiedObject.name>SS-93</cim:IdentifiedObject.name>
+		<cim:Substation.Region rdf:resource="#_B7CD48062F2A49358F35F54AEB2D4008"/>
+	</cim:Substation>
+	<cim:VoltageLevel rdf:ID="_SS93_VL">
+		<cim:IdentifiedObject.name>SS-93 Voltage Level</cim:IdentifiedObject.name>
+		<cim:VoltageLevel.MemberOf_Substation rdf:resource="#_SS93"/>
+		<cim:VoltageLevel.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:VoltageLevel>
+
+	<cim:ConnectivityNode rdf:ID="_ACLINESEG303_3_SS93_SW3_CN">
+		<cim:IdentifiedObject.name>ACLINESEG303_3_SS93_SW5</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+
+	<cim:ConnectivityNode rdf:ID="_SS93_BAD_1_CN">
+		<cim:IdentifiedObject.name>Bus Bar CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+	<cim:BusbarSection rdf:ID="_SS93_BAD_1">
+		<cim:IdentifiedObject.name>SS93 Busbar</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS93_VL"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:BusbarSection>
+	<cim:Terminal rdf:ID="SS_93_BAD_1">
+		<cim:IdentifiedObject.name>Busbar_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS93_BAD_1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS93_BAD_1_CN"/>
+	</cim:Terminal>
+
+
+	<cim:Terminal rdf:ID="_SS_93_SW1_T1">
+		<cim:IdentifiedObject.name>SW1_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS93_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS93_BAD_1_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS93_SW1">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Switch 1</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS93_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="_SS_93_SW1_T2">
+		<cim:IdentifiedObject.name>SW1_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS93_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS93_SW5_ACLINE303_2_CN"/>
+	</cim:Terminal>
+	<cim:ConnectivityNode rdf:ID="_SS93_SW5_ACLINE303_2_CN">
+		<cim:IdentifiedObject.name>Connection to ACLine Segment 303 2</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+ <!-- Now need to connect to the ACLine that goes to  substation 93 -->
+	<cim:Terminal rdf:ID="_SS93_SC_ACLINE3_T1">
+		<cim:IdentifiedObject.name>LINE303_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_03F929948E2B410AB3112811F0DE521D_3"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS93_SW5_ACLINE303_2_CN"/>
+	</cim:Terminal>
+	<cim:ACLineSegment rdf:ID="_03F929948E2B410AB3112811F0DE521D_3">
+		<cim:Conductor.gch>0</cim:Conductor.gch>
+		<cim:Conductor.bch>.0003938</cim:Conductor.bch>
+		<cim:Conductor.r>4.621</cim:Conductor.r>
+		<cim:Conductor.x>37.6</cim:Conductor.x>
+		<cim:Conductor.length>0</cim:Conductor.length>
+		<cim:IdentifiedObject.name>Line 303 Segment 3</cim:IdentifiedObject.name>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:ACLineSegment>
+	<cim:Terminal rdf:ID="_SS93_SS_ACLINE3_T2">
+		<cim:IdentifiedObject.name>LINE303_3_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_3_SS_JUMPER1_CN"/>
+	</cim:Terminal>
+
+
+<!-- Now need to connect to the Super Computer Substation -->
+<!-- Has one BusBar and one Voltage Level.  Base Voltage is the same as North Campus -->
+	<cim:Substation rdf:ID="_SS">
+		<cim:IdentifiedObject.name>SuperComputer</cim:IdentifiedObject.name>
+		<cim:Substation.Region rdf:resource="#_B7CD48062F2A49358F35F54AEB2D4008"/>
+	</cim:Substation>
+	<cim:VoltageLevel rdf:ID="_SS_VL">
+		<cim:IdentifiedObject.name>SuperComputer Substation Voltage Level</cim:IdentifiedObject.name>
+		<cim:VoltageLevel.MemberOf_Substation rdf:resource="#_SS"/>
+		<cim:VoltageLevel.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:VoltageLevel>
+
+	<cim:ConnectivityNode rdf:ID="_ACLINESEG303_3_SS_JUMPER1_CN">
+		<cim:IdentifiedObject.name>ACLINESEG303_3_SS</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+ <!-- JMPER  -->
+	<cim:Terminal rdf:ID="_SS_JUMPER_T1">
+		<cim:IdentifiedObject.name>J1_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_JUMPER"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_ACLINESEG303_3_SS_JUMPER1_CN"/>
+	</cim:Terminal>
+	<cim:Jumper rdf:ID="_SS_JUMPER">
+		<cim:IdentifiedObject.name>Super Computer Substation Jumper</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS_VL"/>
+	</cim:Jumper>
+	<cim:Terminal rdf:ID="_SS_JUMPER_T2">
+		<cim:IdentifiedObject.name>J1_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_JUMPER"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+
+
+	<cim:ConnectivityNode rdf:ID="_SS_JUMPER_BB_CN">
+		<cim:IdentifiedObject.name>Super Computer Substation Fuse CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+	<cim:Terminal rdf:ID="SS93_SW5_T1">
+		<cim:IdentifiedObject.name>SW5_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS93_SW5"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS93_SW5">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Switch 5 SS93</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS93_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="SS93_SW5_T2">
+		<cim:IdentifiedObject.name>SW5_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS93_SW5"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS93_BAD_1_CN"/>
+	</cim:Terminal>
+
+
+<!-- Busbar  -->
+	<cim:BusbarSection rdf:ID="_SS_BB_1">
+		<cim:IdentifiedObject.name>SS Busbar</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS_VL"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:BusbarSection>
+	<cim:Terminal rdf:ID="SS_BB_T1">
+		<cim:IdentifiedObject.name>Busbar_T1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_BB_1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+
+ <!-- Switches: Fuses ignore in this model  -->
+	<cim:Terminal rdf:ID="_SS_SW1_T1">
+		<cim:IdentifiedObject.name>SW1_T5</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS_SW1">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Fused Switch 1</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="_SS_SW1_T2">
+		<cim:IdentifiedObject.name>SW1_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW1"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T1_High"/>
+	</cim:Terminal>
+
+	<cim:Terminal rdf:ID="_SS_SW2_T1">
+		<cim:IdentifiedObject.name>SW2_T5</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW2"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS_SW2">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Fused Switch 2</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="_SS_SW2_T2">
+		<cim:IdentifiedObject.name>SW2_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW2"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T2_High"/>
+	</cim:Terminal>
+
+
+	<cim:Terminal rdf:ID="_SS_SW3_T1">
+		<cim:IdentifiedObject.name>SW3_T5</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW3"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_JUMPER_BB_CN"/>
+	</cim:Terminal>
+	<cim:Switch rdf:ID="_SS_SW3">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:IdentifiedObject.name>Fused Switch 3</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS_VL"/>
+	</cim:Switch>
+	<cim:Terminal rdf:ID="_SS_SW3_T2">
+		<cim:IdentifiedObject.name>SW2_T2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_SS_SW3"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T3_High"/>
+	</cim:Terminal>
+
+
+ <!-- Transformers, Windings, Voltage levels, Base Voltages and required Connectivity Nodes  -->
+ <!-- Ignoring Fuses  -->
+
+	<cim:BaseVoltage rdf:ID="_480V">
+   	    <cim:IdentifiedObject.name>BV 480V</cim:IdentifiedObject.name>
+		<cim:BaseVoltage.nominalVoltage>480V</cim:BaseVoltage.nominalVoltage>
+	</cim:BaseVoltage>
+
+
+	<cim:ConnectivityNode rdf:ID="_SS_T1_High">
+		<cim:IdentifiedObject.name>Transformer 1 High Side CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+ <!-- Transformer 1  -->
+
+	<cim:Terminal rdf:ID="_SS_TW1_T1">
+		<cim:IdentifiedObject.name>High Side Terminal Transformer 1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW1_High"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T1_High"/>
+	</cim:Terminal>
+
+
+	<cim:TransformerWinding rdf:ID="_TW1_High">
+		<cim:TransformerWinding.ratedS>2000</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.primary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>High Side T1</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T1"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:TransformerWinding>
+
+	<cim:TransformerWinding rdf:ID="_TW1_Low">
+		<cim:TransformerWinding.ratedS>2000</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.secondary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>Low Side T1</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T1"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_480V"/>
+	</cim:TransformerWinding>
+
+	<cim:Terminal rdf:ID="_SS_TW1_T2">
+		<cim:IdentifiedObject.name>Low Side Terminal Transformer 1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW1_Low"/>
+	</cim:Terminal>
+
+	<cim:PowerTransformer rdf:ID="_SS_T1">
+		<cim:IdentifiedObject.name>XFMR #338</cim:IdentifiedObject.name>
+		<cim:IdentifiedObject.localName>TR3_2</cim:IdentifiedObject.localName>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS"/>
+	</cim:PowerTransformer>
+
+  <!-- Transformer 2  -->
+	<cim:ConnectivityNode rdf:ID="_SS_T2_High">
+		<cim:IdentifiedObject.name>Transformer 2 High Side CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+	<cim:Terminal rdf:ID="_SS_TW2_T1">
+		<cim:IdentifiedObject.name>High Side Terminal Transformer 2</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW2_High"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T2_High"/>
+	</cim:Terminal>
+
+
+	<cim:TransformerWinding rdf:ID="_TW2_High">
+		<cim:TransformerWinding.ratedS>1500</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.primary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>High Side T2</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T2"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:TransformerWinding>
+
+	<cim:TransformerWinding rdf:ID="_TW2_Low">
+		<cim:TransformerWinding.ratedS>1500</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.secondary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>Low Side T2</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T2"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_480V"/>
+	</cim:TransformerWinding>
+
+	<cim:Terminal rdf:ID="_SS_TW2_T2">
+		<cim:IdentifiedObject.name>Low Side Terminal Transformer 1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW2_Low"/>
+	</cim:Terminal>
+
+	<cim:PowerTransformer rdf:ID="_SS_T2">
+		<cim:IdentifiedObject.name>XFMR 2</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS"/>
+	</cim:PowerTransformer>
+
+  <!-- Transformer 3  -->
+	<cim:ConnectivityNode rdf:ID="_SS_T3_High">
+		<cim:IdentifiedObject.name>Transformer 3 High Side CN</cim:IdentifiedObject.name>
+	</cim:ConnectivityNode>
+
+
+	<cim:Terminal rdf:ID="_SS_TW3_T1">
+		<cim:IdentifiedObject.name>High Side Terminal Transformer 3</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW3_High"/>
+		<cim:Terminal.ConnectivityNode rdf:resource="#_SS_T3_High"/>
+	</cim:Terminal>
+
+
+	<cim:TransformerWinding rdf:ID="_TW3_High">
+		<cim:TransformerWinding.ratedS>1500</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.primary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>High Side T3</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T3"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_F6C8920DCCCF404CBA2BD6C0BB74E870"/>
+	</cim:TransformerWinding>
+
+	<cim:TransformerWinding rdf:ID="_TW3_Low">
+		<cim:TransformerWinding.ratedS>1500</cim:TransformerWinding.ratedS>
+		<cim:TransformerWinding.windingType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingType.secondary"/>
+		<cim:TransformerWinding.x>0</cim:TransformerWinding.x>
+		<cim:TransformerWinding.connectionType rdf:resource="http://iec.ch/TC57/2008/CIM-schema-cim13#WindingConnection.Y"/>
+		<cim:IdentifiedObject.name>Low Side T3</cim:IdentifiedObject.name>
+		<cim:TransformerWinding.MemberOf_PowerTransformer rdf:resource="#_SS_T3"/>
+		<cim:ConductingEquipment.BaseVoltage rdf:resource="#_480V"/>
+	</cim:TransformerWinding>
+
+	<cim:Terminal rdf:ID="_SS_TW2_T3">
+		<cim:IdentifiedObject.name>Low Side Terminal Transformer 1</cim:IdentifiedObject.name>
+		<cim:Terminal.ConductingEquipment rdf:resource="#_TW3_Low"/>
+	</cim:Terminal>
+
+	<cim:PowerTransformer rdf:ID="_SS_T3">
+		<cim:IdentifiedObject.name>XFMR 3</cim:IdentifiedObject.name>
+		<cim:Equipment.MemberOf_EquipmentContainer rdf:resource="#_SS"/>
+	</cim:PowerTransformer>
+</rdf:RDF>

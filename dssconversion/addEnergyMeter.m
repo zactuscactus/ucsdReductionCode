@@ -15,13 +15,15 @@ if ~isfield(c,'energymeter')
     if isfield(c,'transformer') % check transx first
         id = [];
         for i = 1:length(c.transformer)
-            if ismember(cleanBus(lower(bus0)),cleanBus(lower(c.transformer(i).Bus)))
+            if ismember(cleanBus(lower(bus0)),cleanBus(lower(c.transformer(i).Buses)))
                 id = i; break;
             end
         end
         if ~isempty(id)
             c.energymeter.element = ['transformer.' c.transformer(id).Name];
-        else
+		elseif ~isempty(Ind)
+			c.energymeter.element = ['transformer.' c.transformer(Ind).Name];
+		else
             [~, id] = ismember(cleanBus(lower(bus0)),cleanBus(lower({c.line.bus1})));
             if id > 0
                 c.energymeter.element = ['line.' c.line(id).Name];

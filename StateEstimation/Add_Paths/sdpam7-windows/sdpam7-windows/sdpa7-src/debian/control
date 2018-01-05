@@ -1,0 +1,55 @@
+Source: sdpa
+Section: math
+Priority: extra
+Maintainer: Makoto Yamashita <Makoto.Yamashita@is.titech.ac.jp>
+Build-Depends: cdbs, debhelper (>= 7), 
+   automake, autotools-dev, autoconf, gfortran,
+   libatlas-base-dev, libmumps-seq-dev, liboctave-dev
+Standards-Version: 3.9.4
+Homepage: http://sdpa.sourceforge.net/
+
+Package: sdpa
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+   libatlas-base-dev, libmumps-seq-4.10.0
+Description: High-performance package for SemiDefinite Programs
+ The software SDPA (SemiDefinite Programming Algorithm) is one of the most
+ efficient and stable  software packages for solving SDPs based on the
+ primal-dual interior-point method.
+ SDP (SemiDefinite Program) is used for financial engineering, machine
+ learning, control theory, sensor network problem, quantum chemistry,
+ quantum information, combinatorial optimizaiton, polynomial
+ optimization, and so on.
+ Further information on SDP and SDPA can be found at
+ http://sdpa.sourceforge.net/
+
+Package: libsdpa-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends},
+   libatlas-base-dev, libmumps-seq-dev
+Description: Callable library and examples of SDPA
+ This package provides some files [examples and callable library]
+ of SDPA (SemiDefinite Programming Algorithm).
+ See the information of the package 'sdpa'.
+ Further information on SDP and SDPA can be found at
+ http://sdpa.sourceforge.net/
+
+Package: sdpam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+   libatlas-base-dev, libmumps-seq-4.10.0,
+   octave, libsdpa-dev
+Description: Matlab/Octave interface of SDPA
+ This package provides SDPA-M, Matlab/Octave interface of
+ of SDPA (SemiDefinite Programming Algorithm).
+ See the information of the package 'sdpa'.
+ To use SDPA-M on Octave, add /usr/lib/sdpa/mex
+ to your Octave path.
+ The summary of each command can be found in
+ /usr/share/sdpa/mex/CommandList.txt
+ The compilation by Matlab can be found at
+ /usr/share/doc/sdpa/README.
+ Further information on SDP and SDPA can be found at
+ http://sdpa.sourceforge.net/
+ 

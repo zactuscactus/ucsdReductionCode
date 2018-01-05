@@ -1,0 +1,2 @@
+shlibs:Depends=libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libgfortran3 (>= 4.3), libmumps-seq-4.10.0, libstdc++6 (>= 4.4.0)
+misc:Depends=

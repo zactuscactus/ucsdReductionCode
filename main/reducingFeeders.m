@@ -65,7 +65,7 @@ feeder=regexprep(name{end},'.dss','');
 tic
 fprintf('\nParsing Circuit: ')
 
-if nargin<3
+if nargin<3 || isempty(savePath)
 	savePath=[pwd '\' feeder '\'];
 	if ~exist(savePath)
 		mkdir(savePath);
@@ -186,8 +186,8 @@ if ~exist([savePath feeder '_Ybus.mat'])  || ~useSaved
 	end
 	
 	% 	[~, ~, Ycomb_noXfrmr, Ybus_noXfrmr, ~,~]=getYbus(circuit_noXfrmr);
-	[YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist,dssCircuit]=getYbus(circuitBase);
-	
+	[YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist,vmag,theta,volt_base]=getYbus(circuitBase);
+	YbusOrg=Ybus;
 	%
 	% 	missingNode=Ycomb(find(~ismember(Ycomb,Ycomb_noXfrmr)));
 	% 	%Add in any missign buses to new Ybus
@@ -212,44 +212,46 @@ if ~exist([savePath feeder '_Ybus.mat'])  || ~useSaved
 	Zbus=inv(Ybus);
 	circuit_orig.Zbus=Zbus;
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% %Get PU ybus
-	if isfield(circuit,'basevoltages')
-		baseKv=circuit.basevoltages;
-	else
-		baseKv=unique(cell2mat([circuit.transformer{:}.kV]));
-	end
-	RealV=dssCircuit.AllBusVmag*sqrt(3)/1000;
-	if length(baseKv)>1
-		baseKvMat=repmat(baseKv,length(RealV),1);
-		volt_base=[];
-		VoltDiff = bsxfun(@minus,baseKvMat,RealV');
-		[~,Ind]=min(abs(VoltDiff),[],2);
-		volt_base=baseKvMat(sub2ind(size(baseKvMat),[1:size(Ind,1)]',Ind));
-	else
-		volt_base=repmat(baseKv,length(RealV),1);
-	end
-	
-	%Make sure Order of voltages matches order of Ybus
-	valueSet = lower(Ycomb);
-	keySet = lower(dssCircuit.AllnodeNames);
-	mapObj = containers.Map(keySet,1:length(keySet));
-	volt_base=volt_base(cell2mat(values(mapObj,valueSet)));
-	
-	power_base=1;
-	Zbase=volt_base*volt_base'/power_base;
-	Ybase=(1./Zbase);
-	
-	%account for phase angle in voltage
-	VOLT=dssCircuit.AllBusVolts;
-	ineven=2:2:length(VOLT); inodd=1:2:length(VOLT);
-	VOLT=VOLT(inodd)+1i*VOLT(ineven);
-	VOLT=VOLT(cell2mat(values(mapObj,valueSet)));
-	ANGLE=round((angle(VOLT))/(pi/6))*(pi/6);
-	
-	% 	V2=volt_base./sqrt(3).*exp(1i*ANGLE');
-	V2=volt_base.*exp(1i*ANGLE');
+% 	% %Get PU ybus
+% 	if isfield(circuit,'basevoltages')
+% 		baseKv=circuit.basevoltages;
+% 	else
+% 		baseKv=unique(cell2mat([circuit.transformer{:}.kV]));
+% 	end
+% % 	RealV=dssCircuit.AllBusVmag*sqrt(3)/1000;
+% % baseKv=circuit.basevoltages;
+% 	if length(baseKv)>1
+% 		baseKvMat=repmat(baseKv,length(RealV),1);
+% 		volt_base=[];
+% 		VoltDiff = bsxfun(@minus,baseKvMat,RealV');
+% 		[~,Ind]=min(abs(VoltDiff),[],2);
+% 		volt_base=baseKvMat(sub2ind(size(baseKvMat),[1:size(Ind,1)]',Ind));
+% 	else
+% 		volt_base=repmat(baseKv,length(RealV),1);
+% 	end
+% 	
+% 	%Make sure Order of voltages matches order of Ybus
+% 	valueSet = lower(Ycomb);
+% 	keySet = lower(dssCircuit.AllnodeNames);
+% 	mapObj = containers.Map(keySet,1:length(keySet));
+% 	volt_base=volt_base(cell2mat(values(mapObj,valueSet)));
+% 	
+% 	power_base=1;
+% 	Zbase=volt_base*volt_base'/power_base;
+% 	Ybase=(1./Zbase);
+% 	
+% 	%account for phase angle in voltage
+% 	VOLT=dssCircuit.AllBusVolts;
+% 	ineven=2:2:length(VOLT); inodd=1:2:length(VOLT);
+% 	VOLT=VOLT(inodd)+1i*VOLT(ineven);
+% 	VOLT=VOLT(cell2mat(values(mapObj,valueSet)));
+% 	ANGLE=round((angle(VOLT))/(pi/6))*(pi/6);
+% 	
+% 	% 	V2=volt_base./sqrt(3).*exp(1i*ANGLE');
+	V2=volt_base.*exp(1i*theta');
 	V2=diag(V2);
-	save([savePath feeder '_Ybus.mat'],'Ybus','YbusOrderVect','YbusPhaseVect','Ycomb','buslist','Zbus','circuit_orig','V2');
+% % 	delete(o)
+	save([savePath feeder '_Ybus.mat'],'Ybus','YbusOrg','YbusOrderVect','YbusPhaseVect','Ycomb','buslist','Zbus','circuit_orig','V2');
 else
 	load([savePath feeder '_Ybus.mat']);
 end
@@ -429,10 +431,7 @@ if Flag(1)
 				s_ld=P+1i*Q;
 			end
 			
-			
-			if strcmpi(ld(j).conn,'delta')
-				stop=1;
-			end
+
 			if isempty(regexp(ld(j).bus1,'\.','match')) %3 phase
 				Ind=find(ismemberi(YbusOrderVect,ld(j).bus1));
 				S_LD(Ind,ld(j).model)=S_LD(Ind,ld(j).model)+s_ld/3;
@@ -596,6 +595,48 @@ if Flag(4)
 	%remove remaining transformers (not sub, reg, or delta with CB) from
 	%circuit
 	XfrmrToRmv=candidateToRemove;
+	
+	%update Ybus based on removed Xfrmrs
+	names=fieldnames(circuit);
+	keepFields={'circuit','transformer','basevoltages'};
+	names=names(find(~ismemberi(names,keepFields)));
+	circuitRemove=rmfield(circuit,names);
+	circuitRemove.transformer(find(~ismember([1:length(circuit.transformer)],XfrmrToRmv)))=[];
+	[~, ~, YcombRemove, YbusRemove, buslistRemove,~]=getYbus(circuitRemove);
+	YbusRemove(1:3,:)=[]; YbusRemove(:,1:3)=[]; YcombRemove(1:3)=[]; buslistRemove(1)=[];
+	[Order] = getMatchingOrder(YcombRemove,Ycomb); %match with order of Ycomb
+
+	YfillRemove=zeros(length(buslist)*3); %create empty matrix to represtn all 3 phase connecitons
+	phase=reshape(repmat([1 2 3],length(buslist),1)',1,[])';
+	bus=reshape(repmat(buslist,1,3)',1,[])';
+	YfillOrder=strcat(strcat(bus,'.'),num2str(phase)); % createOrder vect
+	[Order] = getMatchingOrder(YcombRemove,YfillOrder); %match with order of Ycomb
+	YfillRemove(Order,Order)=YbusRemove; %add ybus_red to larger matrix
+	YbusRemoveStacked=reshape(YfillRemove,length(YfillRemove),3,[]); %stack into z direction
+	Shunt=sum(YbusRemoveStacked,3); %sum in z direction gives shunt matrix
+
+	%make matrix
+	for ii=1:length(buslistRemove)
+		IndsRemove=find(ismemberi(strtok(YcombRemove,'\.'),buslistRemove(ii)))
+		Inds2=find(ismemberi(YfillOrder,YcombRemove(IndsRemove)));
+		Ybus(find(ismember(Ycomb,YcombRemove(IndsRemove))),find(ismember(Ycomb,YcombRemove(IndsRemove))))=Ybus(find(ismember(Ycomb,YcombRemove(IndsRemove))),find(ismember(Ycomb,YcombRemove(IndsRemove))))-Shunt(Inds2,:);
+	end
+	
+	%get updated voltage vect
+	for ii=1:length(XfrmrToRmv)
+		kV=circuit.transformer(XfrmrToRmv(ii)).kv;
+		for iii=2:length(kV)
+% 			circuit.transformer{XfrmrToRmv(ii)}.kv{iii}=[kV{1}];
+			circuit.transformer(XfrmrToRmv(ii)).kvs(iii)=[kV{1}];
+		end
+	end
+	
+	[~, ~, ~, ~, ~,volt,theta,volt_base]=getYbus(circuit);
+	
+	VreducedFeeder=volt_base.*exp(1i*theta');
+	VreducedFeeder=diag(VreducedFeeder);
+	
+	
 	circuit.transformer(XfrmrToRmv)=[];
 	
 	rembus=[circuit.transformer{:}.buses]; rembus=unique(strtok(rembus(:),'\.'));
@@ -681,15 +722,10 @@ fprintf('\n-------------------------------------------------------------\n')
 tic
 fprintf('\nReducing: ')
 
+ZbusN=inv(Ybus);
 YbusOrder_reduced=find(ismemberi(YbusOrderVect,criticalBuses));
-Zbus_new=Zbus(YbusOrder_reduced,YbusOrder_reduced);
+Zbus_new=ZbusN(YbusOrder_reduced,YbusOrder_reduced);
 Ybus_reduced=inv(Zbus_new);
-% Ybus_real=real(Ybus_reduced);
-% Ybus_imag=imag(Ybus_reduced);
-% Ybus_real(find(abs(Ybus_real)<1E-6))=0;
-% Ybus_imag(find(abs(Ybus_imag)<1E-6))=0;
-% Ybus_reduced=Ybus_real+1i*Ybus_imag;
-
 
 %keep track of order
 buslist_org=buslist; YbusOrderVect_org=YbusOrderVect; YbusPhaseVect_org=YbusPhaseVect; Ycomb_org=Ycomb;
@@ -698,7 +734,7 @@ buslist=criticalBuses; YbusOrderVect=YbusOrderVect(YbusOrder_reduced); YbusPhase
 
 W=Ybus_reduced*Zbus(YbusOrder_reduced,:);
 % W=round(W*10000)/10000;
-W2=V2(YbusOrder_reduced,YbusOrder_reduced)*conj(W)*diag(1./diag(V2));
+W2=VreducedFeeder(YbusOrder_reduced,YbusOrder_reduced)*conj(W)*diag(1./diag(V2));
 % W2=round(W2*10000)/10000;
 % W(find(abs(W)<1E-6))=0;
 
@@ -891,70 +927,133 @@ fprintf('%.2f sec\n',t_)
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     SHUNT CAPACITORS   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% tic
-% fprintf('\nRe-writing Shunt Impedences: ')
-%
-% %add shunt cap
-% %find rows with non-zero shunt capacitanct
-% ShuntRows=1:length(Ybus_reduced);%find(abs(sum(Ybus_reduced,2))>1E-6);
-%
-% %get Ybus of Cap and Xfrmr
-% YbusKill=zeros(length(Ybus_reduced));
-% circuitKill=circuit;
-% names=fieldnames(circuit);
-% keepFields={'circuit','transformer','capacitor','basevoltages','reactor'};
-% names=names(find(~ismemberi(names,keepFields)));
-% for ii=1:length(names)
-% 	circuitKill=rmfield(circuitKill,names{ii});
-% end
-% [~, ~, YcombKill, Ybuskill,]=getYbus(circuitKill);
-%
-% valueSet = lower(YcombKill);
-% keySet = lower(Ycomb);
-% mapObj = containers.Map(keySet,1:length(keySet));
-% Yplace=cell2mat(values(mapObj,valueSet));
-% YbusKill(Yplace,Yplace)=Ybuskill;
-%
-% %remove sourcebus
-% Source=find(ismemberi(YbusOrderVect,'sourcebus'));
-% keepRows=ShuntRows(find(~ismember(ShuntRows,Source)));
-%
-% % %Make additional capacitors here to account for removed impedence from DT
-% count=0;
-% for ii=1:length(keepRows)
-%
-% 	inv_r_jx=(sum(Ybus_reduced(keepRows(ii),:)-YbusKill(keepRows(ii),:),2));
-%
-% 	if real(inv_r_jx)<1E-6 && imag(inv_r_jx)<1E-6
-% 		continue
-% 	elseif real(inv_r_jx)<1E-6
-% 		inv_r_jx=0+1i*imag(inv_r_jx);
-% 	elseif imag(inv_r_jx)<1E-6
-% 		inv_r_jx=real(inv_r_jx);
-% 	end
-%
-% 	r_jx=1/inv_r_jx;
-% 	count=count+1;
-% 	if ~Flag(7) && count==1
-% 		circuit.reactor(1)=dssreactor;
-% 	else
-% 		circuit.reactor(end+1)=dssreactor;
-% 	end
-%
-%
-% 	circuit.reactor(end).name=['addedShunt_' char(regexprep(Ycomb{keepRows(ii)},'\.','_'))];
-% 	circuit.reactor(end).phases=1;
-% 	circuit.reactor(end).bus1=char(Ycomb(keepRows(ii)));
-%
-% 	circuit.reactor(end).R=real(r_jx);
-% 	circuit.reactor(end).X=imag(r_jx);
-% 	circuit.reactor(end).kVAr=0;
-%
-% 	busNum=find(ismemberi(buslist,YbusOrderVect(keepRows(ii))));
-% 	MatchInd=find(ismemberi(trfDownInd,[cell2mat(generation(busNum,4)); busNum]));
-%
-% 	circuit.reactor(end).kv=trf_kV(MatchInd(end))/sqrt(3);
-% end
+tic
+fprintf('\nRe-writing Shunt Impedences: ')
+
+YbusKill=zeros(length(Ybus_reduced));
+circuitKill=circuit;
+names=fieldnames(circuit);
+keepFields={'circuit','transformer','capacitor','basevoltages','reactor'};
+names=names(find(~ismemberi(names,keepFields)));
+
+for ii=1:length(names)
+	circuitKill=rmfield(circuitKill,names{ii});
+end
+[~, ~, YcombKill, Ybuskill,]=getYbus(circuitKill);
+
+valueSet = lower(YcombKill);
+keySet = lower(Ycomb);
+mapObj = containers.Map(keySet,1:length(keySet));
+Yplace=cell2mat(values(mapObj,valueSet));
+YbusKill(Yplace,Yplace)=Ybuskill;
+
+
+Yfill=zeros(length(buslist)*3); %create empty matrix to represtn all 3 phase connecitons
+phase=reshape(repmat([1 2 3],length(buslist),1)',1,[])';
+bus=reshape(repmat(buslist,1,3)',1,[])';
+YfillOrder=strcat(strcat(bus,'.'),num2str(phase)); % createOrder vect
+[Order] = getMatchingOrder(Ycomb,YfillOrder); %match with order of Ycomb
+Yfill(Order,Order)=Ybus_reduced-YbusKill; %add ybus_red to larger matrix
+YfillStacked=reshape(Yfill,length(Yfill),3,[]); %stack into z direction
+Shunt=sum(YfillStacked,3); %sum in z direction gives shunt matrix
+ShuntActual=Shunt(Order,:);
+
+count=0;
+for ii=1:length(buslist)
+	
+	Yinds=find(ismemberi(YbusOrderVect,buslist(ii)));
+	
+	if abs(max(max(ShuntActual(Yinds,YbusPhaseVect(Yinds)))))<1E-4
+		continue
+	end
+	
+	r_jx=inv(ShuntActual(Yinds,YbusPhaseVect(Yinds)));
+	
+	count=count+1;
+	if ~Flag(7) && count==1
+		circuit.reactor(1)=dssreactor;
+	else
+		circuit.reactor(end+1)=dssreactor;
+	end
+	
+	
+	circuit.reactor(end).name=['addedShunt_' char(buslist(ii))];
+	circuit.reactor(end).phases=length(Yinds);
+	circuit.reactor(end).bus1=[char(buslist(ii)) '.' strjoin(arrayfun(@(x) num2str(x),YbusPhaseVect(Yinds),'UniformOutput',false),'.')];
+	
+	circuit.reactor(end).Rmatrix=real(r_jx);
+	circuit.reactor(end).Xmatrix=imag(r_jx);
+% 	circuit.reactor(end).parallel='yes';
+	
+	
+	MatchInd=find(ismemberi(trfDownInd,[cell2mat(generation(ii,4)); ii]));
+	if length(Yinds)==1
+		circuit.reactor(end).kv=trf_kV(MatchInd(end))/sqrt(3);
+	else
+		circuit.reactor(end).kv=trf_kV(MatchInd(end))
+	end
+end
+% % %add shunt cap
+% % %find rows with non-zero shunt capacitanct
+% % ShuntRows=1:length(Ybus_reduced);%find(abs(sum(Ybus_reduced,2))>1E-6);
+% %
+% % %get Ybus of Cap and Xfrmr
+% % YbusKill=zeros(length(Ybus_reduced));
+% % circuitKill=circuit;
+% % names=fieldnames(circuit);
+% % keepFields={'circuit','transformer','capacitor','basevoltages','reactor'};
+% % names=names(find(~ismemberi(names,keepFields)));
+% % for ii=1:length(names)
+% % 	circuitKill=rmfield(circuitKill,names{ii});
+% % end
+% % [~, ~, YcombKill, Ybuskill,]=getYbus(circuitKill);
+% %
+% % valueSet = lower(YcombKill);
+% % keySet = lower(Ycomb);
+% % mapObj = containers.Map(keySet,1:length(keySet));
+% % Yplace=cell2mat(values(mapObj,valueSet));
+% % YbusKill(Yplace,Yplace)=Ybuskill;
+% %
+% % %remove sourcebus
+% % Source=find(ismemberi(YbusOrderVect,'sourcebus'));
+% % keepRows=ShuntRows(find(~ismember(ShuntRows,Source)));
+% %
+% % % %Make additional capacitors here to account for removed impedence from DT
+% % count=0;
+% % for ii=1:length(keepRows)
+% %
+% % 	inv_r_jx=sum(Ybus_reduced(keepRows(ii),:)-YbusKill(keepRows(ii),:),2);
+% %
+% %
+% % 	if abs(real(inv_r_jx))<1E-5 && abs(imag(inv_r_jx))<1E-5
+% % 		continue
+% % 	elseif abs(real(inv_r_jx))<1E-5
+% % 		inv_r_jx=0+1i*imag(inv_r_jx);
+% % 	elseif abs(imag(inv_r_jx))<1E-5
+% % 		inv_r_jx=real(inv_r_jx);
+% % 	end
+% % 	r_jx=1/inv_r_jx;
+% % 	count=count+1;
+% % 	if ~Flag(7) && count==1
+% % 		circuit.reactor(1)=dssreactor;
+% % 	else
+% % 		circuit.reactor(end+1)=dssreactor;
+% % 	end
+% %
+% %
+% % 	circuit.reactor(end).name=['addedShunt_' char(regexprep(Ycomb{keepRows(ii)},'\.','_'))];
+% % 	circuit.reactor(end).phases=1;
+% % 	circuit.reactor(end).bus1=char(Ycomb(keepRows(ii)));
+% %
+% % 	circuit.reactor(end).R=real(r_jx);
+% % 	circuit.reactor(end).X=imag(r_jx);
+% % 	circuit.reactor(end).kVAr=0;
+% %
+% % 	busNum=find(ismemberi(buslist,YbusOrderVect(keepRows(ii))));
+% % 	MatchInd=find(ismemberi(trfDownInd,[cell2mat(generation(busNum,4)); busNum]));
+% %
+% % 	circuit.reactor(end).kv=trf_kV(MatchInd(end))/sqrt(3);
+% % end
 
 t_=toc;
 fprintf('%.2f sec\n',t_)
@@ -1036,7 +1135,10 @@ if Flag(2)
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% for ii=11:13
+% 	circuit.load(ii).kv=.48/sqrt(3);
+% 
+% end
 
 %% Update circuit info
 circuit.circuit.Name=[circuit.circuit.Name '_Reduced'];
@@ -1067,10 +1169,12 @@ if debug
 		circuitBase=rmfield(circuitBase,'regcontrol');
 	end
 	
-	p = WriteDSS(circuitBase,'Test',0,savePath);
-	
-	
+% 	p = WriteDSS(circuitBase,'Test',0,savePath);
+
+% circuit =rmfield(circuit,'reactor')
+
 	[YbusOrderVect2, YbusPhaseVect2, Ycomb2, Ybus_regenerated, ~,~]=getYbus(circuitBase);
+	[OrderRegen] = getMatchingOrder(Ycomb2,Ycomb);
 	
 	%plotting
 	redd=tic;
@@ -1085,7 +1189,7 @@ if debug
 	powerFlowReduced.nodeName(I);
 	[diffV, ind]=max(abs(powerFlowFull.Voltage(Keep)-powerFlowReduced.Voltage));
 	diffV
-	Ycomb(ind)
+	Ycomb2(ind)
 	
 	figure;plot(powerFlowReduced.Dist*.3048,powerFlowReduced.Voltage,'r*',powerFlowFull.Dist(Keep),powerFlowFull.Voltage(Keep),'b*')
 	legend('Reduced','Original')

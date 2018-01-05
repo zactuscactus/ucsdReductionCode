@@ -1,4 +1,4 @@
-function s = char(o)
+function [s,dcap] = char(o)
 % Convert object to string that can be put in an openDSS file
 %	we are careful only to write values that were set by the user, not
 %	defaults
