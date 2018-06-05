@@ -1,0 +1,24 @@
+
+New LineCode.4/0_4/0
+~ nphases=1
+~ r1=0.05800
+~ x1=0.12060
+~ r0=0.17840
+~ x0=0.40470
+~ C1=3.40000
+~ C0=1.60000
+~ units=kft
+~ rmatrix="0.12983011 |"
+~ xmatrix="0.05932303 |"
+~ cmatrix="15.00000000 |"
+~ baseFreq=60
+~ normamps=299
+~ emergamps=299 1.25 *
+~ faultrate=0.1
+~ pctperm=20
+~ repair=3
+~ Kron=N
+~ Rg=0.01805
+~ Xg=0.15508
+~ rho=100
+~ neutral=0
