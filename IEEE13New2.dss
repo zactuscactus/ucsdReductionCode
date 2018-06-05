@@ -1,0 +1,41 @@
+Clear
+
+New Circuit.IEEE13Nodeckt_Reduced Phases=3 bus1=SourceBus basekv=115 pu=1 angle=0 MVAsc3=20000 MVAsc1=21000
+New Line.rg60_632 Phases=3 bus1=rg60.1.2.3 bus2=632.1.2.3 Units=km Length=0.6096 Rmatrix=[ 0.215311004785    0.0969365562667    0.0981793326291| 0.0969365562667     0.209718511154    0.0953830858137| 0.0981793326291    0.0953830858137     0.212141925061|] Xmatrix=[0.632511029641     0.311750450507     0.263220033555| 0.311750450507     0.651090536258     0.239172310943| 0.263220033555     0.239172310943     0.643012489902|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Line.632_675 Phases=3 bus1=632.1.2.3 bus2=675.1.2.3 Units=km Length=0.9144 Rmatrix=[0.307529304726      0.13059008356     0.124163689525|  0.13059008356     0.301714781722     0.129554441162| 0.124163689525     0.129554441162     0.305416591525|] Xmatrix=[  0.5124695912     0.213567761864     0.171664618757| 0.213567761864     0.516227957497     0.165182337769| 0.171664618757     0.165182337769     0.519470565642|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Transformer.Sub Phases=3 Windings=2 XHL=0.008 XLT=4 XHT=4 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=SourceBus Conn=wye kV=115 kVA=5000 %R=0.0005 Wdg=2 Bus=650 Conn=wye kV=4.16 kVA=5000 %R=0.0005
+New Transformer.Reg1 Phases=1 Buses=[650.1 RG60.1] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg2 Phases=1 Buses=[650.2 RG60.2] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg3 Phases=1 Buses=[650.3 RG60.3] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New XYCurve.myeff npts=4 Xarray=[0   25   75  100] Yarray=[1  1  1  1]
+New XYCurve.mypvst npts=4 Xarray=[0.1         0.2         0.4           1] Yarray=[1  1  1  1]
+New XYCurve.CurveFor_InvForPV_632.1_from_692.1 npts=6 Xarray=[0.50417     0.95417     0.98417      1.0242      1.0542      1.5042] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_632.3_from_692.1 npts=6 Xarray=[0.49926     0.94926     0.97926      1.0193      1.0493      1.4993] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_632.1_from_692.2 npts=6 Xarray=[0.51366     0.96366     0.99366      1.0337      1.0637      1.5137] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_632.3_from_692.2 npts=6 Xarray=[0.50874     0.95874     0.98874      1.0287      1.0587      1.5087] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_632.1_from_692.3 npts=6 Xarray=[0.51577     0.96577     0.99577      1.0358      1.0658      1.5158] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_632.3_from_692.3 npts=6 Xarray=[0.51085     0.96085     0.99085      1.0309      1.0609      1.5109] Yarray=[1  1  0  0 -1 -1]
+New Pvsystem.PV_632.1_from_692.1 phases=1 bus1=632.1 kv=2.4 irradiance=1 Pmpp=76.701 kvar=35.2765 kVA=112.7878 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_632.3_from_692.1 phases=1 bus1=632.3 kv=2.4 irradiance=1 Pmpp=0.41376 kvar=-11.6378 kVA=98.2246 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_632.1_from_692.2 phases=1 bus1=632.1 kv=2.4 irradiance=1 Pmpp=1.8591 kvar=-12.7525 kVA=112.7878 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_632.3_from_692.2 phases=1 bus1=632.3 kv=2.4 irradiance=1 Pmpp=5.2818 kvar=-0.63086 kVA=98.2246 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_632.1_from_692.3 phases=1 bus1=632.1 kv=2.4 irradiance=1 Pmpp=10.2812 kvar=8.1568 kVA=112.7878 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_632.3_from_692.3 phases=1 bus1=632.3 kv=2.4 irradiance=1 Pmpp=72.3784 kvar=36.8554 kVA=98.2246 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Load.Load_632.1_model_1 Phases=1 bus1=632.1 Kv=2.4 Kw=7.7124 Model=1 Kvar=17.5789 Vminpu=0.6
+New Load.Load_632.3_model_1 Phases=1 bus1=632.3 Kv=2.4 Kw=1.8277 Model=1 Kvar=-1.916 Vminpu=0.6
+New Invcontrol.InvForPV_632.1_from_692.1 PVSystemList=PV_632.1_from_692.1 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.1_from_692.1 DeltaQ_factor=0.01
+New Invcontrol.InvForPV_632.3_from_692.1 PVSystemList=PV_632.3_from_692.1 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.3_from_692.1 DeltaQ_factor=0.01
+New Invcontrol.InvForPV_632.1_from_692.2 PVSystemList=PV_632.1_from_692.2 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.1_from_692.2 DeltaQ_factor=0.01
+New Invcontrol.InvForPV_632.3_from_692.2 PVSystemList=PV_632.3_from_692.2 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.3_from_692.2 DeltaQ_factor=0.01
+New Invcontrol.InvForPV_632.1_from_692.3 PVSystemList=PV_632.1_from_692.3 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.1_from_692.3 DeltaQ_factor=0.01
+New Invcontrol.InvForPV_632.3_from_692.3 PVSystemList=PV_632.3_from_692.3 Mode=voltvar vvc_curve1=CurveFor_InvForPV_632.3_from_692.3 DeltaQ_factor=0.01
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 4.16 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords IEEE13New2_buscoords.csv
+
+
+set maxiterations=1000

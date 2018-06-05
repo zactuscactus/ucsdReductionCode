@@ -1,5 +1,5 @@
 Clear
-New Circuit.ucsdMicrogrid bus1=SDG&E_69KV basekv=69 pu=1.05 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
+New Circuit.ucsdMicrogrid bus1=SDG&E_69KV basekv=69 pu=1 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
 New Linecode.1_0_Cu r1=0.269029 x1=0.108268 r0=0.429790 x0=0.272310 units=km
 New Linecode.2_0_Cu r1=0.216535 x1=0.104987 r0=0.341207 x0=0.269029 units=km
 New Linecode.3_0_Cu r1=0.172244 x1=0.098425 r0=0.270669 x0=0.262467 units=km
@@ -1089,7 +1089,7 @@ New Transformer.T_200_UREY windings=2 buses=(SS_97_RC,LC_A_UREY) conns=(D,D) kvs
 New Transformer.T_202_SEAWEED windings=2 buses=(SS_64_SIO,SEAWEED_CAN) conns=(D,WG) kvs=(12.470,0.480 ) kvas=(500.0,500.0) xhl=2.640 %rs=(0.56,0.56) xhl=2.640 maxtap=1.05 mintap=0.95 numtaps=4
 New Transformer.T_203_IGPP windings=2 buses=(SS_67_SIO,IGPP_SUB) conns=(D,WG) kvs=(12.470,0.480 ) kvas=(750.0,750.0) xhl=5.800 %rs=(1.11,1.11) xhl=5.800 maxtap=1.05 mintap=0.95 numtaps=4
 New Transformer.T_204 windings=2 buses=(SDG&E_69KV,T_204_SEC) conns=(D,WG) kvs=(69.000,12.470 ) kvas=(16800.0,28000.0) xhl=7.550 %rs=(0.36,0.36) xhl=7.550 maxtap=1.05 mintap=0.95 numtaps=16
-New Transformer.T_205 windings=2 buses=(SDG&E_69KV,T_205_SEC) conns=(D,WG) kvs=(69.000,12.470 ) kvas=(16800.0,28000.0) xhl=7.610 %rs=(0.37,0.37) xhl=7.610 maxtap=1.05 mintap=0.95 numtaps=16 sub=y
+New Transformer.T_205 windings=2 buses=(SDG&E_69KV,T_205_SEC) conns=(D,WG) kvs=(69.000,12.470 ) kvas=(16800.0,28000.0) xhl=7.610 %rs=(0.37,0.37) xhl=7.610 maxtap=1.05 mintap=0.95 numtaps=16
 New Transformer.T_206_3RD_C windings=2 buses=(3RD_C_S206PRI,3RD_C_APT_206) conns=(D,WG) kvs=(12.470,0.208 ) kvas=(150.0,150.0) xhl=3.470 %rs=(0.97,0.97) xhl=3.470 maxtap=1.05 mintap=0.95 numtaps=4
 New Transformer.T_207_3RD_C windings=2 buses=(T_207_PRI,T_207_SEC) conns=(D,WG) kvs=(12.470,0.208 ) kvas=(300.0,300.0) xhl=3.880 %rs=(0.93,0.93) xhl=3.880 maxtap=1.05 mintap=0.95 numtaps=4
 New Transformer.T_209_CPA windings=2 buses=(T_053,US_CPA) conns=(D,WG) kvs=(12.470,0.480 ) kvas=(2500.0,3333.0) xhl=6.250 %rs=(0.78,0.78) xhl=6.250 maxtap=1.05 mintap=0.95 numtaps=4
@@ -1324,273 +1324,273 @@ New Generator.PV_FLEET_SVCS bus1=T_171_SEC Kv=0.48 Kw=28.7 Model=1 Kvar=0 Vminpu
 New Generator.PV_HOPKINSPARK_1 bus1=US_2_HOPKINS Kv=0.48 Kw=91.66 Model=1 Kvar=0 Vminpu=0.95 Vmaxpu=1.05 kVA=1000 
 New Generator.PV_HOPKINSPARK_2 bus1=US_2_HOPKINS Kv=0.48 Kw=246.34 Model=1 Kvar=0 Vminpu=0.95 Vmaxpu=1.05 kVA=1000 
 New Generator.PV_EBU2 bus1=EBU2_LAB Kv=0.48 Kw=80.36 Model=1 Kvar=0 Vminpu=0.95 Vmaxpu=1.05 kVA=1000 
-New Load.3RD_C_APT_206 bus1=3RD_C_APT_206 kV=0.208 model=1 kW=172
-New Load.3RD_C_RES bus1=3RD_C_RES kV=0.208 model=1 kW=172
-New Load.A_1 bus1=A_1 kV=0.480 model=1 kW=172
-New Load.A_2 bus1=A_2 kV=0.480 model=1 kW=172
-New Load.A_3 bus1=A_3 kV=0.480 model=1 kW=172
-New Load.A_4 bus1=A_4 kV=0.480 model=1 kW=172
-New Load.ALEX_SPANOS bus1=ALEX_SPANOS kV=0.480 model=1 kW=172
-New Load.ARGO_BLAKE bus1=ARGO_BLAKE kV=0.480 model=1 kW=172
-New Load.ATHLETIC_FIELD bus1=ATHLETIC_FIELD kV=0.480 model=1 kW=172
-New Load.B_BOX_REST bus1=B_BOX_REST kV=0.208 model=1 kW=172
-New Load.BALLON_BLDG bus1=BALLON_BLDG kV=0.480 model=1 kW=172
-New Load.BASEBALL_SEC bus1=BASEBALL_SEC kV=0.480 model=1 kW=172
-New Load.BASIC_SCI_SUB1 bus1=BASIC_SCI_SUB1 kV=0.208 model=1 kW=172
-New Load.BASIC_SCI_SUB2 bus1=BASIC_SCI_SUB2 kV=0.208 model=1 kW=172
-New Load.BASIC_SCI_SUB3 bus1=BASIC_SCI_SUB3 kV=0.480 model=1 kW=172
-New Load.BASIC_SCI_SUB4 bus1=BASIC_SCI_SUB4 kV=0.208 model=1 kW=172
-New Load.BASIC_SCI_SUB5 bus1=BASIC_SCI_SUB5 kV=0.480 model=1 kW=172
-New Load.BASIC_SCI_SUB6 bus1=BASIC_SCI_SUB6 kV=0.208 model=1 kW=172
-New Load.BASIC_SCI_SUB7 bus1=BASIC_SCI_SUB7 kV=0.208 model=1 kW=172
-New Load.BCF_PMP bus1=BCF_PMP kV=0.480 model=1 kW=172
-New Load.BIO_MED_SEC bus1=BIO_MED_SEC kV=0.480 model=1 kW=172
-New Load.BIRCH_AQ bus1=BIRCH_AQ kV=0.480 model=1 kW=172
-New Load.BIRCH_AQUARIUM bus1=BIRCH_AQUARIUM kV=0.480 model=1 kW=172
-New Load.BLDG_2C_208V bus1=BLDG_2C_208V kV=0.208 model=1 kW=172
-New Load.BLDG_2C_480V bus1=BLDG_2C_480V kV=0.480 model=1 kW=172
-New Load.BONNER_LC_A bus1=BONNER_LC_A kV=0.208 model=1 kW=172
-New Load.BONNER_LC_B bus1=BONNER_LC_B kV=0.480 model=1 kW=172
-New Load.BONNER_LC_C bus1=BONNER_LC_C kV=0.208 model=1 kW=172
-New Load.BRAIN_IMG_SEC bus1=BRAIN_IMG_SEC kV=0.480 model=1 kW=172
-New Load.BUILDING_2D bus1=BUILDING_2D kV=0.480 model=1 kW=172
-New Load.BUS_JMC_TEMP_PWR_SEC bus1=BUS_JMC_TEMP_PWR_SEC kV=0.480 model=1 kW=172
-New Load.BUS_T_304_EC_PS_SEC bus1=BUS_T_304_EC_PS_SEC kV=0.480 model=1 kW=172
-New Load.BUS_XF_CPT_1A_SEC bus1=BUS_XF_CPT_1A_SEC kV=0.240 model=1 kW=172
-New Load.BUS_XF_CPT_1B_SEC bus1=BUS_XF_CPT_1B_SEC kV=0.240 model=1 kW=172
-New Load.BUS_XF_CPT_1C_SEC bus1=BUS_XF_CPT_1C_SEC kV=0.240 model=1 kW=172
-New Load.BUS_XF_CPT_C_SEC bus1=BUS_XF_CPT_C_SEC kV=0.240 model=1 kW=172
-New Load.BUS_XF_CPT_E_SEC bus1=BUS_XF_CPT_E_SEC kV=0.240 model=1 kW=172
-New Load.BUS_XF_CPT_W_SEC bus1=BUS_XF_CPT_W_SEC kV=0.240 model=1 kW=172
-New Load.CAL_IT_US1A bus1=CAL_IT_US1A kV=0.480 model=1 kW=172
-New Load.CAL_IT_US1B bus1=CAL_IT_US1B kV=0.480 model=1 kW=172
-New Load.CAL_IT_US1C bus1=CAL_IT_US1C kV=0.480 model=1 kW=172
-New Load.CANYON_VIEW bus1=CANYON_VIEW kV=0.480 model=1 kW=172
-New Load.CDS1 bus1=CDS1 kV=0.480 model=1 kW=172
-New Load.CELL_SITE bus1=CELL_SITE kV=0.480 model=1 kW=172
-New Load.CEN_LIB_S182 bus1=CEN_LIB_S182 kV=0.480 model=1 kW=172
-New Load.CEN_LIB_S183 bus1=CEN_LIB_S183 kV=0.480 model=1 kW=172
-New Load.CEN_LIB_S184 bus1=CEN_LIB_S184 kV=0.480 model=1 kW=172
-New Load.CENT_HALL bus1=CENT_HALL kV=0.480 model=1 kW=172
-New Load.CLIN_SCI_SUB_A bus1=CLIN_SCI_SUB_A kV=0.208 model=1 kW=172
-New Load.CLIN_SCI_SUB_B bus1=CLIN_SCI_SUB_B kV=0.480 model=1 kW=172
-New Load.CMG bus1=CMG kV=0.480 model=1 kW=172
-New Load.CMRR bus1=CMRR kV=0.480 model=1 kW=172
-New Load.CNG bus1=CNG kV=0.480 model=1 kW=172
-New Load.COAST_APT bus1=COAST_APT kV=0.240 model=1 kW=172
-New Load.COAST_APT_2 bus1=COAST_APT_2 kV=0.240 model=1 kW=172
-New Load.COG_SCI_3C_208V bus1=COG_SCI_3C_208V kV=0.208 model=1 kW=172
-New Load.COG_SCI_3C_480V bus1=COG_SCI_3C_480V kV=0.480 model=1 kW=172
-New Load.CRB_3B bus1=CRB_3B kV=0.480 model=1 kW=172
-New Load.CRB_3B_208V bus1=CRB_3B_208V kV=0.208 model=1 kW=172
-New Load.CREDIT_UNION bus1=CREDIT_UNION kV=0.208 model=1 kW=172
-New Load.CSD2 bus1=CSD2 kV=0.480 model=1 kW=172
-New Load.DANCE_STUDIO bus1=DANCE_STUDIO kV=0.208 model=1 kW=172
-New Load.DB_EM bus1=DB_EM kV=0.480 model=1 kW=172
-New Load.DBN bus1=DBN kV=0.208 model=1 kW=172
-New Load.DBN_1 bus1=DBN_1 kV=0.480 model=1 kW=172
-New Load.DBS bus1=DBS kV=0.208 model=1 kW=172
-New Load.DEEP_SEA_DRILL bus1=DEEP_SEA_DRILL kV=0.208 model=1 kW=172
-New Load.DINING_COMMONS bus1=DINING_COMMONS kV=0.208 model=1 kW=172
-New Load.DSAB bus1=DSAB kV=0.480 model=1 kW=172
-New Load.EAST_CMM_S227 bus1=EAST_CMM_S227 kV=0.480 model=1 kW=172
-New Load.EAST_CMM_S228 bus1=EAST_CMM_S228 kV=0.480 model=1 kW=172
-New Load.EBU_3A_SSB bus1=EBU_3A_SSB kV=0.480 model=1 kW=172
-New Load.EBU_3A1_SSA bus1=EBU_3A1_SSA kV=0.480 model=1 kW=172
-New Load.EBU_3B_SUB_A bus1=EBU_3B_SUB_A kV=0.480 model=1 kW=172
-New Load.EBU_3B1_SUB_B bus1=EBU_3B1_SUB_B kV=0.480 model=1 kW=172
-New Load.EBU1_T_138 bus1=EBU1_T_138 kV=0.480 model=1 kW=172
-New Load.EBU1_T_139 bus1=EBU1_T_139 kV=0.208 model=1 kW=172
-New Load.EBU1_T_140 bus1=EBU1_T_140 kV=0.208 model=1 kW=172
-New Load.EBU2_LAB bus1=EBU2_LAB kV=0.480 model=1 kW=172
-New Load.EC_OFFICE_BLDG bus1=EC_OFFICE_BLDG kV=0.480 model=1 kW=172
-New Load.ECOB bus1=ECOB kV=0.480 model=1 kW=172
-New Load.ECON_3E bus1=ECON_3E kV=0.480 model=1 kW=172
-New Load.ED2 bus1=ED2 kV=0.480 model=1 kW=172
-New Load.ED4 bus1=ED4 kV=0.208 model=1 kW=172
-New Load.ED6 bus1=ED6 kV=0.208 model=1 kW=172
-New Load.ERC bus1=ERC kV=2.400 model=1 kW=172
-New Load.FACULTY_CLUB bus1=FACULTY_CLUB kV=0.208 model=1 kW=172
-New Load.GALBRAITH_HALL bus1=GALBRAITH_HALL kV=0.480 model=1 kW=172
-New Load.GILMAN_PARKING bus1=GILMAN_PARKING kV=0.480 model=1 kW=172
-New Load.GREENHOUSE bus1=GREENHOUSE kV=0.208 model=1 kW=172
-New Load.HD_1 bus1=HD_1 kV=0.480 model=1 kW=172
-New Load.HD_2 bus1=HD_2 kV=0.480 model=1 kW=172
-New Load.HD_3 bus1=HD_3 kV=0.480 model=1 kW=172
-New Load.HEALTH_CENTER bus1=HEALTH_CENTER kV=0.208 model=1 kW=172
-New Load.HI_BAY_PHYSICS bus1=HI_BAY_PHYSICS kV=0.480 model=1 kW=172
-New Load.HS_APT_A bus1=HS_APT_A kV=0.480 model=1 kW=172
-New Load.HS_APT_B bus1=HS_APT_B kV=0.480 model=1 kW=172
-New Load.HUBBS_HALL bus1=HUBBS_HALL kV=0.480 model=1 kW=172
-New Load.I&R_BLDG bus1=I&R_BLDG kV=0.480 model=1 kW=172
-New Load.IGPP_SUB bus1=IGPP_SUB kV=0.480 model=1 kW=172
-New Load.IGPP2 bus1=IGPP2 kV=0.208 model=1 kW=172
-New Load.IMG bus1=IMG kV=0.480 model=1 kW=172
-New Load.IN_OF_AMER_P2 bus1=IN_OF_AMER_P2 kV=0.208 model=1 kW=172
-New Load.INAT_HOUSE bus1=INAT_HOUSE kV=0.208 model=1 kW=172
-New Load.INST_OF_AMER bus1=INST_OF_AMER kV=0.208 model=1 kW=172
-New Load.IRPS bus1=IRPS kV=0.480 model=1 kW=172
-New Load.LA_JOLLA_PLAY bus1=LA_JOLLA_PLAY kV=0.480 model=1 kW=172
-New Load.LC_A_UREY bus1=LC_A_UREY kV=0.208 model=1 kW=172
-New Load.LC_C_UREY bus1=LC_C_UREY kV=0.480 model=1 kW=172
-New Load.LC1_2B_480V bus1=LC1_2B_480V kV=0.480 model=1 kW=172
-New Load.LDP bus1=LDP kV=0.480 model=1 kW=172
-New Load.MAAC_BLDGS bus1=MAAC_BLDGS kV=0.208 model=1 kW=172
-New Load.MANDELL_WEISS bus1=MANDELL_WEISS kV=0.208 model=1 kW=172
-New Load.MANDEVILLE_CTR bus1=MANDEVILLE_CTR kV=0.480 model=1 kW=172
-New Load.MARINE_SCIENCE bus1=MARINE_SCIENCE kV=0.208 model=1 kW=172
-New Load.MARSHALL_SUB1 bus1=MARSHALL_SUB1 kV=0.208 model=1 kW=172
-New Load.MARSHALL_SUB2 bus1=MARSHALL_SUB2 kV=0.208 model=1 kW=172
-New Load.MARSHALL_SUB3 bus1=MARSHALL_SUB3 kV=0.208 model=1 kW=172
-New Load.MARSHALL_SUB4 bus1=MARSHALL_SUB4 kV=0.208 model=1 kW=172
-New Load.MAT_HANDLING bus1=MAT_HANDLING kV=0.480 model=1 kW=172
-New Load.MATHEWS_S167 bus1=MATHEWS_S167 kV=0.208 model=1 kW=172
-New Load.MATHEWS_S168 bus1=MATHEWS_S168 kV=0.208 model=1 kW=172
-New Load.MATTHEWS_SUB bus1=MATTHEWS_SUB kV=0.480 model=1 kW=172
-New Load.MAYER_208V bus1=MAYER_208V kV=0.208 model=1 kW=172
-New Load.MAYER_480V bus1=MAYER_480V kV=0.480 model=1 kW=172
-New Load.MAYER_USSB bus1=MAYER_USSB kV=0.480 model=1 kW=172
-New Load.MAYER_USSC bus1=MAYER_USSC kV=0.480 model=1 kW=172
-New Load.MDB bus1=MDB kV=0.480 model=1 kW=172
-New Load.MDP bus1=MDP kV=0.208 model=1 kW=172
-New Load.MED_TEACHING bus1=MED_TEACHING kV=0.480 model=1 kW=172
-New Load.MEDIA_3F_208V bus1=MEDIA_3F_208V kV=0.208 model=1 kW=172
-New Load.MEDIA_3F_480V bus1=MEDIA_3F_480V kV=0.480 model=1 kW=172
-New Load.MUIR_APTS bus1=MUIR_APTS kV=0.208 model=1 kW=172
-New Load.MULT_BLD_SEC bus1=MULT_BLD_SEC kV=0.480 model=1 kW=172
-New Load.NC_PARKING_480 bus1=NC_PARKING_480 kV=0.480 model=1 kW=172
-New Load.NCH_T_361 bus1=NCH_T_361 kV=0.480 model=1 kW=172
-New Load.NCH_T_362 bus1=NCH_T_362 kV=0.480 model=1 kW=172
-New Load.NCH_T_363 bus1=NCH_T_363 kV=0.480 model=1 kW=172
-New Load.NIERENBURG bus1=NIERENBURG kV=0.480 model=1 kW=172
-New Load.NORPAX bus1=NORPAX kV=0.480 model=1 kW=172
-New Load.OARF bus1=OARF kV=0.480 model=1 kW=172
-New Load.OLD_RITTER_HAL bus1=OLD_RITTER_HAL kV=0.480 model=1 kW=172
-New Load.PACIFIC_H_T1 bus1=PACIFIC_H_T1 kV=0.208 model=1 kW=172
-New Load.PACIFIC_H_T2 bus1=PACIFIC_H_T2 kV=0.208 model=1 kW=172
-New Load.PACIFIC_H_T3 bus1=PACIFIC_H_T3 kV=0.480 model=1 kW=172
-New Load.PEP_CANY_APTS bus1=PEP_CANY_APTS kV=0.208 model=1 kW=172
-New Load.PEP_CYN_S169 bus1=PEP_CYN_S169 kV=0.208 model=1 kW=172
-New Load.PHARM_ESA bus1=PHARM_ESA kV=0.480 model=1 kW=172
-New Load.PHYS_ED_BLDGS bus1=PHYS_ED_BLDGS kV=0.480 model=1 kW=172
-New Load.PIER bus1=PIER kV=0.480 model=1 kW=172
-New Load.POWELL_STRUCT bus1=POWELL_STRUCT kV=0.480 model=1 kW=172
-New Load.PREUSS_SCHOOL bus1=PREUSS_SCHOOL kV=0.480 model=1 kW=172
-New Load.REVELLE_CAFE bus1=REVELLE_CAFE kV=0.208 model=1 kW=172
-New Load.S_EBU2 bus1=S_EBU2 kV=0.480 model=1 kW=172
-New Load.SC_MDS bus1=SC_MDS kV=0.480 model=1 kW=172
-New Load.SCHOLANDER_HAL bus1=SCHOLANDER_HAL kV=0.208 model=1 kW=172
-New Load.SCRIPPS_BLDG bus1=SCRIPPS_BLDG kV=0.208 model=1 kW=172
-New Load.SEAWEED_CAN bus1=SEAWEED_CAN kV=0.480 model=1 kW=172
-New Load.SERF_BLDG bus1=SERF_BLDG kV=0.480 model=1 kW=172
-New Load.SHILEY_EYE_CTR bus1=SHILEY_EYE_CTR kV=0.480 model=1 kW=172
-New Load.SHILEY_US_EM bus1=SHILEY_US_EM kV=0.480 model=1 kW=172
-New Load.SIO_LIBRARY bus1=SIO_LIBRARY kV=0.480 model=1 kW=172
-New Load.SOM_A bus1=SOM_A kV=0.480 model=1 kW=172
-New Load.SOM_B bus1=SOM_B kV=0.480 model=1 kW=172
-New Load.SOM_C bus1=SOM_C kV=0.480 model=1 kW=172
-New Load.SOM_SUB_E bus1=SOM_SUB_E kV=0.480 model=1 kW=172
-New Load.SS_BA bus1=SS_BA kV=0.480 model=1 kW=172
-New Load.SS_BB bus1=SS_BB kV=0.480 model=1 kW=172
-New Load.SS_BC bus1=SS_BC kV=0.480 model=1 kW=172
-New Load.STUDACAD bus1=STUD_ACAD kV=0.480 model=1 kW=172
-New Load.STUDENT_T224 bus1=STUDENT_T224 kV=0.208 model=1 kW=172
-New Load.STUDENT_T226 bus1=STUDENT_T226 kV=0.208 model=1 kW=172
-New Load.SUB_1 bus1=SUB_1 kV=0.480 model=1 kW=172
-New Load.SUB_2 bus1=SUB_2 kV=0.480 model=1 kW=172
-New Load.SUB_2A bus1=SUB_2A kV=0.480 model=1 kW=172
-New Load.SUB_3 bus1=SUB_3 kV=0.480 model=1 kW=172
-New Load.SUB_BS bus1=SUB_BS kV=0.480 model=1 kW=172
-New Load.SUP_COMP_PG bus1=SUP_COMP_PG kV=0.480 model=1 kW=172
-New Load.SVERDRUP_US1 bus1=SVERDRUP_US1 kV=0.208 model=1 kW=172
-New Load.SVERDRUP_US2 bus1=SVERDRUP_US2 kV=0.208 model=1 kW=172
-New Load.T_105_SEC bus1=T_105_SEC kV=0.480 model=1 kW=172
-New Load.T_114_SEC bus1=T_114_SEC kV=0.480 model=1 kW=172
-New Load.T_137_SEC_EBU1 bus1=T_137_SEC_EBU1 kV=0.480 model=1 kW=172
-New Load.T_150_SEC_LC2 bus1=T_150_SEC_LC2 kV=0.208 model=1 kW=172
-New Load.T_159_SEC bus1=BUS_T_159_SEC kV=0.480 model=1 kW=172
-New Load.T_171_SEC bus1=T_171_SEC kV=0.480 model=1 kW=172
-New Load.T_179_OCEANVIEW_SEC bus1=T_179_OCEANVIEW_SEC kV=0.208 model=1 kW=172
-New Load.T_186_SEC bus1=T_186_SEC kV=0.480 model=1 kW=172
-New Load.T_191_SEC bus1=T_191_SEC kV=0.480 model=1 kW=172
-New Load.T_207_SEC bus1=T_207_SEC kV=0.208 model=1 kW=172
-New Load.T_230_SEC bus1=T_230_SEC kV=0.480 model=1 kW=172
-New Load.T_231_SEC bus1=T_231_SEC kV=0.480 model=1 kW=172
-New Load.T_244_SEC bus1=T_244_SEC kV=0.480 model=1 kW=172
-New Load.T_249_SEC bus1=T_249_SEC kV=0.240 model=1 kW=172
-New Load.T_259_SEC bus1=T_259_SEC kV=0.208 model=1 kW=172
-New Load.T_270_SEC bus1=T_270_SEC kV=0.480 model=1 kW=172
-New Load.T_274_SEC bus1=T_274_SEC kV=0.480 model=1 kW=172
-New Load.T_275_SEC bus1=T_275_SEC kV=0.480 model=1 kW=172
-New Load.T_287_SEC bus1=T_287_SEC kV=0.208 model=1 kW=172
-New Load.T_299_SEC bus1=T_299_SEC kV=0.480 model=1 kW=172
-New Load.T_313_SEC bus1=T_313_SEC kV=0.480 model=1 kW=172
-New Load.T_317_SEC bus1=T_317_SEC kV=0.208 model=1 kW=172
-New Load.T_326_SEC bus1=T_326_SEC kV=0.480 model=1 kW=172
-New Load.T_355_SEC bus1=T_355_SEC kV=0.480 model=1 kW=172
-New Load.T_356_SEC bus1=T_356_SEC kV=4.160 model=1 kW=172
-New Load.T_359_SEC bus1=T_359_SEC kV=0.480 model=1 kW=172
-New Load.T_360_SEC bus1=T_360_SEC kV=0.480 model=1 kW=172
-New Load.T_364_MS1 bus1=T_364_MS1 kV=0.480 model=1 kW=172
-New Load.T_365_MS4 bus1=T_365_MS4 kV=0.480 model=1 kW=172
-New Load.T_366_MS5 bus1=T_366_MS5 kV=0.480 model=1 kW=172
-New Load.T_372_SEC bus1=T_372_SEC kV=0.480 model=1 kW=172
-New Load.T_375_SEC bus1=T_375_SEC kV=0.480 model=1 kW=172
-New Load.T_376_SEC bus1=T_376_SEC kV=0.480 model=1 kW=172
-New Load.T_377_SEC bus1=T_377_SEC kV=0.480 model=1 kW=172
-New Load.T_382_SEC_MSA bus1=T_382_SEC_MSA kV=0.480 model=1 kW=172
-New Load.T_384_SEC bus1=T_384_SEC kV=0.480 model=1 kW=172
-New Load.T_385_SEC bus1=T_385_SEC kV=0.480 model=1 kW=172
-New Load.T_386_SEC bus1=T_386_SEC kV=0.480 model=1 kW=172
-New Load.T_394_SEC bus1=T_394_SEC kV=0.480 model=1 kW=172
-New Load.T_CRSF_SEC bus1=T_CRSF_SEC kV=0.480 model=1 kW=172
-New Load.T_H34_SEC bus1=T_H34_SEC kV=0.208 model=1 kW=172
-New Load.T_H35_SEC bus1=T_H35_SEC kV=0.208 model=1 kW=172
-New Load.T_H36_SEC bus1=T_H36_SEC kV=0.208 model=1 kW=172
-New Load.T_H37_SEC bus1=T_H37_SEC kV=0.208 model=1 kW=172
-New Load.TB_SEC bus1=TB_SEC kV=0.480 model=1 kW=172
-New Load.TENEYA bus1=TENEYA kV=0.208 model=1 kW=172
-New Load.TES bus1=TES kV=0.480 model=1 kW=172
-New Load.TIOGA bus1=TIOGA kV=0.208 model=1 kW=172
-New Load.TS bus1=TS kV=12.470 model=1 kW=172
-New Load.TUS_1N_SEC bus1=TUS_1N_SEC kV=0.480 model=1 kW=172
-New Load.TUS_2N_SEC bus1=TUS_2N_SEC kV=0.480 model=1 kW=172
-New Load.TUS_3N_SEC bus1=TUS_3N_SEC kV=0.480 model=1 kW=172
-New Load.TUS_4N_SEC bus1=TUS_4N_SEC kV=0.480 model=1 kW=172
-New Load.TUS_5N_SEC bus1=TUS_5N_SEC kV=0.480 model=1 kW=172
-New Load.TUS_6N_SEC bus1=TUS_6N_SEC kV=0.480 model=1 kW=172
-New Load.UNEX_MSB bus1=UNEX_MSB kV=0.208 model=1 kW=172
-New Load.UREY_CCT bus1=UREY_CCT kV=0.480 model=1 kW=172
-New Load.US_1 bus1=US_1 kV=0.480 model=1 kW=172
-New Load.US_1_RIMAC bus1=US_1_RIMAC kV=0.480 model=1 kW=172
-New Load.US_2_HOPKINS bus1=US_2_HOPKINS kV=0.480 model=1 kW=172
-New Load.US_2_RIMAC bus1=US_2_RIMAC kV=0.480 model=1 kW=172
-New Load.US_3N bus1=US_3N kV=0.480 model=1 kW=172
-New Load.US_7N bus1=US_7N kV=0.480 model=1 kW=172
-New Load.US_CPA bus1=US_CPA kV=0.480 model=1 kW=172
-New Load.US_CPB bus1=US_CPB kV=0.480 model=1 kW=172
-New Load.US_HE bus1=US_HE kV=0.480 model=1 kW=172
-New Load.US_HW bus1=US_HW kV=0.480 model=1 kW=172
-New Load.US_N_EBU2 bus1=US_N_EBU2 kV=0.480 model=1 kW=172
-New Load.US_SS bus1=US_SS kV=0.480 model=1 kW=172
-New Load.USA bus1=USA kV=0.480 model=1 kW=172
-New Load.USB bus1=USB kV=0.480 model=1 kW=172
-New Load.USEM_A_CC bus1=USEM_A_CC kV=0.480 model=1 kW=172
-New Load.USEM_B_CC bus1=USEM_B_CC kV=0.480 model=1 kW=172
-New Load.USNLA_CC bus1=USNLA_CC kV=0.480 model=1 kW=172
-New Load.USNLB_CC bus1=USNLB_CC kV=0.480 model=1 kW=172
-New Load.USR1 bus1=USR1 kV=0.480 model=1 kW=172
-New Load.USR2 bus1=USR2 kV=0.480 model=1 kW=172
-New Load.USS_A bus1=USS_A kV=0.480 model=1 kW=172
-New Load.USS_B bus1=USS_B kV=0.480 model=1 kW=172
-New Load.USS_C_PC bus1=USS_C_PC kV=0.480 model=1 kW=172
-New Load.USS1 bus1=USS1 kV=0.480 model=1 kW=172
-New Load.USS2 bus1=USS2 kV=0.480 model=1 kW=172
-New Load.USS3 bus1=USS3 kV=0.480 model=1 kW=172
-New Load.VISUAL_ARTS bus1=VISUAL_ARTS kV=0.480 model=1 kW=172
-New Load.WARREN_COL_1 bus1=WARREN_COL_1 kV=0.208 model=1 kW=172
-New Load.WARREN_COL_2 bus1=WARREN_COL_2 kV=0.208 model=1 kW=172
-New Load.WARREN_COL_3 bus1=WARREN_COL_3 kV=0.208 model=1 kW=172
+New Load.3RD_C_APT_206 bus1=3RD_C_APT_206 kV=0.208 model=1 kW=30 pf=0.8
+New Load.3RD_C_RES bus1=3RD_C_RES kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.A_1 bus1=A_1 kV=0.480 model=1 kW=197.022 pf=0.8 
+New Load.A_2 bus1=A_2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.A_3 bus1=A_3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.A_4 bus1=A_4 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ALEX_SPANOS bus1=ALEX_SPANOS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ARGO_BLAKE bus1=ARGO_BLAKE kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ATHLETIC_FIELD bus1=ATHLETIC_FIELD kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.B_BOX_REST bus1=B_BOX_REST kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BALLON_BLDG bus1=BALLON_BLDG kV=0.480 model=1 kW=30 pf=0.8
+New Load.BASEBALL_SEC bus1=BASEBALL_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB1 bus1=BASIC_SCI_SUB1 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB2 bus1=BASIC_SCI_SUB2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB3 bus1=BASIC_SCI_SUB3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB4 bus1=BASIC_SCI_SUB4 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB5 bus1=BASIC_SCI_SUB5 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB6 bus1=BASIC_SCI_SUB6 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BASIC_SCI_SUB7 bus1=BASIC_SCI_SUB7 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BCF_PMP bus1=BCF_PMP kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BIO_MED_SEC bus1=BIO_MED_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BIRCH_AQ bus1=BIRCH_AQ kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BIRCH_AQUARIUM bus1=BIRCH_AQUARIUM kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BLDG_2C_208V bus1=BLDG_2C_208V kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BLDG_2C_480V bus1=BLDG_2C_480V kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BONNER_LC_A bus1=BONNER_LC_A kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BONNER_LC_B bus1=BONNER_LC_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BONNER_LC_C bus1=BONNER_LC_C kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.BRAIN_IMG_SEC bus1=BRAIN_IMG_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BUILDING_2D bus1=BUILDING_2D kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BUS_JMC_TEMP_PWR_SEC bus1=BUS_JMC_TEMP_PWR_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BUS_T_304_EC_PS_SEC bus1=BUS_T_304_EC_PS_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.BUS_XF_CPT_1A_SEC bus1=BUS_XF_CPT_1A_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.BUS_XF_CPT_1B_SEC bus1=BUS_XF_CPT_1B_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.BUS_XF_CPT_1C_SEC bus1=BUS_XF_CPT_1C_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.BUS_XF_CPT_C_SEC bus1=BUS_XF_CPT_C_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.BUS_XF_CPT_E_SEC bus1=BUS_XF_CPT_E_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.BUS_XF_CPT_W_SEC bus1=BUS_XF_CPT_W_SEC kV=0.240 model=1 kW=30 pf=0.8
+New Load.CAL_IT_US1A bus1=CAL_IT_US1A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CAL_IT_US1B bus1=CAL_IT_US1B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CAL_IT_US1C bus1=CAL_IT_US1C kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CANYON_VIEW bus1=CANYON_VIEW kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CDS1 bus1=CDS1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CELL_SITE bus1=CELL_SITE kV=0.480 model=1 kW=30 pf=0.8
+New Load.CEN_LIB_S182 bus1=CEN_LIB_S182 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CEN_LIB_S183 bus1=CEN_LIB_S183 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CEN_LIB_S184 bus1=CEN_LIB_S184 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CENT_HALL bus1=CENT_HALL kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CLIN_SCI_SUB_A bus1=CLIN_SCI_SUB_A kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.CLIN_SCI_SUB_B bus1=CLIN_SCI_SUB_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CMG bus1=CMG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CMRR bus1=CMRR kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CNG bus1=CNG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.COAST_APT bus1=COAST_APT kV=0.240 model=1 kW=197.022 pf=0.8
+New Load.COAST_APT_2 bus1=COAST_APT_2 kV=0.240 model=1 kW=197.022 pf=0.8
+New Load.COG_SCI_3C_208V bus1=COG_SCI_3C_208V kV=0.208 model=1 kW=30 pf=0.8
+New Load.COG_SCI_3C_480V bus1=COG_SCI_3C_480V kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CRB_3B bus1=CRB_3B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.CRB_3B_208V bus1=CRB_3B_208V kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.CREDIT_UNION bus1=CREDIT_UNION kV=0.208 model=1 kW=30 pf=0.8
+New Load.CSD2 bus1=CSD2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.DANCE_STUDIO bus1=DANCE_STUDIO kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.DB_EM bus1=DB_EM kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.DBN bus1=DBN kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.DBN_1 bus1=DBN_1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.DBS bus1=DBS kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.DEEP_SEA_DRILL bus1=DEEP_SEA_DRILL kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.DINING_COMMONS bus1=DINING_COMMONS kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.DSAB bus1=DSAB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EAST_CMM_S227 bus1=EAST_CMM_S227 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EAST_CMM_S228 bus1=EAST_CMM_S228 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU_3A_SSB bus1=EBU_3A_SSB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU_3A1_SSA bus1=EBU_3A1_SSA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU_3B_SUB_A bus1=EBU_3B_SUB_A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU_3B1_SUB_B bus1=EBU_3B1_SUB_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU1_T_138 bus1=EBU1_T_138 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EBU1_T_139 bus1=EBU1_T_139 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.EBU1_T_140 bus1=EBU1_T_140 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.EBU2_LAB bus1=EBU2_LAB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.EC_OFFICE_BLDG bus1=EC_OFFICE_BLDG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ECOB bus1=ECOB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ECON_3E bus1=ECON_3E kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.ED2 bus1=ED2 kV=0.480 model=1 kW=30 pf=0.8
+New Load.ED4 bus1=ED4 kV=0.208 model=1 kW=30 pf=0.8
+New Load.ED6 bus1=ED6 kV=0.208 model=1 kW=30 pf=0.8
+New Load.ERC bus1=ERC kV=2.400 model=1 kW=30 pf=0.8
+New Load.FACULTY_CLUB bus1=FACULTY_CLUB kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.GALBRAITH_HALL bus1=GALBRAITH_HALL kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.GILMAN_PARKING bus1=GILMAN_PARKING kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.GREENHOUSE bus1=GREENHOUSE kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.HD_1 bus1=HD_1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HD_2 bus1=HD_2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HD_3 bus1=HD_3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HEALTH_CENTER bus1=HEALTH_CENTER kV=0.208 model=1 kW=30 pf=0.8
+New Load.HI_BAY_PHYSICS bus1=HI_BAY_PHYSICS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HS_APT_A bus1=HS_APT_A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HS_APT_B bus1=HS_APT_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.HUBBS_HALL bus1=HUBBS_HALL kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.I&R_BLDG bus1=I&R_BLDG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.IGPP_SUB bus1=IGPP_SUB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.IGPP2 bus1=IGPP2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.IMG bus1=IMG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.IN_OF_AMER_P2 bus1=IN_OF_AMER_P2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.INAT_HOUSE bus1=INAT_HOUSE kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.INST_OF_AMER bus1=INST_OF_AMER kV=0.208 model=1 kW=30 pf=0.8
+New Load.IRPS bus1=IRPS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.LA_JOLLA_PLAY bus1=LA_JOLLA_PLAY kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.LC_A_UREY bus1=LC_A_UREY kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.LC_C_UREY bus1=LC_C_UREY kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.LC1_2B_480V bus1=LC1_2B_480V kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.LDP bus1=LDP kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MAAC_BLDGS bus1=MAAC_BLDGS kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MANDELL_WEISS bus1=MANDELL_WEISS kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MANDEVILLE_CTR bus1=MANDEVILLE_CTR kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MARINE_SCIENCE bus1=MARINE_SCIENCE kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MARSHALL_SUB1 bus1=MARSHALL_SUB1 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MARSHALL_SUB2 bus1=MARSHALL_SUB2 kV=0.208 model=1 kW=30 pf=0.8
+New Load.MARSHALL_SUB3 bus1=MARSHALL_SUB3 kV=0.208 model=1 kW=30 pf=0.8
+New Load.MARSHALL_SUB4 bus1=MARSHALL_SUB4 kV=0.208 model=1 kW=30 pf=0.8
+New Load.MAT_HANDLING bus1=MAT_HANDLING kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MATHEWS_S167 bus1=MATHEWS_S167 kV=0.208 model=1 kW=30 pf=0.8
+New Load.MATHEWS_S168 bus1=MATHEWS_S168 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MATTHEWS_SUB bus1=MATTHEWS_SUB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MAYER_208V bus1=MAYER_208V kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MAYER_480V bus1=MAYER_480V kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MAYER_USSB bus1=MAYER_USSB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MAYER_USSC bus1=MAYER_USSC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MDB bus1=MDB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MDP bus1=MDP kV=0.208 model=1 kW=30 pf=0.8
+New Load.MED_TEACHING bus1=MED_TEACHING kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.MEDIA_3F_208V bus1=MEDIA_3F_208V kV=0.208 model=1 kW=30 pf=0.8
+New Load.MEDIA_3F_480V bus1=MEDIA_3F_480V kV=0.480 model=1 kW=30 pf=0.8
+New Load.MUIR_APTS bus1=MUIR_APTS kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.MULT_BLD_SEC bus1=MULT_BLD_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NC_PARKING_480 bus1=NC_PARKING_480 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NCH_T_361 bus1=NCH_T_361 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NCH_T_362 bus1=NCH_T_362 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NCH_T_363 bus1=NCH_T_363 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NIERENBURG bus1=NIERENBURG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.NORPAX bus1=NORPAX kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.OARF bus1=OARF kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.OLD_RITTER_HAL bus1=OLD_RITTER_HAL kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.PACIFIC_H_T1 bus1=PACIFIC_H_T1 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.PACIFIC_H_T2 bus1=PACIFIC_H_T2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.PACIFIC_H_T3 bus1=PACIFIC_H_T3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.PEP_CANY_APTS bus1=PEP_CANY_APTS kV=0.208 model=1 kW=30 pf=0.8
+New Load.PEP_CYN_S169 bus1=PEP_CYN_S169 kV=0.208 model=1 kW=30 pf=0.8
+New Load.PHARM_ESA bus1=PHARM_ESA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.PHYS_ED_BLDGS bus1=PHYS_ED_BLDGS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.PIER bus1=PIER kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.POWELL_STRUCT bus1=POWELL_STRUCT kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.PREUSS_SCHOOL bus1=PREUSS_SCHOOL kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.REVELLE_CAFE bus1=REVELLE_CAFE kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.S_EBU2 bus1=S_EBU2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SC_MDS bus1=SC_MDS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SCHOLANDER_HAL bus1=SCHOLANDER_HAL kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.SCRIPPS_BLDG bus1=SCRIPPS_BLDG kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.SEAWEED_CAN bus1=SEAWEED_CAN kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SERF_BLDG bus1=SERF_BLDG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SHILEY_EYE_CTR bus1=SHILEY_EYE_CTR kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SHILEY_US_EM bus1=SHILEY_US_EM kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SIO_LIBRARY bus1=SIO_LIBRARY kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SOM_A bus1=SOM_A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SOM_B bus1=SOM_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SOM_C bus1=SOM_C kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SOM_SUB_E bus1=SOM_SUB_E kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SS_BA bus1=SS_BA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SS_BB bus1=SS_BB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SS_BC bus1=SS_BC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.STUDACAD bus1=STUD_ACAD kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.STUDENT_T224 bus1=STUDENT_T224 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.STUDENT_T226 bus1=STUDENT_T226 kV=0.208 model=1 kW=30 pf=0.8
+New Load.SUB_1 bus1=SUB_1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SUB_2 bus1=SUB_2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SUB_2A bus1=SUB_2A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SUB_3 bus1=SUB_3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SUB_BS bus1=SUB_BS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SUP_COMP_PG bus1=SUP_COMP_PG kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.SVERDRUP_US1 bus1=SVERDRUP_US1 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.SVERDRUP_US2 bus1=SVERDRUP_US2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.T_105_SEC bus1=T_105_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_114_SEC bus1=T_114_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_137_SEC_EBU1 bus1=T_137_SEC_EBU1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_150_SEC_LC2 bus1=T_150_SEC_LC2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.T_159_SEC bus1=BUS_T_159_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_171_SEC bus1=T_171_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_179_OCEANVIEW_SEC bus1=T_179_OCEANVIEW_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_186_SEC bus1=T_186_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_191_SEC bus1=T_191_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_207_SEC bus1=T_207_SEC kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.T_230_SEC bus1=T_230_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_231_SEC bus1=T_231_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_244_SEC bus1=T_244_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_249_SEC bus1=T_249_SEC kV=0.240 model=1 kW=197.022 pf=0.8
+New Load.T_259_SEC bus1=T_259_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_270_SEC bus1=T_270_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_274_SEC bus1=T_274_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_275_SEC bus1=T_275_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_287_SEC bus1=T_287_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_299_SEC bus1=T_299_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_313_SEC bus1=T_313_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_317_SEC bus1=T_317_SEC kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.T_326_SEC bus1=T_326_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_355_SEC bus1=T_355_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_356_SEC bus1=T_356_SEC kV=4.160 model=1 kW=197.022 pf=0.8
+New Load.T_359_SEC bus1=T_359_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_360_SEC bus1=T_360_SEC kV=0.480 model=1 kW=30 pf=0.8
+New Load.T_364_MS1 bus1=T_364_MS1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_365_MS4 bus1=T_365_MS4 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_366_MS5 bus1=T_366_MS5 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_372_SEC bus1=T_372_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_375_SEC bus1=T_375_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_376_SEC bus1=T_376_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_377_SEC bus1=T_377_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_382_SEC_MSA bus1=T_382_SEC_MSA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_384_SEC bus1=T_384_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_385_SEC bus1=T_385_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_386_SEC bus1=T_386_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_394_SEC bus1=T_394_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_CRSF_SEC bus1=T_CRSF_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.T_H34_SEC bus1=T_H34_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_H35_SEC bus1=T_H35_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_H36_SEC bus1=T_H36_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.T_H37_SEC bus1=T_H37_SEC kV=0.208 model=1 kW=30 pf=0.8
+New Load.TB_SEC bus1=TB_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TENEYA bus1=TENEYA kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.TES bus1=TES kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TIOGA bus1=TIOGA kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.TS bus1=TS kV=12.470 model=1 kW=197.022 pf=0.8
+New Load.TUS_1N_SEC bus1=TUS_1N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TUS_2N_SEC bus1=TUS_2N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TUS_3N_SEC bus1=TUS_3N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TUS_4N_SEC bus1=TUS_4N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TUS_5N_SEC bus1=TUS_5N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.TUS_6N_SEC bus1=TUS_6N_SEC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.UNEX_MSB bus1=UNEX_MSB kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.UREY_CCT bus1=UREY_CCT kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_1 bus1=US_1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_1_RIMAC bus1=US_1_RIMAC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_2_HOPKINS bus1=US_2_HOPKINS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_2_RIMAC bus1=US_2_RIMAC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_3N bus1=US_3N kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_7N bus1=US_7N kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_CPA bus1=US_CPA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_CPB bus1=US_CPB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_HE bus1=US_HE kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_HW bus1=US_HW kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_N_EBU2 bus1=US_N_EBU2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.US_SS bus1=US_SS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USA bus1=USA kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USB bus1=USB kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USEM_A_CC bus1=USEM_A_CC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USEM_B_CC bus1=USEM_B_CC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USNLA_CC bus1=USNLA_CC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USNLB_CC bus1=USNLB_CC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USR1 bus1=USR1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USR2 bus1=USR2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS_A bus1=USS_A kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS_B bus1=USS_B kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS_C_PC bus1=USS_C_PC kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS1 bus1=USS1 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS2 bus1=USS2 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.USS3 bus1=USS3 kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.VISUAL_ARTS bus1=VISUAL_ARTS kV=0.480 model=1 kW=197.022 pf=0.8
+New Load.WARREN_COL_1 bus1=WARREN_COL_1 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.WARREN_COL_2 bus1=WARREN_COL_2 kV=0.208 model=1 kW=197.022 pf=0.8
+New Load.WARREN_COL_3 bus1=WARREN_COL_3 kV=0.208 model=1 kW=197.022 pf=0.8
 !EV Loads
 New Load.EV_BIRCH_P017 bus1=EV_BIRCH_P017 kV=0.208 model=1 kW=7.2 pf=1
 New Load.EV_ATHENA bus1=EV_ATHENA kV=0.208 model=1 kW=159.38 pf=1

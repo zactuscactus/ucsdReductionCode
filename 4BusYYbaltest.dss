@@ -1,0 +1,14 @@
+Clear
+
+New Circuit.4BusYYbal Phases=3 basekv=12.47 MVAsc3=200000
+New Transformer.t1 XHL=6 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=n2 Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n3 Conn=wye kV=4.16 kVA=6000 %R=0.5
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords 4BusYYbaltest_buscoords.csv
+
+
+set maxiterations=1000

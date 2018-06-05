@@ -1,0 +1,31 @@
+Clear
+
+New Circuit.4BusYYbal_Reduced Phases=3 basekv=12.47 MVAsc3=200000
+New Line.n1_n3 Phases=3 bus1=n1.1.2.3 bus2=n3.1.2.3 Units=km Length=1.3716 Rmatrix=[ 0.280708885756    0.0963711264216    0.0948510150929| 0.0963711264216     0.286302235571    0.0976375970189| 0.0948510150929    0.0976375970189     0.283126018444|] Xmatrix=[0.671367890258     0.313112912137     0.240638282889| 0.313112912137     0.652574308032     0.264578434109| 0.240638282889     0.264578434109     0.663202512193|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Transformer.t1 XHL=6 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=sourcebus Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n1 Conn=wye kV=4.16 kVA=6000 %R=0.5
+New Capacitor.addedShuntCap_N1 Phases=3 Bus1=N1.1.2.3 Kvar=0 Kv=2.4018 Cmatrix=[  0.0064208  -0.0020721 -0.00078975|  -0.0020721   0.0067651  -0.0013172| -0.00078975  -0.0013172   0.0061047|]
+New Capacitor.addedShuntCap_N3 Phases=3 Bus1=N3.1.2.3 Kvar=0 Kv=2.4018 Cmatrix=[  0.013555  -0.0043744  -0.0016672| -0.0043744    0.014282  -0.0027808| -0.0016672  -0.0027808    0.012888|]
+New XYCurve.myeff npts=4 Xarray=[0   25   75  100] Yarray=[1  1  1  1]
+New XYCurve.mypvst npts=4 Xarray=[0.1         0.2         0.4           1] Yarray=[1  1  1  1]
+New XYCurve.CurveFor_InvForPV_N3.1_from_N4.1 npts=6 Xarray=[0.50003     0.95003     0.98003        1.02        1.05         1.5] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_N3.2_from_N4.2 npts=6 Xarray=[0.50003     0.95003     0.98003        1.02        1.05         1.5] Yarray=[1  1  0  0 -1 -1]
+New XYCurve.CurveFor_InvForPV_N3.3_from_N4.3 npts=6 Xarray=[0.50003     0.95003     0.98003        1.02        1.05         1.5] Yarray=[1  1  0  0 -1 -1]
+New Pvsystem.PV_N3.1_from_N4.1 phases=1 bus1=N3.1 kv=2.4 irradiance=1 Pmpp=1833.3343 kvar=0 kVA=1833.3343 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_N3.2_from_N4.2 phases=1 bus1=N3.2 kv=2.4 irradiance=1 Pmpp=1833.3343 kvar=0 kVA=1833.3343 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Pvsystem.PV_N3.3_from_N4.3 phases=1 bus1=N3.3 kv=2.4 irradiance=1 Pmpp=1833.3344 kvar=0 kVA=1833.3344 %cutin=0 %cutout=0 EffCurve=myeff P-TCurve=mypvst
+New Load.Load_N3.1_model_1 Phases=1 bus1=N3.1 Kv=2.4 Kw=1800.0007 Model=1 Kvar=871.7806
+New Load.Load_N3.2_model_1 Phases=1 bus1=N3.2 Kv=2.4 Kw=1800.0006 Model=1 Kvar=871.7806
+New Load.Load_N3.3_model_1 Phases=1 bus1=N3.3 Kv=2.4 Kw=1800.0006 Model=1 Kvar=871.7806
+New Invcontrol.InvForPV_N3.1_from_N4.1 PVSystemList=PV_N3.1_from_N4.1 Mode=voltvar voltage_curvex_ref=rated vvc_curve1=CurveFor_InvForPV_N3.1_from_N4.1 DeltaQ_factor=0.7 hysteresis_offset=0 avgwindowlen=0s VoltageChangeTolerance=0.1 VarChangeTolerance=0.1 RateofChangeMode=INACTIVE LPFtau=0 RiseFallLimit=0.001 EventLog=Yes
+New Invcontrol.InvForPV_N3.2_from_N4.2 PVSystemList=PV_N3.2_from_N4.2 Mode=voltvar voltage_curvex_ref=rated vvc_curve1=CurveFor_InvForPV_N3.2_from_N4.2 DeltaQ_factor=0.7 hysteresis_offset=0 avgwindowlen=0s VoltageChangeTolerance=0.1 VarChangeTolerance=0.1 RateofChangeMode=INACTIVE LPFtau=0 RiseFallLimit=0.001 EventLog=Yes
+New Invcontrol.InvForPV_N3.3_from_N4.3 PVSystemList=PV_N3.3_from_N4.3 Mode=voltvar voltage_curvex_ref=rated vvc_curve1=CurveFor_InvForPV_N3.3_from_N4.3 DeltaQ_factor=0.7 hysteresis_offset=0 avgwindowlen=0s VoltageChangeTolerance=0.1 VarChangeTolerance=0.1 RateofChangeMode=INACTIVE LPFtau=0 RiseFallLimit=0.001 EventLog=Yes
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords 4bus_new_buscoords.csv
+
+
+set maxiterations=1000

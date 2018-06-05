@@ -1,0 +1,15 @@
+Clear
+
+New Circuit.Alpine_double_load bus1=SourceBus basekv=12 pu=1 MVAsc3=20000 MVAsc1=21000
+New Transformer.355_1686B Phases=1 Windings=2 Buses=[03551328.1 03551328A.1] Conns=[wye wye] kVs=[12  12] kVAs=[20000  20000] %Noloadloss=0 %imag=0
+New Transformer.ALPINE Phases=3 Windings=2 Buses=[SourceBus 0355] Conns=[wye wye] kVs=[12  12] kVAs=[20000  20000] %Noloadloss=0 %imag=0 sub=y
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12 12]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords Alpine_double_loadtest_buscoords.csv
+
+
+set maxiterations=1000

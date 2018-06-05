@@ -31,7 +31,7 @@ dssSolution.MaxControlIterations=300;
 dssSolution.MaxIterations=500;
 dssSolution.InitSnap; % Initialize Snapshot solution
 dssSolution.dblHour = 0.0;
-dssSolution.Solve;
+% dssSolution.Solve;
 %Convert the Ybus to a matrix
 
 [YbusOrderVect, YbusPhaseVect]=strtok(dssCircuit.YNodeOrder,'\.');

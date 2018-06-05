@@ -1,0 +1,19 @@
+Clear
+
+New Circuit.4BusYYbal Phases=3 basekv=12.47 MVAsc3=200000
+New Linecode.mtx601 Nphases=3 Rmatrix=(0.03465 | 0.01560 0.03375 | 0.01580 0.01535 0.03414 ) Xmatrix=(.0179 | 0.05017 .0478 | 0.04236 0.03849 .0348 ) BaseFreq=60
+New Line.line1 LineCode=mtx601 bus1=n1 bus2=n2 Units=ft Length=2000
+New Line.lineNew LineCode=mtx601 bus1=n2 bus2=n3 Units=ft Length=2500
+New Line.line2 LineCode=mtx601 bus1=n3 bus2=n4 Units=ft Length=2500
+New Transformer.t1 XHL=6 sub=y Wdg=1 Bus=sourcebus Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n1 Conn=wye kV=4.16 kVA=6000 %R=0.5
+New Load.load1 Phases=3 bus1=n4 Kv=4.16 Kw=1000 Pf=1 Model=1 Conn=wye
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords 4BusYYbal_buscoords.csv
+
+
+set maxiterations=1000

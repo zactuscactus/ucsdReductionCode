@@ -11,9 +11,66 @@ function [Z,Yk,Ykbar,D,Ykl,Yklbar,Ycomb,volt,volt1,M,W,Ybus,basekv,Ybase,volt00]
 %row 4: value pu
 %ro
 
-% Gen Y bus
-[YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist,dssCircuit]=getYbus(circuit);
+fprintf('\nGetting YBUS and buslist from OpenDSS: ')
+tic
+if isfield(circuit,'pvsystem')
+	circuit=rmfield(circuit,'pvsystem');
+end
+if isfield(circuit,'load')
+	circuit=rmfield(circuit,'load');
+end
+if isfield(circuit,'regcontrol')
+	circuit=rmfield(circuit,'regcontrol');
+end
 
+
+
+%load the circuit and generate the YBUS
+p = WriteDSS(circuit,[circuit.circuit.name 'test'],0,pwd); o = actxserver('OpendssEngine.dss');
+o.reset;
+dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;
+dssText.Command = ['Compile "' p '"']; dssCircuit = o.ActiveCircuit;
+dssText.Command = 'Set controlmode = off';
+dssText.Command = ['Set mode = snapshot'];
+dssText.Command = ['Set stepsize = 30s'];
+dssText.Command = 'Set number = 1';
+dssSolution = dssCircuit.Solution;
+dssSolution.MaxControlIterations=300;
+dssSolution.MaxIterations=500;
+dssSolution.InitSnap; % Initialize Snapshot solution
+dssSolution.dblHour = 0.0;
+dssSolution.Solve;
+%Convert the Ybus to a matrix
+
+for ii=1:1000
+try
+Ybus=dssCircuit.SystemY;
+break
+catch
+	warning('Get Ybus Failed, trying one more time')
+	delete(o);
+clearvars o
+
+p = WriteDSS(circuit,[circuit.circuit.name 'test'],0,pwd); o = actxserver('OpendssEngine.dss');
+o.reset;
+dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;
+dssText.Command = ['Compile "' p '"']; dssCircuit = o.ActiveCircuit;
+dssText.Command = 'Set controlmode = off';
+dssSolution = dssCircuit.Solution;
+dssSolution.MaxControlIterations=100;
+dssSolution.MaxIterations=100;
+dssSolution.InitSnap; % Initialize Snapshot solution
+dssSolution.dblHour = 0.0;
+dssSolution.Solve;
+end
+end
+ineven=2:2:length(Ybus); inodd=1:2:length(Ybus);
+Ybus=Ybus(inodd)+1i*Ybus(ineven); Ybus=reshape(Ybus,sqrt(length(Ybus)),sqrt(length(Ybus)));
+
+[YbusOrderVect, YbusPhaseVect]=strtok(dssCircuit.YNodeOrder,'\.');
+YbusPhaseVect=str2num(cell2mat(strrep(YbusPhaseVect,'.','')));
+Ycomb=dssCircuit.YNodeOrder;
+buslist=regexprep(dssCircuit.AllBUSNames,'-','_');
 
 % Add sourcebus to circuit
 Ycomb(end+1:end+3)={'source.1' 'source.2' 'source.3'};
@@ -198,6 +255,18 @@ Z5=[5*ones(Nbus,1),Vbus(:,1),zeros(Nbus,1),sqrt(Vbus(:,2)),.01*ones(Nbus,1)];
 Z5(end-2:end,5)=Z5(end-2:end,5)/100;
 
 Z=[Z1;Z2;Z5;Z3;Z4];
+for kk=1:length(c.transformer)
+	trfBus=c.transformer(kk).buses;
+KillInd=find([Z{:,1}]==3);
+Z(find(ismemberi(find(ismemberi(strtok(Z(KillInd,2),'.'),trfBus(1))),find(ismemberi(strtok(Z(KillInd,3),'.'),trfBus(2))))),:)=[];
+KillInd=find([Z{:,1}]==3);
+Z(find(ismemberi(find(ismemberi(strtok(Z(KillInd,3),'.'),trfBus(1))),find(ismemberi(strtok(Z(KillInd,2),'.'),trfBus(2))))),:)=[];
+KillInd=find([Z{:,1}]==4);
+Z(find(ismemberi(find(ismemberi(strtok(Z(KillInd,2),'.'),trfBus(1))),find(ismemberi(strtok(Z(KillInd,3),'.'),trfBus(2))))),:)=[];
+KillInd=find([Z{:,1}]==4);
+Z(find(ismemberi(find(ismemberi(strtok(Z(KillInd,3),'.'),trfBus(1))),find(ismemberi(strtok(Z(KillInd,2),'.'),trfBus(2))))),:)=[];
+end
+
 [NZZ, NZZcol]=size(Z);
 
 % Adding noise to the measurements

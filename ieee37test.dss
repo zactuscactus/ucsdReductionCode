@@ -1,0 +1,17 @@
+Clear
+
+New Circuit.ieee37 basekv=230 pu=1 MVAsc3=200000 MVAsc1=210000
+New Transformer.SubXF Phases=3 Windings=2 XHL=8 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=sourcebus Conn=delta kV=230 kVA=2500 %R=1 Wdg=2 Bus=799 Conn=delta kV=4.8 kVA=2500 %R=1
+New Transformer.XFM1 Phases=3 Windings=2 XHL=1.81 %Noloadloss=0 %imag=0 Wdg=1 Bus=709 Conn=delta kV=4.8 kVA=500 %R=0.045 Wdg=2 Bus=775 Conn=delta kV=0.48 kVA=500 %R=0.045
+New Transformer.reg1a Phases=1 Windings=2 Buses=[799.1.2 799r.1.2] Conns=delta kVs=[4.8         4.8] kVAs=[2000  2000] XHL=1 %Noloadloss=0 %imag=0
+New Transformer.reg1c Buses=[799.3.2 799r.3.2] %Noloadloss=0 %imag=0 Like=reg1a
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[230 4.8 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords ieee37test_buscoords.csv
+
+
+set maxiterations=1000

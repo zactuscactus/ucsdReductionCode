@@ -1,6 +1,6 @@
 Clear
 
-New Circuit.ucsdMicrogrid bus1=SDG&E_69KV basekv=69 pu=1.05 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
+New Circuit.ucsdMicrogrid bus1=SDG&E_69KV basekv=69 pu=1 angle=0 frequency=60 MVAsc3=20000 MVAsc1=20000 x1r1=8.6 x0r0=8.9 BaseFreq=60
 New Linecode.1_0_Cu R1=0.26903 X1=0.10827 R0=0.42979 X0=0.27231 Units=km
 New Linecode.2_0_Cu R1=0.21654 X1=0.10499 R0=0.34121 X0=0.26903 Units=km
 New Linecode.3_0_Cu R1=0.17224 X1=0.098425 R0=0.27067 X0=0.26247 Units=km

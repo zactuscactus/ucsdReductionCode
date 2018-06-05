@@ -1,0 +1,21 @@
+Clear
+
+New Circuit.ieee123 bus1=150 basekv=4.16 pu=1 R1=0 X1=0.0001 R0=0 X0=0.0001
+New Transformer.reg1a Phases=3 Windings=2 Buses=[150 150r] Conns=[wye wye] kVs=[4.16        4.16] kVAs=[5000  5000] XHL=0.001 %Loadloss=1e-05 %Noloadloss=0 %imag=0 Ppm_Antifloat=0 sub=y
+New Transformer.XFM1 Phases=3 Windings=2 XHL=2.72 %Noloadloss=0 %imag=0 Wdg=1 Bus=61s Conn=delta kV=4.16 kVA=150 %R=0.635 Wdg=2 Bus=610 Conn=delta kV=0.48 kVA=150 %R=0.635
+New Transformer.reg2a Phases=1 Windings=2 Buses=[9.1 9r.1] Conns=[wye wye] kVs=[2.402       2.402] kVAs=[2000  2000] XHL=0.01 %Loadloss=1e-05 %Noloadloss=0 %imag=0 Ppm_Antifloat=0
+New Transformer.reg3a Phases=1 Windings=2 Buses=[25.1 25r.1] Conns=[wye wye] kVs=[2.402       2.402] kVAs=[2000  2000] XHL=0.01 %Loadloss=1e-05 %Noloadloss=0 %imag=0 Ppm_Antifloat=0
+New Transformer.reg4a Phases=1 Windings=2 Buses=[160.1 160r.1] Conns=[wye wye] kVs=[2.402       2.402] kVAs=[2000  2000] XHL=0.01 %Loadloss=1e-05 %Noloadloss=0 %imag=0 Ppm_Antifloat=0
+New Transformer.reg3c Buses=[25.3 25r.3] %Noloadloss=0 %imag=0 Ppm_Antifloat=0 Like=reg3a
+New Transformer.reg4b Buses=[160.2 160r.2] %Noloadloss=0 %imag=0 Ppm_Antifloat=0 Like=reg4a
+New Transformer.reg4c Buses=[160.3 160r.3] %Noloadloss=0 %imag=0 Ppm_Antifloat=0 Like=reg4a
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[4.16 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords ieee123test_buscoords.csv
+
+
+set maxiterations=1000

@@ -53,6 +53,7 @@ dssText.Command = ['Compile "' p '"'];
 cd(cDir);
 dssText.Command = 'Set controlmode = off';
 % dssText.Command = 'Set controlmode = static';
+dssText.Command = 'Set tolerance = 0.000001';
 dssText.Command = ['Set mode = ' mode ];
 dssText.Command = ['Set stepsize = ' num2str(conf.timeStep) 's'];
 dssText.Command = 'Set number = 1'; % number of time steps or solutions to run or the number of Monte Carlo cases to run.
@@ -70,7 +71,7 @@ Ycomb=dssCircuit.YNodeOrder;
 % Dist = dssCircuit.AllNodeDistances*(3280.8399); % conversion from km to kft (not sure why OpenDSS presents it in km, when the line lengths are clearly identified to be in kft)
 
 dssSolution = dssCircuit.Solution;
-dssSolution.MaxControlIterations=200;
+dssSolution.MaxControlIterations=1000;
 dssSolution.MaxIterations=500;
 dssSolution.InitSnap; % Initialize Snapshot solution
 dssSolution.dblHour = 0.0;

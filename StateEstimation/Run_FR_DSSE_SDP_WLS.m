@@ -1,22 +1,73 @@
 % FR state stimation
-% clear
+clear
 %% SDP
 warning('off','all')
 warning
 noise_level=0;
-c=dssparse('C:\Users\Zactus\Google Drive\Zack\State Estimation\Zack\WLS Code\IEEETestCases\13Bus\IEEE13Nodeckt.dss');
+pathToFile='C:\Users\Zactus\feederReduction\13Bus\IEEE13Nodeckt.dss';
+c=dssparse(pathToFile);
 
+o = actxserver('OpendssEngine.dss');
+dssText = o.Text; dssText.Command = 'Clear';
+dssText.Command = ['Compile "' pathToFile '"'];
+dssCircuit = o.ActiveCircuit;
+c.buslist.id=regexprep(dssCircuit.AllBUSNames,'-','_');
+buslist=c.buslist.id;
+c.buslist.coord=zeros(length(c.buslist.id),2);
 
  pre_nl=noise_level;
-[Z,~,~,~,~,~,YcombOrig,~,~,~,~,~,~,~,~]=GenMeasCode(c,noise_level);
+% [Z,~,~,~,~,~,YcombOrig,~,~,~,~,~,~,~,~]=GenerateMeasurements(c,noise_level);
+[Z,Yk,Ykbar,D,Ykl,Yklbar,Ycomb,volt,volt1,M,W,ybus,basekv,Ybase,true_volt]=GenerateMeasurements(c,noise_level);
 ZOrig=Z;
-numBuses=16;%round((length(c.buslist.id)-1)*rand(1))+1;
-CB=c.buslist.id;%(round((length(c.buslist.id)-1)*rand(numBuses,1))+1);
-[circuit,circuit_orig,~,~,Z] = reducingFeeders_SE('C:\Users\Zactus\Google Drive\Zack\State Estimation\Zack\WLS Code\IEEETestCases\13Bus\IEEE13Nodeckt.dss',CB,[],1,Z);
+
+p = dsswrite(c,[],0,pwd); o = actxserver('OpendssEngine.dss');
+dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;
+dssText.Command = ['Compile "' p '"']; 
+dssCircuit = o.ActiveCircuit;
+Names=dssCircuit.AllBusNames;
+Names{end+1}='source';
+for ii=1:length(Z)
+	Z{ii,6}=find(ismemberi(lower(Names),lower(strtok(Z(ii,2),'.'))));
+	Z{ii,7}=find(ismemberi(lower(Names),lower(strtok(Z(ii,3),'.'))));
+	if isempty(find(ismemberi(Ycomb,Z(ii,2))))
+		stop=1;
+	end
+	Z{ii,2}=find(ismemberi(Ycomb,Z(ii,2)));
+	Z{ii,3}=find(ismemberi(Ycomb,Z(ii,3)));
+end
+
+Z=cell2mat(Z);
+Z(find(Z(:,1)==1),3)=0;
+Z(find(Z(:,1)==2),3)=0;
+Z(find(Z(:,1)==5),3)=0;
+Z(find(Z(:,1)==1),7)=0;
+Z(find(Z(:,1)==2),7)=0;
+Z(find(Z(:,1)==5),7)=0;
 
 
-[~,Yk,Ykbar,D,Ykl,Yklbar,Ycomb,volt,volt1,M,W,ybus,basekv,Ybase,true_volt]=GenMeasCode(circuit,noise_level);
+tic
+WLS_SDP_Result_Full=WLS_with_SDP_PF_Model(Yk,Ykbar,Ykl,Yklbar,M,Z,volt1,volt,D,true_volt,Ycomb);
+toc
 
+
+%% reduce
+numBuses=14;%round((length(c.buslist.id)-1)*rand(1))+1;
+%CB=c.buslist.id;
+% CB=c.buslist.id(round((length(c.buslist.id)-1)*rand(numBuses,1))+1);
+CB=c.buslist.id(1:15);
+cd C:\Users\Zactus\feederReduction\
+delete('c:\users\zactus\feederReduction\circuits\IEEE13Nodeckt_circuit.mat')
+rmdir('c:\users\zactus\feederReduction\IEEE13Nodeckt\','s')
+% [circuit,circuit_orig,~,~,Z] = reducingFeeders_Final_SE(pathToFile,CB,[],1,ZOrig);
+Zbefore=Z;
+[circuit, circuit_orig, ~, ~, ~,~,~,Z] = reducingFeeders_Final_SE(pathToFile,CB,[],1,ZOrig);
+% [circuit, circuit_orig, ~, ~, ~,~,~,~] = reducingFeeders_Final_SE(pathToFile,CB,[],1,ZOrig);
+
+[~,Yk,Ykbar,D,Ykl,Yklbar,Ycomb,volt,volt1,M,W,ybus,basekv,Ybase,true_volt]=GenerateMeasurements(circuit,noise_level);
+
+% tic
+% WLS_SDP_Result=WLS_with_SDP_PF_Model(Yk,Ykbar,Ykl,Yklbar,M,Z,volt1,volt,D,true_volt,Ycomb);
+% toc
 
 p = dsswrite(c,[],0,pwd); o = actxserver('OpendssEngine.dss');
 dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;

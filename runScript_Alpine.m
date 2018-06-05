@@ -46,6 +46,21 @@ for ii=inds
 	CB_old(count)=length(unique(strtok(powerFlowRed2.nodeName,'\.')));
 	time_red_old(count)=powerFlowReduced.timeSim;
 	
+% 	cd c:/users/zactus/FeederReduction/
+% 	circuit_orig_no_shunt=circuit_orig;
+% 	for ii=1:length(circuit_orig_no_shunt)
+% 		circuit_orig_no_shunt.linecode(ii).c1=0;
+% 		circuit_orig_no_shunt.linecode(ii).c0=0;
+% 	end
+% 	[circuit_old,outputdss] = FeederReduction_SE(criticalBuses,circuit_orig_no_shunt);
+% 	[ powerFlowRed2 ] = dssSimulation( circuit_old,[],1,[],[],0);
+% 	voltDiff2=abs(powerFlowFull.Voltage(getMatchingOrder(powerFlowRed2.nodeName,powerFlowFull.nodeName))-powerFlowRed2.Voltage)';
+% 	Vmax_old2(count)=max(voltDiff2);
+% 	Vmean_old2(count)=mean(voltDiff2);
+% 	time_old2(count)=circuit_old.ReductionTime;
+% 	CB_old2(count)=length(unique(strtok(powerFlowRed2.nodeName,'\.')));
+% 	time_red_old2(count)=powerFlowReduced.timeSim;
+	
 end
 end
 figure;plot(1-(CB./length(buslist)),Vmax,'*',1-(CB./length(buslist)),Vmean,'*')

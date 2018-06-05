@@ -1,7 +1,7 @@
 clear
 clc
 
-pathToFile='C:\Users\Zactus\FeederReduction\UCSDcircuit2.dss';
+pathToFile='C:\Users\Zactus\FeederReduction\UCSDcircuit1_PVcorr_undersizedinv.dss';
 
 o = actxserver('OpendssEngine.dss');
 dssText = o.Text; dssText.Command = 'Clear';
@@ -18,6 +18,7 @@ clearvars o
 'BLDG_3B_15','SS_15_ERC','SS_30_RC','SS_31_RC','SS_82_WC','SS_91_WC','SERF_BLDG_PRI','PSA_LINE_TG_1','PSB_LINE_TG_2','SG1_BUS','SS_50_SC','SS_104_WC'...
 'SS_64_SIO','SS_20_EC','SS_93_ERC','EBU2_LAB_PRI','SS_51_EC','SS_57_ERC','SS_13_WC'};
 
+% criticalBuses=buslist;
 cd c:/users/zactus/FeederReduction/
 [circuit, circuit_orig, ~, ~, p2,voltDiff] = reducingFeeders_UCSD(pathToFile,criticalBuses,[],1)
 

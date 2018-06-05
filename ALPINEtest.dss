@@ -1,0 +1,15 @@
+Clear
+
+New Circuit.ALPINE bus1=SourceBus basekv=12 R1=0.063 X1=0.5495 R0=0.0152 X0=1.3295 Sequence=pos
+New Transformer.355_1686B Buses=[03551328.1 03551328A.1] Conns=[wye wye] %Noloadloss=0 Phases=1 Windings=2 %imag=0 kVAs=[20000  20000] kVs=[12  12]
+New Transformer.ALPINE Buses=[SourceBus 0355] Conns=[wye wye] %Noloadloss=0 Phases=3 Windings=2 %imag=0 kVAs=[20000  20000] kVs=[12  12] sub=y
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12 12]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords ALPINEtest_buscoords.csv
+
+
+set maxiterations=1000

@@ -1,0 +1,20 @@
+Clear
+
+ New Circuit.4BusYYbal_Reduced Phases=3 basekv=12.47 MVAsc3=200000
+New Line.sourcebus_n2 Phases=3 bus1=sourcebus.1.2.3 bus2=n2.1.2.3 Units=km Length=2000 Rmatrix=[ 0.173320004842    0.0590699868251     0.058140006213| 0.0590699868251     0.176749978143    0.0598500078965|  0.058140006213    0.0598500078965     0.174799995349|] Xmatrix=[ 0.40834000186     0.190019994025     0.145800001893| 0.190019994025     0.397029994088     0.160470001231| 0.145800001893     0.160470001231     0.403429987736|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Transformer.t1 XHL=6 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=n2 Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n3 Conn=wye kV=4.16 kVA=6000 %R=0.5
+New Pvsystem.PV_N3.1 phases=1 bus1=N3.1 kv=2.4 irradiance=1 Pmpp=200.0001 kvar=0 kVA=200.0001 %cutin=0 %cutout=0
+New Pvsystem.PV_N3.2 phases=1 bus1=N3.2 kv=2.4 irradiance=1 Pmpp=200.0001 kvar=0 kVA=200.0001 %cutin=0 %cutout=0
+New Pvsystem.PV_N3.3 phases=1 bus1=N3.3 kv=2.4 irradiance=1 Pmpp=200.0001 kvar=0 kVA=200.0001 %cutin=0 %cutout=0
+New Load.Load_N3.1_model_2 Phases=1 bus1=N3.1 Kv=2.4 Kw=360.0002 Model=2 Kvar=0 Vminpu=0.01
+New Load.Load_N3.2_model_2 Phases=1 bus1=N3.2 Kv=2.4 Kw=360.0002 Model=2 Kvar=0 Vminpu=0.01
+New Load.Load_N3.3_model_2 Phases=1 bus1=N3.3 Kv=2.4 Kw=360.0002 Model=2 Kvar=0 Vminpu=0.01
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords 4BusYYbal_Reduced_buscoords.csv
+ 
+ 

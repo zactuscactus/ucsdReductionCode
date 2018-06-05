@@ -1,11 +1,7 @@
-            function [State_Estimate]=Estimate_State(ybus,zdata,bpq,dssCircuit,Ycomb,Ybase,true_volt)
+            function [State_Estimate]=Estimate_State(ybus,zdata,dssCircuit,Ycomb,Ybase,true_volt)
 
             % Power System State Estimation using Weighted Least Square Method..
             %Zack Pecenak
-            if nargin==2
-                bpq=zeros(size(ybus));
-            end
-            bpq=zeros(size(ybus));
             %% Variable declaration
             n_nodes = max(max(zdata(:,4)),max(zdata(:,5))); % Get number of nodes..
             type = zdata(:,2); % Type of measurement, Vi - 1, Pi - 2, Qi - 3, Pij - 4, Qij - 5, Iij - 6..

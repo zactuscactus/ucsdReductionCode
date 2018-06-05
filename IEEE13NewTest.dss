@@ -1,0 +1,83 @@
+Clear
+
+New Circuit.IEEE13Nodeckt Phases=3 bus1=SourceBus basekv=115 pu=1 angle=0 MVAsc3=20000 MVAsc1=21000
+New Linecode.1 Nphases=3 Rmatrix=[0.086666667 | 0.029545455 0.088371212 | 0.02907197 0.029924242 0.087405303] Xmatrix=[0.204166667 | 0.095018939 0.198522727 | 0.072897727 0.080227273 0.201723485] Cmatrix=[2.851710072 | -0.920293787 3.004631862 | -0.350755566 -0.585011253 2.71134756] BaseFreq=60
+New Linecode.2 Nphases=3 Rmatrix=[0.088371212 | 0.02992424 0.087405303 | 0.029545455 0.02907197 0.086666667] Xmatrix=[0.198522727 | 0.080227273 0.201723485 | 0.095018939 0.072897727 0.204166667] Cmatrix=[3.004631862 | -0.585011253 2.71134756 | -0.920293787 -0.350755566 2.851710072] BaseFreq=60
+New Linecode.3 Nphases=3 Rmatrix=[0.087405303 | 0.02907197 0.086666667 | 0.029924242 0.029545455 0.088371212] Xmatrix=[0.201723485 | 0.072897727 0.204166667 | 0.080227273 0.095018939 0.198522727] Cmatrix=[2.71134756 | -0.350755566 2.851710072 | -0.585011253 -0.920293787 3.004631862] BaseFreq=60
+New Linecode.4 Nphases=3 Rmatrix=[0.087405303 | 0.029924242 0.088371212 | 0.02907197 0.029545455 0.086666667] Xmatrix=[0.201723485 | 0.080227273 0.198522727 | 0.072897727 0.095018939 0.204166667] Cmatrix=[2.71134756 | 0.585011253 3.004631862 | -0.350755566 -0.920293787 2.851710072] BaseFreq=60
+New Linecode.5 Nphases=3 Rmatrix=[0.088371212 | 0.029545455 0.086666667 | 0.029924242 0.02907197 0.087405303] Xmatrix=[0.198522727 | 0.095018939 0.204166667 | 0.080227273 0.072897727 0.201723485] Cmatrix=[3.004631862 | -0.920293787 2.851710072 | -0.585011253 -0.350755566 2.71134756] BaseFreq=60
+New Linecode.6 Nphases=3 Rmatrix=[0.086666667 | 0.02907197 0.087405303 | 0.029545455 0.029924242 0.088371212] Xmatrix=[0.204166667 | 0.072897727 0.201723485 | 0.095018939 0.080227273 0.198522727] Cmatrix=[2.851710072 | -0.350755566 2.71134756 | -0.920293787 -0.585011253 3.004631862] BaseFreq=60
+New Linecode.7 Nphases=2 Rmatrix=[0.086666667 | 0.02907197 0.087405303] Xmatrix=[0.204166667 | 0.072897727 0.201723485] Cmatrix=[2.569829596 | -0.52995137 2.597460011] BaseFreq=60
+New Linecode.8 Nphases=2 Rmatrix=[0.086666667 | 0.02907197 0.087405303] Xmatrix=[0.204166667 | 0.072897727 0.201723485] Cmatrix=[2.569829596 | -0.52995137 2.597460011] BaseFreq=60
+New Linecode.9 Nphases=1 Rmatrix=[0.251742424] Xmatrix=[0.255208333] Cmatrix=[2.270366128] BaseFreq=60
+New Linecode.10 Nphases=1 Rmatrix=[0.251742424] Xmatrix=[0.255208333] Cmatrix=[2.270366128] BaseFreq=60
+New Linecode.11 Nphases=1 Rmatrix=[0.251742424] Xmatrix=[0.255208333] Cmatrix=[2.270366128] BaseFreq=60
+New Linecode.12 Nphases=3 Rmatrix=[0.288049242 | 0.09844697 0.29032197 | 0.093257576 0.09844697 0.288049242] Xmatrix=[0.142443182 | 0.052556818 0.135643939 | 0.040852273 0.052556818 0.142443182] Cmatrix=[33.77150149 | 0 33.77150149 | 0 0 33.77150149] BaseFreq=60
+New Linecode.300 Nphases=3 Rmatrix=[0.253181818 | 0.039791667 0.250719697 | 0.040340909 0.039128788 0.251780303] Xmatrix=[0.252708333 | 0.109450758 0.256988636 | 0.094981061 0.086950758 0.255132576] Cmatrix=[2.680150309 | -0.769281006 2.5610381 | -0.499507676 -0.312072984 2.455590387] BaseFreq=60
+New Linecode.301 Nphases=3 Rmatrix=[0.365530303 | 0.04407197 0.36282197 | 0.04467803 0.043333333 0.363996212] Xmatrix=[0.267329545 | 0.122007576 0.270473485 | 0.107784091 0.099204545 0.269109848] Cmatrix=[2.572492163 | -0.72160598 2.464381882 | -0.472329395 -0.298961096 2.368881119] BaseFreq=60
+New Linecode.302 Nphases=1 Rmatrix=(0.530208 ) Xmatrix=(0.281345 ) Cmatrix=(2.12257 ) BaseFreq=60
+New Linecode.303 Nphases=1 Rmatrix=(0.530208 ) Xmatrix=(0.281345 ) Cmatrix=(2.12257 ) BaseFreq=60
+New Linecode.304 Nphases=1 Rmatrix=(0.363958 ) Xmatrix=(0.269167 ) Cmatrix=(2.1922 ) BaseFreq=60
+New Linecode.400 Nphases=3 Rmatrix=(0.088205 | 0.0312137 0.0901946 | 0.0306264 0.0316143 0.0889665 ) Xmatrix=(0.20744 | 0.0935314 0.200783 | 0.0760312 0.0855879 0.204877 ) Cmatrix=(2.90301 | -0.679335 3.15896 | -0.22313 -0.481416 2.8965 ) BaseFreq=60
+New Linecode.601 Nphases=3 Rmatrix=[0.065625 | 0.029545455 0.063920455 | 0.029924242 0.02907197 0.064659091] Xmatrix=[0.192784091 | 0.095018939 0.19844697 | 0.080227273 0.072897727 0.195984848] Cmatrix=[3.164838036 | -1.002632425 2.993981593 | -0.632736516 -0.372608713 2.832670203] BaseFreq=60
+New Linecode.602 Nphases=3 Rmatrix=[0.142537879 | 0.029924242 0.14157197 | 0.029545455 0.02907197 0.140833333] Xmatrix=[0.22375 | 0.080227273 0.226950758 | 0.095018939 0.072897727 0.229393939] Cmatrix=[2.863013423 | -0.543414918 2.602031589 | -0.8492585 -0.330962141 2.725162768] BaseFreq=60
+New Linecode.603 Nphases=2 Rmatrix=[0.251780303 | 0.039128788 0.250719697] Xmatrix=[0.255132576 | 0.086950758 0.256988636] Cmatrix=[2.366017603 | -0.452083836 2.343963508] BaseFreq=60
+New Linecode.604 Nphases=2 Rmatrix=[0.250719697 | 0.039128788 0.251780303] Xmatrix=[0.256988636 | 0.086950758 0.255132576] Cmatrix=[2.343963508 | -0.452083836 2.366017603] BaseFreq=60
+New Linecode.605 Nphases=1 Rmatrix=[0.251742424] Xmatrix=[0.255208333] Cmatrix=[2.270366128] BaseFreq=60
+New Linecode.606 Nphases=3 Rmatrix=[0.151174242 | 0.060454545 0.149450758 | 0.053958333 0.060454545 0.151174242] Xmatrix=[0.084526515 | 0.006212121 0.076534091 | -0.002708333 0.006212121 0.084526515] Cmatrix=[48.67459408 | 0 48.67459408 | 0 0 48.67459408] BaseFreq=60
+New Linecode.607 Nphases=1 Rmatrix=[0.254261364] Xmatrix=[0.097045455] Cmatrix=[44.70661522] BaseFreq=60
+New Linecode.721 Nphases=3 Rmatrix=[0.055416667 | 0.012746212 0.050113636 | 0.006382576 0.012746212 0.055416667] Xmatrix=[0.037367424 | -0.006969697 0.035984848 | -0.007897727 -0.006969697 0.037367424] Cmatrix=[80.27484728 | 0 80.27484728 | 0 0 80.27484728] BaseFreq=60
+New Linecode.722 Nphases=3 Rmatrix=[0.089981061 | 0.030852273 0.085 | 0.023371212 0.030852273 0.089981061] Xmatrix=[0.056306818 | -0.006174242 0.050719697 | -0.011496212 -0.006174242 0.056306818] Cmatrix=[64.2184109 | 0 64.2184109 | 0 0 64.2184109] BaseFreq=60
+New Linecode.723 Nphases=3 Rmatrix=[0.245 | 0.092253788 0.246628788 | 0.086837121 0.092253788 0.245] Xmatrix=[0.127140152 | 0.039981061 0.119810606 | 0.028806818 0.039981061 0.127140152] Cmatrix=[37.5977112 | 0 37.5977112 | 0 0 37.5977112] BaseFreq=60
+New Linecode.724 Nphases=3 Rmatrix=[0.396818182 | 0.098560606 0.399015152 | 0.093295455 0.098560606 0.396818182] Xmatrix=[0.146931818 | 0.051856061 0.140113636 | 0.040208333 0.051856061 0.146931818] Cmatrix=[30.26701029 | 0 30.26701029 | 0 0 30.26701029] BaseFreq=60
+New Linecode.mtx601 Nphases=3 Units=mi Rmatrix=(0.3465 | 0.1560 0.3375 | 0.1580 0.1535 0.3414 ) Xmatrix=(1.0179 | 0.5017 1.0478 | 0.4236 0.3849 1.0348 ) BaseFreq=60
+New Linecode.mtx602 Nphases=3 Units=mi Rmatrix=(0.7526 | 0.1580 0.7475 | 0.1560 0.1535 0.7436 ) Xmatrix=(1.1814 | 0.4236 1.1983 | 0.5017 0.3849 1.2112 ) BaseFreq=60
+New Linecode.mtx603 Nphases=2 Units=mi Rmatrix=(1.3238 | 0.2066 1.3294 ) Xmatrix=(1.3569 | 0.4591 1.3471 ) BaseFreq=60
+New Linecode.mtx604 Nphases=2 Units=mi Rmatrix=(1.3238 | 0.2066 1.3294 ) Xmatrix=(1.3569 | 0.4591 1.3471 ) BaseFreq=60
+New Linecode.mtx605 Nphases=1 Units=mi Rmatrix=(1.3292 ) Xmatrix=(1.3475 ) BaseFreq=60
+New Linecode.mtx606 Nphases=3 Units=mi Rmatrix=[0.791721 |0.318476 0.781649 |0.28345 0.318476 0.791721 ] Xmatrix=[0.438352 |0.0276838 0.396697 |-0.0184204 0.0276838 0.438352 ]
+New Linecode.mtx607 Nphases=1 Units=mi Rmatrix=(1.3425 ) Xmatrix=(0.5124 ) BaseFreq=60
+New Line.650632 LineCode=mtx601 Phases=3 bus1=RG60.1.2.3 bus2=632.1.2.3 Units=ft Length=2000
+New Line.632670 LineCode=mtx601 Phases=3 bus1=632.1.2.3 bus2=670.1.2.3 Units=ft Length=667
+New Line.670671 LineCode=mtx601 Phases=3 bus1=670.1.2.3 bus2=671.1.2.3 Units=ft Length=1333
+New Line.671680 LineCode=mtx601 Phases=3 bus1=671.1.2.3 bus2=680.1.2.3 Units=ft Length=1000
+New Line.632633 LineCode=mtx602 Phases=3 bus1=632.1.2.3 bus2=633.1.2.3 Units=ft Length=500
+New Line.632645 LineCode=mtx603 Phases=2 bus1=632.3.2 bus2=645.3.2 Units=ft Length=500
+New Line.645646 LineCode=mtx603 Phases=2 bus1=645.3.2 bus2=646.3.2 Units=ft Length=300
+New Line.692675 LineCode=mtx606 Phases=3 bus1=692.1.2.3 bus2=675.1.2.3 Units=ft Length=500
+New Line.671684 LineCode=mtx604 Phases=2 bus1=671.1.3 bus2=684.1.3 Units=ft Length=300
+New Line.684611 LineCode=mtx605 Phases=1 bus1=684.3 bus2=611.3 Units=ft Length=300
+New Line.684652 LineCode=mtx607 Phases=1 bus1=684.1 bus2=652.1 Units=ft Length=800
+New Line.671692 LineCode=mtx606 Phases=3 bus1=671 bus2=692 Units=ft Length=800
+New Transformer.Sub Phases=3 Windings=2 XHL=0.008 XLT=4 XHT=4 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=SourceBus Conn=delta kV=115 kVA=5000 %R=0.0005 Wdg=2 Bus=650 Conn=wye kV=4.16 kVA=5000 %R=0.0005
+New Transformer.Reg1 Phases=1 Buses=[650.1 RG60.1] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg2 Phases=1 Buses=[650.2 RG60.2] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg3 Phases=1 Buses=[650.3 RG60.3] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.XFM1 Phases=3 Windings=2 XHL=2 XLT=1 XHT=1 %Noloadloss=0 %imag=0 Wdg=1 Bus=633 Conn=wye kV=4.16 kVA=500 %R=0.55 Wdg=2 Bus=634 Conn=wye kV=0.48 kVA=500 %R=0.55
+New Capacitor.Cap1 Phases=3 Bus1=675 Kvar=600 Kv=4.16
+New Capacitor.Cap2 Phases=1 Bus1=611.3 Kvar=100 Kv=2.4
+New Load.671 Phases=3 bus1=671.1.2.3 Kv=4.16 Kw=123.31 Model=1 Conn=Wye Kvar=402.512
+New Load.634a Phases=1 bus1=634.1 Kv=0.277 Kw=104.6012 Model=1 Conn=Wye Kvar=67.9433
+New Load.634b Phases=1 bus1=634.2 Kv=0.277 Kw=59.3009 Model=1 Conn=Wye Kvar=77.3498
+New Load.634c Phases=1 bus1=634.3 Kv=0.277 Kw=93.4862 Model=1 Conn=Wye Kvar=72.494
+New Load.645 Phases=1 bus1=645.2 Kv=2.4 Kw=121.5563 Model=1 Conn=Wye Kvar=72.0902
+New Load.646 Phases=2 bus1=646.2.3 Kv=4.16 Kw=207.8557 Model=1 Conn=Wye Kvar=24.1458
+New Load.692 Phases=2 bus1=692.3.1 Kv=4.16 Kw=151.4568 Model=1 Conn=Wye Kvar=36.2297
+New Load.675a Phases=1 bus1=675.1 Kv=2.4 Kw=162.0691 Model=1 Conn=Wye Kvar=168.4373
+New Load.675b Phases=1 bus1=675.2 Kv=2.4 Kw=47.5147 Model=1 Conn=Wye Kvar=1.7204
+New Load.675c Phases=1 bus1=675.3 Kv=2.4 Kw=57.3648 Model=1 Conn=Wye Kvar=103.8591
+New Load.611 Phases=1 bus1=611.3 Kv=2.4 Kw=5.192 Model=1 Conn=Wye Kvar=13.4342
+New Load.652 Phases=1 bus1=652.1 Kv=2.4 Kw=95.2415 Model=1 Conn=Wye Kvar=84.1665
+New Load.670a Phases=1 bus1=670.1 Kv=2.4 Kw=8.5004 Model=1 Conn=Wye Kvar=7.1269
+New Load.670b Phases=1 bus1=670.2 Kv=2.4 Kw=31.6749 Model=1 Conn=Wye Kvar=19.0179
+New Load.670c Phases=1 bus1=670.3 Kv=2.4 Kw=105.8525 Model=1 Conn=Wye Kvar=32.034
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 4.16 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords IEEE13NewTest_buscoords.csv
+
+
+set maxiterations=1000

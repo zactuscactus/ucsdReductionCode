@@ -25,7 +25,7 @@ for ii=inds
 	while length(unique(criticalBuses))<ii
 		criticalBuses=[unique(criticalBuses); buslist(round((length(buslist)-1)*rand(ii-length(unique(criticalBuses)),1))+1)];
 	end
-	
+	criticalBuses={'l2804247','l3197647','l3312692'};
 	cd c:/users/zactus/FeederReduction/
 	[circuit, circuit_orig, powerFlowFull, powerFlowReduced, ~,voltDiff] = reducingFeeders_Final(pathToFile,criticalBuses,[],1)
 	Vmax(count)=max(voltDiff);

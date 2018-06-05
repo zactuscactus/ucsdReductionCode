@@ -1,0 +1,120 @@
+%% step 1: Load full circuit 
+clear
+clc
+cd c:/users/zactus/feederReduction/
+p='C:\Users\Zactus\feederReduction\FeederJ1\Master_J1.dss'
+tic
+
+
+%% Step 2: Reduce
+criticalBuses={'5690226990';'5696127014';'5699326890';'5840528936';'5851028310';'5857829226';'5859128387';'5869628416';'5880927872';'5891328219';'5905228274';'5907328241';'5911428269';'5914928243';'5918528239';'5918628524';'5926527425';'5929328198';'5931028193';'5931928222';'5932628553';'5933328534';'5934528196';'5934828209';'5938028173';'5938428177';'5944628156';'5944828194';'5957328181';'5965229354';'5968729476';'5976529574';'5977528949';'5985429630';'5987528938';'5988029685';'5988528387';'5991028755';'5992128369';'5993629800';'5997028812';'5998528541';'6000729625';'6004628568';'6009029653';'6011028668';'6015529757';'6022828946';'6027628794';'6028228756';'6031929620';'6034729593';'6036529673';'6038329671';'6038829112';'6040129093';'6053129341';'6059129162';'6060229368';'6063329279';'6084829720';'6086829766';'6095529388';'6096329368';'71019669_';'b10925';'b10927';'b11020';'b11364';'b11418';'b12326';'b12327';'b12330';'b12541';'b13095';'b13220';'b13557';'b13624';'b13651';'b13652';'b13654';'b13657';'b13932';'b14324';'b14325';'b14326';'b14335';'b14339';'b14647';'b14650';'b15821';'b15824';'b15834';'b15842';'b15851';'b16658';'b16709';'b16717';'b16718';'b16719';'b17220';'b17988';'b17991';'b18795';'b18819';'b18820';'b18821';'b18829';'b18831';'b18839';'b18843';'b18849';'b18856';'b18862';'b18864';'b18864reg';'b18865reg';'b18866';'b18868';'b18876';'b18878';'b18881';'b18905';'b18909';'b18912';'b18915';'b18916';'b18919';'b18920';'b18921';'b18924';'b18928';'b18947';'b18948';'b18952';'b18968';'b18976';'b18982';'b18987';'b19001';'b19002';'b19009reg';'b19011';'b19014';'b19016';'b19027';'b19034';'b19039';'b19042';'b19043';'b19047';'b19050';'b19060';'b19061';'b19066';'b19172';'b19175';'b19179';'b19181';'b19183';'b2190';'b22569';'b22571';'b23033';'b23208';'b23283';'b23406';'b23862';'b23864';'b23866';'b23873';'b23875';'b23879';'b23880';'b23885';'b23889';'b24157';'b24232';'b24245';'b24257';'b24266';'b24267';'b24268';'b24280';'b24288';'b24536';'b2532';'b2547';'b26169';'b2648';'b26698';'b26920';'b27844';'b28483';'b28551';'b28624';'b29178';'b29538';'b29875';'b29963';'b3066';'b31172';'b31195';'b31291';'b31907';'b31997';'b32783';'b34542';'b34986';'b35145';'b35443';'b36166';'b36180';'b37083';'b38713';'b390';'b392';'b39509';'b39821';'b4091';'b41085';'b41464';'b41546';'b41859';'b41868';'b41874';'b42550';'b42552';'b42554';'b42556';'b43090';'b43207';'b43429';'b43430';'b43431';'b43433';'b43437';'b43440';'b44696';'b4536';'b45417';'b45444';'b4548';'b4551';'b4557';'b4579';'b45816';'b45837';'b45838';'b4592';'b4594';'b4599';'b4601';'b4608';'b4609';'b4618';'b46196';'b46252';'b4650';'b4655';'b4656';'b4677';'b46969';'b46972';'b46976';'b46978';'b4708';'b4709';'b4713';'b4715';'b4716';'b4729';'b4760';'b4766';'b47666';'b47667';'b47668';'b47683';'b47687';'b4784';'b4787';'b4794';'b4797';'b4808';'b4811';'b4812';'b4813';'b4814';'b4815';'b48177';'b48179';'b48181';'b48184';'b48186';'b4819';'b4825';'b4826';'b4828';'b4829';'b4837';'b4857';'b4863';'b4865';'b4870reg';'b4871';'b4873';'b4877';'b4878';'b4880';'b4889';'b4891';'b4900';'b4901';'b4909';'b4934';'b4972';'b4982';'b4987';'b4988';'b49990';'b50640';'b50641';'b51328';'b5173';'b5177';'b51854';'b51854_sec2';'b5188';'b5193';'b5209';'b5213';'b52160';'b52161';'b52162';'b52165';'b5220';'b52275';'b52572';'b52580';'b52582';'b52585';'b53093';'b53380';'b53877';'b54079';'b54792';'b54794';'b55237';'b55313';'b55546';'b55822';'b55824';'b55825';'b55826';'b55827';'b55830';'b55843';'b56116';'b56325';'b56439';'b56472';'b56475';'b56476';'b56478';'b56608';'b56614';'b56615';'b56616';'b56622';'b56624';'b56626';'b56628';'b56629';'b56662';'b56663';'b56672';'b56673';'b56674';'b56682';'b56684';'b56685';'b56699';'b57590';'b57592';'b57846';'b58809';'b59171';'b59242';'b59252';'b59351';'b59352';'b59568';'b59569';'b59582';'b59935';'b59949';'b60089';'b60403';'b60404';'b60407';'b60689';'b60757';'b60841';'b60842';'b60848';'b60867';'b60868';'b60873';'b60889';'b60890';'b60891';'b60924';'b60930';'b60931';'b60933';'b60934';'b60937';'b60938';'b60939';'b60942';'b60943';'b61013';'b61014';'b61161';'b61235';'b61242';'b61249';'b61253';'b61293';'b61305';'b61423';'b61611';'b61623';'b61696';'b61732';'b61733';'b62270';'b62271';'b62291';'b62292';'b62634';'b62636';'b62993';'b63363';'b63368';'b63369';'b63376';'b63684';'b63722';'b63785';'b66281';'b66285';'b66340';'b66414';'b66479';'b66480';'b9952';'feederhead';'g33462';'g33468';'g33471';'g33472';'g35128';'g35323';'g35497';'g35572';'g35573';'g35776';'g36562';'g36566';'g36575';'g36578';'g36581';'g36737';'g36783';'g36931';'g37601a';'g38451';'g38452';'g40133';'g40139';'g40318';'g40623';'g40871';'g40999';'g42395';'g42530';'g42728';'g42730';'g42775';'g42979';'g43124';'g43132';'g43133';'g43187';'g43860';'g43863';'g44010';'g44632';'g62326';'x_5704827040_c';'x_5833428564_cust1_a';'x_5839828569_cust1_a';'x_5839828569_cust1_b';'x_5840028380_c';'x_5848128103_cust1_c';'x_5851028310_b';'x_5851028310_cust1_c';'x_5851228580_c';'x_5857829226_cust1_c';'x_5859128387_a';'x_5859128387_b';'x_5859128387_cust1_a';'x_5862928822_cust1_c';'x_5865228330a_cust1';'x_5869628416_cust1_a';'x_5879728292_c';'x_5904428572_cust2_b';'x_5905728658_b';'x_5911428269_cust1_c';'x_5912527743_cust1_a';'x_5919228534_b';'x_5919228534_cust3_b';'x_5920428274_c';'x_5920428274_cust1_c';'x_5933328534_c';'x_5939228210_c';'x_5939228210_cust1_c';'x_5957328181_c';'x_5957328181_cust1_c';'x_5967328881_b';'x_5968729476_cust1_b';'x_5976529574_cust1_b';'x_5985329641_b';'x_5985429630_cust1_b';'x_5988029685_b';'x_5988528387_cust1_c';'x_5989528892_cust1_b';'x_5993629800_cust1_b';'x_5996729809_b';'x_5996729809_cust1_b';'x_5997028812_cust2_b';'x_5998528541_c';'x_6002628548_c';'x_6004628568_cust1_c';'x_6005928693_cust1_c';'x_6009029653_a';'x_6009029653_cust1_a';'x_6012728993_b';'x_6015529757_a';'x_6015529757_cust1_a';'x_6022929614_cust1_a';'x_6023329644_a';'x_6024428774_c';'x_6028029671_a';'x_6028029671_cust1_a';'x_6033629640_a';'x_6034729593_cust1_a';'x_6036929652_a';'x_6038329671_a';'x_6038829112_c';'x_6038829112_cust1_c';'x_6039329105_cust1_c';'x_6039329105_cust2_c';'x_6053129341_cust1_b';'x_6059429099_c';'x_6059429099_cust1_c';'x_6060229368_b';'x_6060229368_cust1_b';'x_6072429165_c';'x_6072929120_cust2_c';'x_6096329368_c';'x_6096329368_cust1_c';'x_6097229355_c';'x_b10227_a';'x_b10227_c';'x_b10227_cust1_c';'x_b10227_cust2_a';'x_b10375_a';'x_b10375_cust1_a';'x_b10925_c';'x_b10925_cust3_c';'x_b10931_cust1_c';'x_b10932_c';'x_b10932_cust1_c';'x_b10932_cust3_c';'x_b11021_c';'x_b11365_cust1_b';'x_b11367_cust1_b';'x_b11368_cust2_b';'x_b11418_cust1_b';'x_b11418_cust4_b';'x_b12329_a';'x_b12331_cust1_a';'x_b12753_c';'x_b12753_cust1_c';'x_b13095_b';'x_b13220_cust1_c';'x_b13552_a';'x_b13552_cust2_a';'x_b13553_cust1_a';'x_b13554_cust1_a';'x_b13555_cust2_a';'x_b13557_cust1_a';'x_b13648_c';'x_b13648_cust3_c';'x_b13648_cust4_c';'x_b13648_cust5_c';'x_b13651_a';'x_b13651_cust1_a';'x_b13651_cust2_a';'x_b13651_cust5_a';'x_b13651_cust6_a';'x_b13651_cust7_a';'x_b13651_cust8_a';'x_b13652_cust4_c';'x_b13654_cust10_c';'x_b13654_cust2_c';'x_b13654_cust8_c';'x_b13658_cust1_c';'x_b13659_cust1_c';'x_b13752_cust1_c';'x_b13930_cust2_c';'x_b14326_b';'x_b14326_cust3_b';'x_b14339_cust1_c';'x_b14646_cust1_b';'x_b14647_cust3_b';'x_b14650_cust1_c';'x_b14650_cust2_c';'x_b15823_c';'x_b15823_cust1_c';'x_b15824_c';'x_b15828_c';'x_b15828_cust1_c';'x_b15836_c';'x_b15842_c';'x_b15844_c';'x_b15844_cust1_c';'x_b16658_cust1_a';'x_b17215_cust1_c';'x_b17217_b';'x_b17217_cust1_b';'x_b17220_b';'x_b17220_cust1_b';'x_b17575_c';'x_b17575_cust1_c';'x_b17577_c';'x_b17578_cust1_c';'x_b17578_cust2_c';'x_b17925_b';'x_b17983_c';'x_b17988_cust1_c';'x_b17988_cust3_c';'x_b17990_cust1_c';'x_b18826_cust1_c';'x_b18828_b';'x_b18828_cust1_b';'x_b18835_cust1_a';'x_b18839_b';'x_b18839_cust1_b';'x_b18840_a';'x_b18843_cust2_a';'x_b18847_b';'x_b18847_cust1_b';'x_b18847_cust5_b';'x_b18849_cust1_b';'x_b18849_cust2_b';'x_b18850_cust2_b';'x_b18853_cust2_b';'x_b18855_cust1_b';'x_b18855_cust2_b';'x_b18856_cust2_b';'x_b18858_b';'x_b18866_a';'x_b18866_cust2_a';'x_b18866_cust3_a';'x_b18868_b';'x_b18868_cust1_b';'x_b18876_a';'x_b18878_a';'x_b18878_cust1_a';'x_b18880_b';'x_b18886_cust1_b';'x_b18887_a';'x_b18887_cust2_a';'x_b18901_a';'x_b18901_cust2_a';'x_b18902_a';'x_b18910_a';'x_b18910_cust1_a';'x_b18912_cust1_b';'x_b18914_a';'x_b18914_cust1_a';'x_b18930_a';'x_b18930_cust1_a';'x_b18933_cust1_b';'x_b18947_a';'x_b18948_cust1_a';'x_b18957_cust1_a';'x_b18969_c';'x_b18971_c';'x_b18971_cust2_c';'x_b18975_c';'x_b18979_cust1_c';'x_b18982_cust1_c';'x_b18986_cust1_c';'x_b18987_cust2_c';'x_b18987_cust4_c';'x_b18989_cust1_c';'x_b18998_cust1_c';'x_b18999_cust1_c';'x_b19001_cust2_c';'x_b19007_cust1_a';'x_b19014_a';'x_b19014_cust2_a';'x_b19016_a';'x_b19016_cust1_a';'x_b19019_a';'x_b19021_a';'x_b19023_a';'x_b19023_cust1_a';'x_b19029_a';'x_b19034_b';'x_b19034_cust2_c';'x_b19039_cust1_b';'x_b19040_c';'x_b19040_cust1_c';'x_b19047_cust2_c';'x_b19047_cust3_c';'x_b19050_a';'x_b19050_cust1_a';'x_b19052_c';'x_b19052_cust1_c';'x_b19054_cust1_c';'x_b19054_cust3_c';'x_b19059_a';'x_b19066_c';'x_b19066_cust2_c';'x_b19069_c';'x_b19069_cust3_c';'x_b19071_c';'x_b19175_cust1_a';'x_b19175_cust2_a';'x_b19179_a';'x_b19181_a';'x_b19181_cust2_a';'x_b19181_cust3_a';'x_b22157_cust3_c';'x_b22469_cust3_c';'x_b22565_cust2_a';'x_b22569_a';'x_b22571_c';'x_b22571_cust2_c';'x_b23211_cust1_c';'x_b23405_cust1_a';'x_b23406_a';'x_b23406_cust1_a';'x_b23416_a';'x_b23416_cust1_a';'x_b23591_c';'x_b23591_cust1_c';'x_b23591_cust3_c';'x_b23613_cust1_b';'x_b23613_cust3_b';'x_b23862_c';'x_b23863_cust1_c';'x_b23871_c';'x_b23871_cust1_c';'x_b23872_c';'x_b23873_c';'x_b23873_cust1_c';'x_b23878_cust1_c';'x_b23878_cust2_c';'x_b23879_c';'x_b23885_cust1_c';'x_b23889_c';'x_b24232_cust1_c';'x_b24245_cust1_c';'x_b24257_cust1_c';'x_b24268_c';'x_b24268_cust1_c';'x_b24268_cust3_c';'x_b24270_cust1_c';'x_b24270_cust2_c';'x_b24270_cust3_c';'x_b24270_cust4_c';'x_b24275_cust3_c';'x_b24275_cust7_c';'x_b24280_cust3_c';'x_b24280_cust4_c';'x_b24281_cust1_c';'x_b24282_c';'x_b24288_c';'x_b24288_cust1_c';'x_b24288_cust2_c';'x_b24364_b';'x_b24364_cust1_b';'x_b24365_cust1_c';'x_b24366_b';'x_b24366_cust1_b';'x_b24367_cust2_c';'x_b24505_c';'x_b24505_cust4_c';'x_b24506_cust1_c';'x_b24506_cust2_c';'x_b2526_cust1_b';'x_b2526_cust2_b';'x_b2532_cust1_a';'x_b25707_cust1_a';'x_b26168_cust1_c';'x_b26172_cust2_c';'x_b26172_cust3_c';'x_b26172_cust5_c';'x_b26172_cust6_c';'x_b26920_cust2_c';'x_b27838_cust1_c';'x_b28551_cust1_c';'x_b28624_cust1_c';'x_b28785_c';'x_b28785_cust1_c';'x_b29178_a';'x_b29178_cust1_a';'x_b29179_a';'x_b29179_c';'x_b29179_cust1_c';'x_b29181_cust1_a';'x_b29610_cust1_a';'x_b29875_c';'x_b29875_cust1_c';'x_b29921_c';'x_b29921_cust1_c';'x_b29964_b';'x_b29964_cust1_b';'x_b3065_cust1_c';'x_b30794_a';'x_b30794_cust1_a';'x_b30794_cust1_b';'x_b31172_c';'x_b31172_cust1_c';'x_b31291_b';'x_b31291_cust1_b';'x_b31906_c';'x_b31906_cust3_c';'x_b31906_cust4_c';'x_b31907_c';'x_b31997_c';'x_b32783_cust1_b';'x_b32823_cust2_c';'x_b34541_a';'x_b34546_a';'x_b34546_b';'x_b34546_c';'x_b34546_cust1_a';'x_b35145_c';'x_b35145_cust1_c';'x_b35145_cust2_c';'x_b35145_cust3_c';'x_b35145_cust4_c';'x_b35248_cust1_a';'x_b36166_a';'x_b36181_cust1_c';'x_b37083_b';'x_b37083_cust1_b';'x_b38338_a';'x_b394_cust1_b';'x_b394_cust2_b';'x_b39683_a';'x_b39820_c';'x_b39821_cust1_c';'x_b39821_cust2_c';'x_b40188_c';'x_b40188_cust1_c';'x_b40572_cust1_a';'x_b40572_cust1_b';'x_b41084_b';'x_b41084_c';'x_b41086_cust1_b';'x_b41086_cust1_c';'x_b41240_a';'x_b41463_c';'x_b41467_c';'x_b41467_cust1_c';'x_b41547_cust1_b';'x_b41663_cust2_a';'x_b41857_cust3_a';'x_b41858_b';'x_b41858_cust1_b';'x_b41859_cust2_b';'x_b41864_b';'x_b41865_cust1_b';'x_b41870_cust1_b';'x_b41872_a';'x_b41872_cust1_a';'x_b41872_cust2_a';'x_b41874_cust1_a';'x_b41882_b';'x_b41882_cust2_b';'x_b41884_b';'x_b41884_cust1_b';'x_b41906_a';'x_b41972_b';'x_b41972_cust1_b';'x_b42550_b';'x_b42550_cust1_b';'x_b42552_b';'x_b42554_cust1_b';'x_b42555_b';'x_b43091_c';'x_b43430_b';'x_b43430_cust1_b';'x_b43440_b';'x_b44433_c';'x_b44433_cust2_c';'x_b44495_cust1_c';'x_b45417_c';'x_b45445_cust1_c';'x_b4551_cust1_a';'x_b4554_c';'x_b4561_cust2_b';'x_b4561_cust3_b';'x_b4561_cust4_b';'x_b4561_cust5_b';'x_b4579_c';'x_b4579_cust2_c';'x_b45816_b';'x_b45838_cust1_b';'x_b4583_cust2_a';'x_b4583_cust5_a';'x_b4586_cust1_a';'x_b4587_cust1_b';'x_b4591_a';'x_b4591_cust1_c';'x_b4592_c';'x_b4594_c';'x_b4594_cust1_c';'x_b4594_cust2_c';'x_b4594_cust3_c';'x_b4598_c';'x_b4598_cust1_c';'x_b4598_cust2_c';'x_b4599_b';'x_b4601_cust2_a';'x_b4607_c';'x_b4607_cust1_c';'x_b46196_a';'x_b46196_cust1_a';'x_b46196_cust3_a';'x_b46196_cust4_a';'x_b46250_c';'x_b46251_c';'x_b46252_cust1_c';'x_b46252_cust3_c';'x_b4631_a';'x_b4656_cust2_c';'x_b4668_cust10_a';'x_b4668_cust11_a';'x_b4668_cust6_a';'x_b4668_cust7_a';'x_b4668_cust8_a';'x_b46703_a';'x_b46703_b';'x_b46703_cust1_b';'x_b4673_a';'x_b4673_cust1_a';'x_b4676_cust1_a';'x_b4676_cust2_a';'x_b4676_cust3_a';'x_b46969_a';'x_b46973_a';'x_b46973_cust1_a';'x_b46977_a';'x_b4708_a';'x_b4708_cust2_a';'x_b4709_cust3_a';'x_b4709_cust4_a';'x_b4710_a';'x_b4711_b';'x_b4711_cust1_b';'x_b4711_cust3_b';'x_b4711_cust4_b';'x_b4715_cust4_b';'x_b4716_b';'x_b4716_cust6_b';'x_b4721_cust2_c';'x_b4721_cust4_c';'x_b4729_c';'x_b4729_cust1_c';'x_b4729_cust2_c';'x_b4754_a';'x_b4754_cust1_a';'x_b4754_cust2_a';'x_b4754_cust4_a';'x_b4756_cust1_c';'x_b47668_a';'x_b47668_cust1_c';'x_b47687_cust2_c';'x_b4781_cust2_c';'x_b4781_cust3_c';'x_b4781_cust5_c';'x_b4781_cust6_c';'x_b47846_c';'x_b47846_cust1_c';'x_b4787_c';'x_b4791_cust6_b';'x_b4792_b';'x_b4792_cust1_b';'x_b4792_cust3_b';'x_b4792_cust4_b';'x_b4794_b';'x_b4794_cust1_b';'x_b4794_cust2_b';'x_b4795_cust1_c';'x_b4795_cust3_c';'x_b4796_cust1_c';'x_b4799_a';'x_b4799_cust1_a';'x_b4802_cust1_a';'x_b4802_cust4_a';'x_b4802_cust6_a';'x_b48056_b';'x_b48056_c';'x_b48056_cust1_b';'x_b4805_cust4_c';'x_b4806_c';'x_b4806_cust1_b';'x_b4806_cust1_c';'x_b4806_cust2_b';'x_b4806_cust2_c';'x_b4811_a';'x_b4811_cust1_a';'x_b4811_cust2_a';'x_b4811_cust3_a';'x_b4811_cust4_a';'x_b4811_cust4_b';'x_b4815_cust1_c';'x_b4815_cust5_c';'x_b48177_cust1_c';'x_b4817_cust2_c';'x_b4817_cust6_c';'x_b4817_cust7_c';'x_b48180_cust1_c';'x_b48186_cust1_c';'x_b4819_cust4_c';'x_b4819_cust5_c';'x_b4819_cust6_c';'x_b4819_cust7_c';'x_b4821_cust2_b';'x_b4821_cust4_b';'x_b4823_b';'x_b4825_b';'x_b4825_cust1_b';'x_b4825_cust2_b';'x_b4828_a';'x_b4828_cust1_a';'x_b4832_b';'x_b4832_cust1_a';'x_b4832_cust1_b';'x_b4832_cust2_b';'x_b4858_cust3_b';'x_b4859_a';'x_b4859_cust1_c';'x_b4859_cust2_a';'x_b4859_cust3_a';'x_b4859_cust3_b';'x_b4859_cust3_c';'x_b4861_cust2_b';'x_b4861_cust3_b';'x_b4863_cust1_b';'x_b4863_cust2_b';'x_b4863_cust3_b';'x_b4870_cust1_b';'x_b4870_cust2_b';'x_b4870_cust3_b';'x_b4870_cust5_b';'x_b4870_cust7_b';'x_b4870_cust8_b';'x_b4870_cust9_b';'x_b4873_b';'x_b4873_cust3_b';'x_b4878_b';'x_b4878_cust1_c';'x_b4880_cust4_c';'x_b4881_c';'x_b4881_cust2_c';'x_b4885_cust1_c';'x_b4889_b';'x_b4890_c';'x_b4891_c';'x_b4896_cust1_c';'x_b4896_cust5_c';'x_b4904_cust1_b';'x_b4904_cust2_b';'x_b4904_cust4_b';'x_b4904_cust5_b';'x_b4931_b';'x_b4963_c';'x_b4963_cust2_c';'x_b4964_b';'x_b4964_cust1_b';'x_b4968_b';'x_b4968_cust3_b';'x_b4972_cust1_c';'x_b4972_cust2_c';'x_b4974_c';'x_b4974_cust1_c';'x_b4987_cust2_b';'x_b4990_b';'x_b4994_a';'x_b4994_cust1_a';'x_b49990_c';'x_b49990_cust1_c';'x_b50640_cust1_a';'x_b51328_b';'x_b51328_cust1_b';'x_b5171_b';'x_b5171_cust1_b';'x_b5177_cust1_b';'x_b51853_cust1_a';'x_b5185_cust1_c';'x_b5186_cust1_b';'x_b5188_cust1_a';'x_b5193_cust1_b';'x_b5194_a';'x_b5194_cust1_a';'x_b5206_cust1_c';'x_b5207_cust1_c';'x_b5207_cust2_c';'x_b5207_cust3_c';'x_b5209_cust1_c';'x_b5209_cust2_c';'x_b5209_cust4_c';'x_b5209_cust5_c';'x_b5213_c';'x_b52160_c';'x_b52165_cust1_a';'x_b52165_cust2_a';'x_b52167_a';'x_b52170_c';'x_b52170_cust1_c';'x_b5218_b';'x_b5218_cust1_b';'x_b52275_cust1_c';'x_b52275_cust2_c';'x_b52452_a';'x_b52452_cust1_a';'x_b52568_b';'x_b52568_cust1_b';'x_b52584_b';'x_b52584_cust1_b';'x_b52585_b';'x_b53380_cust1';'x_b54170_cust1_c';'x_b54182_a';'x_b55313_b';'x_b55625_c';'x_b55625_cust2_c';'x_b55823_c';'x_b55824_c';'x_b55824_cust1_c';'x_b55826_cust1_c';'x_b55827_cust1_c';'x_b55829_cust1_c';'x_b55843_c';'x_b55843_cust1_c';'x_b55975_cust1_a';'x_b55976_cust1_a';'x_b55976_cust2_a';'x_b56325_cust1_c';'x_b56446_cust1_a';'x_b56475_cust1_a';'x_b56475_cust2_a';'x_b56476_a';'x_b56476_cust2_a';'x_b56479_a';'x_b56479_cust1_a';'x_b56591_b';'x_b56591_c';'x_b56609_a';'x_b56614_cust1_a';'x_b56615_a';'x_b56622_cust1_a';'x_b56622_cust2_a';'x_b56622_cust3_a';'x_b56624_a';'x_b56625_a';'x_b56625_cust1_a';'x_b56629_a';'x_b56665_b';'x_b56665_cust2_b';'x_b56669_cust1_b';'x_b56669_cust2_b';'x_b56672_cust1_b';'x_b56674_b';'x_b56675_b';'x_b56683_cust1_b';'x_b56684_cust1_b';'x_b56685_cust1_b';'x_b56691_a';'x_b56693_a';'x_b56693_cust2_a';'x_b56698_cust2_a';'x_b56700_a';'x_b56945_cust1_a';'x_b57500_b';'x_b57664_c';'x_b57691_a';'x_b58749_cust1_c';'x_b58809_cust1_c';'x_b58961_cust1_a';'x_b59109_cust1_b';'x_b59172_b';'x_b5921_a';'x_b5921_b';'x_b5921_cust1_a';'x_b5921_cust1_b';'x_b5921_cust1_c';'x_b59242_c';'x_b59252_cust1_c';'x_b59352_c';'x_b59433_cust1_c';'x_b59569_cust1_a';'x_b59582_c';'x_b59582_cust1_c';'x_b59816_a';'x_b59923_c';'x_b59935_cust2_a';'x_b60427_b';'x_b60433_cust1_a';'x_b60689_b';'x_b60690_cust1_a';'x_b60757_c';'x_b60843_c';'x_b60843_cust1_c';'x_b60848_cust1_b';'x_b60867_c';'x_b60870_cust1_c';'x_b60872_c';'x_b60873_c';'x_b60873_cust1_c';'x_b60889_b';'x_b60925_c';'x_b60925_cust1_c';'x_b60925_cust2_c';'x_b60926_c';'x_b60930_c';'x_b60934_c';'x_b60937_cust1_c';'x_b60939_cust2_c';'x_b60939_cust3_c';'x_b60940_cust2_c';'x_b60940_cust3_c';'x_b60943_cust1_c';'x_b60964_b';'x_b61012_c';'x_b61161_a';'x_b61161_b';'x_b61161_cust1_c';'x_b61219_b';'x_b61236_cust1_c';'x_b61242_cust1_b';'x_b61249_c';'x_b61249_cust1_c';'x_b61252_c';'x_b61293_b';'x_b61293_cust3_b';'x_b61309_a';'x_b61309_cust1_a';'x_b61608_cust1_c';'x_b61609_c';'x_b61617_c';'x_b61631_a';'x_b61631_cust1_a';'x_b61632_a';'x_b61632_b';'x_b61693_c';'x_b61748_b';'x_b61759_cust1_c';'x_b61759_cust2_c';'x_b62263_b';'x_b62263_cust1_b';'x_b62271_b';'x_b62292_b';'x_b62294_cust1_c';'x_b62294_cust2_c';'x_b62315_cust1_b';'x_b62635_a';'x_b62774_a';'x_b62774_cust1_a';'x_b62993_cust2_c';'x_b62993_cust3_c';'x_b62993_cust4_c';'x_b62993_cust5_c';'x_b63365_b';'x_b63365_cust1_b';'x_b63369_cust1_c';'x_b63378_c';'x_b63378_cust1_c';'x_b63613_cust1_c';'x_b63685_c';'x_b63722_b';'x_b66281_cust2_c';'x_b66285_c';'x_b66341_cust1_b';'x_b66414_cust1_c';'x_b66452_a';'x_b66479_a';'x_b66480_a';'x_b66480_cust1_a';'x_b66604_cust2_c';'x_b8019_cust4_c';'x_b8019_cust6_c';'x_b9952_cust1_c';'x_g33462_b';'x_g33471_cust1_b';'x_g33899_cust1_b';'x_g34723_cust1_c';'x_g35323_b';'x_g35564_cust1_b';'x_g35573_cust1_a';'x_g35573_cust1_c';'x_g35858_a';'x_g36566_c';'x_g36566_cust1_c';'x_g36578_cust1_c';'x_g36581_c';'x_g36581_cust1_c';'x_g36733_cust1_b';'x_g36748_a';'x_g36748_cust1_a';'x_g36783_b';'x_g36783_cust1_b';'x_g36783_cust2_b';'x_g36931_a';'x_g37451_c';'x_g37451_cust1_c';'x_g37520_cust1_b';'x_g37520_cust2_b';'x_g40138_c';'x_g40871_a';'x_g41938_b';'x_g41938_cust1_b';'x_g41938_cust2_b';'x_g41938_cust3_b';'x_g42099_b';'x_g42099_cust1_b';'x_g42239_cust1_a';'x_g42239_cust3_a';'x_g42239_cust5_a';'x_g42435_c';'x_g42532_cust3_c';'x_g42960_a';'x_g42960_cust1_b';'x_g42979_c';'x_g43124_cust1_c';'x_g43135_cust1_c';'x_g43188_cust1_b';'x_g43190_a';'x_g43190_cust1_a';'x_g43266_a';'x_g43266_b';'x_g43266_cust1_a';'x_g43266_cust1_c';'x_g43337_a';'x_g43337_cust1_a';'x_g43678_b';'x_g43678_cust1_b';'x_g43792_b';'x_g43792_cust1_b';'x_g44012_a';'x_g44633_cust1_b';'x_g62326_cust1_c'};
+
+cd c:/users/zactus/FeederReduction/
+[circuit, circuit_orig, powerFlowFull, powerFlowReduced, pathToFile] = reducingFeeders_Final_SI(p,criticalBuses,[],1);
+
+%% Step 4: get loadshapes and solve full circuit
+cd c:/users/zactus/gridIntegration
+def_addpath
+cd c:/users/zactus/feederReduction/
+c=circuit_orig;
+dt=30;
+%test PTDF for timeload('c:/users/Zactus/feederReduction/AlpineConf.mat');
+timeStart='2014-11-21';
+timeEnd='2014-11-21';
+
+timeDay=cellstr(datestr(datenum(timeStart):1:datenum(timeEnd)));
+fName='Alpine';
+deploySite=conf.deployment;
+
+% loop through days of simulation
+for tId = 1:length(timeDay)
+	tic
+	tDay = timeDay{tId}; indent = '      ';
+	fprintf('%sDay: %s\n',indent,tDay);
+	
+	% all time steps for simulation
+	dt = 30; % in seconds
+	t = datenum(tDay) : dt/24/3600 : (datenum(tDay) + 1 - dt/24/3600); % starting from midnight and end before midnight next day
+	
+	c_fc=circuit_orig;
+	c_fc.loadshape=dssloadshape;
+	c_fc.loadshape(1).npts=2880;
+	c_fc.loadshape(1).sinterval=30;
+	c_fc.loadshape(1).name='ls_ld';
+	c_fc.loadshape(1).mult=linspace(0,1,length(t));
+	
+	cd c:/users/zactus/feederReduction/
+		% run simulation using OpenDSS engine
+		res = dssSimulation_simple(c_fc, 'daily', t, tDay, [],0);
+% 		resControl = dssSimulation_simple_control(c_fc, conf.mode, t, tDay, [],0);
+
+		% add info to result struct
+		res.S_load=repmat([c_fc.load{:}.kw],length(t),1).*repmat(c_fc.loadshape(end).mult(1:length(t)),1,length(c_fc.load))+1i*repmat([c_fc.load{:}.kvar],length(t),1).*repmat(c_fc.loadshape(end).mult(1:length(t)),1,length(c_fc.load));
+		res.S_PV=repmat([c_fc.pvsystem{:}.pmpp],length(t),1).*[c_fc.loadshape{1:end-1}.mult];
+		
+		toc
+end
+
+%% Step 5: Update loadshape for reduced circuit
+fc_pv=[c_fc.loadshape{1:end-1}.mult];
+fc_pv_red=fc_pv*circuit.Map_PVo_NODEo*circuit.Map_PVr_NODEo';
+fc_ld_red=repmat(c_fc.loadshape(end).mult,1,length(circuit.load));
+circuit.loadshape=dssloadshape;
+for ii=1:size(fc_pv_red,2)
+	circuit.loadshape(ii).name=['ls_pv' num2str(ii)];
+	circuit.loadshape(ii).mult=fc_pv_red(:,ii);
+	circuit.loadshape(ii).sinterval=30;
+	circuit.loadshape(ii).Npts=length(fc_pv_red(:,ii));
+	circuit.pvsystem(ii).daily=['ls_pv' num2str(ii)];
+end
+
+for ii=1:size(fc_ld_red,2)
+	circuit.loadshape(end+1).name=['ls_ld' num2str(ii)];
+	circuit.loadshape(end).mult=fc_ld_red(:,ii);
+	circuit.loadshape(end).sinterval=30;
+	circuit.loadshape(end).Npts=length(fc_ld_red(:,ii));
+	circuit.load(ii).daily=['ls_ld' num2str(ii)];
+end
+
+% for ii=1:length(circuit.invcontrol)
+% 	ind=find(ismemberi(circuit.xycurve(:).name,circuit.invcontrol(ii).vvc_curve1));
+% 	circuit.xycurve(ind).name=['curve_' num2str(ii)];
+% 	circuit.invcontrol(ii).vvc_curve1=['curve_' num2str(ii)];
+% 	circuit.invcontrol(ii).VarChangeTolerance=c_fc.invcontrol(1).VarChangeTolerance;
+% 	circuit.invcontrol(ii).deltaQ_factor=c_fc.invcontrol(1).deltaQ_factor;
+% 	circuit.invcontrol(ii).voltage_curvex_ref=c_fc.invcontrol(1).voltage_curvex_ref;
+% 	circuit.invcontrol(ii).avgwindowlen=c_fc.invcontrol(1).avgwindowlen;
+% 	circuit.invcontrol(ii).VoltageChangeTolerance=c_fc.invcontrol(1).VoltageChangeTolerance;
+% 	circuit.invcontrol(ii).RateofChangeMode=c_fc.invcontrol(1).RateofChangeMode;
+% 	circuit.invcontrol(ii).LPFtau=c_fc.invcontrol(1).LPFtau;
+% 	circuit.invcontrol(ii).RiseFallLimit=c_fc.invcontrol(1).RiseFallLimit;
+% end
+
+%% Step 6: run Powerflow
+data = dssSimulation_simple(circuit, conf.mode, t, tDay, [],0);
+% [ dataControl ] = dssSimulation_TS_control( circuit, conf.mode, t, V_predict,resControl.nodeName)
+
+%% Step 7: error analysis
+
+% 	for ii=1:length(dataControl.nodeName)
+% 		Keep(ii)=find(ismemberi(resControl.nodeName,dataControl.nodeName(ii)));
+% 	end
+% 
+% 	voltDiff=(resControl.Voltage(:,Keep)-dataControl.Voltage)';
+% 	[B,I]=sort(voltDiff);
+% 	[diffV, ind]=max(abs(resControl.Voltage(:,Keep)-dataControl.Voltage));
+% 	
+
+	for ii=1:length(data.nodeName)
+		KeepSnap(ii)=find(ismemberi(powerFlowFull.nodeName,powerFlowReduced.nodeName(ii)));
+	end
+
+	voltDiff_Snap=(powerFlowFull.Voltage(KeepSnap)-powerFlowReduced.Voltage)';
+	
+	for ii=1:length(data.nodeName)
+		Keep(ii)=find(ismemberi(res.nodeName,data.nodeName(ii)));
+	end
+
+	voltDiff_noControl=(res.Voltage(:,Keep)-data.Voltage)';
+	
+	save('OutputFromTS_Alpine_106pen_newData.mat')

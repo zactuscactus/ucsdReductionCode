@@ -58,7 +58,7 @@ if length(adj_bus~=0)
 				distMat(parent,child)=.0001;
 			end
 			generation{child,6}= generation{parent,6}+distMat(parent,child);
-			if ismemberi(inputs,'PMeas')
+			if any(ismemberi(inputs,'PMeas'))
 				
 				%measurements of lines
 				IndsChild=find(ismember(Node_number,child));

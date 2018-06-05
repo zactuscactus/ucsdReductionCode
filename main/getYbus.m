@@ -1,4 +1,4 @@
-function [YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist]=getYbus(circuit)
+function [YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist]=getYbus(circuit,addSource)
 
 %Created by Zachary K. Pecenak on 6/18/2016
 
@@ -9,6 +9,9 @@ function [YbusOrderVect, YbusPhaseVect, Ycomb, Ybus, buslist]=getYbus(circuit)
 % [c] = FeederReduction(Bus_upstream,c);
 %Check both inputs are met
 
+if nargin<2
+	addSource=0;
+end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% get Ybus from OpenDSS for feeder.
@@ -23,7 +26,6 @@ end
 if isfield(circuit,'regcontrol')
 	circuit=rmfield(circuit,'regcontrol');
 end
-
 
 
 %load the circuit and generate the YBUS
@@ -44,26 +46,26 @@ dssSolution.Solve;
 %Convert the Ybus to a matrix
 
 for ii=1:1000
-try
-Ybus=dssCircuit.SystemY;
-break
-catch
-	warning('Get Ybus Failed, trying one more time')
-	delete(o);
-clearvars o
-
-p = WriteDSS(circuit,[circuit.circuit.name 'test'],0,pwd); o = actxserver('OpendssEngine.dss');
-o.reset;
-dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;
-dssText.Command = ['Compile "' p '"']; dssCircuit = o.ActiveCircuit;
-dssText.Command = 'Set controlmode = off';
-dssSolution = dssCircuit.Solution;
-dssSolution.MaxControlIterations=100;
-dssSolution.MaxIterations=100;
-dssSolution.InitSnap; % Initialize Snapshot solution
-dssSolution.dblHour = 0.0;
-dssSolution.Solve;
-end
+	try
+		Ybus=dssCircuit.SystemY;
+		break
+	catch
+		warning('Get Ybus Failed, trying one more time')
+		delete(o);
+		clearvars o
+		
+		p = WriteDSS(circuit,[circuit.circuit.name 'test'],0,pwd); o = actxserver('OpendssEngine.dss');
+		o.reset;
+		dssText = o.Text; dssText.Command = 'Clear'; cDir = pwd;
+		dssText.Command = ['Compile "' p '"']; dssCircuit = o.ActiveCircuit;
+		dssText.Command = 'Set controlmode = off';
+		dssSolution = dssCircuit.Solution;
+		dssSolution.MaxControlIterations=100;
+		dssSolution.MaxIterations=100;
+		dssSolution.InitSnap; % Initialize Snapshot solution
+		dssSolution.dblHour = 0.0;
+		dssSolution.Solve;
+	end
 end
 ineven=2:2:length(Ybus); inodd=1:2:length(Ybus);
 Ybus=Ybus(inodd)+1i*Ybus(ineven); Ybus=reshape(Ybus,sqrt(length(Ybus)),sqrt(length(Ybus)));
@@ -72,6 +74,21 @@ Ybus=Ybus(inodd)+1i*Ybus(ineven); Ybus=reshape(Ybus,sqrt(length(Ybus)),sqrt(leng
 YbusPhaseVect=str2num(cell2mat(strrep(YbusPhaseVect,'.','')));
 Ycomb=dssCircuit.YNodeOrder;
 buslist=regexprep(dssCircuit.AllBUSNames,'-','_');
+
+if addSource
+	% Add sourcebus to circuit
+	Ycomb(end+1:end+3)={'source.1' 'source.2' 'source.3'};
+	dssCircuit.SetActiveElement('Vsource.SOURCE');
+	Yprim = dssCircuit.ActiveElement.Yprim;
+	Yprim0=Yprim(1:2:end)+1i*Yprim(2:2:end);
+	NewYprimLength=sqrt(length(Yprim0));
+	Yprim1=reshape(Yprim0,[NewYprimLength,NewYprimLength]);
+	Yprim1(1:3,1:3)=0;
+	Ybusnew=Ybus;
+	Ybusnew(end+1:end+3,end+1:end+3)=0;
+	Ybusnew([1:3,end-2:end],[1:3,end-2:end])=Ybusnew([1:3,end-2:end],[1:3,end-2:end])+Yprim1;
+	Ybus=Ybusnew;
+end
 
 delete(o);
 clearvars o

@@ -1,0 +1,18 @@
+Clear
+
+New Circuit.IEEE13Nodeckt Phases=3 bus1=SourceBus basekv=115 pu=1.0001 angle=30 MVAsc3=20000 MVAsc1=21000
+New Transformer.Sub Phases=3 Windings=2 XHL=0.008 XLT=4 XHT=4 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=SourceBus Conn=delta kV=115 kVA=5000 %R=0.0005 Wdg=2 Bus=650 Conn=wye kV=4.16 kVA=5000 %R=0.0005
+New Transformer.Reg1 Phases=1 Buses=[650.1 RG60.1] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg2 Phases=1 Buses=[650.2 RG60.2] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.Reg3 Phases=1 Buses=[650.3 RG60.3] kVs=[2.4         2.4] kVAs=[1666  1666] XHL=0.01 %Loadloss=0.01 %Noloadloss=0 %imag=0
+New Transformer.XFM1 Phases=3 Windings=2 XHL=2 XLT=1 XHT=1 %Noloadloss=0 %imag=0 Wdg=1 Bus=633 Conn=wye kV=4.16 kVA=500 %R=0.55 Wdg=2 Bus=634 Conn=wye kV=0.48 kVA=500 %R=0.55
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[115 4.16 0.48]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords IEEE13Nodeckttest_buscoords.csv
+
+
+set maxiterations=1000

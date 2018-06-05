@@ -1,0 +1,18 @@
+Clear
+
+New Circuit.4BusYYbal_Reduced Phases=3 basekv=12.47 MVAsc3=200000
+New Line.n1_n2 Phases=3 bus1=n1.1.2.3 bus2=n2.1.2.3 Units=km Length=0.6096 Rmatrix=[113.681102362      51.1811023622      51.8372703412| 51.1811023622      110.728346457      50.3608923885| 51.8372703412      50.3608923885      112.007874016|] Xmatrix=[58.7270341207      164.599737533      138.976377953| 164.599737533      156.824146982      126.279527559| 138.976377953      126.279527559      114.173228346|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Line.n2_n3 Phases=3 bus1=n2.1.2.3 bus2=n3.1.2.3 Units=km Length=0.762 Rmatrix=[113.681102362      51.1811023622      51.8372703412| 51.1811023622      110.728346457      50.3608923885| 51.8372703412      50.3608923885      112.007874016|] Xmatrix=[58.7270341207      164.599737533      138.976377953| 164.599737533      156.824146982      126.279527559| 138.976377953      126.279527559      114.173228346|] Cmatrix=[0                  0                  0| 0                  0                  0| 0                  0                  0|]
+New Transformer.t1 XHL=6 %Noloadloss=0 %imag=0 sub=y Wdg=1 Bus=sourcebus Conn=wye kV=12.47 kVA=6000 %R=0.5 Wdg=2 Bus=n1 Conn=wye kV=4.16 kVA=6000 %R=0.5
+New Capacitor.addedShuntCap_N1 Phases=3 Bus1=N1.1.2.3 Kvar=0 Kv=2.4018 Cmatrix=[ 2.8        -0.6        -0.6| -0.6         2.8        -0.6| -0.6        -0.6         2.8|]
+New Capacitor.addedShuntCap_N2 Phases=3 Bus1=N2.1.2.3 Kvar=0 Kv=2.4018 Cmatrix=[  6.3       -1.35       -1.35| -1.35         6.3       -1.35| -1.35       -1.35         6.3|]
+
+
+! Let DSS estimate the voltage bases
+Set voltagebases=[12.47 4.16]
+Calcvoltagebases     ! This also establishes the bus list
+
+Buscoords 4BusYYbal_Reducedtest_buscoords.csv
+
+
+set maxiterations=1000

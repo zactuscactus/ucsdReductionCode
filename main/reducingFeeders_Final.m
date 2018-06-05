@@ -202,7 +202,7 @@ end
 
 
 %% check which variables we have and set flags
-[Flag]=isfield(circuit,{'load','pvsystem','capacitor','transformer','regcontrol','capcontrol','reactor','generator'});
+[Flag]=isfield(circuit,{'load','pvsystem','capacitor','transformer','regcontrol','capcontrol','reactor','generator','buslist'});
 circuit_orig=circuit;
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%
@@ -354,6 +354,35 @@ end
 t_=toc;
 fprintf('time elapsed %f\n',t_)
 
+if Flag(9)
+circuit_orig.buslist.id=regexprep(circuit_orig.buslist.id,'-','_');
+
+for ii=1:length(buslist)
+	count=0;
+	flag=1;
+	while isempty(find(ismemberi(circuit_orig.buslist.id,buslist(ii))))
+		count=count+1;
+		if count>length(generation_orig{ii,3})
+			flag=0;
+		end
+		
+		if flag==1
+			Ind=find(ismemberi(circuit_orig.buslist.id,buslist(generation_orig{ii,3}(count))));
+		else
+			Ind=find(ismemberi(circuit_orig.buslist.id,buslist(generation_orig{ii,4}(count))));
+		end
+		if ~isempty(Ind)
+			circuit_orig.buslist.id(end+1)=buslist(ii);
+			circuit_orig.buslist.coord(end+1,:)=circuit_orig.buslist.coord(Ind,:);
+			break
+		end
+		if count>=length(generation_orig{ii,3}) && isempty(Ind) && flag==1
+			flag=0;
+			count=0;
+		end
+	end
+end
+end
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     Capacitors    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %This section is to keep the capacitors in the grid by adding the nodes that they are connected to.
@@ -1613,9 +1642,11 @@ end
 
 %% Update circuit info
 circuit.circuit.Name=[circuit.circuit.Name '_Reduced'];
-tmp=find(ismemberi(circuit.buslist.id,buslist));
-circuit.buslist.id=circuit.buslist.id(tmp);
-circuit.buslist.coord=circuit.buslist.coord(tmp,:);
+if Flag(9)
+tmp=find(ismemberi(circuit_orig.buslist.id,buslist));
+circuit.buslist.id=circuit_orig.buslist.id(tmp);
+circuit.buslist.coord=circuit_orig.buslist.coord(tmp,:);
+end
 pathToDss = WriteDSS(circuit,'OutputDSS',0,savePath);
 t_reduct=toc(Full);
 circuit.reductTime=tRed;
@@ -1692,7 +1723,8 @@ if debug
 		end
 	end
 	
-	stopping=1;
+
+stopping=1;
 	
 	% 	figure;plot(powerFlowReduced.Dist*.3048,powerFlowReduced.Voltage,'r*',powerFlowFull.Dist(Keep),powerFlowFull.Voltage(Keep),'b*')
 	% 	legend('Reduced','Original')

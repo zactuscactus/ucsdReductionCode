@@ -1,0 +1,48 @@
+clear
+
+! IEEE 4-bus test case   Y-Y Stepdown Balanced
+! Based on script developed by Alan Dunn and Steve Sparling
+
+new circuit.4BusYYbal basekV=12.47 phases=3 
+! **** HAVE TO STIFFEN THE SOURCE UP A LITTLE; THE TEST CASE ASSUMES AN INFINITE BUS
+~ mvasc3=200000 200000
+
+New linecode.mtx601 nphases=3 BaseFreq=60 
+~ rmatrix = (0.03465 | 0.01560 0.03375 | 0.01580 0.01535 0.03414 ) 
+~ xmatrix = (.0179 | 0.05017 .0478 | 0.04236 0.03849 .0348 ) 
+
+! **** 3-PHASE STEP-DOWN TRANSFORMER 12.47/4.16 KV Y-Y
+new transformer.t1 xhl=6 sub=y
+~ wdg=1 bus=sourcebus conn=wye kV=12.47 kVA=6000 %r=0.5 
+~ wdg=2 bus=n1 conn=wye kV=4.16  kVA=6000 %r=0.5 
+
+
+! **** 12.47 KV LINE
+new line.line1 linecode=mtx601 length=2000 units=ft bus1=n1 bus2=n2
+
+! **** 3-PHASE STEP-DOWN TRANSFORMER 12.47/4.16 KV Y-Y
+!new transformer.t1 xhl=6
+!~ wdg=1 bus=n2 conn=wye kV=12.47 kVA=6000 %r=0.5 
+!~ wdg=2 bus=n3 conn=wye kV=4.16  kVA=6000 %r=0.5 
+
+! **** 4.16 KV LINE
+new line.lineNew bus1=n2 bus2=n3 linecode=mtx601 length=2500 units=ft 
+
+! **** 4.16 KV LINE
+new line.line2 bus1=n3 bus2=n4 linecode=mtx601 length=2500 units=ft  
+
+! **** WYE-CONNECTED 4.16 KV LOAD
+new load.load1 phases=3 bus1=n4 conn=wye kV=4.16 kW=1000 pf=1 model=1
+ 
+
+!new pvsystem.pv1 phases=3 bus1=n4 conn=wye kV=4.16 pmpp=5000 kva=5500 effcurve=myeff P-Tcurve=mypvst
+!new xycurve.vvc1 npts=6 xarray=[.5 .95 .98 1.02 1.05 1.5] yarray=[1 1 0 0 -1 -1]
+!new xycurve.myeff npts=4 xarray=[.1 .2 .4 1] yarray=[1 1 1 1]
+!new xycurve.mypvst npts=4 xarray=[0 25 75 100] yarray=[1 1 1 1]
+!new invcontrol.inv1 mode=voltvar voltage_curvex_ref=rated vvc_curve1=vvc1 deltaQ_factor=.1
+
+set voltagebases=[12.47, 4.16] 
+calcvoltagebases     ! **** let DSS compute voltage bases
+set maxiterations=1000
+set maxcontroliter=1000
+solve
