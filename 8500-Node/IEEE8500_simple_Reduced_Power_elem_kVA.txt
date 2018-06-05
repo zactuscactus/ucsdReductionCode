@@ -1,0 +1,126 @@
+
+CIRCUIT ELEMENT POWER FLOW
+
+(Power Flow into element from indicated Bus)
+
+Power Delivery Elements
+
+  Bus                Phase     kW     +j   kvar         kVA         PF
+
+ELEMENT = "Vsource.SOURCE"
+SOURCEBUS                1        -4.4 +j    332.0      332.0      -0.0132
+SOURCEBUS                2        -0.3 +j    333.0      333.0      -0.0009
+SOURCEBUS                3        -0.3 +j    333.0      333.0      -0.0008
+   TERMINAL TOTAL ............    -4.9 +j    998.1      998.1      -0.0049
+SOURCEBUS                0         0.0 +j      0.0        0.0       1.0000
+SOURCEBUS                0         0.0 +j      0.0        0.0       1.0000
+SOURCEBUS                0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     0.0 +j      0.0        0.0       1.0000
+
+ELEMENT = "Line.L2801909_R20185"
+L2801909                 1         0.1 +j   -335.1      335.1      -0.0004
+L2801909                 2         0.1 +j   -335.1      335.1      -0.0004
+L2801909                 3         0.1 +j   -335.1      335.1      -0.0003
+   TERMINAL TOTAL ............     0.4 +j  -1005.4     1005.4      -0.0004
+R20185                   1         0.0 +j    335.4      335.4       0.0000
+R20185                   2        -0.0 +j    335.4      335.4      -0.0000
+R20185                   3         0.0 +j    335.4      335.4       0.0000
+   TERMINAL TOTAL ............     0.0 +j   1006.3     1006.3       0.0000
+
+ELEMENT = "Line._HVMV_SUB_LSB_HVMV_SUB_48332"
+_HVMV_SUB_LSB            1         4.2 +j   -334.0      334.1      -0.0127
+_HVMV_SUB_LSB            2         0.1 +j   -335.1      335.1      -0.0004
+_HVMV_SUB_LSB            3         0.1 +j   -335.1      335.1      -0.0003
+   TERMINAL TOTAL ............     4.5 +j  -1004.2     1004.3      -0.0045
+HVMV_SUB_48332           1        -4.2 +j    334.1      334.1      -0.0127
+HVMV_SUB_48332           2        -0.1 +j    335.1      335.1      -0.0004
+HVMV_SUB_48332           3        -0.1 +j    335.1      335.1      -0.0003
+   TERMINAL TOTAL ............    -4.5 +j   1004.3     1004.3      -0.0045
+
+ELEMENT = "Line.HVMV_SUB_48332_L2801909"
+HVMV_SUB_48332           1         4.2 +j   -334.1      334.1      -0.0127
+HVMV_SUB_48332           2         0.1 +j   -335.1      335.1      -0.0004
+HVMV_SUB_48332           3         0.1 +j   -335.1      335.1      -0.0003
+   TERMINAL TOTAL ............     4.5 +j  -1004.3     1004.3      -0.0045
+L2801909                 1        -4.2 +j    334.1      334.1      -0.0127
+L2801909                 2        -0.1 +j    335.1      335.1      -0.0004
+L2801909                 3        -0.1 +j    335.1      335.1      -0.0003
+   TERMINAL TOTAL ............    -4.5 +j   1004.4     1004.4      -0.0044
+
+ELEMENT = "Reactor.HVMV_SUB_HSB"
+SOURCEBUS                1         4.4 +j   -332.0      332.0      -0.0132
+SOURCEBUS                2         0.3 +j   -333.0      333.0      -0.0009
+SOURCEBUS                3         0.3 +j   -333.0      333.0      -0.0008
+   TERMINAL TOTAL ............     4.9 +j   -998.1      998.1      -0.0049
+HVMV_SUB_HSB             1        -4.4 +j    332.3      332.4      -0.0132
+HVMV_SUB_HSB             2        -0.3 +j    333.4      333.4      -0.0009
+HVMV_SUB_HSB             3        -0.3 +j    333.4      333.4      -0.0008
+   TERMINAL TOTAL ............    -4.9 +j    999.1      999.1      -0.0049
+
+ELEMENT = "Transformer.HVMV_SUB"
+HVMV_SUB_HSB             1         4.4 +j   -332.3      332.4      -0.0132
+HVMV_SUB_HSB             2         0.3 +j   -333.4      333.4      -0.0009
+HVMV_SUB_HSB             3         0.3 +j   -333.4      333.4      -0.0008
+HVMV_SUB_HSB             0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     4.9 +j   -999.1      999.1      -0.0049
+REGXFMR_HVMV_SUB_LSB     1        -4.2 +j    334.0      334.1      -0.0127
+REGXFMR_HVMV_SUB_LSB     2        -0.1 +j    335.1      335.1      -0.0004
+REGXFMR_HVMV_SUB_LSB     3        -0.1 +j    335.1      335.1      -0.0003
+REGXFMR_HVMV_SUB_LSB     0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............    -4.5 +j   1004.2     1004.2      -0.0045
+
+ELEMENT = "Transformer.FEEDER_REGA"
+REGXFMR_HVMV_SUB_LSB     1         4.2 +j   -334.0      334.1      -0.0127
+REGXFMR_HVMV_SUB_LSB     2         0.1 +j   -335.1      335.1      -0.0004
+REGXFMR_HVMV_SUB_LSB     3         0.1 +j   -335.1      335.1      -0.0003
+REGXFMR_HVMV_SUB_LSB     0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     4.5 +j  -1004.2     1004.2      -0.0045
+_HVMV_SUB_LSB            1        -4.2 +j    334.0      334.1      -0.0127
+_HVMV_SUB_LSB            2        -0.1 +j    335.1      335.1      -0.0004
+_HVMV_SUB_LSB            3        -0.1 +j    335.1      335.1      -0.0003
+_HVMV_SUB_LSB            0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............    -4.5 +j   1004.2     1004.3      -0.0045
+
+ELEMENT = "Transformer.XFRMR_CON_L2801909_SX2801909A"
+L2801909                 1         4.1 +j      1.0        4.2       0.9688
+L2801909                 0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     4.1 +j      1.0        4.2       0.9688
+SX2801909A               1        -2.0 +j     -0.5        2.1       0.9700
+SX2801909A               0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............    -2.0 +j     -0.5        2.1       0.9700
+SX2801909A               0         0.0 +j      0.0        0.0       1.0000
+SX2801909A               2        -2.0 +j     -0.5        2.1       0.9700
+   TERMINAL TOTAL ............    -2.0 +j     -0.5        2.1       0.9700
+
+ELEMENT = "Capacitor.CAPBANK2A"
+R20185                   1         0.0 +j   -335.4      335.4      -0.0000
+   TERMINAL TOTAL ............     0.0 +j   -335.4      335.4      -0.0000
+R20185                   0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     0.0 +j      0.0        0.0       1.0000
+
+ELEMENT = "Capacitor.CAPBANK2B"
+R20185                   2         0.0 +j   -335.4      335.4       1.0000
+   TERMINAL TOTAL ............     0.0 +j   -335.4      335.4       1.0000
+R20185                   0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     0.0 +j      0.0        0.0       1.0000
+
+ELEMENT = "Capacitor.CAPBANK2C"
+R20185                   3         0.0 +j   -335.4      335.4       1.0000
+   TERMINAL TOTAL ............     0.0 +j   -335.4      335.4       1.0000
+R20185                   0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL ............     0.0 +j      0.0        0.0       1.0000
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus                Phase     kW   +j  kvar         kVA         PF
+
+ELEMENT = "Load.226195333C0"
+SX2801909A               1       2.0 +j    0.5        2.1       0.9700
+SX2801909A               2       2.0 +j    0.5        2.1       0.9700
+SX2801909A               0       0.0 +j    0.0        0.0       1.0000
+  TERMINAL TOTAL  ............     4.1 +j      1.0        4.2       0.9700
+
+
+Total Circuit Losses =    0.9 +j    7.1

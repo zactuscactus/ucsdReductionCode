@@ -1,0 +1,42 @@
+
+New Reactor.addedshuntx_regxfmr_hvmv_sub_lsb.1
+! ENABLED
+! NPhases = 1
+! Nconds = 1
+! Nterms = 2
+! Yorder = 2
+! NodeRef = "93 0 "
+! Terminal Status: [C C ]
+! Terminal Bus Ref: [33 33 ]
+
+! YPrim (G matrix)
+!  4.573963453E-006 | -4.573963453E-006 |
+!  -4.573963453E-006 | 4.573963453E-006 |
+! YPrim (B Matrix) = 
+!              0 |             0 |
+!              0 |             0 |
+~ bus1=REGXFMR_HVMV_SUB_LSB.1
+~ bus2=regxfmr_hvmv_sub_lsb.0
+~ phases=1
+~ kvar=0
+~ kv=7.1996
+~ conn=wye
+~ Parallel=yes
+~ R=218628.77
+~ X=0
+~ Rp=0
+~ Z1=[0, 0]
+~ Z2=[0, 0]
+~ Z0=[0, 0]
+~ Z =[218628.77, 0]
+~ RCurve=
+~ LCurve=
+~ LmH=0
+~ normamps=5
+~ emergamps=6
+~ faultrate=0
+~ pctperm=1E2
+~ repair=3
+~ basefreq=60
+~ enabled=true
+~ like=

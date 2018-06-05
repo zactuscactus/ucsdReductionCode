@@ -1,0 +1,60 @@
+
+New Load.load_x2801909a.1_model_1
+! ENABLED
+! NPhases = 1
+! Nconds = 2
+! Nterms = 1
+! Yorder = 2
+! NodeRef = "22 0 "
+! Terminal Status: [C C ]
+! Terminal Bus Ref: [8 8 ]
+
+! YPrim (G matrix)
+!   0.1413194444 | -0.1413194444 |
+!  -0.1413194444 |  0.1413195858 |
+! YPrim (B Matrix) = 
+!  -0.03541799136 | 0.03541799136 |
+!  0.03541799136 | -0.03541802678 |
+! VARIABLES
+~ phases=1
+~ bus1=x2801909a.1
+~ kV=0.12
+~ kW=     2.0
+~ pf=0.970
+~ model=1
+~ yearly=
+~ daily=
+~ duty=
+~ growth=
+~ conn=wye
+~ kvar=     0.5
+~ Rneut=-1
+~ Xneut=0
+~ status=variable
+~ class=1
+~ Vminpu=0.95
+~ Vmaxpu=1.05
+~ Vminnorm=0.0
+~ Vminemerg=0.0
+~ xfkVA=0.0
+~ allocationfactor=0.500
+~ kVA=     2.1
+~ %mean=50
+~ %stddev=10
+~ CVRwatts=1
+~ CVRvars=2
+~ kwh=0
+~ kwhdays=30
+~ Cfactor=4
+~ CVRcurve=
+~ NumCust=1
+~ ZIPV="
+~ %SeriesRL=    50.0
+~ RelWeight=1
+~ Vlowpu=0.5
+~ puXharm=0
+~ XRharm=6
+~ spectrum=defaultload
+~ basefreq=60
+~ enabled=true
+~ like=

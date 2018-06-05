@@ -1,0 +1,112 @@
+
+ISOLATED CIRCUIT ELEMENT REPORT
+
+
+***  THE FOLLOWING BUSES HAVE NO CONNECTION TO THE SOURCE ***
+
+
+***********  THE FOLLOWING SUB NETWORKS ARE ISOLATED ************
+
+
+***********  THE FOLLOWING ENABLED ELEMENTS ARE ISOLATED ************
+
+
+***  THE FOLLOWING BUSES ARE NOT CONNECTED TO ANY POWER DELIVERY ELEMENT ***
+
+
+***********  CONNECTED CIRCUIT ELEMENT TREE ************
+
+(Lexical Level) Element name
+
+(0) Vsource.source
+(1) Reactor.hvmv_sub_hsb
+(2) Transformer.hvmv_sub
+(3) Transformer.feeder_regc
+[SHUNT], Load.load__hvmv_sub_lsb.1_model_1
+[SHUNT], Load.load__hvmv_sub_lsb.2_model_1
+[SHUNT], Load.load__hvmv_sub_lsb.3_model_1
+(4) Line._hvmv_sub_lsb_hvmv_sub_48332
+[SHUNT], Load.load_hvmv_sub_48332.1_model_1
+[SHUNT], Load.load_hvmv_sub_48332.2_model_1
+[SHUNT], Load.load_hvmv_sub_48332.3_model_1
+(5) Line.hvmv_sub_48332_r20185
+[SHUNT], Load.load_r20185.1_model_1
+[SHUNT], Load.load_r20185.2_model_1
+[SHUNT], Load.load_r20185.3_model_1
+[SHUNT], Capacitor.capbank2a
+[SHUNT], Capacitor.capbank2b
+[SHUNT], Capacitor.capbank2c
+(6) Line.r20185_r42247
+[SHUNT], Load.load_r42247.1_model_1
+[SHUNT], Load.load_r42247.2_model_1
+[SHUNT], Load.load_r42247.3_model_1
+[SHUNT], Capacitor.capbank1a
+[SHUNT], Capacitor.capbank1b
+[SHUNT], Capacitor.capbank1c
+(7) Line.r42247_m1142843
+[SHUNT], Load.load_m1142843.1_model_1
+[SHUNT], Load.load_m1142843.2_model_1
+[SHUNT], Load.load_m1142843.3_model_1
+(8) Line.m1142843_m1125994
+[SHUNT], Load.load_m1125994.1_model_1
+[SHUNT], Load.load_m1125994.2_model_1
+[SHUNT], Load.load_m1125994.3_model_1
+(9) Line.m1125994_m1108378
+[SHUNT], Load.load_m1108378.1_model_1
+[SHUNT], Load.load_m1108378.2_model_1
+[SHUNT], Load.load_m1108378.3_model_1
+(10) Line.m1108378_221_282819
+[SHUNT], Load.load_221_282819.1_model_1
+(9) Line.m1125994_regxfmr_190_8581
+[SHUNT], Load.load_regxfmr_190_8581.1_model_1
+[SHUNT], Load.load_regxfmr_190_8581.2_model_1
+[SHUNT], Load.load_regxfmr_190_8581.3_model_1
+(10) Transformer.vreg3_c
+[SHUNT], Load.load_190_8581.1_model_1
+[SHUNT], Load.load_190_8581.2_model_1
+[SHUNT], Load.load_190_8581.3_model_1
+(11) Line.190_8581_r42246
+[SHUNT], Load.load_r42246.1_model_1
+[SHUNT], Load.load_r42246.2_model_1
+[SHUNT], Load.load_r42246.3_model_1
+[SHUNT], Capacitor.capbank0a
+[SHUNT], Capacitor.capbank0b
+[SHUNT], Capacitor.capbank0c
+(12) Line.r42246_regxfmr_190_8593
+[SHUNT], Load.load_regxfmr_190_8593.1_model_1
+[SHUNT], Load.load_regxfmr_190_8593.2_model_1
+(13) Transformer.vreg2_c
+[SHUNT], Load.load_190_8593.1_model_1
+[SHUNT], Load.load_190_8593.2_model_1
+[SHUNT], Load.load_190_8593.3_model_1
+(14) Line.190_8593_n1136663
+[SHUNT], Load.load_n1136663.1_model_1
+[SHUNT], Load.load_n1136663.2_model_1
+[SHUNT], Load.load_n1136663.3_model_1
+(15) Line.n1136663_m1026695
+[SHUNT], Load.load_m1026695.1_model_1
+[SHUNT], Load.load_m1026695.2_model_1
+[SHUNT], Load.load_m1026695.3_model_1
+(16) Line.m1026695_m1026657
+[SHUNT], Load.load_m1026657.1_model_1
+(13) Transformer.vreg2_b
+(13) Transformer.vreg2_a
+(10) Transformer.vreg3_b
+(10) Transformer.vreg3_a
+(8) Line.m1142843_regxfmr_190_7361
+[SHUNT], Load.load_regxfmr_190_7361.1_model_1
+[SHUNT], Load.load_regxfmr_190_7361.2_model_1
+[SHUNT], Load.load_regxfmr_190_7361.3_model_1
+(9) Transformer.vreg4_c
+[SHUNT], Load.load_190_7361.1_model_1
+[SHUNT], Load.load_190_7361.2_model_1
+[SHUNT], Load.load_190_7361.3_model_1
+(10) Line.190_7361_r18242
+[SHUNT], Load.load_r18242.1_model_1
+[SHUNT], Load.load_r18242.2_model_1
+[SHUNT], Load.load_r18242.3_model_1
+[SHUNT], Capacitor.capbank3
+(9) Transformer.vreg4_b
+(9) Transformer.vreg4_a
+(3) Transformer.feeder_regb
+(3) Transformer.feeder_rega

@@ -1,0 +1,30 @@
+
+Elements in Active Circuit: ieee8500_simple_reduced
+
+Power Delivery Elements
+
+Element                                    Bus1                Bus2                Bus3                ...
+
+"Line.L2801909_R20185"                     L2801909             R20185               
+"Line._HVMV_SUB_LSB_HVMV_SUB_48332"        _HVMV_SUB_LSB        HVMV_SUB_48332       
+"Line.HVMV_SUB_48332_L2801909"             HVMV_SUB_48332       L2801909             
+"Reactor.HVMV_SUB_HSB"                     SOURCEBUS            HVMV_SUB_HSB         
+"Transformer.HVMV_SUB"                     HVMV_SUB_HSB         REGXFMR_HVMV_SUB_LSB 
+"Transformer.FEEDER_REGA"                  REGXFMR_HVMV_SUB_LSB _HVMV_SUB_LSB        
+"Transformer.FEEDER_REGB"                  REGXFMR_HVMV_SUB_LSB _HVMV_SUB_LSB        
+"Transformer.FEEDER_REGC"                  REGXFMR_HVMV_SUB_LSB _HVMV_SUB_LSB        
+"Transformer.XFRMR_CON_L2801909_X2801909B" L2801909             X2801909B            X2801909B            
+"Capacitor.CAPBANK2A"                      R20185               R20185               
+"Capacitor.CAPBANK2B"                      R20185               R20185               
+"Capacitor.CAPBANK2C"                      R20185               R20185               
+"Capacitor.ADDEDSHUNTCAP_L2801909"         L2801909             L2801909             
+"Capacitor.ADDEDSHUNTCAP_R20185"           R20185               R20185               
+"Capacitor.ADDEDSHUNTCAP_HVMV_SUB_48332"   HVMV_SUB_48332       HVMV_SUB_48332       
+"Capacitor.ADDEDSHUNTCAP_X2801909B"        X2801909B            X2801909B            
+
+Power Conversion Elements
+
+Element                                    Bus1                Bus2                Bus3                ...
+
+"Load.LOAD_X2801909B.1_MODEL_1"            X2801909B            
+"Load.LOAD_X2801909B.2_MODEL_1"            X2801909B            

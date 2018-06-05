@@ -1,0 +1,52 @@
+
+  Bus   (node ref)  Node       V (kV)    Angle    p.u.   Base kV
+
+03554809 ............. 1       7.1013 /_    1.5     1.025    12.000        1-2     12.287 /_   31.5    1.0239
+   -                   2       7.0909 /_ -118.4    1.0235    12.000
+
+CIRCUIT ELEMENT CURRENTS
+
+(Currents into element from indicated bus)
+
+Power Delivery Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+ELEMENT = "Line.035548_03554809"
+035548                     1      1.5253E-012 /_ -116.6 =  -6.8212E-013 +j -1.3642E-012
+035548                     2      9.0949E-013 /_   90.0 =          0 +j 9.0949E-013
+035548                 Resid      8.1981E-013 /_   33.7 =   6.8212E-013 +j 4.5475E-013
+------------
+03554809                   1      1.5253E-012 /_   63.4 =  6.8212E-013 +j 1.3642E-012
+03554809                   2      9.0949E-013 /_  -90.0 =          0 +j -9.0949E-013
+03554809               Resid      8.1981E-013 /_ -146.3 =   -6.8212E-013 +j -4.5475E-013
+
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+
+CIRCUIT ELEMENT POWER FLOW
+
+(Power Flow into element from indicated Bus)
+
+  Bus       Phase     kW     +j   kvar           kVA           PF
+
+ELEMENT = "Line.035548_03554809"    
+03554809        1 5.0985E-012 +j -9.5564E-012    1.0831E-011     -0.4707
+03554809        2 5.672E-012 +j -3.0693E-012    6.4492E-012     -0.8795
+ TERMINAL TOTAL   1.077E-011 +j -1.2626E-011    1.6595E-011     -0.6490
+ELEMENT = "Line.035548_03554809"    
+035548          1 -5.0985E-012 +j 9.5564E-012    1.0831E-011     -0.4707
+035548          2 -5.672E-012 +j 3.0693E-012    6.4492E-012     -0.8795
+ TERMINAL TOTAL   -1.077E-011 +j 1.2626E-011    1.6595E-011     -0.6490
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase     kW   +j  kvar         kVA         PF
+

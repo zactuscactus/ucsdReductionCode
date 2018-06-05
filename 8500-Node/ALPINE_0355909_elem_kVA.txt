@@ -1,0 +1,68 @@
+
+  Bus   (node ref)  Node       V (kV)    Angle    p.u.   Base kV
+
+0355909 . 1       6.9423 /_   -1.1     1.002    12.000
+
+CIRCUIT ELEMENT CURRENTS
+
+(Currents into element from indicated bus)
+
+Power Delivery Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+ELEMENT = "Line.0355908A_0355909"
+0355908A      1           8.6184 /_  -19.4 =     8.1284 +j   -2.8647
+------------
+0355909       1            8.619 /_  160.6 =    -8.1283 +j    2.8666
+
+
+ELEMENT = "Line.0355909_0355910"
+0355909       1            9.663 /_  -17.4 =     9.2214 +j   -2.8879
+------------
+0355910       1           9.6633 /_  162.6 =    -9.2214 +j    2.8888
+
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+ELEMENT = "PVSystem.NEWPV_151"
+0355909       1           1.0933 /_  178.9 =    -1.0931 +j  0.021316
+0355909       0           1.0933 /_   -1.1 =     1.0931 +j -0.021316
+
+
+
+CIRCUIT ELEMENT POWER FLOW
+
+(Power Flow into element from indicated Bus)
+
+  Bus       Phase     kW     +j   kvar           kVA           PF
+
+ELEMENT = "Line.0355908A_0355909"           
+0355909         1    -56.806 +j    -18.797        59.835      0.9494
+ TERMINAL TOTAL      -56.806 +j    -18.797        59.835      0.9494
+ELEMENT = "Line.0355908A_0355909"           
+0355908A        1     56.814 +j     18.786        59.839      0.9494
+ TERMINAL TOTAL       56.814 +j     18.786        59.839      0.9494
+
+ELEMENT = "Line.0355909_0355910"            
+0355909         1     64.396 +j     18.797        67.084      0.9599
+ TERMINAL TOTAL       64.396 +j     18.797        67.084      0.9599
+ELEMENT = "Line.0355909_0355910"            
+0355910         1    -64.395 +j    -18.801        67.083      0.9599
+ TERMINAL TOTAL      -64.395 +j    -18.801        67.083      0.9599
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase     kW   +j  kvar         kVA         PF
+
+ELEMENT = "PVSystem.NEWPV_151"              
+0355909         1      -7.59 +j -1.8735E-007          7.59      1.0000
+0355909         0          0 +j          0             0      1.0000
+ TERMINAL TOTAL        -7.59 +j -1.8735E-007          7.59      1.0000
+

@@ -1,0 +1,62 @@
+SetProp, 1E050,   -1E050, 1E050, -1E050, 16777215, 16777215, 0, 4
+NoScales,
+Caption, "Transformer.XFRMR_CON_L2801909_SX2801909A Currents"
+ChartCaption, "Transformer.XFRMR_CON_L2801909_SX2801909A Currents"
+Rect, 100, 10, 200, 40
+Label, 150, 15, 0, "Transformer.XFRMR_CON_L2801909_SX2801909A", 0
+BoldLabel, 1
+Width, 7
+DataColor, 8421504
+Move, 0, 0
+Draw, 300, 0
+DataColor, 0
+Width, 3
+FStyle, 0
+Move, 0, 30
+Draw, 100, 30
+Center,  15, 32, 10, "0.55602"
+Center,  60, 32, 10, " /_   -14.38"
+Center,  90, 32, 10, " ->"
+Width, 1
+FStyle, 0
+Move, 0, 20
+Draw, 100, 20
+Center,  15, 22, 10, "0.55602"
+Center,  60, 22, 10, " /_   165.62"
+Center,  90, 22, 10, " ->"
+FStyle, 0
+Move, 0, -10
+Draw, 100, -10
+Center,  15, -8, 10, "7.3366E-007"
+Center,  60, -8, 10, " /_    89.97"
+Center,  90, -8, 10, " ->"
+Width, 7
+Move, -5, 5
+Draw, -5, 35
+Center,  25, 40, 10, "L2801909.1"
+Width, 3
+FStyle, 0
+Move, 300, 30
+Draw, 200, 30
+Center,  210, 32, 10, "<- "
+Center,  240, 32, 10, "16.6806"
+Center,  280, 32, 10, " /_   165.62"
+Width, 1
+FStyle, 0
+Move, 300, 20
+Draw, 200, 20
+Center,  210, 22, 10, "<- "
+Center,  240, 22, 10, "16.6806"
+Center,  280, 22, 10, " /_   -14.38"
+FStyle, 0
+Move, 300, -10
+Draw, 200, -10
+Center,  210, -8, 10, "<- "
+Center,  240, -8, 10, "4.36717E-005"
+Center,  280, -8, 10, " /_    89.69"
+Width, 7
+Move, 305, 5
+Draw, 305, 35
+Center,  275, 40, 10, "SX2801909A.1.0"
+Caption, " Currents"
+PctRim, 5

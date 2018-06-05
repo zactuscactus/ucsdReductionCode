@@ -1,0 +1,7 @@
+
+CONTROLLED TRANSFORMER TAP SETTINGS
+
+Name            Tap      Min       Max     Step  Position
+
+alpine        1.00000  0.90000  1.10000  0.00625     0
+355_1686b     1.00000  0.90000  1.10000  0.00625     0

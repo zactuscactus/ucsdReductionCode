@@ -1,0 +1,3 @@
+Load, Connected KVA, Allocation Factor, Phases, kW, kvar, PF, Model
+LOAD_X2801909B.1_MODEL_1,      0.0, 0.500, 1,      2.0,      0.5, 0.970, 1
+LOAD_X2801909B.2_MODEL_1,      0.0, 0.500, 1,      2.0,      0.5, 0.970, 1

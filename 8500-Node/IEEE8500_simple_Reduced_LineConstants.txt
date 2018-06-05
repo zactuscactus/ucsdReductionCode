@@ -1,0 +1,4 @@
+LINE CONSTANTS
+Frequency = 60 Hz, Earth resistivity = 100 ohm-m
+Earth Model = Deri
+

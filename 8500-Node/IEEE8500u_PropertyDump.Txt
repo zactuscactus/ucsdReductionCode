@@ -1,0 +1,57 @@
+
+New PVSystem.pv_on_03554809.1
+! ENABLED
+! NPhases = 1
+! Nconds = 2
+! Nterms = 1
+! Yorder = 2
+! NodeRef = "nil"
+! Terminal Status: [C C ]
+! Terminal Bus Ref: [-1 -1 ]
+
+! VARIABLES
+!  1: Irradiance = 1
+!  2: PanelkW = 122.6
+!  3: P_TFactor = 1
+!  4: Efficiency = 1
+!  5: Vreg = 1
+~ phases=1
+~ bus1=03554809.1
+~ kv=6.9282
+~ irradiance=1
+~ Pmpp=122.605
+~ pctPmpp=100
+~ Temperature=25
+~ pf=0.99918
+~ conn=wye
+~ kvar=4.96816
+~ kVA=122.706
+~ %Cutin=0
+~ %Cutout=0
+~ EffCurve=
+~ P-TCurve=
+~ %R=50
+~ %X=0
+~ model=1
+~ Vminpu=0.9
+~ Vmaxpu=1.1
+~ Balanced=No
+~ LimitCurrent=No
+~ yearly=
+~ daily=
+~ duty=
+~ Tyearly=
+~ Tdaily=
+~ Tduty=
+~ class=1
+~ UserModel=
+~ UserData=(())
+~ debugtrace=NO
+~ VarFollowInverter=No
+~ kvarLimit=122.706
+~ DutyStart=0
+~ spectrum=
+~ basefreq=60
+~ enabled=true
+~ like=
+

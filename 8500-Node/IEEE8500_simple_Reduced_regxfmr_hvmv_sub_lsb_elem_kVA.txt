@@ -1,0 +1,112 @@
+
+  Bus   (node ref)  Node       V (kV)    Angle    p.u.   Base kV
+
+REGXFMR_HVMV_SUB_LSB 1       7.6059 /_    0.0    1.0564    12.470        1-2     13.174 /_   30.0    1.0564
+   -         2       7.6057 /_ -120.0    1.0564    12.470        2-3     13.173 /_  -90.0    1.0564
+   -         3       7.6059 /_  120.0    1.0564    12.470        3-1     13.174 /_  150.0    1.0564
+
+CIRCUIT ELEMENT CURRENTS
+
+(Currents into element from indicated bus)
+
+Power Delivery Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+ELEMENT = "Transformer.HVMV_SUB"
+HVMV_SUB_HSB     1            4.779 /_   89.9 =  0.0042223 +j     4.779
+HVMV_SUB_HSB     2           4.7643 /_  -30.8 =     4.0942 +j   -2.4363
+HVMV_SUB_HSB     3           4.7788 /_ -150.0 =    -4.1404 +j   -2.3862
+HVMV_SUB_HSB     0         0.060454 /_   46.0 =   0.041967 +j  0.043514
+HVMV_SUB_HSB Resid      9.3011E-010 /_ -134.0 =   -6.4571E-010 +j -6.6944E-010
+------------
+REGXFMR_HVMV_SUB_LSB     1           44.073 /_  -90.1 =  -0.038939 +j   -44.073
+REGXFMR_HVMV_SUB_LSB     2           43.938 /_  149.2 =    -37.759 +j    22.468
+REGXFMR_HVMV_SUB_LSB     3           44.072 /_   30.0 =     38.185 +j    22.006
+REGXFMR_HVMV_SUB_LSB     0          0.55752 /_ -134.0 =   -0.38703 +j  -0.40129
+REGXFMR_HVMV_SUB_LSB Resid       5.195E-008 /_ -138.1 =   -3.8666E-008 +j -3.4694E-008
+
+
+ELEMENT = "Transformer.FEEDER_REGA"
+REGXFMR_HVMV_SUB_LSB     1           44.073 /_   89.9 =   0.038939 +j    44.073
+REGXFMR_HVMV_SUB_LSB     0           44.073 /_  -90.1 =  -0.038939 +j   -44.073
+------------
+_HVMV_SUB_LSB     1           44.073 /_  -90.1 =  -0.038939 +j   -44.073
+_HVMV_SUB_LSB     0           44.073 /_   89.9 =   0.038939 +j    44.073
+
+
+ELEMENT = "Transformer.FEEDER_REGB"
+REGXFMR_HVMV_SUB_LSB     2           43.938 /_  -30.8 =     37.759 +j   -22.468
+REGXFMR_HVMV_SUB_LSB     0           43.938 /_  149.2 =    -37.759 +j    22.468
+------------
+_HVMV_SUB_LSB     2           43.938 /_  149.2 =    -37.759 +j    22.468
+_HVMV_SUB_LSB     0           43.938 /_  -30.8 =     37.759 +j   -22.468
+
+
+ELEMENT = "Transformer.FEEDER_REGC"
+REGXFMR_HVMV_SUB_LSB     3           44.072 /_ -150.0 =    -38.185 +j   -22.006
+REGXFMR_HVMV_SUB_LSB     0           44.072 /_   30.0 =     38.185 +j    22.006
+------------
+_HVMV_SUB_LSB     3           44.072 /_   30.0 =     38.185 +j    22.006
+_HVMV_SUB_LSB     0           44.072 /_ -150.0 =    -38.185 +j   -22.006
+
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase    Magnitude, A     Angle      (Real)   +j  (Imag)
+
+
+CIRCUIT ELEMENT POWER FLOW
+
+(Power Flow into element from indicated Bus)
+
+  Bus       Phase     kW     +j   kvar           kVA           PF
+
+ELEMENT = "Transformer.HVMV_SUB"                    
+REGXFMR_HVMV_SUB_LSB    1   -0.14674 +j     335.22        335.22     -0.0004
+REGXFMR_HVMV_SUB_LSB    2     -4.228 +j     334.15        334.18     -0.0127
+REGXFMR_HVMV_SUB_LSB    3   -0.11137 +j     335.21        335.21     -0.0003
+REGXFMR_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL      -4.4861 +j     1004.6        1004.6     -0.0045
+ELEMENT = "Transformer.HVMV_SUB"                    
+HVMV_SUB_HSB    1    0.29436 +j     -333.5         333.5     -0.0009
+HVMV_SUB_HSB    2     4.3747 +j    -332.45        332.48     -0.0132
+HVMV_SUB_HSB    3    0.25898 +j    -333.49        333.49     -0.0008
+HVMV_SUB_HSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL        4.928 +j    -999.44        999.46     -0.0049
+
+ELEMENT = "Transformer.FEEDER_REGA"                 
+REGXFMR_HVMV_SUB_LSB    1    0.14674 +j    -335.22        335.22     -0.0004
+REGXFMR_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL      0.14674 +j    -335.22        335.22     -0.0004
+ELEMENT = "Transformer.FEEDER_REGA"                 
+_HVMV_SUB_LSB    1    -0.1467 +j     335.22        335.22     -0.0004
+_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL      -0.1467 +j     335.22        335.22     -0.0004
+
+ELEMENT = "Transformer.FEEDER_REGB"                 
+REGXFMR_HVMV_SUB_LSB    2      4.228 +j    -334.15        334.18     -0.0127
+REGXFMR_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL        4.228 +j    -334.15        334.18     -0.0127
+ELEMENT = "Transformer.FEEDER_REGB"                 
+_HVMV_SUB_LSB    2    -4.2279 +j     334.16        334.18     -0.0127
+_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL      -4.2279 +j     334.16        334.18     -0.0127
+
+ELEMENT = "Transformer.FEEDER_REGC"                 
+REGXFMR_HVMV_SUB_LSB    3    0.11137 +j    -335.21        335.21     -0.0003
+REGXFMR_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL      0.11137 +j    -335.21        335.21     -0.0003
+ELEMENT = "Transformer.FEEDER_REGC"                 
+_HVMV_SUB_LSB    3   -0.11133 +j     335.21        335.21     -0.0003
+_HVMV_SUB_LSB    0          0 +j          0             0      1.0000
+ TERMINAL TOTAL     -0.11133 +j     335.21        335.21     -0.0003
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus         Phase     kW   +j  kvar         kVA         PF
+

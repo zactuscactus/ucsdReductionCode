@@ -1,0 +1,12 @@
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg4_c, Action= CHANGED 4 TAPS TO 1.025.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg4_b, Action= CHANGED 11 TAPS TO 1.06875.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg4_a, Action= CHANGED 9 TAPS TO 1.05625.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg3_c, Action= CHANGED 2 TAPS TO 1.0125.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg3_b, Action= CHANGED 10 TAPS TO 1.0625.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg3_a, Action= CHANGED 11 TAPS TO 1.06875.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg2_c, Action= CHANGED 2 TAPS TO 1.0125.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg2_b, Action= CHANGED 14 TAPS TO 1.0875.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.vreg2_a, Action= CHANGED 16 TAPS TO 1.1.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.feeder_regc, Action= CHANGED 1 TAPS TO 1.00625.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.feeder_regb, Action= CHANGED 2 TAPS TO 1.0125.
+Hour=0, Sec=0, ControlIter=1, Element=Regulator.feeder_rega, Action= CHANGED 2 TAPS TO 1.0125.
